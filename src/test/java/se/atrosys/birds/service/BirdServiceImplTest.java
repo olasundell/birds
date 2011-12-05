@@ -1,6 +1,7 @@
 package se.atrosys.birds.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.testng.annotations.Test;
 import se.atrosys.birds.AbstractTest;
 import se.atrosys.birds.model.BirdModel;
@@ -21,13 +22,12 @@ public class BirdServiceImplTest extends AbstractTest {
 	public static final String ID = "123ABC";
 	public static final String HREF = String.format("foo avibaseid=%s", ID);
 	public static final String SCIENTIFIC_NAME = "bar";
-	private final BirdModel model = new BirdModel() {{
-		setHref(HREF);
-		setScientificName(SCIENTIFIC_NAME);
-	}};
+	private final BirdModel model = new BirdModel();
 
 	@Test
 	public void saveShouldWork() {
+		model.setHref(HREF);
+		model.setScientificName(SCIENTIFIC_NAME);
 		service.save(model);
 	}
 	

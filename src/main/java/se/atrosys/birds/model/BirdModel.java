@@ -14,14 +14,14 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table( name = "birds")
+@Table( name = "BIRDS")
 public class BirdModel {
 	@Id
-	@Column(name = "id")
+	@Column(name = "ID")
 	private String id;
-	@Column(name = "scientific_name")
+	@Column(name = "SCIENTIFIC_NAME")
     private String scientificName;
-	@Column(name = "href")
+	@Column(name = "HREF")
 	private String href;
 	@Transient
     private Map<Locale, String> nameLocaleMap;
