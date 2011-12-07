@@ -35,6 +35,10 @@ public class BirdServiceImplTest extends AbstractTest {
 		for (BirdModel m: service.findAll()) {
 			service.delete(m);
 		}
+		
+		for (FamilyModel m: familyService.findAll()) {
+			familyService.delete(m);
+		}
 	}
 
 	@Test

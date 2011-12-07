@@ -83,4 +83,27 @@ public class BirdModel {
 	public void setFamily(FamilyModel family) {
 		this.family = family;
 	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		BirdModel birdModel = (BirdModel) o;
+
+		if (href != null ? !href.equals(birdModel.href) : birdModel.href != null) return false;
+		if (id != null ? !id.equals(birdModel.id) : birdModel.id != null) return false;
+		if (scientificName != null ? !scientificName.equals(birdModel.scientificName) : birdModel.scientificName != null)
+			return false;
+
+		return true;
+	}
+
+	@Override
+	public int hashCode() {
+		int result = id != null ? id.hashCode() : 0;
+		result = 31 * result + (scientificName != null ? scientificName.hashCode() : 0);
+		result = 31 * result + (href != null ? href.hashCode() : 0);
+		return result;
+	}
 }
