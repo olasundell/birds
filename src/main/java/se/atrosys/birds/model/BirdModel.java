@@ -32,9 +32,12 @@ public class BirdModel {
 	@MapKey(name = "language")*/
 	@Transient
 	private Map<String, String> nameStringMap;
-	
+	@ManyToOne(optional=false)
+	@JoinColumn(name="FAMILY_NAME", referencedColumnName = "FAMILY_NAME")
+	private FamilyModel family;
 
-    public BirdModel() {
+
+	public BirdModel() {
         nameLocaleMap = new HashMap<Locale, String>();
 	    nameStringMap = new HashMap<String, String>();
     }
@@ -75,5 +78,9 @@ public class BirdModel {
 
 	public String getId() {
 		return id;
+	}
+
+	public void setFamily(FamilyModel family) {
+		this.family = family;
 	}
 }

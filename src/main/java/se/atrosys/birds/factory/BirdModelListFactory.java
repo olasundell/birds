@@ -34,20 +34,23 @@ public class BirdModelListFactory {
         
         Document doc = Jsoup.parse(file, "UTF-8", "http://avibase.bsc-eoc.org/");
         Element table = doc.getElementsByClass("AVBlist").get(3).child(0);
-		FamilyModel currentFamily;
+		FamilyModel currentFamily = null;
 
         for (Element bird: table.children()) {
 			if (bird.getElementsByAttribute("colspan").size() == 0) {
 				if (bird.getElementsByAttribute("valign").size() > 0) {
 					currentFamily = familyModelFactory.createModel(bird);
 				} else {
-					birdModels.add(birdModelFactory.createModel(bird, null));
+					BirdModel model = birdModelFactory.createModel(bird, null);
+					model.setFamily(currentFamily);
+					birdModels.add(model);
 				}
 			}
         }
 
         return birdModels;
     }
+
     public List<BirdModel> readFromFile(String fileName) throws IOException {
         ArrayList<BirdModel> birdModels = new ArrayList<BirdModel>();
         
