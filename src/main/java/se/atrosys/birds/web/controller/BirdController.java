@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.AbstractController;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.service.BirdService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -31,11 +32,13 @@ public class BirdController {
 	public String randomBird(BirdModel birdModel) {
 		logger.info("randomBird called");
 		List<BirdModel> list = service.findAll();
-		
-		BirdModel randomModel = list.get(new Random(0).nextInt(list.size()));
-		
-		birdModel.setHref(randomModel.getHref());
-		birdModel.setScientificName(randomModel.getScientificName());
+
+		if (list.size() > 0) {
+			BirdModel randomModel = list.get(new Random(0).nextInt(list.size()));
+
+			birdModel.setHref(randomModel.getHref());
+			birdModel.setScientificName(randomModel.getScientificName());
+		}
 
 		return "random";
 	}

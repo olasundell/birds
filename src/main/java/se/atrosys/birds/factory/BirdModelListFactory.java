@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.FamilyModel;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -23,6 +24,8 @@ import java.util.List;
 @Component
 public class BirdModelListFactory {
 	@Autowired private BirdModelFactory birdModelFactory;
+	@Autowired private FamilyModelFactory familyModelFactory;
+
 
 	public List<BirdModel> scrapeFromAviBase(String fileName) throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException {
         ArrayList<BirdModel> birdModels = new ArrayList<BirdModel>();
@@ -30,11 +33,17 @@ public class BirdModelListFactory {
 		File file = new File(fileName);
         
         Document doc = Jsoup.parse(file, "UTF-8", "http://avibase.bsc-eoc.org/");
-//        Document doc = Jsoup.connect("http://avibase.bsc-eoc.org/checklist.jsp?region=eur&list=clements").get();
-
         Element table = doc.getElementsByClass("AVBlist").get(3).child(0);
+		FamilyModel currentFamily;
+
         for (Element bird: table.children()) {
-            birdModels.add(birdModelFactory.createModel(bird, null));
+			if (bird.getElementsByAttribute("colspan").size() == 0) {
+				if (bird.getElementsByAttribute("valign").size() > 0) {
+					currentFamily = familyModelFactory.createModel(bird);
+				} else {
+					birdModels.add(birdModelFactory.createModel(bird, null));
+				}
+			}
         }
 
         return birdModels;

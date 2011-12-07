@@ -5,6 +5,7 @@
     <title>A random bird.</title>
 </head>
 <body>
-<h1>${birdModel.scientificName}</h1>
+A random bird:<br/>
+${birdModel.scientificName}
 </body>
 </html>

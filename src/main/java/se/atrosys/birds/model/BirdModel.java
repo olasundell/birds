@@ -1,5 +1,8 @@
 package se.atrosys.birds.model;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -29,6 +32,7 @@ public class BirdModel {
 	@MapKey(name = "language")*/
 	@Transient
 	private Map<String, String> nameStringMap;
+	
 
     public BirdModel() {
         nameLocaleMap = new HashMap<Locale, String>();
@@ -57,8 +61,16 @@ public class BirdModel {
     }
 
     public void setHref(String href) {
+		if (href == null || href.isEmpty() || !href.contains("avibaseid=")) {
+			throw new IllegalArgumentException(String.format("%s isn't a legal href", href));
+		}
+
         this.href = href;
-	    this.id = href.split("avibaseid=")[1];
+		try {
+			this.id = href.split("avibaseid=")[1];
+		} catch (ArrayIndexOutOfBoundsException e) {
+			LoggerFactory.getLogger(this.getClass()).error(href, e);
+		}
     }
 
 	public String getId() {

@@ -28,6 +28,11 @@ public class BirdServiceImplTest extends AbstractTest {
 	public void saveShouldWork() {
 		model.setHref(HREF);
 		model.setScientificName(SCIENTIFIC_NAME);
+
+		if (service.findById(model.getId()) != null) {
+			service.delete(model);
+		}
+
 		service.save(model);
 	}
 	
@@ -37,9 +42,9 @@ public class BirdServiceImplTest extends AbstractTest {
 
 		assertNotNull(modelList, "Model list is null");
 		assertTrue(modelList.size() > 0, "Model list size is zero");
-		assertEquals(modelList.get(0).getHref(), HREF);
-		assertEquals(modelList.get(0).getId(), ID);
-		assertEquals(modelList.get(0).getScientificName(), SCIENTIFIC_NAME);
+		assertEquals(modelList.get(0).getHref(), HREF, "href wasn't what we expected");
+		assertEquals(modelList.get(0).getId(), ID, "id wasn't what we expected");
+		assertEquals(modelList.get(0).getScientificName(), SCIENTIFIC_NAME, "scientific name wasn't what we expected");
 	}
 	
 }

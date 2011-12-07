@@ -18,32 +18,26 @@ import java.util.List;
 
 @Repository("birdDao")
 public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
-	@Override
 	public BirdModel findById(String id) {
 		return (BirdModel)getHibernateTemplate().get(BirdModel.class, id);
 	}
 
-	@Override
 	public List<BirdModel> findAll() {
 		return getHibernateTemplate().find("from se.atrosys.birds.model.BirdModel");
 	}
 
-	@Override
 	public void save(BirdModel model) {
 		getHibernateTemplate().save(model);
 	}
 
-	@Override
 	public void update(BirdModel model) {
 		getHibernateTemplate().update(model);
 	}
 
-	@Override
 	public void delete(BirdModel model) {
 		getHibernateTemplate().delete(model);
 	}
 
-	@Override
 	public void shutdown() {
 		getHibernateTemplate().getSessionFactory().openSession().createSQLQuery("SHUTDOWN").executeUpdate();
 	}

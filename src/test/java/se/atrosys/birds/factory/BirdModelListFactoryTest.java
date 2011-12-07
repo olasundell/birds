@@ -24,7 +24,7 @@ import static org.testng.Assert.assertTrue;
 public class BirdModelListFactoryTest extends AbstractTest {
 	@Autowired private BirdModelListFactory birdModelListFactory;
 
-	@Test(enabled = false)
+	@Test
     public void scrapeFromAviBaseShouldReturnList() throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException {
         List<BirdModel> list = birdModelListFactory.scrapeFromAviBase("avibase.html");
         

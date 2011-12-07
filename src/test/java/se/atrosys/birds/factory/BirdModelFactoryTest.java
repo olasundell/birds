@@ -82,8 +82,9 @@ public class BirdModelFactoryTest extends AbstractTest {
         assertEquals(model.getName("en"), ENGLISH_NAME, "english name does not match");
         assertEquals(model.getHref(), HREF, "href does not match");
     }
-	
-	@Test
+
+	// disabled until we add detail enrichment again
+	@Test(enabled = false)
 	public void shouldGetCorrectInstanceFromCreateModel() throws CouldNotFindNamesElementException, NoSuchLanguageException {
 		BirdModel model = factory.createModel(bird, detail);
 		assertNotNull(model, "model is null");

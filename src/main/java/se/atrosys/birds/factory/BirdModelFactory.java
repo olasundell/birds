@@ -29,7 +29,7 @@ public class BirdModelFactory {
 
 	public BirdModel createModel(Element listingElement, Element detailedElement) throws CouldNotFindNamesElementException, NoSuchLanguageException {
         BirdModel birdModel = createInitialInstance(listingElement);
-        enrichModelFromAvibase(birdModel, findNamesElement(detailedElement));
+//        enrichModelFromAvibase(birdModel, findNamesElement(detailedElement));
         
         return birdModel;
     }
@@ -39,7 +39,7 @@ public class BirdModelFactory {
 
         birdModel.setScientificName(birdElement.getAllElements().get(1).text());
         birdModel.putName(nameService.getLocaleForCountryDisplayName("English"), birdElement.getAllElements().get(0).childNodes().get(0).attr("text"));
-        birdModel.setHref(birdElement.getAllElements().get(1).attr("href"));
+        birdModel.setHref(birdElement.getElementsByAttribute("href").attr("href"));
         return birdModel;
     }
 
