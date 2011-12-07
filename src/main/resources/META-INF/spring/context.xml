@@ -10,10 +10,16 @@
 	<mvc:annotation-driven/>
     <context:component-scan base-package="se.atrosys.birds" />
 
-    <!-- Data Source -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+
+	<!-- Data Source -->
     <bean id="birdDbDS" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="org.hsqldb.jdbcDriver" />
-        <property name="url" value="jdbc:hsqldb:file:src/main/sql/birddb;shutdown=true" />
+        <property name="url" value="jdbc:hsqldb:file:/home/ola/code/birds/src/main/sql/birddb;shutdown=true" />
         <property name="username" value="SA" />
         <property name="password" value="" />
         <property name="initialSize" value="1" />

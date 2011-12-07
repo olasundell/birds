@@ -1,0 +1,704 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Garrulus glandarius - Avibase</title>
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Description" content="Avibase is an extensive database information system about all birds of the world, containing over 5 million records about 10,000 species and 22,000 subspecies of birds, including distribution information, taxonomy, synonyms in several languages and more.">
+<meta name="KeyWords" content="bird, birds, birding, birder, birders, birdwatching, birdwatcher, birdwatchers, links, birdlink, birdlinks, ornithology, checklist, checklists, world, oiseau, oiseaux, aves, subspecies, family, taxonomy">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Language" content="en">
+
+<style type="text/css">@import url("avibase.css");</style>
+
+<script type="text/javascript" src="js/bsn.AutoSuggest_2.1.3_avibase.js" charset="utf-8"></script>
+<link rel="stylesheet" href="css/autosuggest_inquisitor.css" type="text/css" media="screen" charset="utf-8" />
+
+<SCRIPT language="JavaScript">
+function changepg(pg, lang, id, ts) {
+  self.document.location = 'avibase.jsp?pg=' + pg + (lang != ''?'&lang='+lang:'') + (id != null?'&id=' + id:'') + (ts != null?'&ts=' + ts:'');
+}
+</SCRIPT>
+<!-- SCRIPT language="JavaScript" src="avibase.js"></script -->
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="jquery.ui.draggable.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.alerts.js" type="text/javascript"></script>
+<link href="jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link rel="search" type="application/opensearchdescription+xml" title="Avibase" href="opensearchplugin.xml">
+
+</head>
+<body>
+
+
+<table border=0 bgcolor="#000078" cellpadding=0 cellspacing=0 width=1024 align=center>
+<tr>
+<td width="400" colspan=2><img src="avibase.gif" align="top" height="84"></td>
+<td align="right" width="580">
+<a target="photos" href="http://www.stanford.edu/~cagan/photography.html"><img src="images/ph1017.jpg" align="top" border=0 height="65" alt="" title="Yellow-bellied Seedeater, Las Cruces, Costa Rica, Cagan Sekercioglu"></a><img src="images/ph1757.jpg" align="top" border=0 height="65" alt="" title="Tawny Frogmouth, Sydney, Australia, Andy Whytock"><a target="photos" href="http://www.flickr.com/photos/faisca/28722448/in/set-250198/"><img src="images/ph2267.jpg" align="top" border=0 height="65" alt="" title="House Sparrow, Portugal, Faisca"></a><a target="photos" href="http://www.kashmirnetwork.com/birds/"><img src="images/ph1420.jpg" align="top" border=0 height="65" alt="" title="Scaly-Bellied Woodpecker, Kashmir, India, Bakshi Jehangir"></a><a target="photos" href="http://www.digimages.info"><img src="images/ph739.jpg" align="top" border=0 height="65" alt="" title="Short-eared Owl, France, Alain Fossé"></a><a target="photos" href="http://www.flickr.com/photos/faisca/129427472/in/set-250198/"><img src="images/ph2523.jpg" align="top" border=0 height="65" alt="" title="European Stonechat, Portugal, Faisca"></a><a target="photos" href="http://www.flickr.com/photos/faisca/39504772/in/set-742885/"><img src="images/ph2015.jpg" align="top" border=0 height="65" alt="" title="Circus aeruginosus, Portugal, Faisca"></a>
+<br><b><font color="#FFFFFF" size="1" face="Geneva,Arial,Helvetica">Bird checklists - taxonomy - distribution - maps - links</font></font></b></td></tr>
+</table><table border=0 width=1024 align=center>
+<tr valign=top><td rowspan=2 width=125 class="AVBbar" bgcolor="#336699"> <!-- #000078 -->
+
+<script>
+function makepale(d) {
+  d.style.backgroundColor = '#226CB7';
+}
+function makenormal(d) {
+  d.style.backgroundColor = '#024C97';
+}
+</SCRIPT>
+
+
+<p>&nbsp;<br>
+<div id="div1" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('home','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=home" class="AVBlinks2"><font color="#F0F0F0">Home</font></a>
+</div>
+<br>
+<div id="div2" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('checklist','EN');">
+&nbsp;&nbsp;<a href="checklist.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Checklists</font></a>
+</div>
+<br>
+<div id="div3" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('search','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=search" class="AVBlinks2"><font color="#F0F0F0">Search</font></a>
+</div>
+<br>
+<div id="div4" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('families','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=families" class="AVBlinks2"><font color="#F0F0F0">Families</font></a>
+</div>
+<br>
+<div id="div9" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='compare.jsp';">
+&nbsp;&nbsp;<a href="compare.jsp" class="AVBlinks2"><font color="#F0F0F0">Compare lists</font></a>
+</div>
+<br>
+<div id="div10" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='rangemaps.jsp';">
+&nbsp;&nbsp;<a href="rangemaps.jsp" class="AVBlinks2"><font color="#F0F0F0">Range maps</font></a>
+</div>
+<br>
+<div id="div5" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp';">
+&nbsp;&nbsp;<a href="/links/links.jsp" class="AVBlinks2"><font color="#F0F0F0">Birdlinks</font></a>
+</div>
+<br>
+<div id="div6" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp?page=g_reports';">
+&nbsp;&nbsp;<a href="/links/links.jsp?page=g_reports" class="AVBlinks2"><font color="#F0F0F0">Trip reports</font></a>
+</div>
+<br>
+<div id="div7" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('webservice','EN');">
+&nbsp;&nbsp;<a href="webservice.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Web Service</font></a>
+</div>
+<br>
+<div id="div8" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('contrib','EN');">
+&nbsp;&nbsp;<a href="contrib.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Contribute</font></a>
+</div>
+<P>
+<div>
+<form action="avibase.jsp" name='avbsmall' style="position: relative;">
+<input type="hidden" name="pg" value="search">
+<input type="hidden" name="ts" value="1323206780062">
+
+<font face="Geneva,Arial,Helvetica" size=1 color=white>
+Quick search: <input id="searchboxsm" name="qstr" type="text" size="14" style="font-size: 9pt">
+</form>
+</div>
+</p>
+</font>
+
+<script type="text/javascript">
+	var options_xml = {
+		script: function (input) { return "suggest3.jsp?qstr="+input; },
+		varname:"input",
+		minchars:3,
+		timeout:5000,
+		noresults: "No name matching",
+		maxresults:10
+
+	};
+	var as_xml = new bsn.AutoSuggest('searchboxsm', options_xml);
+</script>
+
+<P><b><font color="#FFFFFF">Avibase is also available in the following languages:</font></b><br>
+<table border=0 style="font-family: Geneva,Arial,Helvetica; font-size: 8pt;">
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-en.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=D8D10F2C5A9AA49F">English</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-es.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=D8D10F2C5A9AA49F">Spanish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-fr.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=D8D10F2C5A9AA49F">French</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-de.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=D8D10F2C5A9AA49F">German</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-hu.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=D8D10F2C5A9AA49F">Hungarian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-id.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=D8D10F2C5A9AA49F">Indonesian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-it.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=D8D10F2C5A9AA49F">Italian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-nl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=D8D10F2C5A9AA49F">Dutch</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-pt.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=D8D10F2C5A9AA49F">Portuguese</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-sv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=D8D10F2C5A9AA49F">Swedish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-ca.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=D8D10F2C5A9AA49F">Catalan</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-is.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=D8D10F2C5A9AA49F">Icelandic</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-af.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=D8D10F2C5A9AA49F">Afrikaans</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-ia.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=D8D10F2C5A9AA49F">Interlingua</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-pl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=D8D10F2C5A9AA49F">Polish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-uk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=D8D10F2C5A9AA49F">Ukrainian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-cs.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=D8D10F2C5A9AA49F">Czech</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-sk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=D8D10F2C5A9AA49F">Slovak</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-ru.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=D8D10F2C5A9AA49F">Russian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-fi.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=D8D10F2C5A9AA49F">Finnish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=D8D10F2C5A9AA49F"><img src="flags/lang2-lv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=D8D10F2C5A9AA49F">Latvian</a></td></tr>
+
+</table>
+</P>
+<p>Google translations:<br>
+<select name="lgg" style="font-size: 9pt; max-width: 100px; clientWidth: 100px;" onChange="googleTrans(this)">
+<option value=""></option>
+<option value="AR" >Arabic</option><option value="AZ" >Azerbaijani</option><option value="BG" >Bulgarian</option><option value="BE" >Belarusian</option><option value="CY" >Welsh</option><option value="DA" >Danish</option><option value="EL" >Greek</option><option value="ET" >Estonian</option><option value="EU" >Basque</option><option value="FA" >Persian</option><option value="FIL" >Filipino</option><option value="GA" >Irish</option><option value="GL" >Galician</option><option value="HATX" >Haitian Creole French</option><option value="HE" >Hebrew</option><option value="HI" >Hindi</option><option value="HR" >Croatian</option><option value="HY" >Armenian</option><option value="JP" >Japanese</option><option value="KA" >Georgian</option><option value="KO" >Korean</option><option value="LT" >Lithuanian</option><option value="MK" >Macedonian</option><option value="MS" >Malay</option><option value="MT" >Maltese</option><option value="NO" >Norwegian</option><option value="RO" >Romanian</option><option value="RU" >Russian</option><option value="SL" >Slovenian</option><option value="SQ" >Albanian</option><option value="SR" >Serbian</option><option value="SW" >Swahili</option><option value="TH" >Thai</option><option value="TR" >Turkish</option><option value="UR" >Urdu</option><option value="VI" >Vietnamese</option><option value="YI" >Yiddish</option><option value="ZH" >Chinese</option>
+</select></p>
+
+<p><a href="translate.jsp?lang=EN" class="AVBlink">Contribute a better translation</a></p>
+
+<script>
+function googleTrans(s) {
+  if (s.options[s.selectedIndex].value == '') return;
+  var url = 'species.jsp?lang=' + s.options[s.selectedIndex].value + '&avibaseid=D8D10F2C5A9AA49F';
+  document.location = url;
+}
+</script>
+
+
+
+</td>
+<td colspan=2 style="padding: 15px">
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+
+  $('#loginbox').toggle();
+
+  $("#loginlnk").click(function(){
+     $('#loginbox').slideToggle('fast');
+  });
+
+
+  $('#credlogin').toggle();
+
+
+});
+
+</script>
+
+
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr>
+<td width="100%" class="AVBHeader" colspan="3">
+Eurasian Jay (<I>Garrulus glandarius</I>) (Linnaeus, 1758)</td>
+</tr>
+<tr>
+<td width="100%" class="AVBSubHeader" colspan="3" align=center>
+<SCRIPT language="JavaScript">
+function changesection(s) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=D8D10F2C5A9AA49F&sec=' + s;
+}
+function changespecies(t,v) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=' + t + '&sec=summary' + (v?'&ssver=' + v:'');
+}
+
+
+</SCRIPT>
+<a href="javascript:changesection('summary')">summary</a>&nbsp;&nbsp;
+<a href="javascript:changesection('taxontable')">taxon grid</a>&nbsp;&nbsp;
+<a href="javascript:changesection('map')">map</a>&nbsp;&nbsp;
+<a href="javascript:changesection('ebird')">eBird</a>&nbsp;&nbsp;
+<a href="javascript:changesection('wiki')">Wikipedia</a>&nbsp;&nbsp;
+<a href="javascript:changesection('natureserve')">NatureServe</a>&nbsp;&nbsp;
+Google: <a href="javascript:changesection('google')">Web/images</a>|<a href="javascript:changesection('scholar')">Scholar</a>&nbsp;&nbsp;
+<a href="javascript:changesection('itis')">ITIS</a>&nbsp;&nbsp;
+<a href="javascript:changesection('birdlife')">Birdlife</a>&nbsp;&nbsp;
+&nbsp;&nbsp;<img align="bottom" src="camera_icon1.gif"> <!-- tx[36] --><a href="javascript:changesection('flickr')">Flickr</a>
+&nbsp;&nbsp;<img align="bottom" src="sound_icon1.gif"> <!-- tx[143] --><a href="javascript:changesection('xenocanto')">Xeno-Canto</a>
+
+<hr noshade width="100%" size=1 align=center color="#F0F0F0">
+
+</td>
+</tr>
+</table>
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr><td>
+
+
+
+  <tr>
+    <td class="AVBContainerText" width="60%" valign="top">
+    
+
+    <table border=0 align=center width=95%><tr valign=top><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+    <script src="flickr_votes.js"></script>
+
+
+    <table height=250 class='flickr'>
+<tr valign='top'><td bgcolor='#F0F0F0' width=250><span id="flickr1"><br><a target="_blank" href="http://www.flickr.com/photos/astropup/5372861943/"><img border=0 src="http://farm6.static.flickr.com/5081/5372861943_af5d9a28f0_m.jpg"></a><br><span class='credit'>photo &copy;Kez 'n' Dez</span><br><center><a href="javascript:report(1, 387366)"><img id="report1" src="button2.gif" title="Report as inappropriate" border=0></a><a href="javascript:voteimg(1, 387366, 1)"><img id="vote1.1" src="vote0.gif" border=0 title="Vote = 1"></a><a href="javascript:voteimg(1, 387366, 2)"><img id="vote1.2" src="vote0.gif" border=0 title="Vote = 2"></a><a href="javascript:voteimg(1, 387366, 3)"><img id="vote1.3" src="vote0.gif" border=0 title="Vote = 3"></a><a href="javascript:voteimg(1, 387366, 4)"><img id="vote1.4" src="vote0.gif" border=0 title="Vote = 4"></a><a href="javascript:voteimg(1, 387366, 5)"><img id="vote1.5" src="vote0.gif" border=0 title="Vote = 5"></a><a href="javascript:nextimg(1, 'Garrulus glandarius')"><img src="button1.gif" title="Change photo" border=0></a></center></span></td></tr>
+</table>
+
+    <span style="color: #606060; font-size: 7pt">Photo powered by <a href="http://flickr.com" target="_blank">flickr.com</a>.</span></p>
+
+
+
+    <p>
+    <b>Order:</b><br> &nbsp;&nbsp;Passeriformes<br>
+    <b>Family:</b><br> &nbsp;&nbsp;Corvidae<br>
+    <P>
+
+    <b>English:</b><br> &nbsp;&nbsp;Eurasian Jay<br>
+    <b>Scientific:</b><br> &nbsp;&nbsp;<i>Garrulus glandarius</i><br>
+    </p>
+    <p><b>Protonym:</b><br> &nbsp;&nbsp;<i>Corvus glandarius</i><br>
+    </p>
+    <p><b>Avibase ID:</b><br> &nbsp;&nbsp;D8D10F2C5A9AA49F<br>
+    <p><b>Taxomic Serial Number:</b><br>
+    TSN: <a target="_blank" href="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=560214">560214</a>
+
+    </p>
+
+    </td><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+
+    <b>Czech:</b><br> &nbsp;&nbsp;sojka obecná<br>
+
+    <b>German:</b><br> &nbsp;&nbsp;Eichelhäher<br>
+
+    <b>Danish:</b><br> &nbsp;&nbsp;Skovskade<br>
+
+    <b>Spanish:</b><br> &nbsp;&nbsp;Arrendajo Euroasiático<br>
+
+    <b>Finnish:</b><br> &nbsp;&nbsp;närhi<br>
+
+    <b>French:</b><br> &nbsp;&nbsp;Geai des chênes<br>
+
+    <b>Icelandic:</b><br> &nbsp;&nbsp;Skrækskaði<br>
+
+    <b>Italian:</b><br> &nbsp;&nbsp;Ghiandaia eurasiatica<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;kakesu<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;カケス<br>
+
+    <b>Dutch:</b><br> &nbsp;&nbsp;Vlaamse Gaai<br>
+
+    <b>Norwegian:</b><br> &nbsp;&nbsp;Nøtteskrike<br>
+
+    <b>Polish:</b><br> &nbsp;&nbsp;sójka<br>
+
+    <b>Portuguese:</b><br> &nbsp;&nbsp;Gaio-comum<br>
+
+    <b>Slovak:</b><br> &nbsp;&nbsp;sojka obyčajná<br>
+
+    <b>Swedish:</b><br> &nbsp;&nbsp;Nötskrika<br>
+
+    <b>Chinese:</b><br> &nbsp;&nbsp;松鸦<br>
+</p>
+    </td></tr></table>
+
+<hr noshade width="80%" size=1 align=center color="#E0E0E0">
+
+   <span class="AVBContainerText">
+  
+     <P><b>Authorities recognizing this taxonomic concept:</b></P>
+
+       <b>African Bird Club Checklist 2004:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>African Bird Club Checklist August 2005:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>African Bird Club Checklist March 2007:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>African Bird Club Checklist January 2008:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>African Bird Club Checklist May 2009:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>African Bird Club Checklist March 2010:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Birdlife checklist version 00:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Birdlife checklist version 01:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Birdlife checklist version 02:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Birdlife checklist version 03:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Birdlife checklist version 04:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition, incl. Jan 2009 suppl.):</b><br>&nbsp;&nbsp;&nbsp;Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Commission internationale pour les noms français des oiseaux (1993, révision 2009):</b><br>&nbsp;&nbsp;&nbsp;Geai des chênes ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Commission internationale pour les noms français des oiseaux (1993):</b><br>&nbsp;&nbsp;&nbsp;Geai des chênes ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 1st edition:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 3rd edition:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 4th edition:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 5th edition (as published):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 5th edition (incl. 2000 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 5th edition (incl. 2001 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 5th edition (incl. 2002 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 5th edition (incl. 2003 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 5th edition (incl. 2004 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 5th edition (incl. 2005 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 6th edition:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 6th edition (incl. 2007 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 6th edition (incl. 2008 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 6th edition (incl. 2009 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 6th edition (version 6.5 incl. 2010 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Clements 6th edition (version 6.6 incl. 2011 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>eBird version 1.50:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>eBird version 1.52:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Howard and Moore 2nd edition:</b><br>&nbsp;&nbsp;&nbsp;Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Howard and Moore 2nd edition (incl. ? suppl):</b><br>&nbsp;&nbsp;&nbsp;Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Howard and Moore 3rd edition (as published):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 1.2):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 2.1):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 3.1):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 4):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 5):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 6):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 7):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 8):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Handbook of the Birds of the World (vol 1-15):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 1.0:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 1.1:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 1.5:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 1.6:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 1.7:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 2.0:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 2.1:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 2.2:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 2.3:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 2.4:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 2.5:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 2.6:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 2.7:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 2.8:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 2.9:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>IOC World Bird Names, version 2.10:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Morony, Bock and Farrand:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Oriental Bird Club:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>James Lee Peters:</b><br>&nbsp;&nbsp;&nbsp; <I>Garrulus glandarius</I><br>
+
+       <b>Sibley and Monroe (1993):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Sibley and Monroe (1993, including corrections up to 1998):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Sibley and Monroe 2nd edition (1996):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Jay ( <I>Garrulus glandarius</I>)<br>
+
+       <b>Zoonomen - Zoological Nomenclature Resource:</b><br>&nbsp;&nbsp;&nbsp; <I>Garrulus glandarius</I><br>
+
+</span>
+
+    </td>
+    <td width="40%" valign=top align=left>
+<span class="AVBContainerText2">
+
+<P><table border=1 width="90%"><tr><td class="AVBContainerText2" style="border: 1pt; border-color: #D8D8BA;">
+
+  <P><b>Taxonomic status:</b><P><b>Species status:</b>
+
+  full species
+
+  
+
+</td></tr></table>
+
+
+
+
+<!-- related taxa -->
+
+<P><table width="90%"><tr><td class="AVBRelated">
+<font size="2">
+
+
+<center><b>Related taxa</b></center>
+
+&nbsp;
+* <b><b>Garrulus glandarius</b></b><big>&larr;</big><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('A1B58E61431636B3', 1)">Garrulus glandarius glandarius</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('82FADFAF2A6F42B2', 1)">Garrulus glandarius fasciatus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('EAF00C5C1ACEA837', 1)">Garrulus glandarius lusitanicus</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('B603765BC50F877D', 1)">Garrulus glandarius glandularis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('E2CE7F962F195D6E', 1)">Garrulus glandarius rufitergum</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('C65627D9E0774BE1', 1)">Garrulus glandarius corsicanus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('02D73DF5F4BD8FD1', 1)">Garrulus glandarius hibernicus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('A75C648D305AECD4', 1)">Garrulus glandarius graecus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('C93363910B61B35A', 1)">Garrulus glandarius cretorum</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('F1B31DD3DF3D97E9', 1)">Garrulus glandarius ferdinandi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('B11825070331808C', 1)">Garrulus glandarius krynicki</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('4D516A2BFBB4BA43', 1)">Garrulus glandarius hansguentheri</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('BE0F4ADF700D6001', 1)">Garrulus glandarius suianae</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('EC016B65B01FA884', 1)">Garrulus glandarius iphigenia</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('21F4A07870D9AE1C', 1)">Garrulus glandarius anatoliae</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('A12E37BB0D4F5AD6', 1)">Garrulus glandarius samios</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('AB0722FC2ECE3CA7', 1)">Garrulus glandarius atricapillus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('3DB2BE07AC51FDF8', 1)">Garrulus glandarius whitakeri</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('E57F5C6E6BEEB7E0', 1)">Garrulus glandarius minor</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('2DA85708E280DF76', 1)">Garrulus glandarius cervicalis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('06F94CD818FBA346', 1)">Garrulus glandarius glaszneri</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('6D4897375EC2C33C', 1)">Garrulus glandarius ichnusae</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('995049E47ED120F8', 1)">Garrulus glandarius hyrcanus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('22D174E55840C2F4', 1)">Garrulus glandarius brandtii</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('969FD380CE071116', 1)">Garrulus glandarius severzowi</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('2FA870E74E2FC7AF', 1)">Garrulus glandarius japonicus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('805641C65868F249', 1)">Garrulus glandarius bispecularis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('365E104E3744FF39', 1)">Garrulus glandarius leucotis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('607D043E569502AC', 1)">Garrulus glandarius hiugaensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('0DA414DA286AC192', 1)">Garrulus glandarius interstinctus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('CB0EE14C81701709', 1)">Garrulus glandarius azureitinctus</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('EE2FFB96A0CB882C', 1)">Garrulus glandarius kansuensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('0747F5CCBA242F17', 1)">Garrulus glandarius orii</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('5D9739E58BE4399E', 1)">Garrulus glandarius pekingensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('58C6C5AE01903A00', 1)">Garrulus glandarius tokugawae</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('8F911C525CAF6557', 1)">Garrulus glandarius rhodius</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('7E7F0A3F1E5CC8F1', 1)">Garrulus glandarius albipectus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('1731B3ED2CF2C506', 1)">Garrulus glandarius jordansi</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('729856FA65526DF3', 1)">Garrulus glandarius sinensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('3306FC3AAFEE6C8D', 1)">Garrulus glandarius severtzowi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('7FD4203ABF4FF20B', 1)">Garrulus glandarius bambergi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('9ED207659C116442', 1)">Garrulus glandarius oatesi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('7DE6EAB0AE9CFA3E', 1)">Garrulus glandarius persaturatus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('5E84CEBB39DD74E8', 1)">Garrulus glandarius namiyei</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('EFB307286B7E8B07', 1)">Garrulus glandarius taivanus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('3137E02B5187F227', 1)">Garrulus glandarius haringtoni</a><br>
+
+</font><br>
+</td></tr></table>
+
+    <table width="90%"><tr><td class="AVBSynonyms">
+    <font size="2"><center><b>Other synonyms</b></center>
+<br><b>Arabic: </b>القيق(أبو زريق)<br><b>Asturian: </b>Glayu<br><b>Azerbaijani: </b>Çəhrayı sığırçın, Zığzığ<br><b>Belarusian: </b>sojka, сойка<br><b>Bulgarian: </b>sojka, Сойка<br><b>Breton: </b>Ar gegin derv, kegin, Richard<br><b>Catalan: </b>Estornell rosat, Gaig<br><b>Catalan (Balears): </b>Gaig<br><b>Valencian: </b>Estornell rosat<br><b>Czech: </b>sojka, Sojka obecná, Sojka obecný<br><b>Welsh: </b>Pioden y coed, Piogen goch, Piogen-y-coed, sgrech y coed, Ysgrech y coed<br><b>Danish: </b>Skovskade<br><b>German: </b>Eichelhaeher, Eichelhäher<br><b>Greek: </b>(Ευρωπαϊκή) Κίσσα, kissa, Κίσσα<br><b>English: </b>Acorn Jay, Black-throated jay, Common Jay, Eurasian Jay, European Jay, Jay, Red-crowned Jay, White-eared Jay<br><b>Esperanto: </b>garolo<br><b>Spanish: </b>Alcaudón enmascarado, Arrandejo Común, Arrandejo сomún, Arredajo, Arrendajo, Arrendajo Común, Arrendajo Euroasiático, Arrrendajo<br><b>Estonian: </b>Pasknäär<br><b>Basque: </b>eskinoso, Eskinosoa, Gaig<br><b>Finnish: </b>Närhi<br><b>Faroese: </b>gnelliskjóra<br><b>French: </b>Geai commune, Geai des chênes, Geai glandivore<br><b>Friulian: </b>badascule, gjaie<br><b>Frisian: </b>houtekster<br><b>Irish: </b>gaio, pega marza, scréachóg, Scréachóg choille<br><b>Gaelic: </b>Sgraicheag, Sgriachag Choille<br><b>Galician: </b>Gaig, Gaio<br><b>Manx: </b>Screeaaghag Cheylley, screeaghag cheylley<br><b>Hebrew: </b>עורבני, עורבני שחור־כיפה<br><b>Croatian: </b>Šojka, Šojka kreštalica<br><b>Hungarian: </b>Szajkó<br><b>Armenian: </b>[Chard/Antarayin Kachaghak ], Անտառային Կաչաղակ, Չարդ/Անտառային Կաչաղակ<br><b>Icelandic: </b>Skrækskaði<br><b>Italian: </b>Ghiandaia, Ghiandaia eurasiatica<br><b>Japanese: </b>kakesu, Kake-su, kashi-dori, yama-garasu<br><b>Japanese: </b>カケス, カシドリ, ヤマガラス<br><b>Georgian: </b>ჩხიკვი, ჯაფარა<br><b>Khakas: </b>Кöйiк саасхан<br><b>Kazakh: </b>Жорғаторғай, Қызғылт қараторғай<br><b>Korean: </b>어치<br><b>Cornish: </b>kegin, Kegyn<br><b>Latin: </b>Garrulus glandarius, Garrulus glandarius glandarius<br><b>Ladino: </b>gacia<br><b>Lithuanian: </b>Kėkétas, kekštas, kėkštas, Rąšis<br><b>Latvian: </b>Krēķis, silis, sīlis<br><b>Macedonian: </b>sojka, соjка, Сојка<br><b>Mongolian: </b>Ятга шаазгай<br><b>Maltese: </b>sultan iċ-ċawl<br><b>Dutch: </b>Gaai, Vlaamse Gaai<br><b>Norwegian: </b>Granskjur, Nøtteskrike<br><b>Occitan: </b>gag<br><b>Polish: </b>sójka, sójka (zwyczajna), Sójka pospolita, Sójka zwyczajna<br><b>Portuguese: </b>gaio, Gaio-comum<br><b>Romansh: </b>sgragia<br><b>Romanian: </b>gaita, gaiţă<br><b>Russian: </b>sojka, Soyka, Обыкновенная сойка, Сойка, Сойка обыкновенная<br><b>Sardinian: </b>malapiga, Marabiga, mariabiga, melapica, pica, piga<br><b>Scots: </b>Scriachag choille, Sgraicheag, sgreuchag-choille<br><b>Northern Sami: </b>látteguovssat<br><b>Slovak: </b>Šoja, Sojka obyčajná, sojka škriekavá<br><b>Slovenian: </b>šoja<br><b>Albanian: </b>grifsha<br><b>Serbian: </b>Kreja, kreja (sojka), šojka, креjа, Креја, шоjка<br><b>Swedish: </b>Nötskrika<br><b>Thai: </b>นกปีกลายสก๊อต, นกปีกลายสก๊อท<br><b>Turkmen: </b>Al sar, alakarga<br><b>Turkish: </b>Alakarga, Kestane Kargası<br><b>Tuvinian: </b>Айлаң-сааскан, Хор-айлаг<br><b>Ukrainian: </b>sojka, сойка<br><b>Vietnamese: </b>Quạ thông<br><b>Sorbian, Lower: </b>kabeja<br><b>Sorbian, Upper: </b>škrěkawa<br><b>Chinese: </b>[jiang-niao], [saigao], [shan heshang], [song-ya], [wu-niao], 塞皋, 屋鸟, 山和尚, 松鴉, 松鴉(橿鳥) , 松鸦, 橿鸟<br><b>Chinese (Taiwan): </b>[song-ya], 松鴉
+  </font>
+  </td></tr></table></P>
+
+</span>
+</td></tr>
+<tr><td colspan="3">
+<P><small><!-- avb.bow2Descr --></small></P>
+<P>
+  </td>
+  </tr>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=3>
+<P>&nbsp;</P>
+<center>
+<a href="http://www.bsc-eoc.org/bscmain.html" target="_blank"><img src="BSClogo3.gif" alt="" title="Avibase is hosted by Bird Studies Canada" border=0></a> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.birdlife.org" target="_blank"><img src="/links/images/bl_logo.gif" alt="" title="Bird Studies Canada is the canadian co-partner of Birdlife International" border=0></a>
+</center><br>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=2 valign="bottom">
+<center><P><small>Avibase has been visited <b>104,636,986</b> times since 24 June 2003. &copy; Denis Lepage |
+<a href="privacy.jsp">Privacy policy</a><br>
+<small><!-- Translation of this page in English provided by --></small></small></P></center>
+
+<center><a href="http://www.birdingtop500.com/cgi-bin/topsite/topsite.cgi?user=dlepage"><img src="http://www.birdingtop500.com/cgi-bin/topsite/counter.cgi?user=dlepage" border=0></a>
+</center>
+</td></tr></table>
+
+</td></tr></table>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12387576-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+
+

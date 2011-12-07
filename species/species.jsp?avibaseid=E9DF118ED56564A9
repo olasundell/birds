@@ -1,0 +1,720 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Pelagodroma marina - Avibase</title>
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Description" content="Avibase is an extensive database information system about all birds of the world, containing over 5 million records about 10,000 species and 22,000 subspecies of birds, including distribution information, taxonomy, synonyms in several languages and more.">
+<meta name="KeyWords" content="bird, birds, birding, birder, birders, birdwatching, birdwatcher, birdwatchers, links, birdlink, birdlinks, ornithology, checklist, checklists, world, oiseau, oiseaux, aves, subspecies, family, taxonomy">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Language" content="en">
+
+<style type="text/css">@import url("avibase.css");</style>
+
+<script type="text/javascript" src="js/bsn.AutoSuggest_2.1.3_avibase.js" charset="utf-8"></script>
+<link rel="stylesheet" href="css/autosuggest_inquisitor.css" type="text/css" media="screen" charset="utf-8" />
+
+<SCRIPT language="JavaScript">
+function changepg(pg, lang, id, ts) {
+  self.document.location = 'avibase.jsp?pg=' + pg + (lang != ''?'&lang='+lang:'') + (id != null?'&id=' + id:'') + (ts != null?'&ts=' + ts:'');
+}
+</SCRIPT>
+<!-- SCRIPT language="JavaScript" src="avibase.js"></script -->
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="jquery.ui.draggable.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.alerts.js" type="text/javascript"></script>
+<link href="jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link rel="search" type="application/opensearchdescription+xml" title="Avibase" href="opensearchplugin.xml">
+
+</head>
+<body>
+
+
+<table border=0 bgcolor="#000078" cellpadding=0 cellspacing=0 width=1024 align=center>
+<tr>
+<td width="400" colspan=2><img src="avibase.gif" align="top" height="84"></td>
+<td align="right" width="580">
+<a target="photos" href="http://www.flickr.com/photos/faisca/165781334/in/set-742885/"><img src="images/ph2297.jpg" align="top" border=0 height="65" alt="" title="Common Kestrel, Portugal, Faisca"></a><a target="photos" href="http://www.stanford.edu/~cagan/photography.html"><img src="images/ph629.jpg" align="top" border=0 height="65" alt="" title="Mourning Warbler (male), Costa Rica, Cagan Sekercioglu"></a><a target="photos" href="http://www.stanford.edu/~cagan/photography.html"><img src="images/ph627.jpg" align="top" border=0 height="65" alt="" title="Long-billed Starthroat (male), Costa Rica, Cagan Sekercioglu"></a><a target="photos" href="http://www.digimages.info"><img src="images/ph767.jpg" align="top" border=0 height="65" alt="" title="Western Grey Plantain-eater, Senegal, Alain Fossé"></a><a target="photos" href="http://www.flickr.com/photos/faisca/16747065/in/set-250198/"><img src="images/ph2610.jpg" align="top" border=0 height="65" alt="" title="YELLOW WAGTAIL, Portugal, Faisca"></a><a target="photos" href="http://www.seitre.com"><img src="images/ph1227.jpg" align="top" border=0 height="65" alt="" title="Double-wattled cassowary, Australia, Roland Seitre"></a><a target="photos" href="http://www.daniscoping.com"><img src="images/ph553.jpg" align="top" border=0 height="65" alt="" title="White Wagtail, Spain, Dani L Huertas"></a>
+<br><b><font color="#FFFFFF" size="1" face="Geneva,Arial,Helvetica">Bird checklists - taxonomy - distribution - maps - links</font></font></b></td></tr>
+</table><table border=0 width=1024 align=center>
+<tr valign=top><td rowspan=2 width=125 class="AVBbar" bgcolor="#336699"> <!-- #000078 -->
+
+<script>
+function makepale(d) {
+  d.style.backgroundColor = '#226CB7';
+}
+function makenormal(d) {
+  d.style.backgroundColor = '#024C97';
+}
+</SCRIPT>
+
+
+<p>&nbsp;<br>
+<div id="div1" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('home','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=home" class="AVBlinks2"><font color="#F0F0F0">Home</font></a>
+</div>
+<br>
+<div id="div2" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('checklist','EN');">
+&nbsp;&nbsp;<a href="checklist.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Checklists</font></a>
+</div>
+<br>
+<div id="div3" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('search','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=search" class="AVBlinks2"><font color="#F0F0F0">Search</font></a>
+</div>
+<br>
+<div id="div4" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('families','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=families" class="AVBlinks2"><font color="#F0F0F0">Families</font></a>
+</div>
+<br>
+<div id="div9" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='compare.jsp';">
+&nbsp;&nbsp;<a href="compare.jsp" class="AVBlinks2"><font color="#F0F0F0">Compare lists</font></a>
+</div>
+<br>
+<div id="div10" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='rangemaps.jsp';">
+&nbsp;&nbsp;<a href="rangemaps.jsp" class="AVBlinks2"><font color="#F0F0F0">Range maps</font></a>
+</div>
+<br>
+<div id="div5" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp';">
+&nbsp;&nbsp;<a href="/links/links.jsp" class="AVBlinks2"><font color="#F0F0F0">Birdlinks</font></a>
+</div>
+<br>
+<div id="div6" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp?page=g_reports';">
+&nbsp;&nbsp;<a href="/links/links.jsp?page=g_reports" class="AVBlinks2"><font color="#F0F0F0">Trip reports</font></a>
+</div>
+<br>
+<div id="div7" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('webservice','EN');">
+&nbsp;&nbsp;<a href="webservice.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Web Service</font></a>
+</div>
+<br>
+<div id="div8" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('contrib','EN');">
+&nbsp;&nbsp;<a href="contrib.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Contribute</font></a>
+</div>
+<P>
+<div>
+<form action="avibase.jsp" name='avbsmall' style="position: relative;">
+<input type="hidden" name="pg" value="search">
+<input type="hidden" name="ts" value="1323205873156">
+
+<font face="Geneva,Arial,Helvetica" size=1 color=white>
+Quick search: <input id="searchboxsm" name="qstr" type="text" size="14" style="font-size: 9pt">
+</form>
+</div>
+</p>
+</font>
+
+<script type="text/javascript">
+	var options_xml = {
+		script: function (input) { return "suggest3.jsp?qstr="+input; },
+		varname:"input",
+		minchars:3,
+		timeout:5000,
+		noresults: "No name matching",
+		maxresults:10
+
+	};
+	var as_xml = new bsn.AutoSuggest('searchboxsm', options_xml);
+</script>
+
+<P><b><font color="#FFFFFF">Avibase is also available in the following languages:</font></b><br>
+<table border=0 style="font-family: Geneva,Arial,Helvetica; font-size: 8pt;">
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-en.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=E9DF118ED56564A9">English</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-es.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=E9DF118ED56564A9">Spanish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-fr.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=E9DF118ED56564A9">French</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-de.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=E9DF118ED56564A9">German</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-hu.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=E9DF118ED56564A9">Hungarian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-id.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=E9DF118ED56564A9">Indonesian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-it.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=E9DF118ED56564A9">Italian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-nl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=E9DF118ED56564A9">Dutch</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-pt.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=E9DF118ED56564A9">Portuguese</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-sv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=E9DF118ED56564A9">Swedish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-ca.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=E9DF118ED56564A9">Catalan</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-is.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=E9DF118ED56564A9">Icelandic</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-af.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=E9DF118ED56564A9">Afrikaans</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-ia.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=E9DF118ED56564A9">Interlingua</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-pl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=E9DF118ED56564A9">Polish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-uk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=E9DF118ED56564A9">Ukrainian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-cs.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=E9DF118ED56564A9">Czech</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-sk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=E9DF118ED56564A9">Slovak</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-ru.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=E9DF118ED56564A9">Russian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-fi.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=E9DF118ED56564A9">Finnish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=E9DF118ED56564A9"><img src="flags/lang2-lv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=E9DF118ED56564A9">Latvian</a></td></tr>
+
+</table>
+</P>
+<p>Google translations:<br>
+<select name="lgg" style="font-size: 9pt; max-width: 100px; clientWidth: 100px;" onChange="googleTrans(this)">
+<option value=""></option>
+<option value="AR" >Arabic</option><option value="AZ" >Azerbaijani</option><option value="BG" >Bulgarian</option><option value="BE" >Belarusian</option><option value="CY" >Welsh</option><option value="DA" >Danish</option><option value="EL" >Greek</option><option value="ET" >Estonian</option><option value="EU" >Basque</option><option value="FA" >Persian</option><option value="FIL" >Filipino</option><option value="GA" >Irish</option><option value="GL" >Galician</option><option value="HATX" >Haitian Creole French</option><option value="HE" >Hebrew</option><option value="HI" >Hindi</option><option value="HR" >Croatian</option><option value="HY" >Armenian</option><option value="JP" >Japanese</option><option value="KA" >Georgian</option><option value="KO" >Korean</option><option value="LT" >Lithuanian</option><option value="MK" >Macedonian</option><option value="MS" >Malay</option><option value="MT" >Maltese</option><option value="NO" >Norwegian</option><option value="RO" >Romanian</option><option value="RU" >Russian</option><option value="SL" >Slovenian</option><option value="SQ" >Albanian</option><option value="SR" >Serbian</option><option value="SW" >Swahili</option><option value="TH" >Thai</option><option value="TR" >Turkish</option><option value="UR" >Urdu</option><option value="VI" >Vietnamese</option><option value="YI" >Yiddish</option><option value="ZH" >Chinese</option>
+</select></p>
+
+<p><a href="translate.jsp?lang=EN" class="AVBlink">Contribute a better translation</a></p>
+
+<script>
+function googleTrans(s) {
+  if (s.options[s.selectedIndex].value == '') return;
+  var url = 'species.jsp?lang=' + s.options[s.selectedIndex].value + '&avibaseid=E9DF118ED56564A9';
+  document.location = url;
+}
+</script>
+
+
+
+</td>
+<td colspan=2 style="padding: 15px">
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+
+  $('#loginbox').toggle();
+
+  $("#loginlnk").click(function(){
+     $('#loginbox').slideToggle('fast');
+  });
+
+
+  $('#credlogin').toggle();
+
+
+});
+
+</script>
+
+
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr>
+<td width="100%" class="AVBHeader" colspan="3">
+White-faced Storm-Petrel (<I>Pelagodroma marina</I>) (Latham, 1790)</td>
+</tr>
+<tr>
+<td width="100%" class="AVBSubHeader" colspan="3" align=center>
+<SCRIPT language="JavaScript">
+function changesection(s) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=E9DF118ED56564A9&sec=' + s;
+}
+function changespecies(t,v) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=' + t + '&sec=summary' + (v?'&ssver=' + v:'');
+}
+
+
+</SCRIPT>
+<a href="javascript:changesection('summary')">summary</a>&nbsp;&nbsp;
+<a href="javascript:changesection('taxontable')">taxon grid</a>&nbsp;&nbsp;
+<a href="javascript:changesection('map')">map</a>&nbsp;&nbsp;
+<a href="javascript:changesection('ebird')">eBird</a>&nbsp;&nbsp;
+<a href="javascript:changesection('wiki')">Wikipedia</a>&nbsp;&nbsp;
+<a href="javascript:changesection('natureserve')">NatureServe</a>&nbsp;&nbsp;
+Google: <a href="javascript:changesection('google')">Web/images</a>|<a href="javascript:changesection('scholar')">Scholar</a>&nbsp;&nbsp;
+<a href="javascript:changesection('itis')">ITIS</a>&nbsp;&nbsp;
+<a href="javascript:changesection('birdlife')">Birdlife</a>&nbsp;&nbsp;
+&nbsp;&nbsp;<img align="bottom" src="camera_icon1.gif"> <!-- tx[36] --><a href="javascript:changesection('flickr')">Flickr</a>
+&nbsp;&nbsp;<img align="bottom" src="sound_icon1.gif"> <!-- tx[143] --><a href="javascript:changesection('xenocanto')">Xeno-Canto</a>
+
+<hr noshade width="100%" size=1 align=center color="#F0F0F0">
+
+</td>
+</tr>
+</table>
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr><td>
+
+
+
+  <tr>
+    <td class="AVBContainerText" width="60%" valign="top">
+    
+
+    <table border=0 align=center width=95%><tr valign=top><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+    <script src="flickr_votes.js"></script>
+
+
+    <table height=250 class='flickr'>
+<tr valign='top'><td bgcolor='#F0F0F0' width=250><span id="flickr1"><br><a target="_blank" href="http://www.flickr.com/photos/owengpz/4365202052/"><img border=0 src="http://farm5.static.flickr.com/4008/4365202052_5938b45279_m.jpg"></a><br><span class='credit'>photo &copy;Owen65</span><br><center><a href="javascript:report(1, 344053)"><img id="report1" src="button2.gif" title="Report as inappropriate" border=0></a><a href="javascript:voteimg(1, 344053, 1)"><img id="vote1.1" src="vote0.gif" border=0 title="Vote = 1"></a><a href="javascript:voteimg(1, 344053, 2)"><img id="vote1.2" src="vote0.gif" border=0 title="Vote = 2"></a><a href="javascript:voteimg(1, 344053, 3)"><img id="vote1.3" src="vote0.gif" border=0 title="Vote = 3"></a><a href="javascript:voteimg(1, 344053, 4)"><img id="vote1.4" src="vote0.gif" border=0 title="Vote = 4"></a><a href="javascript:voteimg(1, 344053, 5)"><img id="vote1.5" src="vote0.gif" border=0 title="Vote = 5"></a><a href="javascript:nextimg(1, 'Pelagodroma marina')"><img src="button1.gif" title="Change photo" border=0></a></center></span></td></tr>
+</table>
+
+    <span style="color: #606060; font-size: 7pt">Photo powered by <a href="http://flickr.com" target="_blank">flickr.com</a>.</span></p>
+
+
+
+    <p>
+    <b>Order:</b><br> &nbsp;&nbsp;Procellariiformes<br>
+    <b>Family:</b><br> &nbsp;&nbsp;Hydrobatidae<br>
+    <P>
+
+    <b>English:</b><br> &nbsp;&nbsp;White-faced Storm-Petrel<br>
+    <b>Scientific:</b><br> &nbsp;&nbsp;<i>Pelagodroma marina</i><br>
+    </p>
+    <p><b>Protonym:</b><br> &nbsp;&nbsp;<i>Procellaria marina</i><br>
+    </p>
+    <p><b>Avibase ID:</b><br> &nbsp;&nbsp;E9DF118ED56564A9<br>
+    <p><b>Taxomic Serial Number:</b><br>
+    TSN: <a target="_blank" href="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=174621">174621</a>
+
+    </p>
+
+    </td><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+
+    <b>Czech:</b><br> &nbsp;&nbsp;buřňáček běločelý<br>
+
+    <b>German:</b><br> &nbsp;&nbsp;Weißgesicht-Sturmschwalbe<br>
+
+    <b>Danish:</b><br> &nbsp;&nbsp;Fregatstormsvale<br>
+
+    <b>Spanish:</b><br> &nbsp;&nbsp;Paíño Pechialbo<br>
+
+    <b>Finnish:</b><br> &nbsp;&nbsp;ulappakeiju<br>
+
+    <b>French:</b><br> &nbsp;&nbsp;Océanite frégate<br>
+
+    <b>Icelandic:</b><br> &nbsp;&nbsp;Njarðarsvala<br>
+
+    <b>Italian:</b><br> &nbsp;&nbsp;Uccello delle tempeste fregata<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;kaoashinagaumitsubame<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;カオジロウミツバメ<br>
+
+    <b>Dutch:</b><br> &nbsp;&nbsp;Bont Stormvogeltje<br>
+
+    <b>Norwegian:</b><br> &nbsp;&nbsp;Fregattstormsvale<br>
+
+    <b>Polish:</b><br> &nbsp;&nbsp;oceannik bialobrewy<br>
+
+    <b>Portuguese:</b><br> &nbsp;&nbsp;Painho-de-ventre-branco<br>
+
+    <b>Portuguese (Brazil):</b><br> &nbsp;&nbsp;Painho-de-ventre-branco<br>
+
+    <b>Slovak:</b><br> &nbsp;&nbsp;búrkozvest morský<br>
+
+    <b>Swedish:</b><br> &nbsp;&nbsp;Fregattstormsvala<br>
+
+    <b>Chinese:</b><br> &nbsp;&nbsp;白脸海燕<br>
+</p>
+    </td></tr></table>
+
+<hr noshade width="80%" size=1 align=center color="#E0E0E0">
+
+   <span class="AVBContainerText">
+  
+     <P><b>Authorities recognizing this taxonomic concept:</b></P>
+
+       <b>African Bird Club Checklist 2004:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>African Bird Club Checklist August 2005:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>African Bird Club Checklist March 2007:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>African Bird Club Checklist January 2008:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>African Bird Club Checklist May 2009:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>African Bird Club Checklist March 2010:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (1886):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 1st suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 2nd suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 3rd suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 4th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 5th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 6th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 7th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (1895):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 8th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 9th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 10th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 11th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 12th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 13th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 14th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 15th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 3rd edition (1910):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 3rd edition (incl. 16th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 3rd edition (incl. 17th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 3rd edition (incl. 18th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (1931):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 19th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 20th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 21th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 22th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 23th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 24th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 25th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 26th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 27th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 28th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 29th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 30th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 31th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (1957):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (incl. 32nd suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (incl. 33th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (incl. 34th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (1983):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 35th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 36th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 37th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 38th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 39th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 40th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 41st suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (1998):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 42th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 43th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 44th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 45th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 46th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 47th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 48th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 49th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 50th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 51th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 52th suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Birdlife checklist version 00:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Birdlife checklist version 01:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Birdlife checklist version 02:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Birdlife checklist version 03:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Birdlife checklist version 04:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition, incl. Jan 2009 suppl.):</b><br>&nbsp;&nbsp;&nbsp;White-faced Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Christidis and Boles (2008): Systematics and Taxonomy of Australian Birds:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Commission internationale pour les noms français des oiseaux (1993, révision 2009):</b><br>&nbsp;&nbsp;&nbsp;Océanite frégate ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Commission internationale pour les noms français des oiseaux (1993):</b><br>&nbsp;&nbsp;&nbsp;Océanite frégate ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 1st edition:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 3rd edition:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 4th edition:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 5th edition (as published):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 5th edition (incl. 2000 revisions):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 5th edition (incl. 2001 revisions):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 5th edition (incl. 2002 revisions):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 5th edition (incl. 2003 revisions):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 5th edition (incl. 2004 revisions):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 5th edition (incl. 2005 revisions):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 6th edition:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 6th edition (incl. 2007 revisions):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 6th edition (incl. 2008 revisions):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 6th edition (incl. 2009 revisions):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 6th edition (version 6.5 incl. 2010 revisions):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Clements 6th edition (version 6.6 incl. 2011 revisions):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>eBird version 1.50:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>eBird version 1.52:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Howard and Moore 2nd edition:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Howard and Moore 2nd edition (incl. ? suppl):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Howard and Moore 3rd edition (as published):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 1.2):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 2.1):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 3.1):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 4):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 5):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 6):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 7):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 8):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Handbook of the Birds of the World (vol 1-15):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 1.0:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 1.1:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 1.5:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 1.6:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 1.7:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 2.0:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 2.1:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 2.2:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 2.3:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 2.4:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 2.5:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 2.6:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 2.7:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 2.8:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 2.9:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>IOC World Bird Names, version 2.10:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Morony, Bock and Farrand:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Oriental Bird Club:</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>James Lee Peters:</b><br>&nbsp;&nbsp;&nbsp; <I>Pelagodroma marina</I><br>
+
+       <b>Sibley and Monroe (1993):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Sibley and Monroe (1993, including corrections up to 1998):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Sibley and Monroe 2nd edition (1996):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>South American Classification Committee (24/10/2003):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>South American Classification Committee (14/09/2005):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>South American Classification Committee (16/07/2006):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>South American Classification Committee (26/09/2007):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>South American Classification Committee (01/05/2008):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>South American Classification Committee (30/09/2009):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>South American Classification Committee (19/08/2010):</b><br>&nbsp;&nbsp;&nbsp;White-faced Storm-Petrel ( <I>Pelagodroma marina</I>)<br>
+
+       <b>Zoonomen - Zoological Nomenclature Resource:</b><br>&nbsp;&nbsp;&nbsp; <I>Pelagodroma marina</I><br>
+
+</span>
+
+    </td>
+    <td width="40%" valign=top align=left>
+<span class="AVBContainerText2">
+
+<P><table border=1 width="90%"><tr><td class="AVBContainerText2" style="border: 1pt; border-color: #D8D8BA;">
+
+  <P><b>Taxonomic status:</b><P><b>Species status:</b>
+
+  full species
+
+  
+
+</td></tr></table>
+
+
+
+
+<!-- related taxa -->
+
+<P><table width="90%"><tr><td class="AVBRelated">
+<font size="2">
+
+
+<center><b>Related taxa</b></center>
+
+&nbsp;
+* <b><b>Pelagodroma marina</b></b><big>&larr;</big><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('58FFB6EDB402F699', 1)">Pelagodroma marina marina</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('9F721AE9D3BD0D33', 1)">Pelagodroma marina hypoleuca</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('35B916C36FD73128', 1)">Pelagodroma marina eadesi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('923CB788C693EF36', 1)">Pelagodroma marina dulciae</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('184137188276BFCB', 1)">Pelagodroma marina maoriana</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('B4EB9F11112AAD0A', 1)">Pelagodroma marina albiclunis</a><br>
+
+</font><br>
+</td></tr></table>
+
+    <table width="90%"><tr><td class="AVBSynonyms">
+    <font size="2"><center><b>Other synonyms</b></center>
+<br><b>Afrikaans: </b>Witgesigstormswael, Witwangstormswael<br><b>Catalan: </b>Petrell carablanc<br><b>Czech: </b>Burnácek belocelý, buřňáček běločelý<br><b>Danish: </b>Fregatstormsvale<br><b>German: </b>Fregattensturmschwalbe, Fregatten-Sturmschwalbe, Weißgesichts-Sturmschwalbe, Weißgesicht-Sturmschwalbe<br><b>English: </b>Frigate Petrel, White-breasted Storm-Petrel, White-faced Petrel, Whitefaced Storm Petrel, White-faced Storm Petrel, White-faced Storm-Petrel<br><b>Spanish: </b>Golondrina de mar de ceja blanca, Paiño cara blanca, Paíño cara blanca, Paíño de Pecho Blanco, Paiño Pechialbo, Paíño Pechialbo, Petrel de las Tormentas Cara Blanca<br><b>Spanish (Argentine): </b>Paiño cara blanca, Paíño cara blanca<br><b>Spanish (Chile): </b>Golondrina de mar de ceja blanca<br><b>Spanish (Costa Rica): </b>Paiño Pechialbo<br><b>Spanish (Uruguay): </b>Petrel de las Tormentas Cara Blanca<br><b>Estonian: </b>valgekulm-tormipääsu<br><b>Basque: </b>Petrell carablanc<br><b>Finnish: </b>Ulappakeiju<br><b>French: </b>Océanite frégate, Pétrel à face blanche, Pétrel frégate<br><b>Galician: </b>Calcamar, Petrell carablanc<br><b>Hebrew: </b>יסעורון פריגטה<br><b>Indonesian: </b>Petrelbadai Muka-putih<br><b>Icelandic: </b>Njarðarsvala<br><b>Italian: </b>Uccello delle tempeste facciabianca, Uccello delle tempeste fregata, Ucello delle tempeste fregata<br><b>Japanese: </b>kaoashinagaumitsubame, kaojiroumitsubame<br><b>Japanese: </b>カオアシナガウミツバメ, カオジロウミツバメ<br><b>Latin: </b>Pelagodroma marina<br><b>Lithuanian: </b>Vėjokregždė<br><b>Maori: </b>Takahi-kare-moana<br><b>Dutch: </b>Bont Stormvogeltje<br><b>Norwegian: </b>Fregattstormsvale<br><b>Polish: </b>nawalnik bialobrewy, oceannik bialobrewy, oceannik białobrewy<br><b>Portuguese: </b>Calca-mar, Painho-de-ventre-branco<br><b>Portuguese (Brazil): </b>Painho-de-ventre-branco<br><b>Russian: </b>Белоголовая Качурка, Белолицая качурка<br><b>Slovak: </b>búrkozvest morský <br><b>Slovenian: </b>progastoglavi strakoš<br><b>Swedish: </b>Fregattstormsvala<br><b>Turkish: </b>ak yüzlü firtina kirlangici, ak yüzlüfırtınakırlangıcı, Ak-yüzlü Fırtınakırlangıcı<br><b>Chinese: </b>白脸海燕
+  </font>
+  </td></tr></table></P>
+
+</span>
+</td></tr>
+<tr><td colspan="3">
+<P><small><!-- avb.bow2Descr --></small></P>
+<P>
+  </td>
+  </tr>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=3>
+<P>&nbsp;</P>
+<center>
+<a href="http://www.bsc-eoc.org/bscmain.html" target="_blank"><img src="BSClogo3.gif" alt="" title="Avibase is hosted by Bird Studies Canada" border=0></a> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.birdlife.org" target="_blank"><img src="/links/images/bl_logo.gif" alt="" title="Bird Studies Canada is the canadian co-partner of Birdlife International" border=0></a>
+</center><br>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=2 valign="bottom">
+<center><P><small>Avibase has been visited <b>104,635,808</b> times since 24 June 2003. &copy; Denis Lepage |
+<a href="privacy.jsp">Privacy policy</a><br>
+<small><!-- Translation of this page in English provided by --></small></small></P></center>
+
+<center><a href="http://www.birdingtop500.com/cgi-bin/topsite/topsite.cgi?user=dlepage"><img src="http://www.birdingtop500.com/cgi-bin/topsite/counter.cgi?user=dlepage" border=0></a>
+</center>
+</td></tr></table>
+
+</td></tr></table>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12387576-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+
+

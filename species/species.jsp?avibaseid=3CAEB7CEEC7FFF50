@@ -1,0 +1,587 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Himantopus himantopus - Avibase</title>
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Description" content="Avibase is an extensive database information system about all birds of the world, containing over 5 million records about 10,000 species and 22,000 subspecies of birds, including distribution information, taxonomy, synonyms in several languages and more.">
+<meta name="KeyWords" content="bird, birds, birding, birder, birders, birdwatching, birdwatcher, birdwatchers, links, birdlink, birdlinks, ornithology, checklist, checklists, world, oiseau, oiseaux, aves, subspecies, family, taxonomy">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Language" content="en">
+
+<style type="text/css">@import url("avibase.css");</style>
+
+<script type="text/javascript" src="js/bsn.AutoSuggest_2.1.3_avibase.js" charset="utf-8"></script>
+<link rel="stylesheet" href="css/autosuggest_inquisitor.css" type="text/css" media="screen" charset="utf-8" />
+
+<SCRIPT language="JavaScript">
+function changepg(pg, lang, id, ts) {
+  self.document.location = 'avibase.jsp?pg=' + pg + (lang != ''?'&lang='+lang:'') + (id != null?'&id=' + id:'') + (ts != null?'&ts=' + ts:'');
+}
+</SCRIPT>
+<!-- SCRIPT language="JavaScript" src="avibase.js"></script -->
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="jquery.ui.draggable.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.alerts.js" type="text/javascript"></script>
+<link href="jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link rel="search" type="application/opensearchdescription+xml" title="Avibase" href="opensearchplugin.xml">
+
+</head>
+<body>
+
+
+<table border=0 bgcolor="#000078" cellpadding=0 cellspacing=0 width=1024 align=center>
+<tr>
+<td width="400" colspan=2><img src="avibase.gif" align="top" height="84"></td>
+<td align="right" width="580">
+<a target="photos" href="http://www.flickr.com/photos/faisca/143893654/in/set-250198/"><img src="images/ph2319.jpg" align="top" border=0 height="65" alt="" title="Lanius senator, Portugal, Faisca"></a><img src="images/ph417.jpg" align="top" border=0 height="65" alt="" title="Black Flycatcher, South Africa, Jan van den Broek"><a target="photos" href="http://www.daniscoping.com"><img src="images/ph453.jpg" align="top" border=0 height="65" alt="" title="Purple Swamp-Hen, Spain, Dani L Huertas"></a><img src="images/ph1764.jpg" align="top" border=0 height="65" alt="" title="Larus argentatus, Finland, Erkki Perämäki"><a target="photos" href="http://www.seitre.com"><img src="images/ph1229.jpg" align="top" border=0 height="65" alt="" title="Little whimbrel, Russia, Roland Seitre"></a><a target="photos" href="http://icarus.uic.edu/~lborgh2/"><img src="images/ph1824.jpg" align="top" border=0 height="65" alt="" title="Indicator variegatus, Kenya, Luca Borghesio"></a><a target="photos" href="http://www.flickr.com/photos/faisca/69843022/in/set-742885/"><img src="images/ph2292.jpg" align="top" border=0 height="65" alt="" title="Common Kestrel, Portugal, Faisca"></a>
+<br><b><font color="#FFFFFF" size="1" face="Geneva,Arial,Helvetica">Bird checklists - taxonomy - distribution - maps - links</font></font></b></td></tr>
+</table><table border=0 width=1024 align=center>
+<tr valign=top><td rowspan=2 width=125 class="AVBbar" bgcolor="#336699"> <!-- #000078 -->
+
+<script>
+function makepale(d) {
+  d.style.backgroundColor = '#226CB7';
+}
+function makenormal(d) {
+  d.style.backgroundColor = '#024C97';
+}
+</SCRIPT>
+
+
+<p>&nbsp;<br>
+<div id="div1" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('home','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=home" class="AVBlinks2"><font color="#F0F0F0">Home</font></a>
+</div>
+<br>
+<div id="div2" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('checklist','EN');">
+&nbsp;&nbsp;<a href="checklist.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Checklists</font></a>
+</div>
+<br>
+<div id="div3" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('search','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=search" class="AVBlinks2"><font color="#F0F0F0">Search</font></a>
+</div>
+<br>
+<div id="div4" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('families','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=families" class="AVBlinks2"><font color="#F0F0F0">Families</font></a>
+</div>
+<br>
+<div id="div9" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='compare.jsp';">
+&nbsp;&nbsp;<a href="compare.jsp" class="AVBlinks2"><font color="#F0F0F0">Compare lists</font></a>
+</div>
+<br>
+<div id="div10" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='rangemaps.jsp';">
+&nbsp;&nbsp;<a href="rangemaps.jsp" class="AVBlinks2"><font color="#F0F0F0">Range maps</font></a>
+</div>
+<br>
+<div id="div5" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp';">
+&nbsp;&nbsp;<a href="/links/links.jsp" class="AVBlinks2"><font color="#F0F0F0">Birdlinks</font></a>
+</div>
+<br>
+<div id="div6" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp?page=g_reports';">
+&nbsp;&nbsp;<a href="/links/links.jsp?page=g_reports" class="AVBlinks2"><font color="#F0F0F0">Trip reports</font></a>
+</div>
+<br>
+<div id="div7" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('webservice','EN');">
+&nbsp;&nbsp;<a href="webservice.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Web Service</font></a>
+</div>
+<br>
+<div id="div8" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('contrib','EN');">
+&nbsp;&nbsp;<a href="contrib.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Contribute</font></a>
+</div>
+<P>
+<div>
+<form action="avibase.jsp" name='avbsmall' style="position: relative;">
+<input type="hidden" name="pg" value="search">
+<input type="hidden" name="ts" value="1323206238125">
+
+<font face="Geneva,Arial,Helvetica" size=1 color=white>
+Quick search: <input id="searchboxsm" name="qstr" type="text" size="14" style="font-size: 9pt">
+</form>
+</div>
+</p>
+</font>
+
+<script type="text/javascript">
+	var options_xml = {
+		script: function (input) { return "suggest3.jsp?qstr="+input; },
+		varname:"input",
+		minchars:3,
+		timeout:5000,
+		noresults: "No name matching",
+		maxresults:10
+
+	};
+	var as_xml = new bsn.AutoSuggest('searchboxsm', options_xml);
+</script>
+
+<P><b><font color="#FFFFFF">Avibase is also available in the following languages:</font></b><br>
+<table border=0 style="font-family: Geneva,Arial,Helvetica; font-size: 8pt;">
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-en.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=3CAEB7CEEC7FFF50">English</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-es.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=3CAEB7CEEC7FFF50">Spanish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-fr.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=3CAEB7CEEC7FFF50">French</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-de.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=3CAEB7CEEC7FFF50">German</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-hu.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=3CAEB7CEEC7FFF50">Hungarian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-id.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=3CAEB7CEEC7FFF50">Indonesian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-it.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=3CAEB7CEEC7FFF50">Italian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-nl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=3CAEB7CEEC7FFF50">Dutch</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-pt.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=3CAEB7CEEC7FFF50">Portuguese</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-sv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=3CAEB7CEEC7FFF50">Swedish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-ca.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=3CAEB7CEEC7FFF50">Catalan</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-is.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=3CAEB7CEEC7FFF50">Icelandic</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-af.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=3CAEB7CEEC7FFF50">Afrikaans</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-ia.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=3CAEB7CEEC7FFF50">Interlingua</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-pl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=3CAEB7CEEC7FFF50">Polish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-uk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=3CAEB7CEEC7FFF50">Ukrainian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-cs.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=3CAEB7CEEC7FFF50">Czech</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-sk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=3CAEB7CEEC7FFF50">Slovak</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-ru.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=3CAEB7CEEC7FFF50">Russian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-fi.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=3CAEB7CEEC7FFF50">Finnish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=3CAEB7CEEC7FFF50"><img src="flags/lang2-lv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=3CAEB7CEEC7FFF50">Latvian</a></td></tr>
+
+</table>
+</P>
+<p>Google translations:<br>
+<select name="lgg" style="font-size: 9pt; max-width: 100px; clientWidth: 100px;" onChange="googleTrans(this)">
+<option value=""></option>
+<option value="AR" >Arabic</option><option value="AZ" >Azerbaijani</option><option value="BG" >Bulgarian</option><option value="BE" >Belarusian</option><option value="CY" >Welsh</option><option value="DA" >Danish</option><option value="EL" >Greek</option><option value="ET" >Estonian</option><option value="EU" >Basque</option><option value="FA" >Persian</option><option value="FIL" >Filipino</option><option value="GA" >Irish</option><option value="GL" >Galician</option><option value="HATX" >Haitian Creole French</option><option value="HE" >Hebrew</option><option value="HI" >Hindi</option><option value="HR" >Croatian</option><option value="HY" >Armenian</option><option value="JP" >Japanese</option><option value="KA" >Georgian</option><option value="KO" >Korean</option><option value="LT" >Lithuanian</option><option value="MK" >Macedonian</option><option value="MS" >Malay</option><option value="MT" >Maltese</option><option value="NO" >Norwegian</option><option value="RO" >Romanian</option><option value="RU" >Russian</option><option value="SL" >Slovenian</option><option value="SQ" >Albanian</option><option value="SR" >Serbian</option><option value="SW" >Swahili</option><option value="TH" >Thai</option><option value="TR" >Turkish</option><option value="UR" >Urdu</option><option value="VI" >Vietnamese</option><option value="YI" >Yiddish</option><option value="ZH" >Chinese</option>
+</select></p>
+
+<p><a href="translate.jsp?lang=EN" class="AVBlink">Contribute a better translation</a></p>
+
+<script>
+function googleTrans(s) {
+  if (s.options[s.selectedIndex].value == '') return;
+  var url = 'species.jsp?lang=' + s.options[s.selectedIndex].value + '&avibaseid=3CAEB7CEEC7FFF50';
+  document.location = url;
+}
+</script>
+
+
+
+</td>
+<td colspan=2 style="padding: 15px">
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+
+  $('#loginbox').toggle();
+
+  $("#loginlnk").click(function(){
+     $('#loginbox').slideToggle('fast');
+  });
+
+
+  $('#credlogin').toggle();
+
+
+});
+
+</script>
+
+
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr>
+<td width="100%" class="AVBHeader" colspan="3">
+Black-winged Stilt (<I>Himantopus himantopus</I>) (Linnaeus, 1758)</td>
+</tr>
+<tr>
+<td width="100%" class="AVBSubHeader" colspan="3" align=center>
+<SCRIPT language="JavaScript">
+function changesection(s) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=3CAEB7CEEC7FFF50&sec=' + s;
+}
+function changespecies(t,v) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=' + t + '&sec=summary' + (v?'&ssver=' + v:'');
+}
+
+
+</SCRIPT>
+<a href="javascript:changesection('summary')">summary</a>&nbsp;&nbsp;
+<a href="javascript:changesection('taxontable')">taxon grid</a>&nbsp;&nbsp;
+<a href="javascript:changesection('map')">map</a>&nbsp;&nbsp;
+<a href="javascript:changesection('ebird')">eBird</a>&nbsp;&nbsp;
+<a href="javascript:changesection('wiki')">Wikipedia</a>&nbsp;&nbsp;
+<a href="javascript:changesection('natureserve')">NatureServe</a>&nbsp;&nbsp;
+Google: <a href="javascript:changesection('google')">Web/images</a>|<a href="javascript:changesection('scholar')">Scholar</a>&nbsp;&nbsp;
+<a href="javascript:changesection('itis')">ITIS</a>&nbsp;&nbsp;
+<a href="javascript:changesection('birdlife')">Birdlife</a>&nbsp;&nbsp;
+&nbsp;&nbsp;<img align="bottom" src="camera_icon1.gif"> <!-- tx[36] --><a href="javascript:changesection('flickr')">Flickr</a>
+&nbsp;&nbsp;<img align="bottom" src="sound_icon1.gif"> <!-- tx[143] --><a href="javascript:changesection('xenocanto')">Xeno-Canto</a>
+
+<hr noshade width="100%" size=1 align=center color="#F0F0F0">
+
+</td>
+</tr>
+</table>
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr><td>
+
+
+
+  <tr>
+    <td class="AVBContainerText" width="60%" valign="top">
+    
+
+    <table border=0 align=center width=95%><tr valign=top><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+    <script src="flickr_votes.js"></script>
+
+
+    <table height=250 class='flickr'>
+<tr valign='top'><td bgcolor='#F0F0F0' width=250><span id="flickr1"><br><a target="_blank" href="http://www.flickr.com/photos/31035468@N03/3084385954/"><img border=0 src="http://farm4.static.flickr.com/3281/3084385954_ecd221f04a_m.jpg"></a><br><span class='credit'>photo &copy;Rons Bird Pictures</span><br><center><a href="javascript:report(1, 68073)"><img id="report1" src="button2.gif" title="Report as inappropriate" border=0></a><a href="javascript:voteimg(1, 68073, 1)"><img id="vote1.1" src="vote0.gif" border=0 title="Vote = 1"></a><a href="javascript:voteimg(1, 68073, 2)"><img id="vote1.2" src="vote0.gif" border=0 title="Vote = 2"></a><a href="javascript:voteimg(1, 68073, 3)"><img id="vote1.3" src="vote0.gif" border=0 title="Vote = 3"></a><a href="javascript:voteimg(1, 68073, 4)"><img id="vote1.4" src="vote0.gif" border=0 title="Vote = 4"></a><a href="javascript:voteimg(1, 68073, 5)"><img id="vote1.5" src="vote0.gif" border=0 title="Vote = 5"></a><a href="javascript:nextimg(1, 'Himantopus himantopus')"><img src="button1.gif" title="Change photo" border=0></a></center></span></td></tr>
+</table>
+
+    <span style="color: #606060; font-size: 7pt">Photo powered by <a href="http://flickr.com" target="_blank">flickr.com</a>.</span></p>
+
+
+
+    <p>
+    <b>Order:</b><br> &nbsp;&nbsp;Charadriiformes<br>
+    <b>Family:</b><br> &nbsp;&nbsp;Recurvirostridae<br>
+    <P>
+
+    <b>English:</b><br> &nbsp;&nbsp;Black-winged Stilt<br>
+    <b>Scientific:</b><br> &nbsp;&nbsp;<i>Himantopus himantopus</i><br>
+    </p>
+    <p><b>Protonym:</b><br> &nbsp;&nbsp;<i>Charadrius Himantopus</i><br>
+    </p>
+    <p><b>Avibase ID:</b><br> &nbsp;&nbsp;3CAEB7CEEC7FFF50<br>
+    <p><b>Taxomic Serial Number:</b><br>
+    TSN: <a target="_blank" href="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=176727">176727</a>
+
+    </p>
+
+    </td><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+
+    <b>Czech:</b><br> &nbsp;&nbsp;pisila čáponohá<br>
+
+    <b>German:</b><br> &nbsp;&nbsp;Stelzenläufer<br>
+
+    <b>Danish:</b><br> &nbsp;&nbsp;Stylteløber<br>
+
+    <b>Spanish:</b><br> &nbsp;&nbsp;Cigüeñuela de Alas Negras<br>
+
+    <b>Finnish:</b><br> &nbsp;&nbsp;pitkäjalka<br>
+
+    <b>French:</b><br> &nbsp;&nbsp;Échasse blanche<br>
+
+    <b>Icelandic:</b><br> &nbsp;&nbsp;Háleggur<br>
+
+    <b>Italian:</b><br> &nbsp;&nbsp;Cavaliere d'Italia<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;seitakashigi<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;セイタカシギ<br>
+
+    <b>Dutch:</b><br> &nbsp;&nbsp;Steltkluut<br>
+
+    <b>Norwegian:</b><br> &nbsp;&nbsp;Stylteløper<br>
+
+    <b>Polish:</b><br> &nbsp;&nbsp;szczudłak<br>
+
+    <b>Portuguese:</b><br> &nbsp;&nbsp;Pernilongo<br>
+
+    <b>Portuguese (Brazil):</b><br> &nbsp;&nbsp;pernilongo-de-costas-negras<br>
+
+    <b>Slovak:</b><br> &nbsp;&nbsp;šišila bocianovitá<br>
+
+    <b>Swedish:</b><br> &nbsp;&nbsp;Styltlöpare<br>
+
+    <b>Chinese:</b><br> &nbsp;&nbsp;黑翅长脚鹬<br>
+</p>
+    </td></tr></table>
+
+<hr noshade width="80%" size=1 align=center color="#E0E0E0">
+
+   <span class="AVBContainerText">
+  
+     <P><b>Authorities recognizing this taxonomic concept:</b></P>
+
+       <b>American Ornithologists' Union 7th edition (1998):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 42th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 43th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 44th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 45th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 46th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 47th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 48th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 49th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 50th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 51th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 52th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Birdlife checklist version 00:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Birdlife checklist version 01:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Birdlife checklist version 02:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Birdlife checklist version 03:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Birdlife checklist version 04:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Commission internationale pour les noms français des oiseaux (1993, révision 2009):</b><br>&nbsp;&nbsp;&nbsp;Échasse blanche ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 4th edition:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 5th edition (as published):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 5th edition (incl. 2000 revisions):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 5th edition (incl. 2001 revisions):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 5th edition (incl. 2002 revisions):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 5th edition (incl. 2003 revisions):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 5th edition (incl. 2004 revisions):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 5th edition (incl. 2005 revisions):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 6th edition:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 6th edition (incl. 2007 revisions):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 6th edition (incl. 2008 revisions):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 6th edition (incl. 2009 revisions):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 6th edition (version 6.5 incl. 2010 revisions):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Clements 6th edition (version 6.6 incl. 2011 revisions):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>eBird version 1.50:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>eBird version 1.52:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Howard and Moore 2nd edition:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Howard and Moore 2nd edition (incl. ? suppl):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 1.0:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 1.1:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 1.5:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 1.6:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 1.7:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 2.0:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 2.1:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 2.2:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 2.3:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 2.4:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 2.5:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 2.6:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 2.7:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 2.8:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 2.9:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>IOC World Bird Names, version 2.10:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Morony, Bock and Farrand:</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Sibley and Monroe (1993):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Sibley and Monroe (1993, including corrections up to 1998):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+       <b>Sibley and Monroe 2nd edition (1996):</b><br>&nbsp;&nbsp;&nbsp;Black-winged Stilt ( <I>Himantopus himantopus</I>)<br>
+
+</span>
+
+    </td>
+    <td width="40%" valign=top align=left>
+<span class="AVBContainerText2">
+
+<P><table border=1 width="90%"><tr><td class="AVBContainerText2" style="border: 1pt; border-color: #D8D8BA;">
+
+  <P><b>Taxonomic status:</b><P><b>Species status:</b>
+
+  this taxon has now been split
+
+  
+     <P>This taxon is a subspecies of
+     <a href="javascript:changespecies('DBC0CB0710D1A7FA')">Himantopus himantopus</a>
+     <br>
+  
+
+</td></tr></table>
+
+
+
+
+<!-- related taxa -->
+
+<P><table width="90%"><tr><td class="AVBRelated">
+<font size="2">
+
+
+<center><b>Related taxa</b></center>
+
+&nbsp;
+<a href="javascript:changespecies('4D883FFC09E12903', 1)">Himantopus himantopus</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('6AC2ABA35182038C', 1)">Himantopus himantopus</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('DBC0CB0710D1A7FA', 1)">Himantopus himantopus</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Himantopus himantopus</b></b><big>&larr;</big><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('AC6252CA7ACD600E', 1)">Himantopus himantopus</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('FDA818EB489BE7B5', 1)">Himantopus himantopus himantopus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('6F3166EDFCEAE88A', 1)">Himantopus himantopus meridionalis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('C1EFFF2DA0D9A0D9', 1)">Himantopus ceylonensis</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('62DAF6CC29ADBF9A', 1)">Himantopus mexicanus</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('C1D4E1DD9ABDEF3C', 1)">Himantopus mexicanus</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('312A656975CB3D0D', 1)">Himantopus knudseni</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('C2830C86727884E3', 1)">Himantopus leucocephalus</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('E28480D77FD3ACE4', 1)">Himantopus melanurus</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('C26304D6CC0AA676', 1)">Himantopus novaezelandiae</a></b><br>
+
+</font><br>
+</td></tr></table>
+
+    <table width="90%"><tr><td class="AVBSynonyms">
+    <font size="2"><center><b>Other synonyms</b></center>
+<br><b>Afrikaans: </b>Rooipootelsie<br><b>Arabic: </b>الكرسوع, الكرسوع أبومغازل, الكرسوع أبومغازل جويري, الكرسوع ابو مغازل, جويري<br><b>Azerbaijani: </b>Çaydaq cüllütü<br><b>Belarusian: </b>Хадулачнік<br><b>Bulgarian: </b>Кокилобегач<br><b>Breton: </b>Ar skaseg kof gwenn<br><b>Catalan: </b>Avisador, Cames llargues, Remena-rocs<br><b>Catalan (Balears): </b>Avisador<br><b>Valencian: </b>Remena-rocs<br><b>Czech: </b>Pisila cáponohá, Pisila čáponohá, pisila èáponohá<br><b>Welsh: </b>Hirgoes<br><b>Danish: </b>Stylteløber<br><b>German: </b>Bindenstrandläufer, Stelzenlaeufer, Stelzenläufer<br><b>Greek: </b>Καλαμοκανάς<br><b>English: </b>Black-necked Stilt, Black-winged Stilt, Common Stilt, Pied Stilt, Poaka, White-headed Stilt<br><b>Esperanto: </b>himantopo<br><b>Spanish: </b>Ciguëñuela, Cigüeñuela, Cigüeñuela Común, Cigüeñuela de Alas Negras, Correlimos Zancolín, Giguëñuela, Playerito zancudo<br><b>Spanish (Argentine): </b>Playerito zancudo<br><b>Spanish (Mexico): </b>candelero americano<br><b>Spanish (Uruguay): </b>Tero Real<br><b>Estonian: </b>karkjalg<br><b>Basque: </b>Cames llargues, Zankaluze, Zankaluzea<br><b>Finnish: </b>Pitkäjalka<br><b>French: </b>Échasse à manteau noir, Echasse blanche, Échasse blanche<br><b>Frisian: </b>Steltklút<br><b>Irish: </b>Scadalach Dhubheiteach, Scodalach Dubheiteach<br><b>Gaelic: </b>Luigneach<br><b>Galician: </b>Cames llargues, Pernalonga<br><b>Manx: </b>Lurgagh<br><b>Hebrew: </b>תמירון<br><b>Hindi: </b>Pavazha kaal ullan<br><b>Croatian: </b>Crvenonoga vlastelica, Vlastelica<br><b>Hungarian: </b>Gólyatöcs<br><b>Armenian: </b>[Votnatsupik ], Ոտնացուպակ, Ոտնացուպիկ<br><b>Icelandic: </b>Háleggur<br><b>Italian: </b>Cavaliere d'Italia<br><b>Japanese: </b>Ashinaga-shigi, seitakashigi, Seitaka-shigi<br><b>Japanese: </b>セイタカシギ<br><b>Georgian: </b>ოჩოფეხა<br><b>Kazakh: </b>Ұзынсирақ балшықшы<br><b>Korean: </b>장다리물떼새<br><b>Cornish: </b>Cornwhylen carrek<br><b>Latin: </b>Himantopus himantopus, Himantopus himantopus himantopus<br><b>Lithuanian: </b>Kojukas, Kūjokas<br><b>Malagasy: </b>Tafaly, Takapaly, Tsakaranta<br><b>Maori: </b>kaki<br><b>Macedonian: </b>Долгонога шљука, Црвенонога сабјарка<br><b>Mongolian: </b>Хилэн жигүүрт<br><b>Malay: </b>Kedidi Kaki Panjang<br><b>Maltese: </b>Fras-servjent<br><b>Dutch: </b>Stelkluut, Steltkluut<br><b>Norwegian: </b>Styleløper, Stylteløper<br><b>Polish: </b>szczudlak, Szczudłak, Szczudłak zwyczajny<br><b>Portuguese: </b>maçaricão, maçaricão-de-pernas-longas, Macarico pernilongo, Macarico-pernilongo, perna longa, Perna longa., pernalonga, Perna-longa, Perna-longa., pernalonga-comum, pernilonga, pernilongo, pernilongo-de-costas-negras, Vira-pedras<br><b>Portuguese (Brazil): </b>maçaricão, maçaricão-de-pernas-longas, pernalonga, pernalonga-comum, pernilonga, pernilongo, pernilongo-de-costas-negras, Vira-pedras<br><b>Romansh: </b>Gambun pitschen<br><b>Russian: </b>Khodulochnik, Ходулочник<br><b>Sardinian: </b>Zurruleu, Zurruvigu<br><b>Scots: </b>Luigneach<br><b>Slovak: </b>Éišila bocianovitá, šišila bocianovitá, Šišila bocianovítá<br><b>Slovenian: </b>polojnik<br><b>Albanian: </b>Kalorësi<br><b>Serbian: </b>dugonogi prudnik, Vlastelica, Властелица<br><b>Swedish: </b>Styltlöpare<br><b>Swahili: </b>Msese Milonjo<br><b>Thai: </b>นกตีนเทียน<br><b>Turkish: </b>Uzunbacak<br><b>Tuvinian: </b>Шывар-даяктыг куш<br><b>Ukrainian: </b>Довгоніг, Кулик-довгоніг , Ходулoчник<br><b>Vietnamese: </b>Cà kheo<br><b>Chinese: </b>[gao-qiao-heng], [hei-chi chang-jiao yu], 高蹺鴴, 黑翅長腳鷸, 黑翅长脚鹬<br><b>Chinese (Taiwan): </b>[gao-qiao-heng], 高蹺鴴
+  </font>
+  </td></tr></table></P>
+
+</span>
+</td></tr>
+<tr><td colspan="3">
+<P><small><!-- avb.bow2Descr --></small></P>
+<P>
+  </td>
+  </tr>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=3>
+<P>&nbsp;</P>
+<center>
+<a href="http://www.bsc-eoc.org/bscmain.html" target="_blank"><img src="BSClogo3.gif" alt="" title="Avibase is hosted by Bird Studies Canada" border=0></a> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.birdlife.org" target="_blank"><img src="/links/images/bl_logo.gif" alt="" title="Bird Studies Canada is the canadian co-partner of Birdlife International" border=0></a>
+</center><br>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=2 valign="bottom">
+<center><P><small>Avibase has been visited <b>104,636,207</b> times since 24 June 2003. &copy; Denis Lepage |
+<a href="privacy.jsp">Privacy policy</a><br>
+<small><!-- Translation of this page in English provided by --></small></small></P></center>
+
+<center><a href="http://www.birdingtop500.com/cgi-bin/topsite/topsite.cgi?user=dlepage"><img src="http://www.birdingtop500.com/cgi-bin/topsite/counter.cgi?user=dlepage" border=0></a>
+</center>
+</td></tr></table>
+
+</td></tr></table>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12387576-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+
+

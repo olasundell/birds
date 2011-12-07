@@ -1,0 +1,549 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Regulus regulus - Avibase</title>
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Description" content="Avibase is an extensive database information system about all birds of the world, containing over 5 million records about 10,000 species and 22,000 subspecies of birds, including distribution information, taxonomy, synonyms in several languages and more.">
+<meta name="KeyWords" content="bird, birds, birding, birder, birders, birdwatching, birdwatcher, birdwatchers, links, birdlink, birdlinks, ornithology, checklist, checklists, world, oiseau, oiseaux, aves, subspecies, family, taxonomy">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Language" content="en">
+
+<style type="text/css">@import url("avibase.css");</style>
+
+<script type="text/javascript" src="js/bsn.AutoSuggest_2.1.3_avibase.js" charset="utf-8"></script>
+<link rel="stylesheet" href="css/autosuggest_inquisitor.css" type="text/css" media="screen" charset="utf-8" />
+
+<SCRIPT language="JavaScript">
+function changepg(pg, lang, id, ts) {
+  self.document.location = 'avibase.jsp?pg=' + pg + (lang != ''?'&lang='+lang:'') + (id != null?'&id=' + id:'') + (ts != null?'&ts=' + ts:'');
+}
+</SCRIPT>
+<!-- SCRIPT language="JavaScript" src="avibase.js"></script -->
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="jquery.ui.draggable.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.alerts.js" type="text/javascript"></script>
+<link href="jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link rel="search" type="application/opensearchdescription+xml" title="Avibase" href="opensearchplugin.xml">
+
+</head>
+<body>
+
+
+<table border=0 bgcolor="#000078" cellpadding=0 cellspacing=0 width=1024 align=center>
+<tr>
+<td width="400" colspan=2><img src="avibase.gif" align="top" height="84"></td>
+<td align="right" width="580">
+<a target="photos" href="http://www.flickr.com/photos/faisca/28722448/in/set-250198/"><img src="images/ph2267.jpg" align="top" border=0 height="65" alt="" title="House Sparrow, Portugal, Faisca"></a><a target="photos" href="http://www.digimages.info"><img src="images/ph761.jpg" align="top" border=0 height="65" alt="" title="White Stork, France, Alain Fossé"></a><a target="photos" href="http://www.wildspirits.it"><img src="images/ph1472.jpg" align="top" border=0 height="65" alt="" title="Eurasian Eagle-Owl, Italy, Claudia & Aggeo"></a><a target="photos" href="http://www.kashmirnetwork.com/birds/"><img src="images/ph1365.jpg" align="top" border=0 height="65" alt="" title="White-throated Kingfisher, Kashmir, India, Bakshi Jehangir"></a><a target="photos" href="http://www.flickr.com/photos/faisca/264216329/in/set-250198/"><img src="images/ph2109.jpg" align="top" border=0 height="65" alt="" title="Cyanopica cyana, Portugal, Faisca"></a><a target="photos" href="http://www.flickr.com/photos/faisca/85620091/in/set-250198/"><img src="images/ph2419.jpg" align="top" border=0 height="65" alt="" title="Nycticorax nycticorax, Portugal, Faisca"></a><a target="photos" href="http://www.kashmirnetwork.com/birds/"><img src="images/ph1304.jpg" align="top" border=0 height="65" alt="" title="Bluethroat, Kashmir, India, Bakshi Jehangir"></a>
+<br><b><font color="#FFFFFF" size="1" face="Geneva,Arial,Helvetica">Bird checklists - taxonomy - distribution - maps - links</font></font></b></td></tr>
+</table><table border=0 width=1024 align=center>
+<tr valign=top><td rowspan=2 width=125 class="AVBbar" bgcolor="#336699"> <!-- #000078 -->
+
+<script>
+function makepale(d) {
+  d.style.backgroundColor = '#226CB7';
+}
+function makenormal(d) {
+  d.style.backgroundColor = '#024C97';
+}
+</SCRIPT>
+
+
+<p>&nbsp;<br>
+<div id="div1" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('home','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=home" class="AVBlinks2"><font color="#F0F0F0">Home</font></a>
+</div>
+<br>
+<div id="div2" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('checklist','EN');">
+&nbsp;&nbsp;<a href="checklist.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Checklists</font></a>
+</div>
+<br>
+<div id="div3" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('search','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=search" class="AVBlinks2"><font color="#F0F0F0">Search</font></a>
+</div>
+<br>
+<div id="div4" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('families','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=families" class="AVBlinks2"><font color="#F0F0F0">Families</font></a>
+</div>
+<br>
+<div id="div9" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='compare.jsp';">
+&nbsp;&nbsp;<a href="compare.jsp" class="AVBlinks2"><font color="#F0F0F0">Compare lists</font></a>
+</div>
+<br>
+<div id="div10" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='rangemaps.jsp';">
+&nbsp;&nbsp;<a href="rangemaps.jsp" class="AVBlinks2"><font color="#F0F0F0">Range maps</font></a>
+</div>
+<br>
+<div id="div5" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp';">
+&nbsp;&nbsp;<a href="/links/links.jsp" class="AVBlinks2"><font color="#F0F0F0">Birdlinks</font></a>
+</div>
+<br>
+<div id="div6" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp?page=g_reports';">
+&nbsp;&nbsp;<a href="/links/links.jsp?page=g_reports" class="AVBlinks2"><font color="#F0F0F0">Trip reports</font></a>
+</div>
+<br>
+<div id="div7" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('webservice','EN');">
+&nbsp;&nbsp;<a href="webservice.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Web Service</font></a>
+</div>
+<br>
+<div id="div8" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('contrib','EN');">
+&nbsp;&nbsp;<a href="contrib.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Contribute</font></a>
+</div>
+<P>
+<div>
+<form action="avibase.jsp" name='avbsmall' style="position: relative;">
+<input type="hidden" name="pg" value="search">
+<input type="hidden" name="ts" value="1323206948187">
+
+<font face="Geneva,Arial,Helvetica" size=1 color=white>
+Quick search: <input id="searchboxsm" name="qstr" type="text" size="14" style="font-size: 9pt">
+</form>
+</div>
+</p>
+</font>
+
+<script type="text/javascript">
+	var options_xml = {
+		script: function (input) { return "suggest3.jsp?qstr="+input; },
+		varname:"input",
+		minchars:3,
+		timeout:5000,
+		noresults: "No name matching",
+		maxresults:10
+
+	};
+	var as_xml = new bsn.AutoSuggest('searchboxsm', options_xml);
+</script>
+
+<P><b><font color="#FFFFFF">Avibase is also available in the following languages:</font></b><br>
+<table border=0 style="font-family: Geneva,Arial,Helvetica; font-size: 8pt;">
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-en.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=A7CC62D6BD333F25">English</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-es.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=A7CC62D6BD333F25">Spanish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-fr.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=A7CC62D6BD333F25">French</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-de.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=A7CC62D6BD333F25">German</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-hu.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=A7CC62D6BD333F25">Hungarian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-id.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=A7CC62D6BD333F25">Indonesian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-it.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=A7CC62D6BD333F25">Italian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-nl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=A7CC62D6BD333F25">Dutch</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-pt.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=A7CC62D6BD333F25">Portuguese</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-sv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=A7CC62D6BD333F25">Swedish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-ca.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=A7CC62D6BD333F25">Catalan</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-is.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=A7CC62D6BD333F25">Icelandic</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-af.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=A7CC62D6BD333F25">Afrikaans</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-ia.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=A7CC62D6BD333F25">Interlingua</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-pl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=A7CC62D6BD333F25">Polish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-uk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=A7CC62D6BD333F25">Ukrainian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-cs.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=A7CC62D6BD333F25">Czech</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-sk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=A7CC62D6BD333F25">Slovak</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-ru.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=A7CC62D6BD333F25">Russian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-fi.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=A7CC62D6BD333F25">Finnish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=A7CC62D6BD333F25"><img src="flags/lang2-lv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=A7CC62D6BD333F25">Latvian</a></td></tr>
+
+</table>
+</P>
+<p>Google translations:<br>
+<select name="lgg" style="font-size: 9pt; max-width: 100px; clientWidth: 100px;" onChange="googleTrans(this)">
+<option value=""></option>
+<option value="AR" >Arabic</option><option value="AZ" >Azerbaijani</option><option value="BG" >Bulgarian</option><option value="BE" >Belarusian</option><option value="CY" >Welsh</option><option value="DA" >Danish</option><option value="EL" >Greek</option><option value="ET" >Estonian</option><option value="EU" >Basque</option><option value="FA" >Persian</option><option value="FIL" >Filipino</option><option value="GA" >Irish</option><option value="GL" >Galician</option><option value="HATX" >Haitian Creole French</option><option value="HE" >Hebrew</option><option value="HI" >Hindi</option><option value="HR" >Croatian</option><option value="HY" >Armenian</option><option value="JP" >Japanese</option><option value="KA" >Georgian</option><option value="KO" >Korean</option><option value="LT" >Lithuanian</option><option value="MK" >Macedonian</option><option value="MS" >Malay</option><option value="MT" >Maltese</option><option value="NO" >Norwegian</option><option value="RO" >Romanian</option><option value="RU" >Russian</option><option value="SL" >Slovenian</option><option value="SQ" >Albanian</option><option value="SR" >Serbian</option><option value="SW" >Swahili</option><option value="TH" >Thai</option><option value="TR" >Turkish</option><option value="UR" >Urdu</option><option value="VI" >Vietnamese</option><option value="YI" >Yiddish</option><option value="ZH" >Chinese</option>
+</select></p>
+
+<p><a href="translate.jsp?lang=EN" class="AVBlink">Contribute a better translation</a></p>
+
+<script>
+function googleTrans(s) {
+  if (s.options[s.selectedIndex].value == '') return;
+  var url = 'species.jsp?lang=' + s.options[s.selectedIndex].value + '&avibaseid=A7CC62D6BD333F25';
+  document.location = url;
+}
+</script>
+
+
+
+</td>
+<td colspan=2 style="padding: 15px">
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+
+  $('#loginbox').toggle();
+
+  $("#loginlnk").click(function(){
+     $('#loginbox').slideToggle('fast');
+  });
+
+
+  $('#credlogin').toggle();
+
+
+});
+
+</script>
+
+
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr>
+<td width="100%" class="AVBHeader" colspan="3">
+Goldcrest (<I>Regulus regulus</I>) (Linnaeus, 1758)</td>
+</tr>
+<tr>
+<td width="100%" class="AVBSubHeader" colspan="3" align=center>
+<SCRIPT language="JavaScript">
+function changesection(s) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=A7CC62D6BD333F25&sec=' + s;
+}
+function changespecies(t,v) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=' + t + '&sec=summary' + (v?'&ssver=' + v:'');
+}
+
+
+</SCRIPT>
+<a href="javascript:changesection('summary')">summary</a>&nbsp;&nbsp;
+<a href="javascript:changesection('taxontable')">taxon grid</a>&nbsp;&nbsp;
+<a href="javascript:changesection('map')">map</a>&nbsp;&nbsp;
+<a href="javascript:changesection('ebird')">eBird</a>&nbsp;&nbsp;
+<a href="javascript:changesection('wiki')">Wikipedia</a>&nbsp;&nbsp;
+<a href="javascript:changesection('natureserve')">NatureServe</a>&nbsp;&nbsp;
+Google: <a href="javascript:changesection('google')">Web/images</a>|<a href="javascript:changesection('scholar')">Scholar</a>&nbsp;&nbsp;
+<a href="javascript:changesection('itis')">ITIS</a>&nbsp;&nbsp;
+<a href="javascript:changesection('birdlife')">Birdlife</a>&nbsp;&nbsp;
+&nbsp;&nbsp;<img align="bottom" src="camera_icon1.gif"> <!-- tx[36] --><a href="javascript:changesection('flickr')">Flickr</a>
+&nbsp;&nbsp;<img align="bottom" src="sound_icon1.gif"> <!-- tx[143] --><a href="javascript:changesection('xenocanto')">Xeno-Canto</a>
+
+<hr noshade width="100%" size=1 align=center color="#F0F0F0">
+
+</td>
+</tr>
+</table>
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr><td>
+
+
+
+  <tr>
+    <td class="AVBContainerText" width="60%" valign="top">
+    
+
+    <table border=0 align=center width=95%><tr valign=top><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+    <script src="flickr_votes.js"></script>
+
+
+    <table height=250 class='flickr'>
+<tr valign='top'><td bgcolor='#F0F0F0' width=250><span id="flickr1"><br><a target="_blank" href="http://www.flickr.com/photos/yeliseev/323720866/"><img border=0 src="http://farm1.static.flickr.com/123/323720866_5cfa7da8f8_m.jpg"></a><br><span class='credit'>photo &copy;Sergey Yeliseev</span><br><center><a href="javascript:report(1, 116266)"><img id="report1" src="button2.gif" title="Report as inappropriate" border=0></a><a href="javascript:voteimg(1, 116266, 1)"><img id="vote1.1" src="vote0.gif" border=0 title="Vote = 1"></a><a href="javascript:voteimg(1, 116266, 2)"><img id="vote1.2" src="vote0.gif" border=0 title="Vote = 2"></a><a href="javascript:voteimg(1, 116266, 3)"><img id="vote1.3" src="vote0.gif" border=0 title="Vote = 3"></a><a href="javascript:voteimg(1, 116266, 4)"><img id="vote1.4" src="vote0.gif" border=0 title="Vote = 4"></a><a href="javascript:voteimg(1, 116266, 5)"><img id="vote1.5" src="vote0.gif" border=0 title="Vote = 5"></a><a href="javascript:nextimg(1, 'Regulus regulus')"><img src="button1.gif" title="Change photo" border=0></a></center></span></td></tr>
+</table>
+
+    <span style="color: #606060; font-size: 7pt">Photo powered by <a href="http://flickr.com" target="_blank">flickr.com</a>.</span></p>
+
+
+
+    <p>
+    <b>Order:</b><br> &nbsp;&nbsp;Passeriformes<br>
+    <b>Family:</b><br> &nbsp;&nbsp;Regulidae<br>
+    <P>
+
+    <b>English:</b><br> &nbsp;&nbsp;Goldcrest<br>
+    <b>Scientific:</b><br> &nbsp;&nbsp;<i>Regulus regulus</i><br>
+    </p>
+    <p><b>Protonym:</b><br> &nbsp;&nbsp;<i>Motacilla Regulus</i><br>
+    </p>
+    <p><b>Avibase ID:</b><br> &nbsp;&nbsp;A7CC62D6BD333F25<br>
+    <p><b>Taxomic Serial Number:</b><br>
+    TSN: <a target="_blank" href="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=562698">562698</a>
+
+    </p>
+
+    </td><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+
+    <b>Czech:</b><br> &nbsp;&nbsp;králíček obecný<br>
+
+    <b>German:</b><br> &nbsp;&nbsp;Wintergoldhähnchen<br>
+
+    <b>Danish:</b><br> &nbsp;&nbsp;Fuglekonge<br>
+
+    <b>Spanish:</b><br> &nbsp;&nbsp;Reyezuelo Sencillo<br>
+
+    <b>Finnish:</b><br> &nbsp;&nbsp;hippiäinen<br>
+
+    <b>French:</b><br> &nbsp;&nbsp;Roitelet huppé<br>
+
+    <b>Icelandic:</b><br> &nbsp;&nbsp;Glókollur<br>
+
+    <b>Italian:</b><br> &nbsp;&nbsp;Regolo eurasiatico<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;kikuitadaki<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;キクイタダキ<br>
+
+    <b>Dutch:</b><br> &nbsp;&nbsp;Goudhaantje<br>
+
+    <b>Norwegian:</b><br> &nbsp;&nbsp;Fuglekonge<br>
+
+    <b>Polish:</b><br> &nbsp;&nbsp;mysikrólik<br>
+
+    <b>Portuguese:</b><br> &nbsp;&nbsp;Estrelinha-de-poupa<br>
+
+    <b>Slovak:</b><br> &nbsp;&nbsp;králik zlatohlavý<br>
+
+    <b>Swedish:</b><br> &nbsp;&nbsp;Kungsfågel<br>
+
+    <b>Chinese:</b><br> &nbsp;&nbsp;戴菊<br>
+</p>
+    </td></tr></table>
+
+<hr noshade width="80%" size=1 align=center color="#E0E0E0">
+
+   <span class="AVBContainerText">
+  
+     <P><b>Authorities recognizing this taxonomic concept:</b></P>
+
+       <b>African Bird Club Checklist 2004:</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>African Bird Club Checklist August 2005:</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>African Bird Club Checklist March 2007:</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>African Bird Club Checklist January 2008:</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>African Bird Club Checklist May 2009:</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>African Bird Club Checklist March 2010:</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Birdlife checklist version 00:</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition, incl. Jan 2009 suppl.):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Commission internationale pour les noms français des oiseaux (1993):</b><br>&nbsp;&nbsp;&nbsp;Roitelet huppé ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 4th edition:</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 5th edition (as published):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 5th edition (incl. 2000 revisions):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 5th edition (incl. 2001 revisions):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 5th edition (incl. 2002 revisions):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 5th edition (incl. 2003 revisions):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 5th edition (incl. 2004 revisions):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 5th edition (incl. 2005 revisions):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 6th edition:</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 6th edition (incl. 2007 revisions):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 6th edition (incl. 2008 revisions):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 6th edition (incl. 2009 revisions):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 6th edition (version 6.5 incl. 2010 revisions):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Clements 6th edition (version 6.6 incl. 2011 revisions):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>eBird version 1.50:</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>eBird version 1.52:</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Howard and Moore 2nd edition:</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Howard and Moore 2nd edition (incl. ? suppl):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Sibley and Monroe (1993):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Sibley and Monroe (1993, including corrections up to 1998):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Sibley and Monroe 2nd edition (1996):</b><br>&nbsp;&nbsp;&nbsp;Goldcrest ( <I>Regulus regulus</I>)<br>
+
+       <b>Zoonomen - Zoological Nomenclature Resource:</b><br>&nbsp;&nbsp;&nbsp; <I>Regulus regulus</I><br>
+
+</span>
+
+    </td>
+    <td width="40%" valign=top align=left>
+<span class="AVBContainerText2">
+
+<P><table border=1 width="90%"><tr><td class="AVBContainerText2" style="border: 1pt; border-color: #D8D8BA;">
+
+  <P><b>Taxonomic status:</b><P><b>Species status:</b>
+
+  full species (sometimes considered a nominal subspecies)
+
+  
+     <P>This taxon is considered a subspecies of
+     <a href="javascript:changespecies('1C51C1095E427BB8')">Regulus regulus</a>
+     (<i>sensu lato</i>) by some authors<br>
+  
+
+</td></tr></table>
+
+
+
+
+<!-- related taxa -->
+
+<P><table width="90%"><tr><td class="AVBRelated">
+<font size="2">
+
+
+<center><b>Related taxa</b></center>
+
+&nbsp;
+<a href="javascript:changespecies('1C51C1095E427BB8', 1)">Regulus regulus</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><b>Regulus regulus</b></b><big>&larr;</big><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('A31DA471181C91DE', 1)">Regulus regulus regulus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('587932242E0C78B6', 1)">Regulus regulus anglorum</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('84BD40DB91C6B1E3', 1)">Regulus regulus interni</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('A7E3CE55005E475B', 1)">Regulus regulus azoricus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('847C9DE9A97DE328', 1)">Regulus regulus sanctaemariae</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('C37040A4EAD64EF1', 1)">Regulus regulus inermis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('FE72DB2671996A75', 1)">Regulus regulus buturlini</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('E3150D2A9446ED44', 1)">Regulus regulus coatsi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('FB94B672D33A3BCA', 1)">Regulus regulus himalayensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('9B8C750951F2BA91', 1)">Regulus regulus japonensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('33FE54E3D37C230E', 1)">Regulus regulus sikkimensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('276588D5F396EA83', 1)">Regulus regulus tristis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('43FBE3C4292DAF4B', 1)">Regulus regulus yunnanensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('24B8D7F69067EEEE', 1)">Regulus regulus hyrcanus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('C4900028D396ECFF', 1)">Regulus regulus ellenthalerae</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('AC00D42656FE4E4D', 1)">Regulus teneriffae</a></b><br>
+
+</font><br>
+</td></tr></table>
+
+    <table width="90%"><tr><td class="AVBSynonyms">
+    <font size="2"><center><b>Other synonyms</b></center>
+<br><b>Asturian: </b>Reyín de Faya, Reyín de Fayeu<br><b>Azerbaijani: </b>Sarıbaş kralcıq<br><b>Belarusian: </b>Жоўтагаловы каралёк<br><b>Bulgarian: </b>Жълтоглаво кралче<br><b>Breton: </b>An dreolan kabell aour, Laouenan-gwenn<br><b>Catalan: </b>Reietó, Reietó d’hivern, Reietó d'hivern<br><b>Catalan (Balears): </b>Reietó d’hivern, Reietó d'hivern<br><b>Czech: </b>Králícek obecný, Králíček obecný, králíèek obecný<br><b>Welsh: </b>Dryw aur, Dryw bach y coed, Dryw ben aur, Dryw ben felen, Dryw eurben<br><b>Danish: </b>Fuglekonge<br><b>German: </b>Wintergoldhaehnchen, Wintergoldhähnchen, Winter-Goldhähnchen<br><b>Greek: </b>Χρυσοβασιλίσκος<br><b>English: </b>Common Goldcrest, European Goldcrest, Goldcrest<br><b>Esperanto: </b>orverta regolo<br><b>Spanish: </b>Mosquitero musical, Reyezuela sencillo, Reyezuelo Sencillo<br><b>Estonian: </b>Pöialpoiss<br><b>Basque: </b>Mendi-erregetxo, Mendi-erregetxoa, Reietó <br><b>Finnish: </b>Hippiäinen<br><b>Faroese: </b>Títlingskongur<br><b>French: </b>Roitelet huppé<br><b>Frisian: </b>Goudtûfke<br><b>Irish: </b>Caipín dhearg, Cíobhuí, Cíorbhuí, Dreoilín ceannbhuí, Dreoilín easpoig<br><b>Gaelic: </b>Crionag Bhuidhe<br><b>Galician: </b>Estreliña do norte, Reietó <br><b>Manx: </b>Drean buigh, Ushag y Fuygh<br><b>Hebrew: </b>מלכילון, מלכילון האורנים<br><b>Croatian: </b>Zlatoglavi Kraljic, Zlatoglavi Kraljić<br><b>Hungarian: </b>Sárgafeju királyka, Sárgafejû királyka, Sárgafejű királyka<br><b>Armenian: </b>[Deghnaglukh Arkayik ], Դեղնագլուխ Արքայիկ<br><b>Icelandic: </b>Glókollur<br><b>Italian: </b>Regolo, Regolo eurasiatico<br><b>Japanese: </b>kikuitadaki, Kiku-itadaki, matsu-mushiri<br><b>Japanese: </b>キクイタダキ, マツムシリ<br><b>Georgian: </b>ყვითელთავა ღაბუაჩიტი<br><b>Khakas: </b>Точлачах<br><b>Kazakh: </b>Сарыбас шєже<br><b>Korean: </b>상모솔새<br><b>Cornish: </b>Owrgryben<br><b>Latin: </b>Regulus regulus<br><b>Lithuanian: </b>Nykétukas, Nykštukas, Paprastasis nykštukas<br><b>Latvian: </b>Zeltgalvītis<br><b>Macedonian: </b>Жолтоглаво кралче<br><b>Mongolian: </b>Шар мэлзэн бялзуухай<br><b>Maltese: </b>Bufula tal-Qamar<br><b>Dutch: </b>Goudhaan, Goudhaantje<br><b>Norwegian: </b>Fuglekonge, Furulus<br><b>Polish: </b>mysikrólik, Mysikrólik zwyczajny<br><b>Portuguese: </b>estrelinha, Estrelinha-de-poupa<br><b>Romansh: </b>Retgottel d'enviern<br><b>Russian: </b>Zheltogolovy Korolyok, Желтоголовый королек, Желтоголовый королёк, Королек желтоголовый<br><b>Scots: </b>Crionag bhuidhe<br><b>Slovak: </b>králiček zlatohlavý, králik zlat (ohlav) ý, králik zlat ý, Králik zlatohlavý, Králik zlatý<br><b>Slovenian: </b>rumenoglavi kraljicek, rumenoglavi kraljiček<br><b>Albanian: </b>Mbretëthi<br><b>Serbian: </b>obican kraljic, običan kraljić, žutoglavi kraljic, Обичан кралјић, Обичан краљић<br><b>Swedish: </b>Kungsfågel<br><b>Turkish: </b>Çalıkuşu, çalykuşu<br><b>Tuvinian: </b>Шиижекчигеш<br><b>Ukrainian: </b>Жовтаголовий корольок, Жовточуба золотомушка, Золотомушка жовточуба <br><b>Chinese: </b>[dai-ju], [dai-ju-niao], [dai-ju-ying], 戴 菊, 戴菊, 戴菊莺, 戴菊鳥<br><b>Chinese (Taiwan): </b>[dai-ju-niao], 戴菊鳥
+  </font>
+  </td></tr></table></P>
+
+</span>
+</td></tr>
+<tr><td colspan="3">
+<P><small><!-- avb.bow2Descr --></small></P>
+<P>
+  </td>
+  </tr>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=3>
+<P>&nbsp;</P>
+<center>
+<a href="http://www.bsc-eoc.org/bscmain.html" target="_blank"><img src="BSClogo3.gif" alt="" title="Avibase is hosted by Bird Studies Canada" border=0></a> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.birdlife.org" target="_blank"><img src="/links/images/bl_logo.gif" alt="" title="Bird Studies Canada is the canadian co-partner of Birdlife International" border=0></a>
+</center><br>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=2 valign="bottom">
+<center><P><small>Avibase has been visited <b>104,637,222</b> times since 24 June 2003. &copy; Denis Lepage |
+<a href="privacy.jsp">Privacy policy</a><br>
+<small><!-- Translation of this page in English provided by --></small></small></P></center>
+
+<center><a href="http://www.birdingtop500.com/cgi-bin/topsite/topsite.cgi?user=dlepage"><img src="http://www.birdingtop500.com/cgi-bin/topsite/counter.cgi?user=dlepage" border=0></a>
+</center>
+</td></tr></table>
+
+</td></tr></table>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12387576-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+
+

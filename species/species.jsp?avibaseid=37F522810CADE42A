@@ -1,0 +1,676 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Fringilla coelebs - Avibase</title>
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Description" content="Avibase is an extensive database information system about all birds of the world, containing over 5 million records about 10,000 species and 22,000 subspecies of birds, including distribution information, taxonomy, synonyms in several languages and more.">
+<meta name="KeyWords" content="bird, birds, birding, birder, birders, birdwatching, birdwatcher, birdwatchers, links, birdlink, birdlinks, ornithology, checklist, checklists, world, oiseau, oiseaux, aves, subspecies, family, taxonomy">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Language" content="en">
+
+<style type="text/css">@import url("avibase.css");</style>
+
+<script type="text/javascript" src="js/bsn.AutoSuggest_2.1.3_avibase.js" charset="utf-8"></script>
+<link rel="stylesheet" href="css/autosuggest_inquisitor.css" type="text/css" media="screen" charset="utf-8" />
+
+<SCRIPT language="JavaScript">
+function changepg(pg, lang, id, ts) {
+  self.document.location = 'avibase.jsp?pg=' + pg + (lang != ''?'&lang='+lang:'') + (id != null?'&id=' + id:'') + (ts != null?'&ts=' + ts:'');
+}
+</SCRIPT>
+<!-- SCRIPT language="JavaScript" src="avibase.js"></script -->
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="jquery.ui.draggable.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.alerts.js" type="text/javascript"></script>
+<link href="jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link rel="search" type="application/opensearchdescription+xml" title="Avibase" href="opensearchplugin.xml">
+
+</head>
+<body>
+
+
+<table border=0 bgcolor="#000078" cellpadding=0 cellspacing=0 width=1024 align=center>
+<tr>
+<td width="400" colspan=2><img src="avibase.gif" align="top" height="84"></td>
+<td align="right" width="580">
+<a target="photos" href="http://www.flickr.com/photos/faisca/8998539/in/set-250198/"><img src="images/ph2049.jpg" align="top" border=0 height="65" alt="" title="Common Redshank, Portugal, Faisca"></a><a target="photos" href="http://www.chezfred.info/"><img src="images/ph1794.jpg" align="top" border=0 height="65" alt="" title="Bennett's Woodpecker, Namibia, Frédéric Leviez"></a><a target="photos" href="http://www.flickr.com/photos/faisca/317326578/in/set-250198/"><img src="images/ph1910.jpg" align="top" border=0 height="65" alt="" title="Black-necked Grebe, Portugal, Faisca"></a><a target="photos" href="http://www.flickr.com/photos/faisca/37397717/in/set-250198/"><img src="images/ph2312.jpg" align="top" border=0 height="65" alt="" title="Lanius excubitor, Portugal, Faisca"></a><a target="photos" href="http://www.chezfred.info/"><img src="images/ph2647.jpg" align="top" border=0 height="65" alt="" title="gobemouche gris, France, Frédéric Leviez"></a><a target="photos" href="http://www.schmoker.org/BirdPics/ThumbnailGallery.html"><img src="images/ph185.jpg" align="top" border=0 height="65" alt="" title="Western Scrub-Jay, USA, Bill Schmoker"></a><a target="photos" href="http://www.flickr.com/photos/faisca/160110130/in/set-72157594145739260/"><img src="images/ph2121.jpg" align="top" border=0 height="65" alt="" title="Emberiza cia, Portugal, Faisca"></a>
+<br><b><font color="#FFFFFF" size="1" face="Geneva,Arial,Helvetica">Bird checklists - taxonomy - distribution - maps - links</font></font></b></td></tr>
+</table><table border=0 width=1024 align=center>
+<tr valign=top><td rowspan=2 width=125 class="AVBbar" bgcolor="#336699"> <!-- #000078 -->
+
+<script>
+function makepale(d) {
+  d.style.backgroundColor = '#226CB7';
+}
+function makenormal(d) {
+  d.style.backgroundColor = '#024C97';
+}
+</SCRIPT>
+
+
+<p>&nbsp;<br>
+<div id="div1" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('home','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=home" class="AVBlinks2"><font color="#F0F0F0">Home</font></a>
+</div>
+<br>
+<div id="div2" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('checklist','EN');">
+&nbsp;&nbsp;<a href="checklist.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Checklists</font></a>
+</div>
+<br>
+<div id="div3" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('search','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=search" class="AVBlinks2"><font color="#F0F0F0">Search</font></a>
+</div>
+<br>
+<div id="div4" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('families','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=families" class="AVBlinks2"><font color="#F0F0F0">Families</font></a>
+</div>
+<br>
+<div id="div9" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='compare.jsp';">
+&nbsp;&nbsp;<a href="compare.jsp" class="AVBlinks2"><font color="#F0F0F0">Compare lists</font></a>
+</div>
+<br>
+<div id="div10" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='rangemaps.jsp';">
+&nbsp;&nbsp;<a href="rangemaps.jsp" class="AVBlinks2"><font color="#F0F0F0">Range maps</font></a>
+</div>
+<br>
+<div id="div5" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp';">
+&nbsp;&nbsp;<a href="/links/links.jsp" class="AVBlinks2"><font color="#F0F0F0">Birdlinks</font></a>
+</div>
+<br>
+<div id="div6" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp?page=g_reports';">
+&nbsp;&nbsp;<a href="/links/links.jsp?page=g_reports" class="AVBlinks2"><font color="#F0F0F0">Trip reports</font></a>
+</div>
+<br>
+<div id="div7" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('webservice','EN');">
+&nbsp;&nbsp;<a href="webservice.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Web Service</font></a>
+</div>
+<br>
+<div id="div8" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('contrib','EN');">
+&nbsp;&nbsp;<a href="contrib.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Contribute</font></a>
+</div>
+<P>
+<div>
+<form action="avibase.jsp" name='avbsmall' style="position: relative;">
+<input type="hidden" name="pg" value="search">
+<input type="hidden" name="ts" value="1323207516781">
+
+<font face="Geneva,Arial,Helvetica" size=1 color=white>
+Quick search: <input id="searchboxsm" name="qstr" type="text" size="14" style="font-size: 9pt">
+</form>
+</div>
+</p>
+</font>
+
+<script type="text/javascript">
+	var options_xml = {
+		script: function (input) { return "suggest3.jsp?qstr="+input; },
+		varname:"input",
+		minchars:3,
+		timeout:5000,
+		noresults: "No name matching",
+		maxresults:10
+
+	};
+	var as_xml = new bsn.AutoSuggest('searchboxsm', options_xml);
+</script>
+
+<P><b><font color="#FFFFFF">Avibase is also available in the following languages:</font></b><br>
+<table border=0 style="font-family: Geneva,Arial,Helvetica; font-size: 8pt;">
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=37F522810CADE42A"><img src="flags/lang2-en.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=37F522810CADE42A">English</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=37F522810CADE42A"><img src="flags/lang2-es.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=37F522810CADE42A">Spanish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=37F522810CADE42A"><img src="flags/lang2-fr.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=37F522810CADE42A">French</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=37F522810CADE42A"><img src="flags/lang2-de.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=37F522810CADE42A">German</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=37F522810CADE42A"><img src="flags/lang2-hu.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=37F522810CADE42A">Hungarian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=37F522810CADE42A"><img src="flags/lang2-id.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=37F522810CADE42A">Indonesian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=37F522810CADE42A"><img src="flags/lang2-it.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=37F522810CADE42A">Italian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=37F522810CADE42A"><img src="flags/lang2-nl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=37F522810CADE42A">Dutch</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=37F522810CADE42A"><img src="flags/lang2-pt.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=37F522810CADE42A">Portuguese</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=37F522810CADE42A"><img src="flags/lang2-sv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=37F522810CADE42A">Swedish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=37F522810CADE42A"><img src="flags/lang2-ca.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=37F522810CADE42A">Catalan</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=37F522810CADE42A"><img src="flags/lang2-is.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=37F522810CADE42A">Icelandic</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=37F522810CADE42A"><img src="flags/lang2-af.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=37F522810CADE42A">Afrikaans</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=37F522810CADE42A"><img src="flags/lang2-ia.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=37F522810CADE42A">Interlingua</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=37F522810CADE42A"><img src="flags/lang2-pl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=37F522810CADE42A">Polish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=37F522810CADE42A"><img src="flags/lang2-uk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=37F522810CADE42A">Ukrainian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=37F522810CADE42A"><img src="flags/lang2-cs.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=37F522810CADE42A">Czech</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=37F522810CADE42A"><img src="flags/lang2-sk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=37F522810CADE42A">Slovak</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=37F522810CADE42A"><img src="flags/lang2-ru.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=37F522810CADE42A">Russian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=37F522810CADE42A"><img src="flags/lang2-fi.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=37F522810CADE42A">Finnish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=37F522810CADE42A"><img src="flags/lang2-lv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=37F522810CADE42A">Latvian</a></td></tr>
+
+</table>
+</P>
+<p>Google translations:<br>
+<select name="lgg" style="font-size: 9pt; max-width: 100px; clientWidth: 100px;" onChange="googleTrans(this)">
+<option value=""></option>
+<option value="AR" >Arabic</option><option value="AZ" >Azerbaijani</option><option value="BG" >Bulgarian</option><option value="BE" >Belarusian</option><option value="CY" >Welsh</option><option value="DA" >Danish</option><option value="EL" >Greek</option><option value="ET" >Estonian</option><option value="EU" >Basque</option><option value="FA" >Persian</option><option value="FIL" >Filipino</option><option value="GA" >Irish</option><option value="GL" >Galician</option><option value="HATX" >Haitian Creole French</option><option value="HE" >Hebrew</option><option value="HI" >Hindi</option><option value="HR" >Croatian</option><option value="HY" >Armenian</option><option value="JP" >Japanese</option><option value="KA" >Georgian</option><option value="KO" >Korean</option><option value="LT" >Lithuanian</option><option value="MK" >Macedonian</option><option value="MS" >Malay</option><option value="MT" >Maltese</option><option value="NO" >Norwegian</option><option value="RO" >Romanian</option><option value="RU" >Russian</option><option value="SL" >Slovenian</option><option value="SQ" >Albanian</option><option value="SR" >Serbian</option><option value="SW" >Swahili</option><option value="TH" >Thai</option><option value="TR" >Turkish</option><option value="UR" >Urdu</option><option value="VI" >Vietnamese</option><option value="YI" >Yiddish</option><option value="ZH" >Chinese</option>
+</select></p>
+
+<p><a href="translate.jsp?lang=EN" class="AVBlink">Contribute a better translation</a></p>
+
+<script>
+function googleTrans(s) {
+  if (s.options[s.selectedIndex].value == '') return;
+  var url = 'species.jsp?lang=' + s.options[s.selectedIndex].value + '&avibaseid=37F522810CADE42A';
+  document.location = url;
+}
+</script>
+
+
+
+</td>
+<td colspan=2 style="padding: 15px">
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+
+  $('#loginbox').toggle();
+
+  $("#loginlnk").click(function(){
+     $('#loginbox').slideToggle('fast');
+  });
+
+
+  $('#credlogin').toggle();
+
+
+});
+
+</script>
+
+
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr>
+<td width="100%" class="AVBHeader" colspan="3">
+Chaffinch (<I>Fringilla coelebs</I>) Linnaeus, 1758</td>
+</tr>
+<tr>
+<td width="100%" class="AVBSubHeader" colspan="3" align=center>
+<SCRIPT language="JavaScript">
+function changesection(s) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=37F522810CADE42A&sec=' + s;
+}
+function changespecies(t,v) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=' + t + '&sec=summary' + (v?'&ssver=' + v:'');
+}
+
+
+</SCRIPT>
+<a href="javascript:changesection('summary')">summary</a>&nbsp;&nbsp;
+<a href="javascript:changesection('taxontable')">taxon grid</a>&nbsp;&nbsp;
+<a href="javascript:changesection('map')">map</a>&nbsp;&nbsp;
+<a href="javascript:changesection('ebird')">eBird</a>&nbsp;&nbsp;
+<a href="javascript:changesection('wiki')">Wikipedia</a>&nbsp;&nbsp;
+<a href="javascript:changesection('natureserve')">NatureServe</a>&nbsp;&nbsp;
+Google: <a href="javascript:changesection('google')">Web/images</a>|<a href="javascript:changesection('scholar')">Scholar</a>&nbsp;&nbsp;
+<a href="javascript:changesection('itis')">ITIS</a>&nbsp;&nbsp;
+<a href="javascript:changesection('birdlife')">Birdlife</a>&nbsp;&nbsp;
+&nbsp;&nbsp;<img align="bottom" src="camera_icon1.gif"> <!-- tx[36] --><a href="javascript:changesection('flickr')">Flickr</a>
+&nbsp;&nbsp;<img align="bottom" src="sound_icon1.gif"> <!-- tx[143] --><a href="javascript:changesection('xenocanto')">Xeno-Canto</a>
+
+<hr noshade width="100%" size=1 align=center color="#F0F0F0">
+
+</td>
+</tr>
+</table>
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr><td>
+
+
+
+  <tr>
+    <td class="AVBContainerText" width="60%" valign="top">
+    
+
+    <table border=0 align=center width=95%><tr valign=top><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+    <script src="flickr_votes.js"></script>
+
+
+    <table height=250 class='flickr'>
+<tr valign='top'><td bgcolor='#F0F0F0' width=250><span id="flickr1"><br><a target="_blank" href="http://www.flickr.com/photos/amawby/2237074366/"><img border=0 src="http://farm3.static.flickr.com/2356/2237074366_a2d857089a_m.jpg"></a><br><span class='credit'>photo &copy;Andrew Mawby</span><br><center><a href="javascript:report(1, 59094)"><img id="report1" src="button2.gif" title="Report as inappropriate" border=0></a><a href="javascript:voteimg(1, 59094, 1)"><img id="vote1.1" src="vote0.gif" border=0 title="Vote = 1"></a><a href="javascript:voteimg(1, 59094, 2)"><img id="vote1.2" src="vote0.gif" border=0 title="Vote = 2"></a><a href="javascript:voteimg(1, 59094, 3)"><img id="vote1.3" src="vote0.gif" border=0 title="Vote = 3"></a><a href="javascript:voteimg(1, 59094, 4)"><img id="vote1.4" src="vote0.gif" border=0 title="Vote = 4"></a><a href="javascript:voteimg(1, 59094, 5)"><img id="vote1.5" src="vote0.gif" border=0 title="Vote = 5"></a><a href="javascript:nextimg(1, 'Fringilla coelebs')"><img src="button1.gif" title="Change photo" border=0></a></center></span></td></tr>
+</table>
+
+    <span style="color: #606060; font-size: 7pt">Photo powered by <a href="http://flickr.com" target="_blank">flickr.com</a>.</span></p>
+
+
+
+    <p>
+    <b>Order:</b><br> &nbsp;&nbsp;Passeriformes<br>
+    <b>Family:</b><br> &nbsp;&nbsp;Fringillidae<br>
+    <P>
+
+    <b>English:</b><br> &nbsp;&nbsp;Chaffinch<br>
+    <b>Scientific:</b><br> &nbsp;&nbsp;<i>Fringilla coelebs</i><br>
+    </p>
+    <p><b>Protonym:</b><br> &nbsp;&nbsp;<i>Fringilla coelebs</i><br>
+    </p>
+    <p><b>Avibase ID:</b><br> &nbsp;&nbsp;37F522810CADE42A<br>
+    <p><b>Taxomic Serial Number:</b><br>
+    TSN: <a target="_blank" href="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=179168">179168</a>
+
+    </p>
+
+    </td><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+
+    <b>Czech:</b><br> &nbsp;&nbsp;pěnkava obecná<br>
+
+    <b>German:</b><br> &nbsp;&nbsp;Buchfink<br>
+
+    <b>Danish:</b><br> &nbsp;&nbsp;Bogfinke<br>
+
+    <b>Spanish:</b><br> &nbsp;&nbsp;Pinzón Vulgar<br>
+
+    <b>Finnish:</b><br> &nbsp;&nbsp;peippo<br>
+
+    <b>French:</b><br> &nbsp;&nbsp;Pinson des arbres<br>
+
+    <b>Icelandic:</b><br> &nbsp;&nbsp;Bókfinka<br>
+
+    <b>Italian:</b><br> &nbsp;&nbsp;Fringuello comune<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;zuaoatori<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;ズアオアトリ<br>
+
+    <b>Dutch:</b><br> &nbsp;&nbsp;Vink<br>
+
+    <b>Norwegian:</b><br> &nbsp;&nbsp;Bokfink<br>
+
+    <b>Polish:</b><br> &nbsp;&nbsp;zięba<br>
+
+    <b>Portuguese:</b><br> &nbsp;&nbsp;Tentilhão-comum<br>
+
+    <b>Slovak:</b><br> &nbsp;&nbsp;pinka obyčajná<br>
+
+    <b>Swedish:</b><br> &nbsp;&nbsp;Bofink<br>
+
+    <b>Chinese:</b><br> &nbsp;&nbsp;苍头燕雀<br>
+</p>
+    </td></tr></table>
+
+<hr noshade width="80%" size=1 align=center color="#E0E0E0">
+
+   <span class="AVBContainerText">
+  
+     <P><b>Authorities recognizing this taxonomic concept:</b></P>
+
+       <b>African Bird Club Checklist 2004:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>African Bird Club Checklist August 2005:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>African Bird Club Checklist March 2007:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>African Bird Club Checklist January 2008:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>African Bird Club Checklist May 2009:</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>African Bird Club Checklist March 2010:</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (incl. 34th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (1983):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 35th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 36th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 37th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 38th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 39th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 40th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 41st suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (1998):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 42th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 43th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 44th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 45th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 46th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 47th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 48th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 49th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 50th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 51th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 52th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Birdlife checklist version 00:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Birdlife checklist version 01:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Birdlife checklist version 02:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Birdlife checklist version 03:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Birdlife checklist version 04:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition, incl. Jan 2009 suppl.):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Christidis and Boles (2008): Systematics and Taxonomy of Australian Birds:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Commission internationale pour les noms français des oiseaux (1993, révision 2009):</b><br>&nbsp;&nbsp;&nbsp;Pinson des arbres ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Commission internationale pour les noms français des oiseaux (1993):</b><br>&nbsp;&nbsp;&nbsp;Pinson des arbres ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 1st edition:</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 3rd edition:</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 4th edition:</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 5th edition (as published):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 5th edition (incl. 2000 revisions):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 5th edition (incl. 2001 revisions):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 5th edition (incl. 2002 revisions):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 5th edition (incl. 2003 revisions):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 5th edition (incl. 2004 revisions):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 5th edition (incl. 2005 revisions):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 6th edition:</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 6th edition (incl. 2007 revisions):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 6th edition (incl. 2008 revisions):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 6th edition (incl. 2009 revisions):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 6th edition (version 6.5 incl. 2010 revisions):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Clements 6th edition (version 6.6 incl. 2011 revisions):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>eBird version 1.50:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>eBird version 1.52:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Howard and Moore 2nd edition:</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Howard and Moore 2nd edition (incl. ? suppl):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Howard and Moore 3rd edition (as published):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 1.2):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 2.1):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 3.1):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 4):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 5):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 6):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 7):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 8):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Handbook of the Birds of the World (vol 1-15):</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 1.0:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 1.1:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 1.5:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 1.6:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 1.7:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 2.0:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 2.1:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 2.2:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 2.3:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 2.4:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 2.5:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 2.6:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 2.7:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 2.8:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 2.9:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>IOC World Bird Names, version 2.10:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Morony, Bock and Farrand:</b><br>&nbsp;&nbsp;&nbsp;Common Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Oriental Bird Club:</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>James Lee Peters:</b><br>&nbsp;&nbsp;&nbsp; <I>Fringilla coelebs</I><br>
+
+       <b>Sibley and Monroe (1993):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Sibley and Monroe (1993, including corrections up to 1998):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Sibley and Monroe 2nd edition (1996):</b><br>&nbsp;&nbsp;&nbsp;Chaffinch ( <I>Fringilla coelebs</I>)<br>
+
+       <b>Zoonomen - Zoological Nomenclature Resource:</b><br>&nbsp;&nbsp;&nbsp; <I>Fringilla coelebs</I><br>
+
+</span>
+
+    </td>
+    <td width="40%" valign=top align=left>
+<span class="AVBContainerText2">
+
+<P><table border=1 width="90%"><tr><td class="AVBContainerText2" style="border: 1pt; border-color: #D8D8BA;">
+
+  <P><b>Taxonomic status:</b><P><b>Species status:</b>
+
+  full species
+
+  
+
+</td></tr></table>
+
+
+
+
+<!-- related taxa -->
+
+<P><table width="90%"><tr><td class="AVBRelated">
+<font size="2">
+
+
+<center><b>Related taxa</b></center>
+
+&nbsp;
+* <b><b>Fringilla coelebs</b></b><big>&larr;</big><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('6364E4A53B9D5D99', 1)">Fringilla coelebs [coelebs]</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('0A29642D97819BAE', 1)">Fringilla coelebs coelebs</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('68CF5BC39ECBEB49', 1)">Fringilla coelebs balearica</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('AB72E013F8CAD591', 1)">Fringilla coelebs tintillon</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('74A80899A170077A', 1)">Fringilla coelebs tyrrhenica</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('FF85938F12347088', 1)">Fringilla coelebs solomkoi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('FB8A4D53B425C74F', 1)">Fringilla coelebs caucasica</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('029D09947D4255D9', 1)">Fringilla coelebs alexandrovi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('5C5B1C82CA75309F', 1)">Fringilla coelebs transcaspia</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('D62BE2E6B5D00A6F', 1)">Fringilla coelebs syriaca</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('AB6E962A3A865380', 1)">Fringilla coelebs gengleri</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('7D2F705F133A1598', 1)">Fringilla coelebs sarda</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('A63D9CB40B992BE6', 1)">Fringilla coelebs schiebeli</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('05AD15D88523C7D6', 1)">Fringilla coelebs [moreletti or maderensis]</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('D77B121C501DC1AA', 1)">Fringilla coelebs moreletti</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('3F80A0BC87F395E3', 1)">Fringilla coelebs maderensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('15C80D723B41FC18', 1)">Fringilla coelebs [canariensis or ombriosa]</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('13054768EF5C6AEA', 1)">Fringilla coelebs canariensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('9A34E0F07C6E6308', 1)">Fringilla coelebs ombriosa</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('305F7CDF7A6CE655', 1)">Fringilla coelebs palmae</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('376882CE2C6BDC25', 1)">Fringilla coelebs africana</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('540721BABEAA39DA', 1)">Fringilla coelebs spodiogenys</a><br>
+
+</font><br>
+</td></tr></table>
+
+    <table width="90%"><tr><td class="AVBSynonyms">
+    <font size="2"><center><b>Other synonyms</b></center>
+<br><b>Afrikaans: </b>Gryskoppie<br><b>Arabic: </b>الحسون الظالم, الصغنج, الصغنج (عصفور ظالم), الصغنج(عصفور ظالم), عصفور ظالم<br><b>Asturian: </b>Pimpím, Pin-Pin<br><b>Azerbaijani: </b>Garlı alacəhrə quşu, Meşə sərçəsi<br><b>Belarusian: </b>Берасцянка, Зябок<br><b>Bulgarian: </b>Обикновена чинка<br><b>Breton: </b>Ar pintig, Pint, Pintig<br><b>Catalan: </b>Pardal d'ala blanca, Pinsà, Pinsà comú<br><b>Catalan (Balears): </b>Pinsà<br><b>Valencian: </b>Pardal d'ala blanca<br><b>Czech: </b>Penkava obecná, Pěnkava obecná, pìnkava obecná<br><b>Welsh: </b>Asgell arian, Asgell fraith, Asgell-arian, Binc-binc, Brig y coed, Ji-binc, Jin jin, Pia'r gwinc, Pwynt, Winc<br><b>Danish: </b>Bogfinke<br><b>German: </b>Buchfink, Finkenlerche<br><b>Greek: </b>(Κοινός) Σπίνος, Σπίνος<br><b>English: </b>Chaffinch, Chaffinch Chaffinch, Common Chaffinch, Eurasian Chaffinch, European Chaffinch<br><b>Esperanto: </b>fringo<br><b>Spanish: </b>Gorrión molinero, Pinzón Común, Pinzon Vulgar, Pinzón vulgar<br><b>Estonian: </b>Metsvint<br><b>Basque: </b>Pinsà comú , Txonda arrunta, Txonta arrunt<br><b>Finnish: </b>Peippo<br><b>Faroese: </b>Bókfinka, Bókígða<br><b>French: </b>Pinson des arbres<br><b>Frisian: </b>Skelfink<br><b>Irish: </b>Bricín beatha, Gealún cátha, Rí Rua, Ríura<br><b>Gaelic: </b>Breacan Beithe, Bricein Beithe, Briecan Beatha<br><b>Galician: </b>Pimpín, Pinsà comú <br><b>Manx: </b>Ushag Veg Vreck, Ushag y Choan, Ushag y choau<br><b>Hebrew: </b>פרוש מצוי<br><b>Croatian: </b>Zeba, Zeba bitkavica<br><b>Hungarian: </b>Erdei pinty<br><b>Armenian: </b>[Amurik ], Ամուրիկ<br><b>Icelandic: </b>Bókfinka<br><b>Italian: </b>Fringuello, Fringuello comune<br><b>Japanese: </b>zuaoatori, Zuao-atori<br><b>Japanese: </b>ズアオアトリ<br><b>Georgian: </b>სკვინჩა<br><b>Kazakh: </b>Жаурауық, Қарлы торғай<br><b>Cornish: </b>Tynk<br><b>Latin: </b>Fringilla coelebs<br><b>Lithuanian: </b>Čiuldutis, Kikilis, Paprastasis kikilis, Šilagaidis<br><b>Latvian: </b>Žube, Žubīte<br><b>Macedonian: </b>Зеба, Обична звингалка<br><b>Mongolian: </b>Дуулгаат ээрүүл бялзуухай<br><b>Maltese: </b>Sponsun<br><b>Dutch: </b>Vink<br><b>Norwegian: </b>Bokfink, Tvint'n, Uverspekk<br><b>Polish: </b>zieba, Zięba, zięba (zwyczajna), zieba zwyczajna, Zięba zwyczajna<br><b>Portuguese: </b>Tentelhão-comum, tentilhão, Tentilhão-comum<br><b>Romansh: </b>Fringhel<br><b>Russian: </b>Zyablik, Зяблик<br><b>Sardinian: </b>Lineddu, Pappadrigu, Pappatrigu, Passariargia, Tintillu, Zoni<br><b>Scots: </b>Breacan beithe, Briecan beatha<br><b>Northern Sami: </b>Beibboš<br><b>Slovak: </b>pinka lesná, Pinka obyčajná<br><b>Slovenian: </b>šcinkavec, ščinkavec<br><b>Albanian: </b>Borës, Zborak, Zboraks, Zog bore<br><b>Serbian: </b>obicna zeba, obična zeba, Обична зеба<br><b>Swedish: </b>Bofink<br><b>Thai: </b>นกจาบปีกอ่อนหัวเทาอกชมพู<br><b>Turkish: </b>Bayağı İspinoz, ispinoz, İspinoz, şspinoz<br><b>Tuvinian: </b>Агаар медээчизи, Зяблик<br><b>Ukrainian: </b>Зяблик<br><b>Vietnamese: </b>Chim sẻ khướư<br><b>Chinese: </b>[cang-tou yan-que], 苍头燕雀
+  </font>
+  </td></tr></table></P>
+
+</span>
+</td></tr>
+<tr><td colspan="3">
+<P><small><!-- avb.bow2Descr --></small></P>
+<P>
+  </td>
+  </tr>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=3>
+<P>&nbsp;</P>
+<center>
+<a href="http://www.bsc-eoc.org/bscmain.html" target="_blank"><img src="BSClogo3.gif" alt="" title="Avibase is hosted by Bird Studies Canada" border=0></a> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.birdlife.org" target="_blank"><img src="/links/images/bl_logo.gif" alt="" title="Bird Studies Canada is the canadian co-partner of Birdlife International" border=0></a>
+</center><br>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=2 valign="bottom">
+<center><P><small>Avibase has been visited <b>104,637,940</b> times since 24 June 2003. &copy; Denis Lepage |
+<a href="privacy.jsp">Privacy policy</a><br>
+<small><!-- Translation of this page in English provided by --></small></small></P></center>
+
+<center><a href="http://www.birdingtop500.com/cgi-bin/topsite/topsite.cgi?user=dlepage"><img src="http://www.birdingtop500.com/cgi-bin/topsite/counter.cgi?user=dlepage" border=0></a>
+</center>
+</td></tr></table>
+
+</td></tr></table>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12387576-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+
+

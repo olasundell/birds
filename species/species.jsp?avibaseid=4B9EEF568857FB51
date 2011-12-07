@@ -1,0 +1,678 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Phasianus colchicus - Avibase</title>
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Description" content="Avibase is an extensive database information system about all birds of the world, containing over 5 million records about 10,000 species and 22,000 subspecies of birds, including distribution information, taxonomy, synonyms in several languages and more.">
+<meta name="KeyWords" content="bird, birds, birding, birder, birders, birdwatching, birdwatcher, birdwatchers, links, birdlink, birdlinks, ornithology, checklist, checklists, world, oiseau, oiseaux, aves, subspecies, family, taxonomy">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Language" content="en">
+
+<style type="text/css">@import url("avibase.css");</style>
+
+<script type="text/javascript" src="js/bsn.AutoSuggest_2.1.3_avibase.js" charset="utf-8"></script>
+<link rel="stylesheet" href="css/autosuggest_inquisitor.css" type="text/css" media="screen" charset="utf-8" />
+
+<SCRIPT language="JavaScript">
+function changepg(pg, lang, id, ts) {
+  self.document.location = 'avibase.jsp?pg=' + pg + (lang != ''?'&lang='+lang:'') + (id != null?'&id=' + id:'') + (ts != null?'&ts=' + ts:'');
+}
+</SCRIPT>
+<!-- SCRIPT language="JavaScript" src="avibase.js"></script -->
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="jquery.ui.draggable.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.alerts.js" type="text/javascript"></script>
+<link href="jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link rel="search" type="application/opensearchdescription+xml" title="Avibase" href="opensearchplugin.xml">
+
+</head>
+<body>
+
+
+<table border=0 bgcolor="#000078" cellpadding=0 cellspacing=0 width=1024 align=center>
+<tr>
+<td width="400" colspan=2><img src="avibase.gif" align="top" height="84"></td>
+<td align="right" width="580">
+<a target="photos" href="http://www.flickr.com/photos/faisca/308668914/in/set-250198/"><img src="images/ph2415.jpg" align="top" border=0 height="65" alt="" title="Northern Shoveler, Portugal, Faisca"></a><a target="photos" href="http://www.digimages.info"><img src="images/ph826.jpg" align="top" border=0 height="65" alt="" title="Little Bee-eater, , Alain Fossé"></a><a target="photos" href="http://www.neoecofoundation.org"><img src="images/ph1277.jpg" align="top" border=0 height="65" alt="" title="Green-barred Woodpecker, Brazil, Neotropical Eco Foundation"></a><a target="photos" href="http://www.stanford.edu/~cagan/photography.html"><img src="images/ph1017.jpg" align="top" border=0 height="65" alt="" title="Yellow-bellied Seedeater, Las Cruces, Costa Rica, Cagan Sekercioglu"></a><a target="photos" href="http://www.flickr.com/photos/faisca/244065844/in/set-250198/"><img src="images/ph1867.jpg" align="top" border=0 height="65" alt="" title="Arenaria interpres, Portugal, Faisca"></a><a target="photos" href="http://www.kashmirnetwork.com/birds/"><img src="images/ph1334.jpg" align="top" border=0 height="65" alt="" title="Oriental Turtle Dove, Kashmir, India, Bakshi Jehangir"></a><a target="photos" href="http://www.stanford.edu/~cagan/photography.html"><img src="images/ph964.jpg" align="top" border=0 height="65" alt="" title="Boat-billed Flycatcher, Las Cruces, Costa Rica, Cagan Sekercioglu"></a>
+<br><b><font color="#FFFFFF" size="1" face="Geneva,Arial,Helvetica">Bird checklists - taxonomy - distribution - maps - links</font></font></b></td></tr>
+</table><table border=0 width=1024 align=center>
+<tr valign=top><td rowspan=2 width=125 class="AVBbar" bgcolor="#336699"> <!-- #000078 -->
+
+<script>
+function makepale(d) {
+  d.style.backgroundColor = '#226CB7';
+}
+function makenormal(d) {
+  d.style.backgroundColor = '#024C97';
+}
+</SCRIPT>
+
+
+<p>&nbsp;<br>
+<div id="div1" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('home','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=home" class="AVBlinks2"><font color="#F0F0F0">Home</font></a>
+</div>
+<br>
+<div id="div2" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('checklist','EN');">
+&nbsp;&nbsp;<a href="checklist.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Checklists</font></a>
+</div>
+<br>
+<div id="div3" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('search','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=search" class="AVBlinks2"><font color="#F0F0F0">Search</font></a>
+</div>
+<br>
+<div id="div4" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('families','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=families" class="AVBlinks2"><font color="#F0F0F0">Families</font></a>
+</div>
+<br>
+<div id="div9" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='compare.jsp';">
+&nbsp;&nbsp;<a href="compare.jsp" class="AVBlinks2"><font color="#F0F0F0">Compare lists</font></a>
+</div>
+<br>
+<div id="div10" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='rangemaps.jsp';">
+&nbsp;&nbsp;<a href="rangemaps.jsp" class="AVBlinks2"><font color="#F0F0F0">Range maps</font></a>
+</div>
+<br>
+<div id="div5" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp';">
+&nbsp;&nbsp;<a href="/links/links.jsp" class="AVBlinks2"><font color="#F0F0F0">Birdlinks</font></a>
+</div>
+<br>
+<div id="div6" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp?page=g_reports';">
+&nbsp;&nbsp;<a href="/links/links.jsp?page=g_reports" class="AVBlinks2"><font color="#F0F0F0">Trip reports</font></a>
+</div>
+<br>
+<div id="div7" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('webservice','EN');">
+&nbsp;&nbsp;<a href="webservice.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Web Service</font></a>
+</div>
+<br>
+<div id="div8" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('contrib','EN');">
+&nbsp;&nbsp;<a href="contrib.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Contribute</font></a>
+</div>
+<P>
+<div>
+<form action="avibase.jsp" name='avbsmall' style="position: relative;">
+<input type="hidden" name="pg" value="search">
+<input type="hidden" name="ts" value="1323205761296">
+
+<font face="Geneva,Arial,Helvetica" size=1 color=white>
+Quick search: <input id="searchboxsm" name="qstr" type="text" size="14" style="font-size: 9pt">
+</form>
+</div>
+</p>
+</font>
+
+<script type="text/javascript">
+	var options_xml = {
+		script: function (input) { return "suggest3.jsp?qstr="+input; },
+		varname:"input",
+		minchars:3,
+		timeout:5000,
+		noresults: "No name matching",
+		maxresults:10
+
+	};
+	var as_xml = new bsn.AutoSuggest('searchboxsm', options_xml);
+</script>
+
+<P><b><font color="#FFFFFF">Avibase is also available in the following languages:</font></b><br>
+<table border=0 style="font-family: Geneva,Arial,Helvetica; font-size: 8pt;">
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-en.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=4B9EEF568857FB51">English</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-es.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=4B9EEF568857FB51">Spanish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-fr.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=4B9EEF568857FB51">French</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-de.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=4B9EEF568857FB51">German</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-hu.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=4B9EEF568857FB51">Hungarian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-id.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=4B9EEF568857FB51">Indonesian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-it.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=4B9EEF568857FB51">Italian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-nl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=4B9EEF568857FB51">Dutch</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-pt.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=4B9EEF568857FB51">Portuguese</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-sv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=4B9EEF568857FB51">Swedish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-ca.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=4B9EEF568857FB51">Catalan</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-is.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=4B9EEF568857FB51">Icelandic</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-af.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=4B9EEF568857FB51">Afrikaans</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-ia.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=4B9EEF568857FB51">Interlingua</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-pl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=4B9EEF568857FB51">Polish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-uk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=4B9EEF568857FB51">Ukrainian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-cs.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=4B9EEF568857FB51">Czech</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-sk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=4B9EEF568857FB51">Slovak</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-ru.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=4B9EEF568857FB51">Russian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-fi.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=4B9EEF568857FB51">Finnish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=4B9EEF568857FB51"><img src="flags/lang2-lv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=4B9EEF568857FB51">Latvian</a></td></tr>
+
+</table>
+</P>
+<p>Google translations:<br>
+<select name="lgg" style="font-size: 9pt; max-width: 100px; clientWidth: 100px;" onChange="googleTrans(this)">
+<option value=""></option>
+<option value="AR" >Arabic</option><option value="AZ" >Azerbaijani</option><option value="BG" >Bulgarian</option><option value="BE" >Belarusian</option><option value="CY" >Welsh</option><option value="DA" >Danish</option><option value="EL" >Greek</option><option value="ET" >Estonian</option><option value="EU" >Basque</option><option value="FA" >Persian</option><option value="FIL" >Filipino</option><option value="GA" >Irish</option><option value="GL" >Galician</option><option value="HATX" >Haitian Creole French</option><option value="HE" >Hebrew</option><option value="HI" >Hindi</option><option value="HR" >Croatian</option><option value="HY" >Armenian</option><option value="JP" >Japanese</option><option value="KA" >Georgian</option><option value="KO" >Korean</option><option value="LT" >Lithuanian</option><option value="MK" >Macedonian</option><option value="MS" >Malay</option><option value="MT" >Maltese</option><option value="NO" >Norwegian</option><option value="RO" >Romanian</option><option value="RU" >Russian</option><option value="SL" >Slovenian</option><option value="SQ" >Albanian</option><option value="SR" >Serbian</option><option value="SW" >Swahili</option><option value="TH" >Thai</option><option value="TR" >Turkish</option><option value="UR" >Urdu</option><option value="VI" >Vietnamese</option><option value="YI" >Yiddish</option><option value="ZH" >Chinese</option>
+</select></p>
+
+<p><a href="translate.jsp?lang=EN" class="AVBlink">Contribute a better translation</a></p>
+
+<script>
+function googleTrans(s) {
+  if (s.options[s.selectedIndex].value == '') return;
+  var url = 'species.jsp?lang=' + s.options[s.selectedIndex].value + '&avibaseid=4B9EEF568857FB51';
+  document.location = url;
+}
+</script>
+
+
+
+</td>
+<td colspan=2 style="padding: 15px">
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+
+  $('#loginbox').toggle();
+
+  $("#loginlnk").click(function(){
+     $('#loginbox').slideToggle('fast');
+  });
+
+
+  $('#credlogin').toggle();
+
+
+});
+
+</script>
+
+
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr>
+<td width="100%" class="AVBHeader" colspan="3">
+Common Pheasant (<I>Phasianus colchicus</I>) Linnaeus, 1758</td>
+</tr>
+<tr>
+<td width="100%" class="AVBSubHeader" colspan="3" align=center>
+<SCRIPT language="JavaScript">
+function changesection(s) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=4B9EEF568857FB51&sec=' + s;
+}
+function changespecies(t,v) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=' + t + '&sec=summary' + (v?'&ssver=' + v:'');
+}
+
+
+</SCRIPT>
+<a href="javascript:changesection('summary')">summary</a>&nbsp;&nbsp;
+<a href="javascript:changesection('taxontable')">taxon grid</a>&nbsp;&nbsp;
+<a href="javascript:changesection('map')">map</a>&nbsp;&nbsp;
+<a href="javascript:changesection('ebird')">eBird</a>&nbsp;&nbsp;
+<a href="javascript:changesection('wiki')">Wikipedia</a>&nbsp;&nbsp;
+<a href="javascript:changesection('natureserve')">NatureServe</a>&nbsp;&nbsp;
+Google: <a href="javascript:changesection('google')">Web/images</a>|<a href="javascript:changesection('scholar')">Scholar</a>&nbsp;&nbsp;
+<a href="javascript:changesection('itis')">ITIS</a>&nbsp;&nbsp;
+<font color="#303030">Birdlife</font>&nbsp;&nbsp;
+&nbsp;&nbsp;<img align="bottom" src="camera_icon1.gif"> <!-- tx[36] --><a href="javascript:changesection('flickr')">Flickr</a>
+&nbsp;&nbsp;<img align="bottom" src="sound_icon1.gif"> <!-- tx[143] --><a href="javascript:changesection('xenocanto')">Xeno-Canto</a>
+
+<hr noshade width="100%" size=1 align=center color="#F0F0F0">
+
+</td>
+</tr>
+</table>
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr><td>
+
+
+
+  <tr>
+    <td class="AVBContainerText" width="60%" valign="top">
+    
+
+    <table border=0 align=center width=95%><tr valign=top><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+    <script src="flickr_votes.js"></script>
+
+
+    <table height=250 class='flickr'>
+<tr valign='top'><td bgcolor='#F0F0F0' width=250><span id="flickr1"><br><a target="_blank" href="http://www.flickr.com/photos/36917655@N08/4262075105/"><img border=0 src="http://farm3.static.flickr.com/2496/4262075105_814151ee82_m.jpg"></a><br><span class='credit'>photo &copy;p. stubbs photo</span><br><center><a href="javascript:report(1, 204867)"><img id="report1" src="button2.gif" title="Report as inappropriate" border=0></a><a href="javascript:voteimg(1, 204867, 1)"><img id="vote1.1" src="vote2d.gif" border=0 title="Vote = 1"></a><a href="javascript:voteimg(1, 204867, 2)"><img id="vote1.2" src="vote2d.gif" border=0 title="Vote = 2"></a><a href="javascript:voteimg(1, 204867, 3)"><img id="vote1.3" src="vote2d.gif" border=0 title="Vote = 3"></a><a href="javascript:voteimg(1, 204867, 4)"><img id="vote1.4" src="vote2a.gif" border=0 title="Vote = 4"></a><a href="javascript:voteimg(1, 204867, 5)"><img id="vote1.5" src="vote0.gif" border=0 title="Vote = 5"></a><a href="javascript:nextimg(1, 'Phasianus colchicus')"><img src="button1.gif" title="Change photo" border=0></a></center></span></td></tr>
+</table>
+
+    <span style="color: #606060; font-size: 7pt">Photo powered by <a href="http://flickr.com" target="_blank">flickr.com</a>.</span></p>
+
+
+
+    <p>
+    <b>Order:</b><br> &nbsp;&nbsp;Galliformes<br>
+    <b>Family:</b><br> &nbsp;&nbsp;Phasianidae<br>
+    <P>
+
+    <b>English:</b><br> &nbsp;&nbsp;Common Pheasant<br>
+    <b>Scientific:</b><br> &nbsp;&nbsp;<i>Phasianus colchicus</i><br>
+    </p>
+    <p><b>Protonym:</b><br> &nbsp;&nbsp;<i>Phasianus colchicus</i><br>
+    </p>
+    <p><b>Avibase ID:</b><br> &nbsp;&nbsp;4B9EEF568857FB51<br>
+    <p><b>Taxomic Serial Number:</b><br>
+    TSN: <a target="_blank" href="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175905">175905</a>
+
+    </p>
+
+    </td><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+
+    <b>Czech:</b><br> &nbsp;&nbsp;bažant obecný<br>
+
+    <b>German:</b><br> &nbsp;&nbsp;Fasan<br>
+
+    <b>Danish:</b><br> &nbsp;&nbsp;Fasan<br>
+
+    <b>Spanish:</b><br> &nbsp;&nbsp;Faisán Vulgar<br>
+
+    <b>Finnish:</b><br> &nbsp;&nbsp;fasaani<br>
+
+    <b>French:</b><br> &nbsp;&nbsp;Faisan de Colchide<br>
+
+    <b>Icelandic:</b><br> &nbsp;&nbsp;Fashani<br>
+
+    <b>Italian:</b><br> &nbsp;&nbsp;Fagiano comune<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;kouraikiji<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;キジ<br>
+
+    <b>Dutch:</b><br> &nbsp;&nbsp;Bosfazant<br>
+
+    <b>Norwegian:</b><br> &nbsp;&nbsp;Fasan<br>
+
+    <b>Polish:</b><br> &nbsp;&nbsp;bażant<br>
+
+    <b>Portuguese:</b><br> &nbsp;&nbsp;Faisão<br>
+
+    <b>Slovak:</b><br> &nbsp;&nbsp;bažant obycajný<br>
+
+    <b>Swedish:</b><br> &nbsp;&nbsp;Fasan<br>
+
+    <b>Chinese:</b><br> &nbsp;&nbsp;环颈雉<br>
+</p>
+    </td></tr></table>
+
+<hr noshade width="80%" size=1 align=center color="#E0E0E0">
+
+   <span class="AVBContainerText">
+  
+     <P><b>Authorities recognizing this taxonomic concept:</b></P>
+
+       <b>African Bird Club Checklist January 2008:</b><br>&nbsp;&nbsp;&nbsp;Common Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>African Bird Club Checklist May 2009:</b><br>&nbsp;&nbsp;&nbsp;Common Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>African Bird Club Checklist March 2010:</b><br>&nbsp;&nbsp;&nbsp;Common Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (1931):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 19th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 20th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 21th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 22th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 23th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 24th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 25th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 26th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 27th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 28th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 29th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 30th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 31th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (1957):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (incl. 32nd suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (incl. 33th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (incl. 34th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (1983):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 35th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 36th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 37th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 38th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 39th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 40th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 41st suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (1998):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 42th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 43th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 44th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 45th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 46th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 47th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 48th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 49th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 50th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 51th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 52th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>Birdlife checklist version 00:</b><br>&nbsp;&nbsp;&nbsp;Common Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>Birdlife checklist version 01:</b><br>&nbsp;&nbsp;&nbsp;Common Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition):</b><br>&nbsp;&nbsp;&nbsp;Common Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition, incl. Jan 2009 suppl.):</b><br>&nbsp;&nbsp;&nbsp;Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>Christidis and Boles (2008): Systematics and Taxonomy of Australian Birds:</b><br>&nbsp;&nbsp;&nbsp;Common Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>Clements 4th edition:</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>Clements 6th edition (incl. 2008 revisions):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>Clements 6th edition (incl. 2009 revisions):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>Clements 6th edition (version 6.5 incl. 2010 revisions):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>Clements 6th edition (version 6.6 incl. 2011 revisions):</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>eBird version 1.50:</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>eBird version 1.52:</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>IOC World Bird Names, version 1.0:</b><br>&nbsp;&nbsp;&nbsp;Common Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>IOC World Bird Names, version 1.1:</b><br>&nbsp;&nbsp;&nbsp;Common Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>Morony, Bock and Farrand:</b><br>&nbsp;&nbsp;&nbsp;Ring-necked Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+       <b>James Lee Peters:</b><br>&nbsp;&nbsp;&nbsp; <I>Phasianus colchicus</I><br>
+
+       <b>Sibley and Monroe 2nd edition (1996):</b><br>&nbsp;&nbsp;&nbsp;Common Pheasant ( <I>Phasianus colchicus</I>)<br>
+
+</span>
+
+    </td>
+    <td width="40%" valign=top align=left>
+<span class="AVBContainerText2">
+
+<P><table border=1 width="90%"><tr><td class="AVBContainerText2" style="border: 1pt; border-color: #D8D8BA;">
+
+  <P><b>Taxonomic status:</b><P><b>Species status:</b>
+
+  this taxon has now been split
+
+  
+
+</td></tr></table>
+
+
+
+
+<!-- related taxa -->
+
+<P><table width="90%"><tr><td class="AVBRelated">
+<font size="2">
+
+
+<center><b>Related taxa</b></center>
+
+&nbsp;
+<b>Phasianus colchicus</b></b><big>&larr;</big><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('2FA39DCD42F80BC9', 1)">Phasianus colchicus</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('79537DF33DEFAD53', 1)">Phasianus colchicus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('36EA5BB9C5E78D46', 1)">Phasianus colchicus colchicus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('8656A63681986363', 1)">Phasianus colchicus europaeus</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('9DBF3CF0D7E95D7D', 1)">Phasianus colchicus septentrionalis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('40ABF0E28A54876B', 1)">Phasianus colchicus talischensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('92E3EB5A615316EE', 1)">Phasianus colchicus turcestanicus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('D1B0658DED28CF37', 1)">Phasianus colchicus bergii</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('CF47CFCF2ADF4796', 1)">Phasianus colchicus persicus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('93F681EFD88FA944', 1)">Phasianus colchicus zerafschanicus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('5DA5C75906A013C5', 1)">Phasianus colchicus zarudnyi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('A7F2F7F798641A6B', 1)">Phasianus colchicus bianchii</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('D2FA273AA05B1A9B', 1)">Phasianus colchicus [torquatus]</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('9EA3F9015005A34A', 1)">Phasianus colchicus torquatus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('62FC33554E11A231', 1)">Phasianus colchicus formosanus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('6AB235D067F6225F', 1)">Phasianus colchicus satscheuensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('C75CFD2B4B0AFA9E', 1)">Phasianus colchicus vlangalii</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('E67EC9DDB168D8F5', 1)">Phasianus colchicus alaschanicus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('84C4E2EE688B619B', 1)">Phasianus colchicus sohokhotensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('4B360D0C1B251BC8', 1)">Phasianus colchicus pallasi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('888AF2CC8809CCFA', 1)">Phasianus colchicus karpowi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('4C576E3AB4CC8D8C', 1)">Phasianus colchicus kiangsuensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('E250804046C82AF6', 1)">Phasianus colchicus strauchi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('BD193FD7381FD386', 1)">Phasianus colchicus suehschanensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('40CF3AAA7781AB5E', 1)">Phasianus colchicus elegans</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('BA8BDEE1936494BE', 1)">Phasianus colchicus decollatus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('FBAFC33D7B9E5BFB', 1)">Phasianus colchicus rothschildi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('515E4965C1D986DF', 1)">Phasianus colchicus takatsukasae</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('41125BCA5E285B49', 1)">Phasianus colchicus [tarimensis]</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('DD680747E0F6BEAA', 1)">Phasianus colchicus tarimensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('1200917A78DEB9B6', 1)">Phasianus colchicus shawii</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('4A409AAACC8E8540', 1)">Phasianus colchicus [mongolicus]</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('A3AB8960E15B2AB8', 1)">Phasianus colchicus mongolicus</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('3DCFA3580AA2B7C9', 1)">Phasianus colchicus edzinensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('9B6940B33CF9526F', 1)">Phasianus colchicus hagenbecki</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('0772E0C39F1FD4BA', 1)">Phasianus colchicus [chrysomelas or principalis]</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('30F84E06353F99F6', 1)">Phasianus colchicus principalis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('CDC1DCE1493F9612', 1)">Phasianus colchicus chrysomelas</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('22C500C0224D53F5', 1)">Phasianus versicolor</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('5BBF75BC61D2C2CD', 1)">Phasianus versicolor versicolor</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('90A26A50EEE42DB7', 1)">Phasianus versicolor robustipes</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('80A0FEFF05458570', 1)">Phasianus versicolor kigis</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('430F64E53F30F860', 1)">Phasianus versicolor tanensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('50A7B27683E1C9A7', 1)">Phasianus versicolor tohkaidi</a><br>
+
+</font><br>
+</td></tr></table>
+
+    <table width="90%"><tr><td class="AVBSynonyms">
+    <font size="2"><center><b>Other synonyms</b></center>
+<br><b>Azerbaijani: </b>Qırqovul<br><b>Belarusian: </b>Бажан<br><b>Bulgarian: </b>Колхидски фазан<br><b>Breton: </b>Ar fazan-kolc'his<br><b>Catalan: </b>Faisà<br><b>Catalan (Balears): </b>Faisà<br><b>Czech: </b>Bažant obecný<br><b>Welsh: </b>Ceiliog y coed, Coediar, Ffesant<br><b>Danish: </b>Fasan<br><b>German: </b>Fasan<br><b>Greek: </b>(Κοινός) Φασιανός, Φασιανός<br><b>English: </b>Chinese pheasant, Common Pheasant, English pheasant, green pheasant, Japanese pheasant, Pheasant, Ring-necked Pheasant<br><b>Esperanto: </b>Fazano <br><b>Spanish: </b>Faisán, faisán de collar, Faisán Vulgar<br><b>Spanish (Chile): </b>Faisán<br><b>Spanish (Dominican Rep.): </b>Faisán<br><b>Spanish (Mexico): </b>faisán de collar<br><b>Estonian: </b>Faasan, faasan (jahifaasan)<br><b>Basque: </b>Faisà, Faisai arrunta<br><b>Finnish: </b>Fasaani<br><b>Faroese: </b>Fasánur<br><b>French: </b>faisan de chasse, Faisan de Colchide<br><b>Frisian: </b>fazant<br><b>Irish: </b>Piasún<br><b>Gaelic: </b>An Easag, Easag<br><b>Galician: </b>Faisà, Faisán<br><b>Haitian Creole French: </b>Faisan<br><b>Hebrew: </b>פסיון מצוי<br><b>Croatian: </b>Fazan<br><b>Hungarian: </b>Fácán<br><b>Armenian: </b>[Pasian ], Անդրկավկասյան Փասիան, Փասիան<br><b>Icelandic: </b>Fashani<br><b>Italian: </b>Fagiano, Fagiano comune<br><b>Japanese: </b>kouraikiji, Kourai-kiji<br><b>Japanese: </b>キジ, コウライキジ<br><b>Georgian: </b>კოლხური ხოხობი<br><b>Kazakh: </b>Қырғауыл<br><b>Korean: </b>꿩<br><b>Cornish: </b>Fesont<br><b>Latin: </b>Phasianus colchicus<br><b>Lithuanian: </b>Fazanas, Medžiojamasis fazanas<br><b>Latvian: </b>fazans<br><b>Macedonian: </b>Ловен фазан, Фазан<br><b>Dutch: </b>Bosfazant, Fazant<br><b>Norwegian: </b>Fasan<br><b>Polish: </b>bażant, bażant (zwyczajny), bażant zwyczajny<br><b>Portuguese: </b>faisão<br><b>Romansh: </b>Fasan<br><b>Romanian: </b>fazan<br><b>Russian: </b>Fazan, Обыкновенный фазан, Фазан, Фазан обыкновенный<br><b>Slovak: </b>bažant obycajný, Bažant obyčajný, bažant poľovný, obyčajný poľovný<br><b>Slovenian: </b>fazan<br><b>Albanian: </b>Fazani<br><b>Serbian: </b>Fazan, obicni fazan, obični fazan, Фазан<br><b>Swedish: </b>Fasan<br><b>Turkmen: </b>sülün<br><b>Turkish: </b>Sülün<br><b>Ukrainian: </b>Фазан<br><b>Vietnamese: </b>Trĩ đỏ<br><b>Chinese: </b>环颈雉, 環頸雉, 雉雞, 雉鸡
+  </font>
+  </td></tr></table></P>
+
+</span>
+</td></tr>
+<tr><td colspan="3">
+<P><small><!-- avb.bow2Descr --></small></P>
+<P>
+  </td>
+  </tr>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=3>
+<P>&nbsp;</P>
+<center>
+<a href="http://www.bsc-eoc.org/bscmain.html" target="_blank"><img src="BSClogo3.gif" alt="" title="Avibase is hosted by Bird Studies Canada" border=0></a> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.birdlife.org" target="_blank"><img src="/links/images/bl_logo.gif" alt="" title="Bird Studies Canada is the canadian co-partner of Birdlife International" border=0></a>
+</center><br>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=2 valign="bottom">
+<center><P><small>Avibase has been visited <b>104,635,672</b> times since 24 June 2003. &copy; Denis Lepage |
+<a href="privacy.jsp">Privacy policy</a><br>
+<small><!-- Translation of this page in English provided by --></small></small></P></center>
+
+<center><a href="http://www.birdingtop500.com/cgi-bin/topsite/topsite.cgi?user=dlepage"><img src="http://www.birdingtop500.com/cgi-bin/topsite/counter.cgi?user=dlepage" border=0></a>
+</center>
+</td></tr></table>
+
+</td></tr></table>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12387576-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+
+

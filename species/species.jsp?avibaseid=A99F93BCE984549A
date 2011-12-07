@@ -1,0 +1,602 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Sylvia curruca - Avibase</title>
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Description" content="Avibase is an extensive database information system about all birds of the world, containing over 5 million records about 10,000 species and 22,000 subspecies of birds, including distribution information, taxonomy, synonyms in several languages and more.">
+<meta name="KeyWords" content="bird, birds, birding, birder, birders, birdwatching, birdwatcher, birdwatchers, links, birdlink, birdlinks, ornithology, checklist, checklists, world, oiseau, oiseaux, aves, subspecies, family, taxonomy">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Language" content="en">
+
+<style type="text/css">@import url("avibase.css");</style>
+
+<script type="text/javascript" src="js/bsn.AutoSuggest_2.1.3_avibase.js" charset="utf-8"></script>
+<link rel="stylesheet" href="css/autosuggest_inquisitor.css" type="text/css" media="screen" charset="utf-8" />
+
+<SCRIPT language="JavaScript">
+function changepg(pg, lang, id, ts) {
+  self.document.location = 'avibase.jsp?pg=' + pg + (lang != ''?'&lang='+lang:'') + (id != null?'&id=' + id:'') + (ts != null?'&ts=' + ts:'');
+}
+</SCRIPT>
+<!-- SCRIPT language="JavaScript" src="avibase.js"></script -->
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="jquery.ui.draggable.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.alerts.js" type="text/javascript"></script>
+<link href="jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link rel="search" type="application/opensearchdescription+xml" title="Avibase" href="opensearchplugin.xml">
+
+</head>
+<body>
+
+
+<table border=0 bgcolor="#000078" cellpadding=0 cellspacing=0 width=1024 align=center>
+<tr>
+<td width="400" colspan=2><img src="avibase.gif" align="top" height="84"></td>
+<td align="right" width="580">
+<a target="photos" href="http://www.digimages.info"><img src="images/ph760.jpg" align="top" border=0 height="65" alt="" title="Papuan Lorikeet, , Alain Fossé"></a><a target="photos" href="http://www.chezfred.info/"><img src="images/ph1794.jpg" align="top" border=0 height="65" alt="" title="Bennett's Woodpecker, Namibia, Frédéric Leviez"></a><a target="photos" href="http://www.chezfred.info/"><img src="images/ph2653.jpg" align="top" border=0 height="65" alt="" title="colombar maïtsou, Madagascar, Frédéric Leviez"></a><img src="images/ph1727.jpg" align="top" border=0 height="65" alt="" title="Yellowshouldered Grassquit, Jamaica, Jan van den Broek"><a target="photos" href="http://www.kashmirnetwork.com/birds/"><img src="images/ph1357.jpg" align="top" border=0 height="65" alt="" title="Common Kestrel, Kashmir, India, Bakshi Jehangir"></a><a target="photos" href="http://www.flickr.com/photos/faisca/51811452/in/set-250198/"><img src="images/ph2231.jpg" align="top" border=0 height="65" alt="" title="GREY HERON, Portugal, Faisca"></a><a target="photos" href="http://www.flickr.com/photos/faisca/169768888/in/set-250198/"><img src="images/ph1950.jpg" align="top" border=0 height="65" alt="" title="BLACK-WINGED STILT, Portugal, Faisca"></a>
+<br><b><font color="#FFFFFF" size="1" face="Geneva,Arial,Helvetica">Bird checklists - taxonomy - distribution - maps - links</font></font></b></td></tr>
+</table><table border=0 width=1024 align=center>
+<tr valign=top><td rowspan=2 width=125 class="AVBbar" bgcolor="#336699"> <!-- #000078 -->
+
+<script>
+function makepale(d) {
+  d.style.backgroundColor = '#226CB7';
+}
+function makenormal(d) {
+  d.style.backgroundColor = '#024C97';
+}
+</SCRIPT>
+
+
+<p>&nbsp;<br>
+<div id="div1" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('home','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=home" class="AVBlinks2"><font color="#F0F0F0">Home</font></a>
+</div>
+<br>
+<div id="div2" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('checklist','EN');">
+&nbsp;&nbsp;<a href="checklist.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Checklists</font></a>
+</div>
+<br>
+<div id="div3" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('search','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=search" class="AVBlinks2"><font color="#F0F0F0">Search</font></a>
+</div>
+<br>
+<div id="div4" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('families','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=families" class="AVBlinks2"><font color="#F0F0F0">Families</font></a>
+</div>
+<br>
+<div id="div9" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='compare.jsp';">
+&nbsp;&nbsp;<a href="compare.jsp" class="AVBlinks2"><font color="#F0F0F0">Compare lists</font></a>
+</div>
+<br>
+<div id="div10" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='rangemaps.jsp';">
+&nbsp;&nbsp;<a href="rangemaps.jsp" class="AVBlinks2"><font color="#F0F0F0">Range maps</font></a>
+</div>
+<br>
+<div id="div5" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp';">
+&nbsp;&nbsp;<a href="/links/links.jsp" class="AVBlinks2"><font color="#F0F0F0">Birdlinks</font></a>
+</div>
+<br>
+<div id="div6" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp?page=g_reports';">
+&nbsp;&nbsp;<a href="/links/links.jsp?page=g_reports" class="AVBlinks2"><font color="#F0F0F0">Trip reports</font></a>
+</div>
+<br>
+<div id="div7" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('webservice','EN');">
+&nbsp;&nbsp;<a href="webservice.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Web Service</font></a>
+</div>
+<br>
+<div id="div8" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('contrib','EN');">
+&nbsp;&nbsp;<a href="contrib.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Contribute</font></a>
+</div>
+<P>
+<div>
+<form action="avibase.jsp" name='avbsmall' style="position: relative;">
+<input type="hidden" name="pg" value="search">
+<input type="hidden" name="ts" value="1323207083203">
+
+<font face="Geneva,Arial,Helvetica" size=1 color=white>
+Quick search: <input id="searchboxsm" name="qstr" type="text" size="14" style="font-size: 9pt">
+</form>
+</div>
+</p>
+</font>
+
+<script type="text/javascript">
+	var options_xml = {
+		script: function (input) { return "suggest3.jsp?qstr="+input; },
+		varname:"input",
+		minchars:3,
+		timeout:5000,
+		noresults: "No name matching",
+		maxresults:10
+
+	};
+	var as_xml = new bsn.AutoSuggest('searchboxsm', options_xml);
+</script>
+
+<P><b><font color="#FFFFFF">Avibase is also available in the following languages:</font></b><br>
+<table border=0 style="font-family: Geneva,Arial,Helvetica; font-size: 8pt;">
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=A99F93BCE984549A"><img src="flags/lang2-en.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=A99F93BCE984549A">English</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=A99F93BCE984549A"><img src="flags/lang2-es.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=A99F93BCE984549A">Spanish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=A99F93BCE984549A"><img src="flags/lang2-fr.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=A99F93BCE984549A">French</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=A99F93BCE984549A"><img src="flags/lang2-de.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=A99F93BCE984549A">German</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=A99F93BCE984549A"><img src="flags/lang2-hu.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=A99F93BCE984549A">Hungarian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=A99F93BCE984549A"><img src="flags/lang2-id.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=A99F93BCE984549A">Indonesian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=A99F93BCE984549A"><img src="flags/lang2-it.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=A99F93BCE984549A">Italian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=A99F93BCE984549A"><img src="flags/lang2-nl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=A99F93BCE984549A">Dutch</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=A99F93BCE984549A"><img src="flags/lang2-pt.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=A99F93BCE984549A">Portuguese</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=A99F93BCE984549A"><img src="flags/lang2-sv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=A99F93BCE984549A">Swedish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=A99F93BCE984549A"><img src="flags/lang2-ca.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=A99F93BCE984549A">Catalan</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=A99F93BCE984549A"><img src="flags/lang2-is.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=A99F93BCE984549A">Icelandic</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=A99F93BCE984549A"><img src="flags/lang2-af.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=A99F93BCE984549A">Afrikaans</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=A99F93BCE984549A"><img src="flags/lang2-ia.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=A99F93BCE984549A">Interlingua</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=A99F93BCE984549A"><img src="flags/lang2-pl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=A99F93BCE984549A">Polish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=A99F93BCE984549A"><img src="flags/lang2-uk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=A99F93BCE984549A">Ukrainian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=A99F93BCE984549A"><img src="flags/lang2-cs.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=A99F93BCE984549A">Czech</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=A99F93BCE984549A"><img src="flags/lang2-sk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=A99F93BCE984549A">Slovak</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=A99F93BCE984549A"><img src="flags/lang2-ru.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=A99F93BCE984549A">Russian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=A99F93BCE984549A"><img src="flags/lang2-fi.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=A99F93BCE984549A">Finnish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=A99F93BCE984549A"><img src="flags/lang2-lv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=A99F93BCE984549A">Latvian</a></td></tr>
+
+</table>
+</P>
+<p>Google translations:<br>
+<select name="lgg" style="font-size: 9pt; max-width: 100px; clientWidth: 100px;" onChange="googleTrans(this)">
+<option value=""></option>
+<option value="AR" >Arabic</option><option value="AZ" >Azerbaijani</option><option value="BG" >Bulgarian</option><option value="BE" >Belarusian</option><option value="CY" >Welsh</option><option value="DA" >Danish</option><option value="EL" >Greek</option><option value="ET" >Estonian</option><option value="EU" >Basque</option><option value="FA" >Persian</option><option value="FIL" >Filipino</option><option value="GA" >Irish</option><option value="GL" >Galician</option><option value="HATX" >Haitian Creole French</option><option value="HE" >Hebrew</option><option value="HI" >Hindi</option><option value="HR" >Croatian</option><option value="HY" >Armenian</option><option value="JP" >Japanese</option><option value="KA" >Georgian</option><option value="KO" >Korean</option><option value="LT" >Lithuanian</option><option value="MK" >Macedonian</option><option value="MS" >Malay</option><option value="MT" >Maltese</option><option value="NO" >Norwegian</option><option value="RO" >Romanian</option><option value="RU" >Russian</option><option value="SL" >Slovenian</option><option value="SQ" >Albanian</option><option value="SR" >Serbian</option><option value="SW" >Swahili</option><option value="TH" >Thai</option><option value="TR" >Turkish</option><option value="UR" >Urdu</option><option value="VI" >Vietnamese</option><option value="YI" >Yiddish</option><option value="ZH" >Chinese</option>
+</select></p>
+
+<p><a href="translate.jsp?lang=EN" class="AVBlink">Contribute a better translation</a></p>
+
+<script>
+function googleTrans(s) {
+  if (s.options[s.selectedIndex].value == '') return;
+  var url = 'species.jsp?lang=' + s.options[s.selectedIndex].value + '&avibaseid=A99F93BCE984549A';
+  document.location = url;
+}
+</script>
+
+
+
+</td>
+<td colspan=2 style="padding: 15px">
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+
+  $('#loginbox').toggle();
+
+  $("#loginlnk").click(function(){
+     $('#loginbox').slideToggle('fast');
+  });
+
+
+  $('#credlogin').toggle();
+
+
+});
+
+</script>
+
+
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr>
+<td width="100%" class="AVBHeader" colspan="3">
+Lesser Whitethroat (<I>Sylvia curruca</I>) (Linnaeus, 1758)</td>
+</tr>
+<tr>
+<td width="100%" class="AVBSubHeader" colspan="3" align=center>
+<SCRIPT language="JavaScript">
+function changesection(s) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=A99F93BCE984549A&sec=' + s;
+}
+function changespecies(t,v) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=' + t + '&sec=summary' + (v?'&ssver=' + v:'');
+}
+
+
+</SCRIPT>
+<a href="javascript:changesection('summary')">summary</a>&nbsp;&nbsp;
+<a href="javascript:changesection('taxontable')">taxon grid</a>&nbsp;&nbsp;
+<a href="javascript:changesection('map')">map</a>&nbsp;&nbsp;
+<a href="javascript:changesection('ebird')">eBird</a>&nbsp;&nbsp;
+<a href="javascript:changesection('wiki')">Wikipedia</a>&nbsp;&nbsp;
+<a href="javascript:changesection('natureserve')">NatureServe</a>&nbsp;&nbsp;
+Google: <a href="javascript:changesection('google')">Web/images</a>|<a href="javascript:changesection('scholar')">Scholar</a>&nbsp;&nbsp;
+<a href="javascript:changesection('itis')">ITIS</a>&nbsp;&nbsp;
+<a href="javascript:changesection('birdlife')">Birdlife</a>&nbsp;&nbsp;
+&nbsp;&nbsp;<img align="bottom" src="camera_icon1.gif"> <!-- tx[36] --><a href="javascript:changesection('flickr')">Flickr</a>
+&nbsp;&nbsp;<img align="bottom" src="sound_icon1.gif"> <!-- tx[143] --><a href="javascript:changesection('xenocanto')">Xeno-Canto</a>
+
+<hr noshade width="100%" size=1 align=center color="#F0F0F0">
+
+</td>
+</tr>
+</table>
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr><td>
+
+
+
+  <tr>
+    <td class="AVBContainerText" width="60%" valign="top">
+    
+
+    <table border=0 align=center width=95%><tr valign=top><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+    <script src="flickr_votes.js"></script>
+
+
+    <table height=250 class='flickr'>
+<tr valign='top'><td bgcolor='#F0F0F0' width=250><span id="flickr1"><br><a target="_blank" href="http://www.flickr.com/photos/bogbumper/6093143980/"><img border=0 src="http://farm7.static.flickr.com/6069/6093143980_c54dd66501_m.jpg"></a><br><span class='credit'>photo &copy;Katie Fuller</span><br><center><a href="javascript:report(1, 529814)"><img id="report1" src="button2.gif" title="Report as inappropriate" border=0></a><a href="javascript:voteimg(1, 529814, 1)"><img id="vote1.1" src="vote0.gif" border=0 title="Vote = 1"></a><a href="javascript:voteimg(1, 529814, 2)"><img id="vote1.2" src="vote0.gif" border=0 title="Vote = 2"></a><a href="javascript:voteimg(1, 529814, 3)"><img id="vote1.3" src="vote0.gif" border=0 title="Vote = 3"></a><a href="javascript:voteimg(1, 529814, 4)"><img id="vote1.4" src="vote0.gif" border=0 title="Vote = 4"></a><a href="javascript:voteimg(1, 529814, 5)"><img id="vote1.5" src="vote0.gif" border=0 title="Vote = 5"></a><a href="javascript:nextimg(1, 'Sylvia curruca')"><img src="button1.gif" title="Change photo" border=0></a></center></span></td></tr>
+</table>
+
+    <span style="color: #606060; font-size: 7pt">Photo powered by <a href="http://flickr.com" target="_blank">flickr.com</a>.</span></p>
+
+
+
+    <p>
+    <b>Order:</b><br> &nbsp;&nbsp;Passeriformes<br>
+    <b>Family:</b><br> &nbsp;&nbsp;Sylviidae<br>
+    <P>
+
+    <b>English:</b><br> &nbsp;&nbsp;Lesser Whitethroat<br>
+    <b>Scientific:</b><br> &nbsp;&nbsp;<i>Sylvia curruca</i><br>
+    </p>
+    <p><b>Protonym:</b><br> &nbsp;&nbsp;<i>Motacilla Curruca</i><br>
+    </p>
+    <p><b>Avibase ID:</b><br> &nbsp;&nbsp;A99F93BCE984549A<br>
+    <p><b>Taxomic Serial Number:</b><br>
+    TSN: <a target="_blank" href="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=563190">563190</a>
+
+    </p>
+
+    </td><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+
+    <b>Czech:</b><br> &nbsp;&nbsp;pěnice pokřovní<br>
+
+    <b>German:</b><br> &nbsp;&nbsp;Klappergrasmücke<br>
+
+    <b>Danish:</b><br> &nbsp;&nbsp;Gærdesanger<br>
+
+    <b>Spanish:</b><br> &nbsp;&nbsp;Curruca Pequeña<br>
+
+    <b>Finnish:</b><br> &nbsp;&nbsp;hernekerttu<br>
+
+    <b>French:</b><br> &nbsp;&nbsp;Fauvette babillarde<br>
+
+    <b>Icelandic:</b><br> &nbsp;&nbsp;Netlusöngvari<br>
+
+    <b>Italian:</b><br> &nbsp;&nbsp;Bigiarella<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;konodojiromushikui<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;コノドジロムシクイ<br>
+
+    <b>Dutch:</b><br> &nbsp;&nbsp;Braamsluiper<br>
+
+    <b>Norwegian:</b><br> &nbsp;&nbsp;Møller<br>
+
+    <b>Polish:</b><br> &nbsp;&nbsp;piegża<br>
+
+    <b>Portuguese:</b><br> &nbsp;&nbsp;Papa-amoras-cinzento<br>
+
+    <b>Slovak:</b><br> &nbsp;&nbsp;penica popolavá<br>
+
+    <b>Swedish:</b><br> &nbsp;&nbsp;Ärtsångare<br>
+
+    <b>Chinese:</b><br> &nbsp;&nbsp;白喉林莺<br>
+</p>
+    </td></tr></table>
+
+<hr noshade width="80%" size=1 align=center color="#E0E0E0">
+
+   <span class="AVBContainerText">
+  
+     <P><b>Authorities recognizing this taxonomic concept:</b></P>
+
+       <b>American Ornithologists' Union 7th edition (incl. 45th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 46th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 47th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 48th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 49th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 50th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 51th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 52th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Birdlife checklist version 00:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Birdlife checklist version 01:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Birdlife checklist version 02:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Birdlife checklist version 03:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Birdlife checklist version 04:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition, incl. Jan 2009 suppl.):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Commission internationale pour les noms français des oiseaux (1993):</b><br>&nbsp;&nbsp;&nbsp;Fauvette babillarde ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 1st edition:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 3rd edition:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 4th edition:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 5th edition (as published):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 5th edition (incl. 2000 revisions):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 5th edition (incl. 2001 revisions):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 5th edition (incl. 2002 revisions):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 5th edition (incl. 2003 revisions):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 5th edition (incl. 2004 revisions):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 5th edition (incl. 2005 revisions):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 6th edition:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 6th edition (incl. 2007 revisions):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 6th edition (incl. 2008 revisions):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 6th edition (incl. 2009 revisions):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 6th edition (version 6.5 incl. 2010 revisions):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Clements 6th edition (version 6.6 incl. 2011 revisions):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>eBird version 1.50:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>eBird version 1.52:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Howard and Moore 2nd edition:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curraca</I>)<br>
+
+       <b>Howard and Moore 2nd edition (incl. ? suppl):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Handbook of the Birds of the World (vol 1-15):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 1.0:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 1.1:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 1.5:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 1.6:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 1.7:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 2.0:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 2.1:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 2.2:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 2.3:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 2.4:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 2.5:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 2.6:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 2.7:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 2.8:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 2.9:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>IOC World Bird Names, version 2.10:</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Sibley and Monroe (1993):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Sibley and Monroe (1993, including corrections up to 1998):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Sibley and Monroe 2nd edition (1996):</b><br>&nbsp;&nbsp;&nbsp;Lesser Whitethroat ( <I>Sylvia curruca</I>)<br>
+
+       <b>Zoonomen - Zoological Nomenclature Resource:</b><br>&nbsp;&nbsp;&nbsp; <I>Sylvia curruca</I><br>
+
+</span>
+
+    </td>
+    <td width="40%" valign=top align=left>
+<span class="AVBContainerText2">
+
+<P><table border=1 width="90%"><tr><td class="AVBContainerText2" style="border: 1pt; border-color: #D8D8BA;">
+
+  <P><b>Taxonomic status:</b><P><b>Species status:</b>
+
+  full species (sometimes considered a nominal subspecies)
+
+  
+     <P>This taxon is considered a subspecies of
+     <a href="javascript:changespecies('87EBAE9693EEA70C')">Sylvia curruca</a>
+     (<i>sensu lato</i>) by some authors<br>
+  
+
+</td></tr></table>
+
+
+
+
+<!-- related taxa -->
+
+<P><table width="90%"><tr><td class="AVBRelated">
+<font size="2">
+
+
+<center><b>Related taxa</b></center>
+
+&nbsp;
+<a href="javascript:changespecies('0DCD05BE8EE35C8D', 1)">Sylvia curruca</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('87EBAE9693EEA70C', 1)">Sylvia curruca</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><b>Sylvia curruca</b></b><big>&larr;</big><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('2BD7EA67FF1D5EA6', 1)">Sylvia curruca curruca</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('40831EE249676EA6', 1)">Sylvia curruca blythi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('A212B7CD733B39FB', 1)">Sylvia curruca halimodendri</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('11E25CA2688C8D2A', 1)">Sylvia curruca caucasica</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('7A60C86DDC14C596', 1)">Sylvia curruca jaxartica</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('8B2B113A92729AD6', 1)">Sylvia curruca telengitica</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('81522BF5B7FF8204', 1)">Sylvia althaea</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('C41959F9C3495756', 1)">Sylvia althaea althaea</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('25487A55FEDE56C0', 1)">Sylvia althaea monticola</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('1974077420C6FAD3', 1)">Sylvia althaea zagrossiensis</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('9A8D1290A27548F2', 1)">Sylvia minula</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('2FAA32B06E8A9B3C', 1)">Sylvia minula</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('75DECD9CCEA9CA1E', 1)">Sylvia minula minula</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('86F2FA705A6810DE', 1)">Sylvia margelanica</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('F408E7EC01ECC45C', 1)">Sylvia margelanica margelanica</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('BC9673931E7BC14A', 1)">Sylvia margelanica chuancheica</a>]<br>
+
+</font><br>
+</td></tr></table>
+
+    <table width="90%"><tr><td class="AVBSynonyms">
+    <font size="2"><center><b>Other synonyms</b></center>
+<br><b>Arabic: </b>أبيض الحنجرة الصغير, الدخلة بيضاء الحنجرة الصغيرة, هازجة فيراني<br><b>Azerbaijani: </b>Çərənçi silvi<br><b>Belarusian: </b>Леска-завірушка<br><b>Bulgarian: </b>Малко белогушо коприварче<br><b>Breton: </b>Ar bagous gwenn<br><b>Catalan: </b>Busqueret xerraire, Busquereta mosquitera, Tallarol xerraire<br><b>Catalan (Balears): </b>Busqueret xerraire<br><b>Valencian: </b>Busquereta mosquitera<br><b>Czech: </b>Penice pokrovní, Pěnice pokřovní, pìnice pokøovní<br><b>Welsh: </b>Bronwen leiaf, Cogwen lleiaf, Gwddfgwen lleiaf, Llwydfron fach, Llwydfron lleiaf<br><b>Danish: </b>Gærdesanger<br><b>German: </b>Klappergrasmücke, Klappergrasmuecke, Müllerchen, Zaungrasmücke<br><b>Greek: </b>Βουνοτσιροβάκος, Λαλοτσιροβάκος<br><b>English: </b>Lesser Whitethroat, Lesser Whitethroated, White-throated warbler<br><b>Esperanto: </b>babilema silvio<br><b>Spanish: </b>Curruca gavilana, Curruca Pequeña, Curruca Zarcerilla, Curuca zarcerilla<br><b>Estonian: </b>Väike-poosalind, Väike-põõsalind<br><b>Basque: </b>Sasitxinbotxo, Sasi-txinbotxo, Tallarol xerraire <br><b>Finnish: </b>Hernekerttu<br><b>Faroese: </b>Notuljómari<br><b>French: </b>Babillarde ordinaire, Fauvette babillarde<br><b>Frisian: </b>Toarnhipperke<br><b>Irish: </b>Gilphíb Bheag<br><b>Gaelic: </b>Gealan Coille Beag<br><b>Galician: </b>Papuxa cincenta, Tallarol xerraire <br><b>Manx: </b>Fynnag veg<br><b>Hebrew: </b>סבכי טוחנים<br><b>Croatian: </b>Grmuša čevrljinka<br><b>Hungarian: </b>Kis poszáta<br><b>Armenian: </b>[Moru Shahrik ], Մորու Շահրիկ<br><b>Icelandic: </b>Netlusöngvari<br><b>Italian: </b>Bigiarella, Bigiarella comune<br><b>Japanese: </b>Kashimia mushi-kui, Kashimiya-mushikui, Ko nodo-jiro mushi-kui, konodojiromushikui, sabakunodojiromushikui<br><b>Japanese: </b>カシミアムシクイ, コノドジロムシクイ<br><b>Georgian: </b>მქირდავი ასპუჭაკა<br><b>Kazakh: </b>Боз сандуғаш<br><b>Korean: </b>쇠흰턱딱새<br><b>Cornish: </b>Gudhykwyn lyha<br><b>Latin: </b>Curruca curruca, Sylvia carruca, Sylvia curraca, Sylvia curruca, Sylvia currura<br><b>Lithuanian: </b>Pilkoji devynbalse, Pilkoji devynbalsė<br><b>Latvian: </b>Gaišais ķauķis, Lakstīgalas kalps<br><b>Macedonian: </b>Белогушо коприварче, Мал белогуш грмушар<br><b>Mongolian: </b>Тарчигнаа зээржигэне<br><b>Maltese: </b>Bekkafik Irmiedi<br><b>Dutch: </b>Braamsluiper<br><b>Norwegian: </b>Gressmutt, Møller<br><b>Polish: </b>piegza, Piegża, piegża (zwyczajna), Piegża zwyczajna, Pokrzewka piegża<br><b>Portuguese: </b>papa amoras cinzento, Papa-amoras-cinzento<br><b>Romansh: </b>Fustgetta baterlunza<br><b>Russian: </b>Cлавка-завирушка, Slavka-melnichek, Славка-завирушка, Славка-завирушка обыкновенная, славка-мельничек<br><b>Scots: </b>Gealan coille beag<br><b>Slovak: </b>Penica popolavá<br><b>Slovenian: </b>mlinarcek, mlinarček<br><b>Albanian: </b>Bilbilthi i zakonshëm<br><b>Serbian: </b>grmuša cevrljinka, grmuša čevrljinka, grmuša mlinaric, Грмуша цврлјинка, Грмуша чеврљинка<br><b>Swedish: </b>Ärtsångare<br><b>Thai: </b>นกคอขาวน้อย<br><b>Turkish: </b>çit Ötleğeni, Küçük Ak Gerdanlı Ötleğen, küçük ak gerdanly ötleğen, Küçük Akdeniz Gerdanlı Ötleğen, Küçük akgerdanlı ötleğen, Küçük Ak-gerdanlı Ötleğen, Küçük Akgerdanlı Ötleşen<br><b>Tuvinian: </b>Чүгенниг ыраажывай<br><b>Ukrainian: </b>Кропив'янка прудка , Прудка кропив’янка, Прудка славка<br><b>Chinese: </b>[bai-hou lin-ying], 白喉林莺, 白喉林鶯
+  </font>
+  </td></tr></table></P>
+
+</span>
+</td></tr>
+<tr><td colspan="3">
+<P><small><!-- avb.bow2Descr --></small></P>
+<P>
+  </td>
+  </tr>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=3>
+<P>&nbsp;</P>
+<center>
+<a href="http://www.bsc-eoc.org/bscmain.html" target="_blank"><img src="BSClogo3.gif" alt="" title="Avibase is hosted by Bird Studies Canada" border=0></a> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.birdlife.org" target="_blank"><img src="/links/images/bl_logo.gif" alt="" title="Bird Studies Canada is the canadian co-partner of Birdlife International" border=0></a>
+</center><br>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=2 valign="bottom">
+<center><P><small>Avibase has been visited <b>104,637,410</b> times since 24 June 2003. &copy; Denis Lepage |
+<a href="privacy.jsp">Privacy policy</a><br>
+<small><!-- Translation of this page in English provided by --></small></small></P></center>
+
+<center><a href="http://www.birdingtop500.com/cgi-bin/topsite/topsite.cgi?user=dlepage"><img src="http://www.birdingtop500.com/cgi-bin/topsite/counter.cgi?user=dlepage" border=0></a>
+</center>
+</td></tr></table>
+
+</td></tr></table>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12387576-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+
+

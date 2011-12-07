@@ -1,5 +1,8 @@
 package se.atrosys.birds.web.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -7,6 +10,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.service.BirdService;
+
+import java.util.List;
+import java.util.Random;
 
 /**
  * Created by IntelliJ IDEA.
@@ -17,13 +24,19 @@ import se.atrosys.birds.model.BirdModel;
  */
 @Controller
 public class BirdController {
-	@RequestMapping("/")
-	public @ResponseBody String randomBird() {
-		BirdModel birdModel = new BirdModel();
+	Logger logger = LoggerFactory.getLogger(this.getClass());
+	@Autowired protected BirdService service;
+	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String randomBird(BirdModel birdModel) {
+		logger.info("randomBird called");
+		List<BirdModel> list = service.findAll();
+		
+		BirdModel randomModel = list.get(new Random(0).nextInt(list.size()));
+		
+		birdModel.setHref(randomModel.getHref());
+		birdModel.setScientificName(randomModel.getScientificName());
 
-		birdModel.setHref("HREF");
-		birdModel.setScientificName("Scifiname");
-
-		return "bird";
+		return "random";
 	}
 }

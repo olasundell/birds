@@ -1,0 +1,684 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Anas penelope - Avibase</title>
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Description" content="Avibase is an extensive database information system about all birds of the world, containing over 5 million records about 10,000 species and 22,000 subspecies of birds, including distribution information, taxonomy, synonyms in several languages and more.">
+<meta name="KeyWords" content="bird, birds, birding, birder, birders, birdwatching, birdwatcher, birdwatchers, links, birdlink, birdlinks, ornithology, checklist, checklists, world, oiseau, oiseaux, aves, subspecies, family, taxonomy">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Language" content="en">
+
+<style type="text/css">@import url("avibase.css");</style>
+
+<script type="text/javascript" src="js/bsn.AutoSuggest_2.1.3_avibase.js" charset="utf-8"></script>
+<link rel="stylesheet" href="css/autosuggest_inquisitor.css" type="text/css" media="screen" charset="utf-8" />
+
+<SCRIPT language="JavaScript">
+function changepg(pg, lang, id, ts) {
+  self.document.location = 'avibase.jsp?pg=' + pg + (lang != ''?'&lang='+lang:'') + (id != null?'&id=' + id:'') + (ts != null?'&ts=' + ts:'');
+}
+</SCRIPT>
+<!-- SCRIPT language="JavaScript" src="avibase.js"></script -->
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="jquery.ui.draggable.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.alerts.js" type="text/javascript"></script>
+<link href="jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link rel="search" type="application/opensearchdescription+xml" title="Avibase" href="opensearchplugin.xml">
+
+</head>
+<body>
+
+
+<table border=0 bgcolor="#000078" cellpadding=0 cellspacing=0 width=1024 align=center>
+<tr>
+<td width="400" colspan=2><img src="avibase.gif" align="top" height="84"></td>
+<td align="right" width="580">
+<a target="photos" href="http://www.digimages.info"><img src="images/ph896.jpg" align="top" border=0 height="65" alt="" title="Pied Avocet, France, Alain Fossé"></a><a target="photos" href="http://www.flickr.com/photos/faisca/112564049/in/set-250198/"><img src="images/ph2521.jpg" align="top" border=0 height="65" alt="" title="European Stonechat, Portugal, Faisca"></a><a target="photos" href="http://www.flickr.com/photos/faisca/34191218/in/set-250198/"><img src="images/ph2026.jpg" align="top" border=0 height="65" alt="" title="CISTICOLA JUNCIDIS, Portugal, Faisca"></a><a target="photos" href="http://www.flickr.com/photos/faisca/276360475/in/set-1000855/"><img src="images/ph1887.jpg" align="top" border=0 height="65" alt="" title="BARN OWL, Portugal, Faisca"></a><a target="photos" href="http://www.notason.com/oiseaux/"><img src="images/ph1028.jpg" align="top" border=0 height="65" alt="" title="Cardinal à poitrine rose, Québec, Canada, Marcel Gauthier"></a><a target="photos" href="http://www.chezfred.info/"><img src="images/ph1784.jpg" align="top" border=0 height="65" alt="" title="Pied Kingfisher, Egypt, Frédéric Leviez"></a><a target="photos" href="http://www.digimages.info"><img src="images/ph803.jpg" align="top" border=0 height="65" alt="" title="Greater Blue-eared Glossy Starling, Senegal, Alain Fossé"></a>
+<br><b><font color="#FFFFFF" size="1" face="Geneva,Arial,Helvetica">Bird checklists - taxonomy - distribution - maps - links</font></font></b></td></tr>
+</table><table border=0 width=1024 align=center>
+<tr valign=top><td rowspan=2 width=125 class="AVBbar" bgcolor="#336699"> <!-- #000078 -->
+
+<script>
+function makepale(d) {
+  d.style.backgroundColor = '#226CB7';
+}
+function makenormal(d) {
+  d.style.backgroundColor = '#024C97';
+}
+</SCRIPT>
+
+
+<p>&nbsp;<br>
+<div id="div1" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('home','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=home" class="AVBlinks2"><font color="#F0F0F0">Home</font></a>
+</div>
+<br>
+<div id="div2" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('checklist','EN');">
+&nbsp;&nbsp;<a href="checklist.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Checklists</font></a>
+</div>
+<br>
+<div id="div3" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('search','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=search" class="AVBlinks2"><font color="#F0F0F0">Search</font></a>
+</div>
+<br>
+<div id="div4" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('families','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=families" class="AVBlinks2"><font color="#F0F0F0">Families</font></a>
+</div>
+<br>
+<div id="div9" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='compare.jsp';">
+&nbsp;&nbsp;<a href="compare.jsp" class="AVBlinks2"><font color="#F0F0F0">Compare lists</font></a>
+</div>
+<br>
+<div id="div10" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='rangemaps.jsp';">
+&nbsp;&nbsp;<a href="rangemaps.jsp" class="AVBlinks2"><font color="#F0F0F0">Range maps</font></a>
+</div>
+<br>
+<div id="div5" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp';">
+&nbsp;&nbsp;<a href="/links/links.jsp" class="AVBlinks2"><font color="#F0F0F0">Birdlinks</font></a>
+</div>
+<br>
+<div id="div6" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp?page=g_reports';">
+&nbsp;&nbsp;<a href="/links/links.jsp?page=g_reports" class="AVBlinks2"><font color="#F0F0F0">Trip reports</font></a>
+</div>
+<br>
+<div id="div7" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('webservice','EN');">
+&nbsp;&nbsp;<a href="webservice.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Web Service</font></a>
+</div>
+<br>
+<div id="div8" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('contrib','EN');">
+&nbsp;&nbsp;<a href="contrib.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Contribute</font></a>
+</div>
+<P>
+<div>
+<form action="avibase.jsp" name='avbsmall' style="position: relative;">
+<input type="hidden" name="pg" value="search">
+<input type="hidden" name="ts" value="1323205646359">
+
+<font face="Geneva,Arial,Helvetica" size=1 color=white>
+Quick search: <input id="searchboxsm" name="qstr" type="text" size="14" style="font-size: 9pt">
+</form>
+</div>
+</p>
+</font>
+
+<script type="text/javascript">
+	var options_xml = {
+		script: function (input) { return "suggest3.jsp?qstr="+input; },
+		varname:"input",
+		minchars:3,
+		timeout:5000,
+		noresults: "No name matching",
+		maxresults:10
+
+	};
+	var as_xml = new bsn.AutoSuggest('searchboxsm', options_xml);
+</script>
+
+<P><b><font color="#FFFFFF">Avibase is also available in the following languages:</font></b><br>
+<table border=0 style="font-family: Geneva,Arial,Helvetica; font-size: 8pt;">
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=15EE0D3685082E13"><img src="flags/lang2-en.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=15EE0D3685082E13">English</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=15EE0D3685082E13"><img src="flags/lang2-es.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=15EE0D3685082E13">Spanish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=15EE0D3685082E13"><img src="flags/lang2-fr.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=15EE0D3685082E13">French</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=15EE0D3685082E13"><img src="flags/lang2-de.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=15EE0D3685082E13">German</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=15EE0D3685082E13"><img src="flags/lang2-hu.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=15EE0D3685082E13">Hungarian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=15EE0D3685082E13"><img src="flags/lang2-id.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=15EE0D3685082E13">Indonesian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=15EE0D3685082E13"><img src="flags/lang2-it.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=15EE0D3685082E13">Italian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=15EE0D3685082E13"><img src="flags/lang2-nl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=15EE0D3685082E13">Dutch</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=15EE0D3685082E13"><img src="flags/lang2-pt.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=15EE0D3685082E13">Portuguese</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=15EE0D3685082E13"><img src="flags/lang2-sv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=15EE0D3685082E13">Swedish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=15EE0D3685082E13"><img src="flags/lang2-ca.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=15EE0D3685082E13">Catalan</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=15EE0D3685082E13"><img src="flags/lang2-is.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=15EE0D3685082E13">Icelandic</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=15EE0D3685082E13"><img src="flags/lang2-af.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=15EE0D3685082E13">Afrikaans</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=15EE0D3685082E13"><img src="flags/lang2-ia.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=15EE0D3685082E13">Interlingua</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=15EE0D3685082E13"><img src="flags/lang2-pl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=15EE0D3685082E13">Polish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=15EE0D3685082E13"><img src="flags/lang2-uk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=15EE0D3685082E13">Ukrainian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=15EE0D3685082E13"><img src="flags/lang2-cs.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=15EE0D3685082E13">Czech</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=15EE0D3685082E13"><img src="flags/lang2-sk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=15EE0D3685082E13">Slovak</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=15EE0D3685082E13"><img src="flags/lang2-ru.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=15EE0D3685082E13">Russian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=15EE0D3685082E13"><img src="flags/lang2-fi.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=15EE0D3685082E13">Finnish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=15EE0D3685082E13"><img src="flags/lang2-lv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=15EE0D3685082E13">Latvian</a></td></tr>
+
+</table>
+</P>
+<p>Google translations:<br>
+<select name="lgg" style="font-size: 9pt; max-width: 100px; clientWidth: 100px;" onChange="googleTrans(this)">
+<option value=""></option>
+<option value="AR" >Arabic</option><option value="AZ" >Azerbaijani</option><option value="BG" >Bulgarian</option><option value="BE" >Belarusian</option><option value="CY" >Welsh</option><option value="DA" >Danish</option><option value="EL" >Greek</option><option value="ET" >Estonian</option><option value="EU" >Basque</option><option value="FA" >Persian</option><option value="FIL" >Filipino</option><option value="GA" >Irish</option><option value="GL" >Galician</option><option value="HATX" >Haitian Creole French</option><option value="HE" >Hebrew</option><option value="HI" >Hindi</option><option value="HR" >Croatian</option><option value="HY" >Armenian</option><option value="JP" >Japanese</option><option value="KA" >Georgian</option><option value="KO" >Korean</option><option value="LT" >Lithuanian</option><option value="MK" >Macedonian</option><option value="MS" >Malay</option><option value="MT" >Maltese</option><option value="NO" >Norwegian</option><option value="RO" >Romanian</option><option value="RU" >Russian</option><option value="SL" >Slovenian</option><option value="SQ" >Albanian</option><option value="SR" >Serbian</option><option value="SW" >Swahili</option><option value="TH" >Thai</option><option value="TR" >Turkish</option><option value="UR" >Urdu</option><option value="VI" >Vietnamese</option><option value="YI" >Yiddish</option><option value="ZH" >Chinese</option>
+</select></p>
+
+<p><a href="translate.jsp?lang=EN" class="AVBlink">Contribute a better translation</a></p>
+
+<script>
+function googleTrans(s) {
+  if (s.options[s.selectedIndex].value == '') return;
+  var url = 'species.jsp?lang=' + s.options[s.selectedIndex].value + '&avibaseid=15EE0D3685082E13';
+  document.location = url;
+}
+</script>
+
+
+
+</td>
+<td colspan=2 style="padding: 15px">
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+
+  $('#loginbox').toggle();
+
+  $("#loginlnk").click(function(){
+     $('#loginbox').slideToggle('fast');
+  });
+
+
+  $('#credlogin').toggle();
+
+
+});
+
+</script>
+
+
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr>
+<td width="100%" class="AVBHeader" colspan="3">
+Eurasian Wigeon (<I>Anas penelope</I>) Linnaeus, 1758</td>
+</tr>
+<tr>
+<td width="100%" class="AVBSubHeader" colspan="3" align=center>
+<SCRIPT language="JavaScript">
+function changesection(s) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=15EE0D3685082E13&sec=' + s;
+}
+function changespecies(t,v) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=' + t + '&sec=summary' + (v?'&ssver=' + v:'');
+}
+
+
+</SCRIPT>
+<a href="javascript:changesection('summary')">summary</a>&nbsp;&nbsp;
+<a href="javascript:changesection('taxontable')">taxon grid</a>&nbsp;&nbsp;
+<a href="javascript:changesection('map')">map</a>&nbsp;&nbsp;
+<a href="javascript:changesection('ebird')">eBird</a>&nbsp;&nbsp;
+<a href="javascript:changesection('wiki')">Wikipedia</a>&nbsp;&nbsp;
+<a href="javascript:changesection('natureserve')">NatureServe</a>&nbsp;&nbsp;
+Google: <a href="javascript:changesection('google')">Web/images</a>|<a href="javascript:changesection('scholar')">Scholar</a>&nbsp;&nbsp;
+<a href="javascript:changesection('itis')">ITIS</a>&nbsp;&nbsp;
+<a href="javascript:changesection('birdlife')">Birdlife</a>&nbsp;&nbsp;
+&nbsp;&nbsp;<img align="bottom" src="camera_icon1.gif"> <!-- tx[36] --><a href="javascript:changesection('flickr')">Flickr</a>
+&nbsp;&nbsp;<img align="bottom" src="sound_icon1.gif"> <!-- tx[143] --><a href="javascript:changesection('xenocanto')">Xeno-Canto</a>
+
+<hr noshade width="100%" size=1 align=center color="#F0F0F0">
+
+</td>
+</tr>
+</table>
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr><td>
+
+
+
+  <tr>
+    <td class="AVBContainerText" width="60%" valign="top">
+    
+
+    <table border=0 align=center width=95%><tr valign=top><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+    <script src="flickr_votes.js"></script>
+
+
+    <table height=250 class='flickr'>
+<tr valign='top'><td bgcolor='#F0F0F0' width=250><span id="flickr1"><br><a target="_blank" href="http://www.flickr.com/photos/21933510@N07/4310444505/"><img border=0 src="http://farm5.static.flickr.com/4001/4310444505_cb1b957154_m.jpg"></a><br><span class='credit'>photo &copy;Bas Kers</span><br><center><a href="javascript:report(1, 220883)"><img id="report1" src="button2.gif" title="Report as inappropriate" border=0></a><a href="javascript:voteimg(1, 220883, 1)"><img id="vote1.1" src="vote0.gif" border=0 title="Vote = 1"></a><a href="javascript:voteimg(1, 220883, 2)"><img id="vote1.2" src="vote0.gif" border=0 title="Vote = 2"></a><a href="javascript:voteimg(1, 220883, 3)"><img id="vote1.3" src="vote0.gif" border=0 title="Vote = 3"></a><a href="javascript:voteimg(1, 220883, 4)"><img id="vote1.4" src="vote0.gif" border=0 title="Vote = 4"></a><a href="javascript:voteimg(1, 220883, 5)"><img id="vote1.5" src="vote0.gif" border=0 title="Vote = 5"></a><a href="javascript:nextimg(1, 'Anas penelope')"><img src="button1.gif" title="Change photo" border=0></a></center></span></td></tr>
+</table>
+
+    <span style="color: #606060; font-size: 7pt">Photo powered by <a href="http://flickr.com" target="_blank">flickr.com</a>.</span></p>
+
+
+
+    <p>
+    <b>Order:</b><br> &nbsp;&nbsp;Anseriformes<br>
+    <b>Family:</b><br> &nbsp;&nbsp;Anatidae<br>
+    <P>
+
+    <b>English:</b><br> &nbsp;&nbsp;Eurasian Wigeon<br>
+    <b>Scientific:</b><br> &nbsp;&nbsp;<i>Anas penelope</i><br>
+    </p>
+    <p><b>Protonym:</b><br> &nbsp;&nbsp;<i>Anas Penelope</i><br>
+    </p>
+    <p><b>Avibase ID:</b><br> &nbsp;&nbsp;15EE0D3685082E13<br>
+    <p><b>Taxomic Serial Number:</b><br>
+    TSN: <a target="_blank" href="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175092">175092</a>
+
+    </p>
+
+    </td><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+
+    <b>Czech:</b><br> &nbsp;&nbsp;hvízdák eurasijský<br>
+
+    <b>German:</b><br> &nbsp;&nbsp;Pfeifente<br>
+
+    <b>Danish:</b><br> &nbsp;&nbsp;Pibeand<br>
+
+    <b>Spanish:</b><br> &nbsp;&nbsp;Silbón Europeo<br>
+
+    <b>Finnish:</b><br> &nbsp;&nbsp;haapana<br>
+
+    <b>French:</b><br> &nbsp;&nbsp;Canard siffleur<br>
+
+    <b>Icelandic:</b><br> &nbsp;&nbsp;Rauðhöfðaönd<br>
+
+    <b>Italian:</b><br> &nbsp;&nbsp;Fischione europeo<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;hidorigamo<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;ヒドリガモ<br>
+
+    <b>Dutch:</b><br> &nbsp;&nbsp;Smient<br>
+
+    <b>Norwegian:</b><br> &nbsp;&nbsp;Brunnakke<br>
+
+    <b>Polish:</b><br> &nbsp;&nbsp;świstun<br>
+
+    <b>Portuguese:</b><br> &nbsp;&nbsp;Piadeira<br>
+
+    <b>Slovak:</b><br> &nbsp;&nbsp;kačica hvizdárka<br>
+
+    <b>Swedish:</b><br> &nbsp;&nbsp;Bläsand<br>
+
+    <b>Chinese:</b><br> &nbsp;&nbsp;赤颈鸭<br>
+</p>
+    </td></tr></table>
+
+<hr noshade width="80%" size=1 align=center color="#E0E0E0">
+
+   <span class="AVBContainerText">
+  
+     <P><b>Authorities recognizing this taxonomic concept:</b></P>
+
+       <b>African Bird Club Checklist 2004:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>African Bird Club Checklist August 2005:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>African Bird Club Checklist March 2007:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>African Bird Club Checklist January 2008:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>African Bird Club Checklist May 2009:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>African Bird Club Checklist March 2010:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (1886):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 1st suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 2nd suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 3rd suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 4th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 5th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 6th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 7th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (1895):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 8th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 9th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 10th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 11th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 12th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 13th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 14th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 15th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 3rd edition (1910):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 3rd edition (incl. 16th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 3rd edition (incl. 17th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 3rd edition (incl. 18th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (1931):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 19th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 20th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 21th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 22th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 23th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 24th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 25th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 26th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 27th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 28th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 29th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 30th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 4th edition (incl. 31th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (1957):</b><br>&nbsp;&nbsp;&nbsp;European Widgeon ( <I>Mareca penelope</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (incl. 32nd suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (incl. 33th suppl.):</b><br>&nbsp;&nbsp;&nbsp;European Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (incl. 34th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (1983):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 35th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 36th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 37th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 38th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 39th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 40th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 41st suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (1998):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 42th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 43th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 44th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 45th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 46th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 47th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 48th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 49th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 50th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 51th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 52th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Birdlife checklist version 00:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Birdlife checklist version 01:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Birdlife checklist version 02:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Birdlife checklist version 03:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Birdlife checklist version 04:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition, incl. Jan 2009 suppl.):</b><br>&nbsp;&nbsp;&nbsp;Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Commission internationale pour les noms français des oiseaux (1993, révision 2009):</b><br>&nbsp;&nbsp;&nbsp;Canard siffleur ( <I>Anas penelope</I>)<br>
+
+       <b>Commission internationale pour les noms français des oiseaux (1993):</b><br>&nbsp;&nbsp;&nbsp;Canard siffleur ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 1st edition:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 3rd edition:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Widgeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 4th edition:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 5th edition (as published):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 5th edition (incl. 2000 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 5th edition (incl. 2001 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 5th edition (incl. 2002 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 5th edition (incl. 2003 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 5th edition (incl. 2004 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 5th edition (incl. 2005 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 6th edition:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 6th edition (incl. 2007 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 6th edition (incl. 2008 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 6th edition (incl. 2009 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 6th edition (version 6.5 incl. 2010 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Clements 6th edition (version 6.6 incl. 2011 revisions):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>eBird version 1.50:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>eBird version 1.52:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Howard and Moore 2nd edition:</b><br>&nbsp;&nbsp;&nbsp;European Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Howard and Moore 2nd edition (incl. ? suppl):</b><br>&nbsp;&nbsp;&nbsp;European Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Howard and Moore 3rd edition (as published):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 1.2):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 2.1):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 3.1):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 4):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 5):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 6):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 7):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 8):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Handbook of the Birds of the World (vol 1-15):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 1.0:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 1.1:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 1.5:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 1.6:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 1.7:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 2.0:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 2.1:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 2.2:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 2.3:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 2.4:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 2.5:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 2.6:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 2.7:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 2.8:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 2.9:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>IOC World Bird Names, version 2.10:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Morony, Bock and Farrand:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Oriental Bird Club:</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>James Lee Peters:</b><br>&nbsp;&nbsp;&nbsp; <I>Anas penelope</I><br>
+
+       <b>Sibley and Monroe (1993):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Sibley and Monroe (1993, including corrections up to 1998):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Sibley and Monroe 2nd edition (1996):</b><br>&nbsp;&nbsp;&nbsp;Eurasian Wigeon ( <I>Anas penelope</I>)<br>
+
+       <b>Zoonomen - Zoological Nomenclature Resource:</b><br>&nbsp;&nbsp;&nbsp; <I>Anas penelope</I><br>
+
+</span>
+
+    </td>
+    <td width="40%" valign=top align=left>
+<span class="AVBContainerText2">
+
+<P><table border=1 width="90%"><tr><td class="AVBContainerText2" style="border: 1pt; border-color: #D8D8BA;">
+
+  <P><b>Taxonomic status:</b><P><b>Species status:</b>
+
+  full species
+
+  
+
+</td></tr></table>
+
+
+
+
+<!-- related taxa -->
+
+<P><table width="90%"><tr><td class="AVBRelated">
+<font size="2">
+
+
+<center><b>Related taxa</b></center>
+
+&nbsp;
+* <b><b>Anas penelope</b></b><big>&larr;</big><br>
+
+</font><br>
+</td></tr></table>
+
+    <table width="90%"><tr><td class="AVBSynonyms">
+    <font size="2"><center><b>Other synonyms</b></center>
+<br><b>Arabic: </b>البط الصواي, البط الصواي بط, صواي<br><b>Asturian: </b>Coríu Xiblador, Coríu Xiblón<br><b>Azerbaijani: </b>Marek<br><b>Belarusian: </b>Качка-свіцьва<br><b>Bulgarian: </b>Фиш<br><b>Breton: </b>An houad penn ruz, Houad penn-ruz<br><b>Catalan: </b>Ànec xiualador, Ànec xiulador, Piuló, Siulador<br><b>Catalan (Balears): </b>Siulador<br><b>Valencian: </b>Piuló<br><b>Czech: </b>Hvízdák eurasijský, Hvízdák euroasijský<br><b>Chuvash: </b>Çут çăмкаллă кăвакал<br><b>Welsh: </b>Chwiw, Chwiwell, Chwiwiad, Wiwell<br><b>Danish: </b>Pibeand<br><b>German: </b>Europäische Pfeifente, Pfeifente<br><b>Greek: </b>(Ευρωπαϊκό) Σφυριχτάρι, Σφυριχτάρι<br><b>Emiliano-romagnolo: </b>Sciorz<br><b>English: </b>Eurasian Widgeon, Eurasian Wigeon, European Widgeon, European Wigeon, Widgeon, Wigeon<br><b>Esperanto: </b>Fajfanaso<br><b>Spanish: </b>Anade silbon, Anade Silbón, Ánade Silbón, Ánade silbón europeo, Anade Silvón, Pato Cabeciblanco Europeo, Pato europeo, Pato Silbón, Silbon Euroasiatico, Silbon Europeo, Silbón Europeo<br><b>Spanish (Dominican Rep.): </b>Silbón Euroasiátic, Silbon Euroasiatico<br><b>Spanish (Mexico): </b>Pato Silbón<br><b>Estonian: </b>Viupart<br><b>Basque: </b>Ahate txistulari, Ahate txistularia, Ànec xiulador<br><b>Persian: </b>انواع اردك های آبی, غاز <br><b>Finnish: </b>Haapana<br><b>Faroese: </b>Ennigul ont, Ennigulont<br><b>French: </b>Canard siffleur, Canard siffleur d‘Europe, Canard siffleur d'Europe, Mareca penelope<br><b>Irish: </b>Lacha rua, Rualacha, rualacha Eorpach<br><b>Gaelic: </b>Glas-Lach<br><b>Galician: </b>Ànec xiulador, Asubiador<br><b>Manx: </b>Laagh ruy, Thunnag veg Feie<br><b>Haitian Creole French: </b>Faldam etranje<br><b>Hebrew: </b>ברווז צהוב מצח, ברוז צהוב מצח, ברוז צהוב־מצח, צהוב־מצח, צהוב-מצח<br><b>Croatian: </b>Patka zviždara, Zviždara<br><b>Hungarian: </b>Fütyülo réce, Fütyülõ réce, Fütyülő réce<br><b>Armenian: </b>[Penelopa ], Շչան Բադ, Պենելոպա<br><b>Indonesian: </b>Itik Bungalan<br><b>Icelandic: </b>Rauðhöfðaönd<br><b>Italian: </b>Capràss, Fischione, Fischione eurasiatico, Fischione europeo<br><b>Modenese: </b>Capràss<br><b>Japanese: </b>Aka-gashira, hidorigamo, Hi-dori-gamo, Hidori-gamo<br><b>Japanese: </b>アカガシラ, ヒドリガモ<br><b>Georgian: </b>თეთრშუბლა იხვი<br><b>Khakas: </b>Кöгiн öртек<br><b>Kazakh: </b>Сарыайдар үйрек<br><b>Korean: </b>홍머리오리<br><b>Cornish: </b>Whewer<br><b>Latin: </b>Anas penelope, Mareca penelope<br><b>Lithuanian: </b>Capas, Cyple, Cyplė, Cypukė<br><b>Latvian: </b>Baltvēderis<br><b>Macedonian: </b>Патка свиркач<br><b>Mongolian: </b>Зээрд алаг нугас<br><b>Malay: </b>Itik Wigeon<br><b>Maltese: </b>Silfjun Ewropew<br><b>Dutch: </b>Smient<br><b>Norwegian: </b>Brunnakke, Lyngand, Pipand<br><b>Polish: </b>swistun, Świstun, świstun (zwyczajny), Świstun zwyczajny<br><b>Portuguese: </b>Piadeira<br><b>Romansh: </b>Anda da la blassa<br><b>Russian: </b>Sviyaz, Свиязь, Свиязь обыкновенная<br><b>Sardinian: </b>Piberoni<br><b>Scots: </b>Glas lach<br><b>Northern Sami: </b>Snárttal<br><b>Slovak: </b>Kačica hvizdárka, kačica hvízdavá, kačica hvizdávka<br><b>Slovenian: </b>navadna žvižgavka, žvižgavka<br><b>Albanian: </b>Kryekuqe e madhe<br><b>Serbian: </b>patka zviždarka, plovka zviždara, Zviždarka, Zviždarka, plovka zviždara, Звиждарка, Патка звиждарка, Пловка звиждара<br><b>Swedish: </b>Bläsand<br><b>Swahili: </b>Bata Domo-kijivu<br><b>Thai: </b>เป็ดปากสั้น<br><b>Turkish: </b>Fiyu, Islık-çalan Ördek<br><b>Tuvinian: </b>Сыгырар өдурек<br><b>Ukrainian: </b>Свищ<br><b>Vietnamese: </b>Vịt đầu vàng<br><b>Chinese: </b>[chi-jing fu], [chi-jing ya], [e-zai ya], [hong ya], 红鸭, 赤頸鴨, 赤颈凫, 赤颈鸭, 鹅仔鸭<br><b>Chinese (Taiwan): </b>[chi-jing ya], 赤頸鴨
+  </font>
+  </td></tr></table></P>
+
+</span>
+</td></tr>
+<tr><td colspan="3">
+<P><small><!-- avb.bow2Descr --></small></P>
+<P>
+  </td>
+  </tr>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=3>
+<P>&nbsp;</P>
+<center>
+<a href="http://www.bsc-eoc.org/bscmain.html" target="_blank"><img src="BSClogo3.gif" alt="" title="Avibase is hosted by Bird Studies Canada" border=0></a> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.birdlife.org" target="_blank"><img src="/links/images/bl_logo.gif" alt="" title="Bird Studies Canada is the canadian co-partner of Birdlife International" border=0></a>
+</center><br>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=2 valign="bottom">
+<center><P><small>Avibase has been visited <b>104,635,553</b> times since 24 June 2003. &copy; Denis Lepage |
+<a href="privacy.jsp">Privacy policy</a><br>
+<small><!-- Translation of this page in English provided by --></small></small></P></center>
+
+<center><a href="http://www.birdingtop500.com/cgi-bin/topsite/topsite.cgi?user=dlepage"><img src="http://www.birdingtop500.com/cgi-bin/topsite/counter.cgi?user=dlepage" border=0></a>
+</center>
+</td></tr></table>
+
+</td></tr></table>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12387576-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+
+

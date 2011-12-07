@@ -1,0 +1,666 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Anas [platyrhynchos or diazi] - Avibase</title>
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Description" content="Avibase is an extensive database information system about all birds of the world, containing over 5 million records about 10,000 species and 22,000 subspecies of birds, including distribution information, taxonomy, synonyms in several languages and more.">
+<meta name="KeyWords" content="bird, birds, birding, birder, birders, birdwatching, birdwatcher, birdwatchers, links, birdlink, birdlinks, ornithology, checklist, checklists, world, oiseau, oiseaux, aves, subspecies, family, taxonomy">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Language" content="en">
+
+<style type="text/css">@import url("avibase.css");</style>
+
+<script type="text/javascript" src="js/bsn.AutoSuggest_2.1.3_avibase.js" charset="utf-8"></script>
+<link rel="stylesheet" href="css/autosuggest_inquisitor.css" type="text/css" media="screen" charset="utf-8" />
+
+<SCRIPT language="JavaScript">
+function changepg(pg, lang, id, ts) {
+  self.document.location = 'avibase.jsp?pg=' + pg + (lang != ''?'&lang='+lang:'') + (id != null?'&id=' + id:'') + (ts != null?'&ts=' + ts:'');
+}
+</SCRIPT>
+<!-- SCRIPT language="JavaScript" src="avibase.js"></script -->
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="jquery.ui.draggable.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.alerts.js" type="text/javascript"></script>
+<link href="jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link rel="search" type="application/opensearchdescription+xml" title="Avibase" href="opensearchplugin.xml">
+
+</head>
+<body>
+
+
+<table border=0 bgcolor="#000078" cellpadding=0 cellspacing=0 width=1024 align=center>
+<tr>
+<td width="400" colspan=2><img src="avibase.gif" align="top" height="84"></td>
+<td align="right" width="580">
+<a target="photos" href="http://www.schmoker.org/BirdPics/ThumbnailGallery.html"><img src="images/ph309.jpg" align="top" border=0 height="65" alt="" title="Ferruginous Hawk, USA, Bill Schmoker"></a><a target="photos" href="http://www.flickr.com/photos/faisca/88147155/in/set-250198/"><img src="images/ph2328.jpg" align="top" border=0 height="65" alt="" title="Larus fuscus, Portugal, Faisca"></a><a target="photos" href="http://www.stanford.edu/~cagan/photography.html"><img src="images/ph670.jpg" align="top" border=0 height="65" alt="" title="Snowy-bellied Hummingbird (male), Costa Rica, Cagan Sekercioglu"></a><a target="photos" href="http://www.digimages.info"><img src="images/ph936.jpg" align="top" border=0 height="65" alt="" title="Fulvous Babbler, Morocco, Alain Fossé"></a><a target="photos" href="http://www.daniscoping.com"><img src="images/ph530.jpg" align="top" border=0 height="65" alt="" title="Black-crowned Night-Heron, Spain, Dani L Huertas"></a><a target="photos" href="http://www.flickr.com/photos/faisca/263270646/in/set-250198/"><img src="images/ph2124.jpg" align="top" border=0 height="65" alt="" title="Euplectes afer, Portugal, Faisca"></a><a target="photos" href="http://www.kashmirnetwork.com/birds/"><img src="images/ph1376.jpg" align="top" border=0 height="65" alt="" title="Common Moorhen, Kashmir, India, Bakshi Jehangir"></a>
+<br><b><font color="#FFFFFF" size="1" face="Geneva,Arial,Helvetica">Bird checklists - taxonomy - distribution - maps - links</font></font></b></td></tr>
+</table><table border=0 width=1024 align=center>
+<tr valign=top><td rowspan=2 width=125 class="AVBbar" bgcolor="#336699"> <!-- #000078 -->
+
+<script>
+function makepale(d) {
+  d.style.backgroundColor = '#226CB7';
+}
+function makenormal(d) {
+  d.style.backgroundColor = '#024C97';
+}
+</SCRIPT>
+
+
+<p>&nbsp;<br>
+<div id="div1" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('home','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=home" class="AVBlinks2"><font color="#F0F0F0">Home</font></a>
+</div>
+<br>
+<div id="div2" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('checklist','EN');">
+&nbsp;&nbsp;<a href="checklist.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Checklists</font></a>
+</div>
+<br>
+<div id="div3" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('search','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=search" class="AVBlinks2"><font color="#F0F0F0">Search</font></a>
+</div>
+<br>
+<div id="div4" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('families','EN');">
+&nbsp;&nbsp;<a href="avibase.jsp?lang=EN&pg=families" class="AVBlinks2"><font color="#F0F0F0">Families</font></a>
+</div>
+<br>
+<div id="div9" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='compare.jsp';">
+&nbsp;&nbsp;<a href="compare.jsp" class="AVBlinks2"><font color="#F0F0F0">Compare lists</font></a>
+</div>
+<br>
+<div id="div10" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='rangemaps.jsp';">
+&nbsp;&nbsp;<a href="rangemaps.jsp" class="AVBlinks2"><font color="#F0F0F0">Range maps</font></a>
+</div>
+<br>
+<div id="div5" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp';">
+&nbsp;&nbsp;<a href="/links/links.jsp" class="AVBlinks2"><font color="#F0F0F0">Birdlinks</font></a>
+</div>
+<br>
+<div id="div6" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="self.location='/links/links.jsp?page=g_reports';">
+&nbsp;&nbsp;<a href="/links/links.jsp?page=g_reports" class="AVBlinks2"><font color="#F0F0F0">Trip reports</font></a>
+</div>
+<br>
+<div id="div7" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('webservice','EN');">
+&nbsp;&nbsp;<a href="webservice.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Web Service</font></a>
+</div>
+<br>
+<div id="div8" style="width: 100; height: 15; position: relative; background-color: #024C97" onmouseout="makenormal(this);" onMouseover="makepale(this);" onClick="changepg('contrib','EN');">
+&nbsp;&nbsp;<a href="contrib.jsp?lang=EN" class="AVBlinks2"><font color="#F0F0F0">Contribute</font></a>
+</div>
+<P>
+<div>
+<form action="avibase.jsp" name='avbsmall' style="position: relative;">
+<input type="hidden" name="pg" value="search">
+<input type="hidden" name="ts" value="1323205653656">
+
+<font face="Geneva,Arial,Helvetica" size=1 color=white>
+Quick search: <input id="searchboxsm" name="qstr" type="text" size="14" style="font-size: 9pt">
+</form>
+</div>
+</p>
+</font>
+
+<script type="text/javascript">
+	var options_xml = {
+		script: function (input) { return "suggest3.jsp?qstr="+input; },
+		varname:"input",
+		minchars:3,
+		timeout:5000,
+		noresults: "No name matching",
+		maxresults:10
+
+	};
+	var as_xml = new bsn.AutoSuggest('searchboxsm', options_xml);
+</script>
+
+<P><b><font color="#FFFFFF">Avibase is also available in the following languages:</font></b><br>
+<table border=0 style="font-family: Geneva,Arial,Helvetica; font-size: 8pt;">
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-en.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=EN&avibaseid=D6F5A788399B36E7">English</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-es.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ES&avibaseid=D6F5A788399B36E7">Spanish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-fr.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FR&avibaseid=D6F5A788399B36E7">French</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-de.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=DE&avibaseid=D6F5A788399B36E7">German</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-hu.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=HU&avibaseid=D6F5A788399B36E7">Hungarian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-id.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=ID&avibaseid=D6F5A788399B36E7">Indonesian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-it.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IT&avibaseid=D6F5A788399B36E7">Italian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-nl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=NL&avibaseid=D6F5A788399B36E7">Dutch</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-pt.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PT&avibaseid=D6F5A788399B36E7">Portuguese</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-sv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SV&avibaseid=D6F5A788399B36E7">Swedish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-ca.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CA&avibaseid=D6F5A788399B36E7">Catalan</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-is.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IS&avibaseid=D6F5A788399B36E7">Icelandic</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-af.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=AF&avibaseid=D6F5A788399B36E7">Afrikaans</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-ia.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=IA&avibaseid=D6F5A788399B36E7">Interlingua</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-pl.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=PL&avibaseid=D6F5A788399B36E7">Polish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-uk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=UK&avibaseid=D6F5A788399B36E7">Ukrainian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-cs.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=CS&avibaseid=D6F5A788399B36E7">Czech</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-sk.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=SK&avibaseid=D6F5A788399B36E7">Slovak</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-ru.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=RU&avibaseid=D6F5A788399B36E7">Russian</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-fi.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=FI&avibaseid=D6F5A788399B36E7">Finnish</a></td></tr>
+
+<tr><td align=right><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=D6F5A788399B36E7"><img src="flags/lang2-lv.jpg" border=0></a></td><td><a class="AVBlink" href="species.jsp?lang=LV&avibaseid=D6F5A788399B36E7">Latvian</a></td></tr>
+
+</table>
+</P>
+<p>Google translations:<br>
+<select name="lgg" style="font-size: 9pt; max-width: 100px; clientWidth: 100px;" onChange="googleTrans(this)">
+<option value=""></option>
+<option value="AR" >Arabic</option><option value="AZ" >Azerbaijani</option><option value="BG" >Bulgarian</option><option value="BE" >Belarusian</option><option value="CY" >Welsh</option><option value="DA" >Danish</option><option value="EL" >Greek</option><option value="ET" >Estonian</option><option value="EU" >Basque</option><option value="FA" >Persian</option><option value="FIL" >Filipino</option><option value="GA" >Irish</option><option value="GL" >Galician</option><option value="HATX" >Haitian Creole French</option><option value="HE" >Hebrew</option><option value="HI" >Hindi</option><option value="HR" >Croatian</option><option value="HY" >Armenian</option><option value="JP" >Japanese</option><option value="KA" >Georgian</option><option value="KO" >Korean</option><option value="LT" >Lithuanian</option><option value="MK" >Macedonian</option><option value="MS" >Malay</option><option value="MT" >Maltese</option><option value="NO" >Norwegian</option><option value="RO" >Romanian</option><option value="RU" >Russian</option><option value="SL" >Slovenian</option><option value="SQ" >Albanian</option><option value="SR" >Serbian</option><option value="SW" >Swahili</option><option value="TH" >Thai</option><option value="TR" >Turkish</option><option value="UR" >Urdu</option><option value="VI" >Vietnamese</option><option value="YI" >Yiddish</option><option value="ZH" >Chinese</option>
+</select></p>
+
+<p><a href="translate.jsp?lang=EN" class="AVBlink">Contribute a better translation</a></p>
+
+<script>
+function googleTrans(s) {
+  if (s.options[s.selectedIndex].value == '') return;
+  var url = 'species.jsp?lang=' + s.options[s.selectedIndex].value + '&avibaseid=D6F5A788399B36E7';
+  document.location = url;
+}
+</script>
+
+
+
+</td>
+<td colspan=2 style="padding: 15px">
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+
+  $('#loginbox').toggle();
+
+  $("#loginlnk").click(function(){
+     $('#loginbox').slideToggle('fast');
+  });
+
+
+  $('#credlogin').toggle();
+
+
+});
+
+</script>
+
+
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr>
+<td width="100%" class="AVBHeader" colspan="3">
+Mallard or Mexican Duck (<I>Anas [platyrhynchos or diazi]</I>) </td>
+</tr>
+<tr>
+<td width="100%" class="AVBSubHeader" colspan="3" align=center>
+<SCRIPT language="JavaScript">
+function changesection(s) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=D6F5A788399B36E7&sec=' + s;
+}
+function changespecies(t,v) {
+  self.document.location = 'species.jsp?lang=EN&avibaseid=' + t + '&sec=summary' + (v?'&ssver=' + v:'');
+}
+
+
+</SCRIPT>
+<a href="javascript:changesection('summary')">summary</a>&nbsp;&nbsp;
+<a href="javascript:changesection('taxontable')">taxon grid</a>&nbsp;&nbsp;
+<a href="javascript:changesection('map')">map</a>&nbsp;&nbsp;
+<a href="javascript:changesection('ebird')">eBird</a>&nbsp;&nbsp;
+<a href="javascript:changesection('wiki')">Wikipedia</a>&nbsp;&nbsp;
+<a href="javascript:changesection('natureserve')">NatureServe</a>&nbsp;&nbsp;
+Google: <a href="javascript:changesection('google')">Web/images</a>|<a href="javascript:changesection('scholar')">Scholar</a>&nbsp;&nbsp;
+<a href="javascript:changesection('itis')">ITIS</a>&nbsp;&nbsp;
+<a href="javascript:changesection('birdlife')">Birdlife</a>&nbsp;&nbsp;
+&nbsp;&nbsp;<img align="bottom" src="camera_icon1.gif"> <!-- tx[36] --><a href="javascript:changesection('flickr')">Flickr</a>
+&nbsp;&nbsp;<img align="bottom" src="sound_icon1.gif"> <!-- tx[143] --><a href="javascript:changesection('xenocanto')">Xeno-Canto</a>
+
+<hr noshade width="100%" size=1 align=center color="#F0F0F0">
+
+</td>
+</tr>
+</table>
+
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr><td>
+
+
+
+  <tr>
+    <td class="AVBContainerText" width="60%" valign="top">
+    
+
+    <table border=0 align=center width=95%><tr valign=top><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+    <script src="flickr_votes.js"></script>
+
+
+
+    <p>
+    <b>Order:</b><br> &nbsp;&nbsp;Anseriformes<br>
+    <b>Family:</b><br> &nbsp;&nbsp;Anatidae<br>
+    <P>
+
+    <b>English:</b><br> &nbsp;&nbsp;Mallard or Mexican Duck<br>
+    <b>Scientific:</b><br> &nbsp;&nbsp;<i>Anas [platyrhynchos or diazi]</i><br>
+    </p>
+    <p><b>Protonym:</b><br> &nbsp;&nbsp;<i></i><br>
+    </p>
+    <p><b>Avibase ID:</b><br> &nbsp;&nbsp;D6F5A788399B36E7<br>
+    <p><b>Taxomic Serial Number:</b><br>
+    TSN: <a target="_blank" href="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175063">175063</a>
+
+    </p>
+
+    </td><td class="AVBContainerText" bordercolor="#FFFFFF" width=50%>
+
+    <b>Czech:</b><br> &nbsp;&nbsp;kachna divoká<br>
+
+    <b>German:</b><br> &nbsp;&nbsp;Stockente<br>
+
+    <b>Danish:</b><br> &nbsp;&nbsp;Gråand<br>
+
+    <b>Spanish:</b><br> &nbsp;&nbsp;Ánade Real<br>
+
+    <b>Finnish:</b><br> &nbsp;&nbsp;sinisorsa<br>
+
+    <b>French:</b><br> &nbsp;&nbsp;Canard colvert<br>
+
+    <b>Icelandic:</b><br> &nbsp;&nbsp;Stokkönd<br>
+
+    <b>Italian:</b><br> &nbsp;&nbsp;Germano reale<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;magamo<br>
+
+    <b>Japanese:</b><br> &nbsp;&nbsp;マガモ<br>
+
+    <b>Dutch:</b><br> &nbsp;&nbsp;Wilde Eend<br>
+
+    <b>Norwegian:</b><br> &nbsp;&nbsp;Stokkand<br>
+
+    <b>Polish:</b><br> &nbsp;&nbsp;krzyżówka<br>
+
+    <b>Portuguese:</b><br> &nbsp;&nbsp;Pato-real<br>
+
+    <b>Slovak:</b><br> &nbsp;&nbsp;kacica divá<br>
+
+    <b>Swedish:</b><br> &nbsp;&nbsp;Gräsand<br>
+
+    <b>Chinese:</b><br> &nbsp;&nbsp;绿头鸭<br>
+</p>
+    </td></tr></table>
+
+<hr noshade width="80%" size=1 align=center color="#E0E0E0">
+
+   <span class="AVBContainerText">
+  
+     <P><b>Authorities recognizing this taxonomic concept:</b></P>
+
+       <b>African Bird Club Checklist 2004:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>African Bird Club Checklist August 2005:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>African Bird Club Checklist March 2007:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>African Bird Club Checklist January 2008:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>African Bird Club Checklist May 2009:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>African Bird Club Checklist March 2010:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (1886):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 1st suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 2nd suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 3rd suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 4th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 5th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 6th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 1st edition (incl. 7th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (1895):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 8th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 9th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 10th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 11th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 12th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 13th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas boschas</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 14th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 2nd edition (incl. 15th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 3rd edition (1910):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 3rd edition (incl. 16th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 3rd edition (incl. 17th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 3rd edition (incl. 18th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 5th edition (incl. 34th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (1983):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 35th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 36th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 37th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 38th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 39th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 40th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 6th edition (incl. 41st suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (1998):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 42th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 43th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 44th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 45th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 46th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 47th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 48th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 49th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 50th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 51th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>American Ornithologists' Union 7th edition (incl. 52th suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Birdlife checklist version 00:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Birdlife checklist version 01:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Birdlife checklist version 02:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Birdlife checklist version 03:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Birdlife checklist version 04:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>British Ornithologists' Union Checklist (7th edition, incl. Jan 2009 suppl.):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Christidis and Boles (2008): Systematics and Taxonomy of Australian Birds:</b><br>&nbsp;&nbsp;&nbsp;Northern Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Commission internationale pour les noms français des oiseaux (1993, révision 2009):</b><br>&nbsp;&nbsp;&nbsp;Canard colvert ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 4th edition:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 5th edition (as published):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 5th edition (incl. 2000 revisions):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 5th edition (incl. 2001 revisions):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 5th edition (incl. 2002 revisions):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 5th edition (incl. 2003 revisions):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 5th edition (incl. 2004 revisions):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 5th edition (incl. 2005 revisions):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 6th edition:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 6th edition (incl. 2007 revisions):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 6th edition (incl. 2008 revisions):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 6th edition (incl. 2009 revisions):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 6th edition (version 6.5 incl. 2010 revisions):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Clements 6th edition (version 6.6 incl. 2011 revisions):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>eBird version 1.50:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>eBird version 1.52:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Howard and Moore 2nd edition:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Howard and Moore 2nd edition (incl. ? suppl):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Howard and Moore 3rd edition (as published):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 1.2):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 2.1):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 3.1):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 4):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 5):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 6):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 7):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Howard and Moore 3rd edition (incl. corrigenda 8):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>IOC World Bird Names, version 1.7:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>IOC World Bird Names, version 2.0:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>IOC World Bird Names, version 2.1:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>IOC World Bird Names, version 2.2:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Morony, Bock and Farrand:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Oriental Bird Club:</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Sibley and Monroe (1993):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Sibley and Monroe (1993, including corrections up to 1998):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Sibley and Monroe 2nd edition (1996):</b><br>&nbsp;&nbsp;&nbsp;Mallard ( <I>Anas platyrhynchos</I>)<br>
+
+       <b>Zoonomen - Zoological Nomenclature Resource:</b><br>&nbsp;&nbsp;&nbsp; <I>Anas platyrhynchos</I><br>
+
+</span>
+
+    </td>
+    <td width="40%" valign=top align=left>
+<span class="AVBContainerText2">
+
+<P><table border=1 width="90%"><tr><td class="AVBContainerText2" style="border: 1pt; border-color: #D8D8BA;">
+
+  <P><b>Taxonomic status:</b><P><b>Species status:</b>
+
+  this taxon has now been split
+
+  
+     <P>This taxon is a subspecies of
+     <a href="javascript:changespecies('FE8FDEBA181A9499')">Anas platyrhynchos</a>
+     <br>
+  
+
+</td></tr></table>
+
+
+
+
+<!-- related taxa -->
+
+<P><table width="90%"><tr><td class="AVBRelated">
+<font size="2">
+
+
+<center><b>Related taxa</b></center>
+
+&nbsp;
+<a href="javascript:changespecies('FE8FDEBA181A9499', 1)">Anas platyrhynchos</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Anas [platyrhynchos or diazi]</b></b><big>&larr;</big><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('85625D75F2524457', 1)">Anas platyrhynchos</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('63C34FC91E6110AF', 1)">Anas platyrhynchos platyrhynchos</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('DEB2F2BEA4E9D912', 1)">Anas platyrhynchos neoboria</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('3A1E5FFEA2EB068D', 1)">Anas platyrhynchos rukensis</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('191EBDD33A5A4F3B', 1)">Anas platyrhynchos conboschas</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('C335AA38DA547021', 1)">Anas platyrhynchos subboschas</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('EF1FAAB68308AE7D', 1)">Anas platyrhynchos oustaleti</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('07FFC1E5643AE054', 1)">Anas platyrhynchos [var. domesticus]</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('42CF45FEA3D6D52F', 1)">Anas diazi</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('0644549BD9D1311C', 1)">Anas diazi diazi</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="javascript:changespecies('0B6A1493B6E0D9DF', 1)">Anas diazi novimexicana</a>]<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('3F444E5A03214FAD', 1)">Anas laysanensis</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('250EA983F9CDC3BC', 1)">Anas wyvilliana</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <b><a href="javascript:changespecies('697B933E00311446', 1)">Anas fulvigula</a></b><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('ECAB75ADFDD1BADF', 1)">Anas fulvigula fulvigula</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:changespecies('63BAF63DE6065516', 1)">Anas fulvigula maculosa</a><br>
+
+</font><br>
+</td></tr></table>
+
+    <table width="90%"><tr><td class="AVBSynonyms">
+    <font size="2"><center><b>Other synonyms</b></center>
+<br><b>Afrikaans: </b>Groenkopeend<br><b>Arabic: </b>البُركة, البُركة بو الخصيف, الخضيري<br><b>Azerbaijani: </b>Yaşılbaş ördək<br><b>Belarusian: </b>Качка-крыжанка, Крыжанка<br><b>Bulgarian: </b>Зеленоглава патица<br><b>Breton: </b>An houad-korz, Houad, Houad-korz<br><b>Catalan: </b>Ànec collverd, Ànec coll-verd, Collverd, Coll-verd<br><b>Catalan (Balears): </b>Collverd<br><b>Valencian: </b>Coll-verd<br><b>Czech: </b>Kachna divoká<br><b>Chuvash: </b>Кăвакал-хай<br><b>Welsh: </b>Cors hwyad, Corshwyaden, Garan hwyad, Hwyaden wyllt<br><b>Danish: </b>Gråand<br><b>German: </b>Laysanente, Stockente, Stockente-platyrhynchus<br><b>Greek: </b>[prasinokefali], Πρασινοκέφαλη, Πρασινοκέφαλη Πάπια<br><b>English: </b>Common mallard, Green-headed Duck, Green-headed mallard, Greenland, Mallard, Mallard Duck, Mallard or Mexican Duck, Mexican Duck, New Mexican Duck, Northern mallard<br><b>Esperanto: </b>Platbeka anaso<br><b>Spanish: </b>Anade Azulón, Ánade azulón, Anade real, Ánade Real, Azulón, Pato Cabeciverde, Pato de Collar, Pato Inglés, Pato Real<br><b>Spanish (Colombia): </b>Pato Real<br><b>Spanish (Costa Rica): </b>Pato Cabeciverde<br><b>Spanish (Cuba): </b>Pato Inglés<br><b>Spanish (Dominican Rep.): </b>Pato Inglés<br><b>Spanish (Honduras): </b>Pato de collar<br><b>Spanish (Mexico): </b>Pato de Collar<br><b>Spanish (Nicaragua): </b>Pato Cabeciverde<br><b>Estonian: </b>sinikael-part<br><b>Basque: </b>Ànec collverd, Basahate, Basahatea<br><b>Persian: </b>اردك وحشی<br><b>Finnish: </b>Heinä- eli sinisorsa, Sinisorsa<br><b>Faroese: </b>Stokkont, Stokk-ont, Villdunna<br><b>French: </b>Canard colvert, Canard malard<br><b>Friulian: </b>Masurin, Mazar, Mazorin, Raze grande<br><b>Frisian: </b>Wylde ein<br><b>Irish: </b>Lacha Fhiáin, Mallard<br><b>Gaelic: </b>Lach, Lacha Chinn Naine, Tunnag Fhiadhaich<br><b>Galician: </b>Alavanco real, Ànec collverd, Lavanco, Pato real<br><b>Manx: </b>Laagh Voirrey, Thunnag Feie<br><b>Haitian Creole French: </b>Kanna kolvèt<br><b>Hebrew: </b>ברכיה, ברכייה<br><b>Croatian: </b>Divlja Patka<br><b>Hungarian: </b>Tokés réce, Tõkés réce, Tőkés réce<br><b>Armenian: </b>[Krnchan Bud ], Կռնչան Բադ<br><b>Icelandic: </b>Stokkönd<br><b>Italian: </b>Germano reale<br><b>Inuktitut: </b>Qeerlutooq<br><b>Japanese: </b>Ao-kubi, Hon-gamo, magamo, Ma-gamo<br><b>Japanese: </b>アオクビ, ホンガモ, マガモ<br><b>Georgian: </b>გარეული იხვი<br><b>Khakas: </b>Сас öртек, Чазы öртегi<br><b>Kazakh: </b>Барылдауық үйрек<br><b>Korean: </b>청둥오리<br><b>Kashmiri: </b>[Nilij]<br><b>Cornish: </b>Hos gwyls, Mallart<br><b>Latin: </b>Anas [platyrhynchos or diazi], Anas boschas, Anas platyrhynchos, Anas platyrhynchos or diazi, Anas platyrhynchos platyrhynchos<br><b>Ladin: </b>Anera salvaria<br><b>Lithuanian: </b>Didżioji antis, Didžioji antis<br><b>Latvian: </b>Meža pīle<br><b>Macedonian: </b>Дива патка, Патка глуварка<br><b>Mongolian: </b>Зэрлэг нугас<br><b>Maltese: </b>Kuluvert<br><b>Dutch: </b>Wilde eend<br><b>Norwegian: </b>Blåhals, Grasand, Stokkand<br><b>Ojibwa: </b>ᐃᓂᓂᔑᐸ<br><b>Polish: </b>krzyzówka, Krzyżówka, Krzyżówka zwyczajna<br><b>Portuguese: </b>pato real, Pato-real<br><b>Romansh: </b>Anda selvadia<br><b>Romanian: </b>Raţă mare<br><b>Romany: </b>Divlio-ratsa, Divlio-ratsoy<br><b>Russian: </b>Kryakva, Кряква, Кряква обыкновенная, Обыкновенная кряква<br><b>Sardinian: </b>Anadi conca birdi, Conchirde, Testirde<br><b>Scots: </b>Lach, Lacha chinn naine, Tounag<br><b>Northern Sami: </b>Suoidnesuorsi<br><b>Slovak: </b>kacica divá, Kačica divá<br><b>Slovenian: </b>mlakarica, raca mlakarica<br><b>Albanian: </b>Kuqla qafëgjelbër, Rosa e vëndit<br><b>Serbian: </b>Divlja patka, divlja patka gluvara, Divlja patka, gluvara, gluvara, Глувара, Дивлја патка, Дивља патка, Патка глувара<br><b>Swedish: </b>Gräsand<br><b>Thai: </b>เป็ดหัวเขียว<br><b>Turkmen: </b>yeşilbaş<br><b>Turkish: </b>Yeşilbaş, Yeşilbaş Ördek<br><b>Tuvinian: </b>бос, Черлик өдурек, Чыргырааш өдурек<br><b>Ukrainian: </b>Крижень<br><b>Vietnamese: </b>Le le, Vịt cổ xanh, Vịt mỏ vàng, Vịt nước<br><b>Sorbian, Lower: </b>Źiwa kacka<br><b>Sorbian, Upper: </b>Dźiwja kačka<br><b>Chinese: </b>[chen wu], [da hong-tui ya], [da ma-ya], [da ye-ya], [fu], [lu-tou ya], [qing bian], [ye-wu], [ye-ya], 凫, 大红腿鸭, 大野鸭, 大麻鸭, 晨骛, 沉骛, 綠頭鴨, 绿头鸭, 野骛, 野鸭, 青边<br><b>Chinese (Taiwan): </b>[lu-tou ya], 綠頭鴨
+  </font>
+  </td></tr></table></P>
+
+</span>
+</td></tr>
+<tr><td colspan="3">
+<P><small><!-- avb.bow2Descr --></small></P>
+<P>
+  </td>
+  </tr>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=3>
+<P>&nbsp;</P>
+<center>
+<a href="http://www.bsc-eoc.org/bscmain.html" target="_blank"><img src="BSClogo3.gif" alt="" title="Avibase is hosted by Bird Studies Canada" border=0></a> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.birdlife.org" target="_blank"><img src="/links/images/bl_logo.gif" alt="" title="Bird Studies Canada is the canadian co-partner of Birdlife International" border=0></a>
+</center><br>
+
+
+
+
+
+</td></tr>
+<tr><td colspan=2 valign="bottom">
+<center><P><small>Avibase has been visited <b>104,635,559</b> times since 24 June 2003. &copy; Denis Lepage |
+<a href="privacy.jsp">Privacy policy</a><br>
+<small><!-- Translation of this page in English provided by --></small></small></P></center>
+
+<center><a href="http://www.birdingtop500.com/cgi-bin/topsite/topsite.cgi?user=dlepage"><img src="http://www.birdingtop500.com/cgi-bin/topsite/counter.cgi?user=dlepage" border=0></a>
+</center>
+</td></tr></table>
+
+</td></tr></table>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12387576-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+
+
