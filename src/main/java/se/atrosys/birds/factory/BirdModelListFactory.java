@@ -3,9 +3,12 @@ package se.atrosys.birds.factory;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
+import se.atrosys.birds.exception.NoFamilyException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.FamilyModel;
@@ -25,9 +28,10 @@ import java.util.List;
 public class BirdModelListFactory {
 	@Autowired private BirdModelFactory birdModelFactory;
 	@Autowired private FamilyModelFactory familyModelFactory;
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
-	public List<BirdModel> scrapeFromAviBase(String fileName) throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException {
+	public List<BirdModel> scrapeFromAviBase(String fileName) throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException, NoFamilyException {
         ArrayList<BirdModel> birdModels = new ArrayList<BirdModel>();
 
 		File file = new File(fileName);
@@ -37,15 +41,19 @@ public class BirdModelListFactory {
 		FamilyModel currentFamily = null;
 
         for (Element bird: table.children()) {
-			if (bird.getElementsByAttribute("colspan").size() == 0) {
-				if (bird.getElementsByAttribute("valign").size() > 0) {
-					currentFamily = familyModelFactory.createModel(bird);
-				} else {
-					BirdModel model = birdModelFactory.createModel(bird, null);
-					model.setFamily(currentFamily);
-					birdModels.add(model);
-				}
-			}
+	        if (bird.getElementsByAttribute("valign").size() > 0) {
+		        currentFamily = familyModelFactory.createModel(bird);
+	        } else if (bird.getElementsByAttribute("colspan").size() == 0) {
+		        BirdModel model = birdModelFactory.createModel(bird, null);
+		        if (currentFamily == null) {
+			        logger.error("Trying to create a bird without a family.");
+//						throw new NoFamilyException();
+		        } else {
+			        model.setFamily(currentFamily);
+			        currentFamily.addBird(model);
+			        birdModels.add(model);
+		        }
+	        }
         }
 
         return birdModels;

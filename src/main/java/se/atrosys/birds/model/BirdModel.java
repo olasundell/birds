@@ -106,4 +106,8 @@ public class BirdModel {
 		result = 31 * result + (href != null ? href.hashCode() : 0);
 		return result;
 	}
+
+	public FamilyModel getFamily() {
+		return family;
+	}
 }

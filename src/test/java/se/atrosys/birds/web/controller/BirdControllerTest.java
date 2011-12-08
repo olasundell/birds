@@ -47,7 +47,7 @@ public class BirdControllerTest extends AbstractTest {
 		Model model = new ExtendedModelMap();
 
 		BirdModel paramBirdModel = new BirdModel();
-		Assert.assertEquals("random", controller.randomBird(paramBirdModel));
+		Assert.assertEquals("random", controller.randomBird(null, paramBirdModel));
 		Assert.assertEquals(paramBirdModel, birdModel);
 		
 	}

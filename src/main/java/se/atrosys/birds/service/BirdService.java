@@ -17,5 +17,6 @@ public interface BirdService {
 	public void save(BirdModel model);
 	public void update(BirdModel model);
 	public void delete(BirdModel model);
+	public void saveAll(List<BirdModel> birdModels);
 	public void shutdown();
 }

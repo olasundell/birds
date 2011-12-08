@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import se.atrosys.birds.db.BirdDao;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
+import se.atrosys.birds.exception.NoFamilyException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.factory.BirdModelListFactory;
 import se.atrosys.birds.model.BirdModel;
@@ -26,6 +27,7 @@ import java.util.List;
 public class BirdServiceImpl implements BirdService {
 	@Autowired BirdDao dao;
 	@Autowired BirdModelListFactory birdModelListFactory;
+	@Autowired FamilyService familyService;
 	
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 	
@@ -49,6 +51,16 @@ public class BirdServiceImpl implements BirdService {
 		dao.delete(model);
 	}
 
+	public void saveAll(List<BirdModel> birdModels) {
+		for (BirdModel model: birdModels) {
+			if (familyService.findById(model.getFamily().getFamily()) == null) {
+				familyService.save(model.getFamily());
+			}
+
+			save(model);
+		}
+	}
+
 	public void shutdown() {
 		dao.shutdown();
 	}
@@ -67,6 +79,8 @@ public class BirdServiceImpl implements BirdService {
 		} catch (CouldNotFindNamesElementException e) {
 			logger.error("An error occurred", e);
 		} catch (NoSuchLanguageException e) {
+			logger.error("An error occurred", e);
+		} catch (NoFamilyException e) {
 			logger.error("An error occurred", e);
 		}
 
