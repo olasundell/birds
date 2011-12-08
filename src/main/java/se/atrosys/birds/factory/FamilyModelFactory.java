@@ -11,11 +11,22 @@ import se.atrosys.birds.model.FamilyModel;
 public class FamilyModelFactory {
 	public FamilyModel createModel(Element bird) {
 		FamilyModel model = new FamilyModel();
-		String[] text = bird.getElementsByTag("b").get(0).text().split(": ");
-		
-		model.setGroup(text[0]);
-		model.setFamily(text[1]);
+
+		model.setGroup(extractGroupName(bird));
+		model.setFamily(extractFamilyName(bird));
 
 		return model;
+	}
+
+	public String extractGroupName(Element bird) {
+		return extractNameArray(bird)[0];
+	}
+
+	public String extractFamilyName(Element bird) {
+		return extractNameArray(bird)[1];
+	}
+
+	private String[] extractNameArray(Element bird) {
+		return bird.getElementsByTag("b").get(0).text().split(": ");
 	}
 }

@@ -16,6 +16,7 @@ import se.atrosys.birds.model.FamilyModel;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by IntelliJ IDEA.
@@ -27,6 +28,7 @@ import java.util.List;
 @Component
 public class BirdModelListFactory {
 	@Autowired private BirdModelFactory birdModelFactory;
+	@Autowired private FamilyModelListFactory familyModelListFactory;
 	@Autowired private FamilyModelFactory familyModelFactory;
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -35,6 +37,8 @@ public class BirdModelListFactory {
         ArrayList<BirdModel> birdModels = new ArrayList<BirdModel>();
 
 		File file = new File(fileName);
+
+		Map<String, FamilyModel> familyModelMap = familyModelListFactory.scrapeFromAviBase(fileName);
         
         Document doc = Jsoup.parse(file, "UTF-8", "http://avibase.bsc-eoc.org/");
         Element table = doc.getElementsByClass("AVBlist").get(3).child(0);
@@ -42,12 +46,12 @@ public class BirdModelListFactory {
 
         for (Element bird: table.children()) {
 	        if (bird.getElementsByAttribute("valign").size() > 0) {
-		        currentFamily = familyModelFactory.createModel(bird);
+		        String key = familyModelFactory.extractFamilyName(bird);
+		        currentFamily = familyModelMap.get(key);
 	        } else if (bird.getElementsByAttribute("colspan").size() == 0) {
 		        BirdModel model = birdModelFactory.createModel(bird, null);
 		        if (currentFamily == null) {
 			        logger.error("Trying to create a bird without a family.");
-//						throw new NoFamilyException();
 		        } else {
 			        model.setFamily(currentFamily);
 			        currentFamily.addBird(model);

@@ -17,7 +17,8 @@ public class FamilyModel {
 	private String family;
 	@Column(name = "GROUP_NAME")
 	private String group;
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "family")
+//	@OneToMany(cascade = CascadeType.ALL, mappedBy = "family")
+	@OneToMany(mappedBy = "family")
 	private List<BirdModel> birds;
 
 	public FamilyModel() {
@@ -38,5 +39,9 @@ public class FamilyModel {
 
 	public void addBird(BirdModel model) {
 		birds.add(model);
+	}
+
+	public String getGroup() {
+		return group;  //To change body of created methods use File | Settings | File Templates.
 	}
 }

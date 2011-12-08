@@ -66,6 +66,7 @@ public class BirdController {
 
 		birdModel.setHref(randomModel.getHref());
 		birdModel.setScientificName(randomModel.getScientificName());
+		birdModel.setFamily(randomModel.getFamily());
 
 		return "random";
 	}

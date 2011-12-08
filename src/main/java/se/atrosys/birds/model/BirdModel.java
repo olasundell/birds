@@ -32,8 +32,8 @@ public class BirdModel {
 	@MapKey(name = "language")*/
 	@Transient
 	private Map<String, String> nameStringMap;
-	@ManyToOne(optional=false)
-	@JoinColumn(name="FAMILY_NAME", referencedColumnName = "FAMILY_NAME")
+
+	@ManyToOne
 	private FamilyModel family;
 
 
@@ -107,6 +107,8 @@ public class BirdModel {
 		return result;
 	}
 
+	@ManyToOne(optional=false, fetch = FetchType.EAGER)
+	@JoinColumn(name="FAMILY_NAME", table = "FAMILIES")
 	public FamilyModel getFamily() {
 		return family;
 	}

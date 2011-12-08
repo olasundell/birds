@@ -69,6 +69,9 @@ public class BirdServiceImplTest extends AbstractTest {
 		assertEquals(modelList.get(0).getHref(), HREF, "href wasn't what we expected");
 		assertEquals(modelList.get(0).getId(), ID, "id wasn't what we expected");
 		assertEquals(modelList.get(0).getScientificName(), SCIENTIFIC_NAME, "scientific name wasn't what we expected");
+		assertEquals(modelList.get(0).getFamily().getFamily(), FAMILY_NAME, "family name wasn't what we expected");
+		assertEquals(modelList.get(0).getFamily().getGroup(), GROUP_NAME, "group name wasn't what we expected");
+
 	}
 	
 }

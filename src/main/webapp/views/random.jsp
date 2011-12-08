@@ -6,6 +6,8 @@
 </head>
 <body>
 A random bird:<br/>
-${birdModel.scientificName}
+Group: ${birdModel.family.group}<br/>
+Family: ${birdModel.family.family}<br/>
+Name: ${birdModel.scientificName}<br/>
 </body>
 </html>

@@ -8,10 +8,14 @@ import se.atrosys.birds.exception.NoFamilyException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.factory.BirdModelListFactory;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.FamilyModel;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
 
@@ -30,6 +34,14 @@ public class BirdModelListFactoryTest extends AbstractTest {
         List<BirdModel> list = birdModelListFactory.scrapeFromAviBase("avibase.html");
         
         assertNotNull(list, "List is null");
-        assertTrue(list.size() > 0, "List is empty");
+		assertEquals(list.size(), 929, "List is empty");
+		
+		Map<String, FamilyModel> familyModels = new HashMap<String, FamilyModel>();
+		
+		for (BirdModel model: list) {
+			familyModels.put(model.getFamily().getFamily(), model.getFamily());
+		}
+		
+		assertEquals(familyModels.size(), 92, "Bird model list didn't have the expected number of families");
     }
 }
