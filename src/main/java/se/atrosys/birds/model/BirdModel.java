@@ -1,12 +1,12 @@
 package se.atrosys.birds.model;
 
+import org.hibernate.annotations.CollectionOfElements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 import javax.persistence.*;
+import javax.persistence.metamodel.EntityType;
 
 /**
  * Created by IntelliJ IDEA.
@@ -28,19 +28,20 @@ public class BirdModel {
 	private String href;
 	@Transient
     private Map<Locale, String> nameLocaleMap;
-/*	@OneToMany( mappedBy = "id", cascade = CascadeType.ALL)
-	@MapKey(name = "language")*/
+	
+	@ManyToOne
+	@JoinColumn(name = "FAMILY_NAME")
+	private FamilyModel family;
 	@Transient
 	private Map<String, String> nameStringMap;
-
-	@ManyToOne
-	private FamilyModel family;
-
+	@Transient
+	private List<BirdNameModel> birdNameModels;
 
 	public BirdModel() {
         nameLocaleMap = new HashMap<Locale, String>();
 	    nameStringMap = new HashMap<String, String>();
-    }
+		birdNameModels = new ArrayList<BirdNameModel>();
+	}
 
     public String getScientificName() {
         return scientificName;
@@ -111,5 +112,14 @@ public class BirdModel {
 	@JoinColumn(name="FAMILY_NAME", table = "FAMILIES")
 	public FamilyModel getFamily() {
 		return family;
+	}
+
+	@OneToMany
+	public List<BirdNameModel> getNames() {
+		return birdNameModels;
+	}
+	
+	public void setNames(List<BirdNameModel> birdNameModels) {
+		this.birdNameModels = birdNameModels;
 	}
 }

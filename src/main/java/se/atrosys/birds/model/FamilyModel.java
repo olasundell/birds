@@ -17,7 +17,6 @@ public class FamilyModel {
 	private String family;
 	@Column(name = "GROUP_NAME")
 	private String group;
-//	@OneToMany(cascade = CascadeType.ALL, mappedBy = "family")
 	@OneToMany(mappedBy = "family")
 	private List<BirdModel> birds;
 

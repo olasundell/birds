@@ -37,7 +37,7 @@ public class BirdModelFactory {
     protected BirdModel createInitialInstance(Element birdElement) throws NoSuchLanguageException {
         BirdModel birdModel = new BirdModel();
 
-        birdModel.setScientificName(birdElement.getAllElements().get(1).text());
+        birdModel.setScientificName(birdElement.getAllElements().get(4).text());
         birdModel.putName(nameService.getLocaleForCountryDisplayName("English"), birdElement.getAllElements().get(0).childNodes().get(0).attr("text"));
         birdModel.setHref(birdElement.getElementsByAttribute("href").attr("href"));
         return birdModel;

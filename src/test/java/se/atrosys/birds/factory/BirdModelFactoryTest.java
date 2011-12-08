@@ -48,7 +48,7 @@ public class BirdModelFactoryTest extends AbstractTest {
     @BeforeMethod
     protected void setUp() throws Exception {
         detail = Jsoup.parse(new File("dendrocygnaviduata.html"), "UTF-8").body();
-        bird = Jsoup.parse(htmlSnippet).body();
+        bird = Jsoup.parse(new File("avibase.html"), "UTF-8").getElementsByClass("AVBlist").get(3).child(0).getElementsByAttribute("href").get(0);
     }
     
     @Test
@@ -84,7 +84,7 @@ public class BirdModelFactoryTest extends AbstractTest {
     }
 
 	// disabled until we add detail enrichment again
-	@Test(enabled = false)
+	@Test
 	public void shouldGetCorrectInstanceFromCreateModel() throws CouldNotFindNamesElementException, NoSuchLanguageException {
 		BirdModel model = factory.createModel(bird, detail);
 		assertNotNull(model, "model is null");
