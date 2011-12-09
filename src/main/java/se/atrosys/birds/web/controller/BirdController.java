@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
+import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoFamilyException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
@@ -54,6 +55,8 @@ public class BirdController {
 				logger.error("An error occurred", e);
 			} catch (NoFamilyException e) {
 				logger.error("An error occurred", e);
+			} catch (CouldNotFindDetailsException e) {
+				logger.error("An error occurred", e);
 			}
 		}
 
@@ -67,6 +70,7 @@ public class BirdController {
 		birdModel.setHref(randomModel.getHref());
 		birdModel.setScientificName(randomModel.getScientificName());
 		birdModel.setFamily(randomModel.getFamily());
+		birdModel.setNames(randomModel.getNames());
 
 		return "random";
 	}

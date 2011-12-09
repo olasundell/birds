@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import se.atrosys.birds.db.BirdDao;
+import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoFamilyException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
@@ -81,6 +82,8 @@ public class BirdServiceImpl implements BirdService {
 		} catch (NoSuchLanguageException e) {
 			logger.error("An error occurred", e);
 		} catch (NoFamilyException e) {
+			logger.error("An error occurred", e);
+		} catch (CouldNotFindDetailsException e) {
 			logger.error("An error occurred", e);
 		}
 

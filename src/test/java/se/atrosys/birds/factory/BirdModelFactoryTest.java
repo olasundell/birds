@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.factory.BirdModelFactory;
@@ -42,13 +43,15 @@ public class BirdModelFactoryTest extends AbstractTest {
             .append("<td>Rare/Accidental </td>")
             .append("</tr>").toString();
     @Autowired private BirdModelFactory factory;
+	@Autowired private BirdModelListFactory birdModelListFactory;
     private Element detail;
     private Element bird;
 
     @BeforeMethod
     protected void setUp() throws Exception {
         detail = Jsoup.parse(new File("dendrocygnaviduata.html"), "UTF-8").body();
-        bird = Jsoup.parse(new File("avibase.html"), "UTF-8").getElementsByClass("AVBlist").get(3).child(0).getElementsByAttribute("href").get(0);
+	    Element table = birdModelListFactory.getTable(Jsoup.parse(new File("avibase.html"), "UTF-8"));
+	    bird = table.child(6);
     }
     
     @Test
@@ -79,18 +82,18 @@ public class BirdModelFactoryTest extends AbstractTest {
         BirdModel model = factory.createInitialInstance(bird);
         assertNotNull(model, "model is null");
         assertEquals(model.getScientificName(), SCIENTIFIC_NAME, "scientific name does not match");
-        assertEquals(model.getName("en"), ENGLISH_NAME, "english name does not match");
+	    assertEquals(model.getName("en"), ENGLISH_NAME, "english name does not match");
         assertEquals(model.getHref(), HREF, "href does not match");
     }
 
 	// disabled until we add detail enrichment again
 	@Test
-	public void shouldGetCorrectInstanceFromCreateModel() throws CouldNotFindNamesElementException, NoSuchLanguageException {
-		BirdModel model = factory.createModel(bird, detail);
+	public void shouldGetCorrectInstanceFromCreateModel() throws CouldNotFindNamesElementException, NoSuchLanguageException, CouldNotFindDetailsException {
+		BirdModel model = factory.createModel(bird);
 		assertNotNull(model, "model is null");
 		assertEquals(model.getScientificName(), SCIENTIFIC_NAME, "scientific name does not match");
-		assertEquals(model.getName("en"), ENGLISH_NAME, "english name does not match");
 		assertEquals(model.getHref(), HREF, "href does not match");
+		assertEquals(model.getName("en"), ENGLISH_NAME, "english name does not match");
 		assertEquals(model.getName("de"), GERMAN_NAME, "german name does not match");
 	}
     

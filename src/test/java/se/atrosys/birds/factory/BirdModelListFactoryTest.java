@@ -3,6 +3,7 @@ package se.atrosys.birds.factory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoFamilyException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
@@ -30,7 +31,7 @@ public class BirdModelListFactoryTest extends AbstractTest {
 	@Autowired private BirdModelListFactory birdModelListFactory;
 
 	@Test
-    public void scrapeFromAviBaseShouldReturnList() throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException, NoFamilyException {
+    public void scrapeFromAviBaseShouldReturnList() throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException, NoFamilyException, CouldNotFindDetailsException {
         List<BirdModel> list = birdModelListFactory.scrapeFromAviBase("avibase.html");
         
         assertNotNull(list, "List is null");

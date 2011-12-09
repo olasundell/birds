@@ -7,7 +7,7 @@ package se.atrosys.birds.exception;
  * Time: 9:48 AM
  * To change this template use File | Settings | File Templates.
  */
-public class CouldNotFindNamesElementException extends Throwable {
+public class CouldNotFindNamesElementException extends Exception {
     public CouldNotFindNamesElementException(String s) {
         super(s);
     }

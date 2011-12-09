@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoFamilyException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
@@ -33,7 +34,7 @@ public class BirdModelListFactory {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
-	public List<BirdModel> scrapeFromAviBase(String fileName) throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException, NoFamilyException {
+	public List<BirdModel> scrapeFromAviBase(String fileName) throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException, NoFamilyException, CouldNotFindDetailsException {
         ArrayList<BirdModel> birdModels = new ArrayList<BirdModel>();
 
 		File file = new File(fileName);
@@ -41,7 +42,7 @@ public class BirdModelListFactory {
 		Map<String, FamilyModel> familyModelMap = familyModelListFactory.scrapeFromAviBase(fileName);
         
         Document doc = Jsoup.parse(file, "UTF-8", "http://avibase.bsc-eoc.org/");
-        Element table = doc.getElementsByClass("AVBlist").get(3).child(0);
+        Element table = getTable(doc);
 		FamilyModel currentFamily = null;
 
         for (Element bird: table.children()) {
@@ -49,7 +50,7 @@ public class BirdModelListFactory {
 		        String key = familyModelFactory.extractFamilyName(bird);
 		        currentFamily = familyModelMap.get(key);
 	        } else if (bird.getElementsByAttribute("colspan").size() == 0) {
-		        BirdModel model = birdModelFactory.createModel(bird, null);
+		        BirdModel model = birdModelFactory.createModel(bird);
 		        if (currentFamily == null) {
 			        logger.error("Trying to create a bird without a family.");
 		        } else {
@@ -63,7 +64,11 @@ public class BirdModelListFactory {
         return birdModels;
     }
 
-    public List<BirdModel> readFromFile(String fileName) throws IOException {
+	public Element getTable(Document doc) {
+		return doc.getElementsByClass("AVBlist").get(3).child(0);
+	}
+
+	public List<BirdModel> readFromFile(String fileName) throws IOException {
         ArrayList<BirdModel> birdModels = new ArrayList<BirdModel>();
         
         File file = new File(fileName);
