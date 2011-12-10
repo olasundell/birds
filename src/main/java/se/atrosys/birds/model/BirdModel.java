@@ -26,16 +26,17 @@ public class BirdModel {
     private String scientificName;
 	@Column(name = "HREF")
 	private String href;
-	@Transient
-    private Map<Locale, String> nameLocaleMap;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "FAMILY_NAME")
 	private FamilyModel family;
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	private List<BirdNameModel> birdNameModels;
+
+	@Transient
+	private Map<Locale, String> nameLocaleMap;
 	@Transient
 	private Map<String, String> nameStringMap;
-	@Transient
-	private List<BirdNameModel> birdNameModels;
 
 	public BirdModel() {
         nameLocaleMap = new HashMap<Locale, String>();
@@ -58,6 +59,13 @@ public class BirdModel {
     public void putName(Locale lang, String name) {
         nameLocaleMap.put(lang, name);
 	    nameStringMap.put(lang.getLanguage(), name);
+
+	    BirdNameModel birdNameModel = new BirdNameModel();
+	    birdNameModel.setLang(lang.getDisplayLanguage());
+	    birdNameModel.setName(name);
+	    birdNameModel.setBird(this);
+
+	    birdNameModels.add(birdNameModel);
     }
 
     public String getHref() {
@@ -74,6 +82,7 @@ public class BirdModel {
 			this.id = href.split("avibaseid=")[1];
 		} catch (ArrayIndexOutOfBoundsException e) {
 			LoggerFactory.getLogger(this.getClass()).error(href, e);
+			throw e;
 		}
     }
 
@@ -114,7 +123,6 @@ public class BirdModel {
 		return family;
 	}
 
-	@OneToMany
 	public List<BirdNameModel> getNames() {
 		return birdNameModels;
 	}

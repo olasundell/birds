@@ -58,9 +58,9 @@ public class BirdModelFactory {
         BirdModel birdModel = new BirdModel();
 
         birdModel.setScientificName(birdElement.getElementsByTag("i").text());
-
-        birdModel.putName(nameService.getLocaleForCountryDisplayName("English"), birdElement.getElementsByTag("td").get(0).text());
         birdModel.setHref(birdElement.getElementsByAttribute("href").attr("href"));
+		birdModel.putName(nameService.getLocaleForCountryDisplayName("English"), birdElement.getElementsByTag("td").get(0).text());
+
         return birdModel;
     }
 
@@ -80,7 +80,7 @@ public class BirdModelFactory {
 		                model.putName(localeForCountryDisplayName,
 				                node.attr("text").replaceAll("[\\u00A0]", "").trim());
 	                } catch (NoSuchLanguageException e) {
-		                logger.info(String.format("Could not find language %s", currentLang));
+		                logger.debug(String.format("Could not find language %s", currentLang));
 	                }
 
                     currentLang = "";
@@ -91,6 +91,7 @@ public class BirdModelFactory {
 
     protected Element findNamesElement(Element element) throws CouldNotFindNamesElementException {
         for (Element e: element.getElementsByTag("b")) {
+	        // TODO this should be a bit more precise, check for more languages than German
             Elements elements = e.getElementsContainingText("German:");
             if (elements.size() > 0) {
                 return e.parent();

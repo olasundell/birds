@@ -13,8 +13,12 @@ import javax.persistence.*;
 @Table(name = "BIRD_NAMES")
 public class BirdNameModel {
 	@Id
-	@Column(name = "BIRD_ID")
-	private String birdId;
+	@Column(name = "ID")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	private int id;
+	@ManyToOne
+	@JoinColumn(name = "BIRD_ID")
+	private BirdModel bird;
 	@Column(name = "BIRD_NAME")
 	private String name;
 	@Column(name = "LANG")
@@ -34,5 +38,9 @@ public class BirdNameModel {
 
 	public void setLang(String lang) {
 		this.lang = lang;
+	}
+
+	public void setBird(BirdModel bird) {
+		this.bird = bird;
 	}
 }

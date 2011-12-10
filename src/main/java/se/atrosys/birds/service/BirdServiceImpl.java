@@ -11,6 +11,7 @@ import se.atrosys.birds.exception.NoFamilyException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.factory.BirdModelListFactory;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.BirdNameModel;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;
@@ -29,6 +30,7 @@ public class BirdServiceImpl implements BirdService {
 	@Autowired BirdDao dao;
 	@Autowired BirdModelListFactory birdModelListFactory;
 	@Autowired FamilyService familyService;
+	@Autowired BirdNameService birdNameService;
 	
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 	
@@ -41,7 +43,14 @@ public class BirdServiceImpl implements BirdService {
 	}
 
 	public void save(BirdModel model) {
+		if (familyService.findById(model.getFamily().getFamily()) == null) {
+			familyService.save(model.getFamily());
+		}
+
 		dao.save(model);
+
+		birdNameService.saveAll(model.getNames());
+
 	}
 
 	public void update(BirdModel model) {
@@ -54,10 +63,6 @@ public class BirdServiceImpl implements BirdService {
 
 	public void saveAll(List<BirdModel> birdModels) {
 		for (BirdModel model: birdModels) {
-			if (familyService.findById(model.getFamily().getFamily()) == null) {
-				familyService.save(model.getFamily());
-			}
-
 			save(model);
 		}
 	}
