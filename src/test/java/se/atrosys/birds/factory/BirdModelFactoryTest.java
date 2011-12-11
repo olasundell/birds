@@ -12,6 +12,7 @@ import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.factory.BirdModelFactory;
 import se.atrosys.birds.model.BirdModel;
 
+import javax.xml.bind.JAXBException;
 import java.io.File;
 import java.io.IOException;
 
@@ -88,7 +89,7 @@ public class BirdModelFactoryTest extends AbstractTest {
 
 	// disabled until we add detail enrichment again
 	@Test
-	public void shouldGetCorrectInstanceFromCreateModel() throws CouldNotFindNamesElementException, NoSuchLanguageException, CouldNotFindDetailsException {
+	public void shouldGetCorrectInstanceFromCreateModel() throws CouldNotFindNamesElementException, NoSuchLanguageException, CouldNotFindDetailsException, JAXBException {
 		BirdModel model = factory.createModel(bird);
 		assertNotNull(model, "model is null");
 		assertEquals(model.getScientificName(), SCIENTIFIC_NAME, "scientific name does not match");

@@ -14,6 +14,7 @@ import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.BirdNameModel;
 
 import javax.annotation.PostConstruct;
+import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -89,6 +90,8 @@ public class BirdServiceImpl implements BirdService {
 		} catch (NoFamilyException e) {
 			logger.error("An error occurred", e);
 		} catch (CouldNotFindDetailsException e) {
+			logger.error("An error occurred", e);
+		} catch (JAXBException e) {
 			logger.error("An error occurred", e);
 		}
 

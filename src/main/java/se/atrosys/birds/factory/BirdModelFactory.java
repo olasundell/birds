@@ -15,8 +15,11 @@ import org.slf4j.Logger;
 import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
+import se.atrosys.birds.flickr.FlickrService;
 import se.atrosys.birds.service.CountryNameService;
 import se.atrosys.birds.model.BirdModel;
+
+import javax.xml.bind.JAXBException;
 
 /**
  * Created by IntelliJ IDEA.
@@ -27,22 +30,28 @@ import se.atrosys.birds.model.BirdModel;
  */
 @Component
 public class BirdModelFactory {
-	@Autowired
-	CountryNameService nameService;
+	@Autowired CountryNameService nameService;
+	@Autowired FlickrService flickrService;
+	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	public BirdModel createModel(Element listingElement) throws NoSuchLanguageException, CouldNotFindDetailsException {
+	public BirdModel createModel(Element listingElement) throws NoSuchLanguageException, CouldNotFindDetailsException, JAXBException {
         BirdModel birdModel = createInitialInstance(listingElement);
 		Element detailedElement = createDetailedElement(birdModel);
 		try {
 			Element namesElement = findNamesElement(detailedElement);
 			enrichModelFromAvibase(birdModel, namesElement);
+			enrichModelWithPhotos(birdModel);
 		} catch (CouldNotFindNamesElementException e) {
 			logger.warn(String.format("Could not find names element, species %s", birdModel.getScientificName()));
 		}
         
         return birdModel;
     }
+
+	private void enrichModelWithPhotos(BirdModel birdModel) throws JAXBException {
+		birdModel.addPhotos(flickrService.getPictures(birdModel));
+	}
 
 	private Element createDetailedElement(BirdModel birdModel) throws CouldNotFindDetailsException {
 		String format = String.format("/home/ola/code/birds/species/%s", birdModel.getHref());

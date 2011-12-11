@@ -11,6 +11,7 @@ import se.atrosys.birds.factory.BirdModelListFactory;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.FamilyModel;
 
+import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -31,8 +32,8 @@ public class BirdModelListFactoryTest extends AbstractTest {
 	@Autowired private BirdModelListFactory birdModelListFactory;
 
 	@Test
-    public void scrapeFromAviBaseShouldReturnList() throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException, NoFamilyException, CouldNotFindDetailsException {
-        List<BirdModel> list = birdModelListFactory.scrapeFromAviBase("avibase.html");
+    public void scrapeFromAviBaseShouldReturnList() throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException, NoFamilyException, CouldNotFindDetailsException, JAXBException {
+        List<BirdModel> list = birdModelListFactory.scrapeFromAviBase("avibase-short.html");
         
         assertNotNull(list, "List is null");
 		assertEquals(list.size(), 929, "List is empty");

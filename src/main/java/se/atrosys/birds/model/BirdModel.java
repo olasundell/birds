@@ -3,6 +3,7 @@ package se.atrosys.birds.model;
 import org.hibernate.annotations.CollectionOfElements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import se.atrosys.birds.flickr.FlickrPhotoList;
 
 import java.util.*;
 import javax.persistence.*;
@@ -37,11 +38,14 @@ public class BirdModel {
 	private Map<Locale, String> nameLocaleMap;
 	@Transient
 	private Map<String, String> nameStringMap;
+	@Transient
+	private List photos;
 
 	public BirdModel() {
         nameLocaleMap = new HashMap<Locale, String>();
 	    nameStringMap = new HashMap<String, String>();
 		birdNameModels = new ArrayList<BirdNameModel>();
+		photos = new ArrayList();
 	}
 
     public String getScientificName() {
@@ -129,5 +133,9 @@ public class BirdModel {
 	
 	public void setNames(List<BirdNameModel> birdNameModels) {
 		this.birdNameModels = birdNameModels;
+	}
+
+	public void addPhotos(FlickrPhotoList pictures) {
+		photos.addAll(pictures.getList());
 	}
 }

@@ -10,6 +10,7 @@ import se.atrosys.birds.factory.BirdModelListFactory;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.service.BirdService;
 
+import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.List;
 
@@ -28,8 +29,8 @@ public class DbSystemTest extends AbstractTest {
 	@Autowired BirdService birdService;
 	
 	@Test
-	public void dbShouldWork() throws CouldNotFindNamesElementException, IOException, NoFamilyException, NoSuchLanguageException, CouldNotFindDetailsException {
-		List<BirdModel> birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase.html");
+	public void dbShouldWork() throws CouldNotFindNamesElementException, IOException, NoFamilyException, NoSuchLanguageException, CouldNotFindDetailsException, JAXBException {
+		List<BirdModel> birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase-short.html");
 		birdService.save(birdModels.get(0));
 		List<BirdModel> list = birdService.findAll();	
 		

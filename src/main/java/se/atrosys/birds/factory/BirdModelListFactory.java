@@ -14,6 +14,7 @@ import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.FamilyModel;
 
+import javax.xml.bind.JAXBException;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +35,7 @@ public class BirdModelListFactory {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
-	public List<BirdModel> scrapeFromAviBase(String fileName) throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException, NoFamilyException, CouldNotFindDetailsException {
+	public List<BirdModel> scrapeFromAviBase(String fileName) throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException, NoFamilyException, CouldNotFindDetailsException, JAXBException {
         ArrayList<BirdModel> birdModels = new ArrayList<BirdModel>();
 
 		File file = new File(fileName);

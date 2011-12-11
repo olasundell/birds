@@ -19,6 +19,7 @@ import se.atrosys.birds.service.BirdService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +57,8 @@ public class BirdController {
 			} catch (NoFamilyException e) {
 				logger.error("An error occurred", e);
 			} catch (CouldNotFindDetailsException e) {
+				logger.error("An error occurred", e);
+			} catch (JAXBException e) {
 				logger.error("An error occurred", e);
 			}
 		}
