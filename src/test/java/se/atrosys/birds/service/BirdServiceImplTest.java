@@ -1,13 +1,17 @@
 package se.atrosys.birds.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.flickr.PhotoBuilder;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.BirdPhotoModel;
 import se.atrosys.birds.model.FamilyModel;
+import se.atrosys.birds.model.PhotoModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.testng.Assert.*;
@@ -29,6 +33,8 @@ public class BirdServiceImplTest extends AbstractTest {
 	private final BirdModel model = new BirdModel();
 	private static final String FAMILY_NAME = "Faaaamily";
 	private static final String GROUP_NAME = "Groupers";
+	private static final List<BirdPhotoModel> photos = new ArrayList<BirdPhotoModel>();
+	private final PhotoBuilder<BirdPhotoModel> photoBuilder = new PhotoBuilder<BirdPhotoModel>();
 
 	@AfterClass
 	public void afterClass() {
@@ -42,9 +48,11 @@ public class BirdServiceImplTest extends AbstractTest {
 	}
 
 	@Test
-	public void saveShouldWork() {
+	public void saveShouldWork() throws InstantiationException, IllegalAccessException {
 		model.setHref(HREF);
 		model.setScientificName(SCIENTIFIC_NAME);
+		photos.add(photoBuilder.build(BirdPhotoModel.class));
+		model.setPhotos(photos);
 
 		FamilyModel family = new FamilyModel();
 		family.setFamily(FAMILY_NAME);
@@ -59,6 +67,18 @@ public class BirdServiceImplTest extends AbstractTest {
 
 		service.save(model);
 	}
+
+	@Test(dependsOnMethods = "saveShouldWork" )
+	public void findBasedOnIdShouldWork() {
+		BirdModel retrievedModel = service.findById(ID);
+		assertEquals(retrievedModel.getHref(), HREF, "href wasn't what we expected");
+		assertEquals(retrievedModel.getId(), ID, "id wasn't what we expected");
+		assertEquals(retrievedModel.getScientificName(), SCIENTIFIC_NAME, "scientific name wasn't what we expected");
+		assertEquals(retrievedModel.getFamily().getFamily(), FAMILY_NAME, "family name wasn't what we expected");
+		assertEquals(retrievedModel.getFamily().getGroup(), GROUP_NAME, "group name wasn't what we expected");
+		assertFalse(retrievedModel.getPhotos().isEmpty(), "Photo list is empty");
+		assertEquals(retrievedModel.getPhotos().get(0), photos.get(0));
+	}
 	
 	@Test(dependsOnMethods = "saveShouldWork" )
 	public void findAllShouldWork() {
@@ -71,7 +91,6 @@ public class BirdServiceImplTest extends AbstractTest {
 		assertEquals(modelList.get(0).getScientificName(), SCIENTIFIC_NAME, "scientific name wasn't what we expected");
 		assertEquals(modelList.get(0).getFamily().getFamily(), FAMILY_NAME, "family name wasn't what we expected");
 		assertEquals(modelList.get(0).getFamily().getGroup(), GROUP_NAME, "group name wasn't what we expected");
-
 	}
 	
 }

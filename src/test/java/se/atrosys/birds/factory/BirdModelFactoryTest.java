@@ -15,6 +15,7 @@ import se.atrosys.birds.model.BirdModel;
 import javax.xml.bind.JAXBException;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import static org.mockito.Mockito.mock;
 import static org.testng.Assert.*;
@@ -76,7 +77,6 @@ public class BirdModelFactoryTest extends AbstractTest {
         factory.enrichModelFromAvibase(model, element);
         assertEquals(model.getName("de"), GERMAN_NAME, "german name does not match");
     }
-    
 
     @Test
     public void shouldGetCorrectInstanceFromAviBaseSnippet() throws IOException, NoSuchLanguageException {
@@ -87,7 +87,6 @@ public class BirdModelFactoryTest extends AbstractTest {
         assertEquals(model.getHref(), HREF, "href does not match");
     }
 
-	// disabled until we add detail enrichment again
 	@Test
 	public void shouldGetCorrectInstanceFromCreateModel() throws CouldNotFindNamesElementException, NoSuchLanguageException, CouldNotFindDetailsException, JAXBException {
 		BirdModel model = factory.createModel(bird);
@@ -98,4 +97,11 @@ public class BirdModelFactoryTest extends AbstractTest {
 		assertEquals(model.getName("de"), GERMAN_NAME, "german name does not match");
 	}
     
+	@Test
+	public void shouldHavePhotos() throws JAXBException, NoSuchLanguageException, CouldNotFindDetailsException {
+		BirdModel model = factory.createModel(bird);
+		List photos = model.getPhotos();
+		assertNotNull(photos, "Photo list is null");
+		assertFalse(photos.isEmpty(), "Photo list is empty");
+	}
 }
