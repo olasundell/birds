@@ -33,7 +33,7 @@ public class BirdModelListFactoryTest extends AbstractTest {
 
 	@Test
     public void scrapeFromAviBaseShouldReturnList() throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException, NoFamilyException, CouldNotFindDetailsException, JAXBException {
-        List<BirdModel> list = birdModelListFactory.scrapeFromAviBase("avibase-short.html");
+        List<BirdModel> list = birdModelListFactory.scrapeFromAviBase("avibase.html");
         
         assertNotNull(list, "List is null");
 		assertEquals(list.size(), 929, "List is empty");
