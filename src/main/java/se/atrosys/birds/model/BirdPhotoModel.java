@@ -90,6 +90,16 @@ public class BirdPhotoModel implements PhotoModel {
 		this.title = title;
 	}
 
+	public String getUrl() {
+		return String.format("http://farm%s.staticflickr.com/%s/%s_%s.jpg", farm, server, id, secret);
+		/*
+								or
+							http://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}_[mstzb].jpg
+								or
+							http://farm{farm-id}.staticflickr.com/{server-id}/{id}_{o-secret}_o.(jpg|gif|png)
+							 */
+	}
+
 	public void setBirdModel(BirdModel birdModel) {
 //		this.bird = birdModel;
 	}

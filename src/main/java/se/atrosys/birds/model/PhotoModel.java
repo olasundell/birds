@@ -14,4 +14,5 @@ public interface PhotoModel {
 	void setSecret(String secret);
 	void setServer(String server);
 	void setTitle(String title);
+	String getUrl();
 }
