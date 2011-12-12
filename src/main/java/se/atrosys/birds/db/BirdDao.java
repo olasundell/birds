@@ -18,4 +18,6 @@ public interface BirdDao {
 	public void update(BirdModel model);
 	public void delete(BirdModel model);
 	public void shutdown();
+
+	BirdModel getRandomBird();
 }

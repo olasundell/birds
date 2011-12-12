@@ -27,8 +27,9 @@ import static org.testng.Assert.assertNotNull;
 public class DbSystemTest extends AbstractTest {
 	@Autowired BirdModelListFactory birdModelListFactory;
 	@Autowired BirdService birdService;
-	
-	@Test
+
+	// TODO disabled due to the fact that it changes data. Rewrite using hsql or Derby.
+	@Test(enabled = false)
 	public void dbShouldWork() throws CouldNotFindNamesElementException, IOException, NoFamilyException, NoSuchLanguageException, CouldNotFindDetailsException, JAXBException {
 		List<BirdModel> birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase-short.html");
 		birdService.save(birdModels.get(0));

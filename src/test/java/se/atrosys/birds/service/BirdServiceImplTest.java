@@ -37,7 +37,7 @@ public class BirdServiceImplTest extends AbstractTest {
 	private static final List<BirdPhotoModel> photos = new ArrayList<BirdPhotoModel>();
 	private final PhotoBuilder<BirdPhotoModel> photoBuilder = new PhotoBuilder<BirdPhotoModel>();
 
-	@AfterClass
+/*	@AfterClass
 	public void afterClass() {
 		for (BirdModel m: service.findAll()) {
 			service.delete(m);
@@ -46,9 +46,10 @@ public class BirdServiceImplTest extends AbstractTest {
 		for (FamilyModel m: familyService.findAll()) {
 			familyService.delete(m);
 		}
-	}
+	}*/
 
-	@Test
+	// TODO disabled as it changes data. Rewrite using mocking.
+	@Test(enabled = false)
 	public void saveShouldWork() throws InstantiationException, IllegalAccessException {
 		model.setHref(HREF);
 		model.setScientificName(SCIENTIFIC_NAME);
@@ -69,7 +70,8 @@ public class BirdServiceImplTest extends AbstractTest {
 		service.save(model);
 	}
 
-	@Test(dependsOnMethods = "saveShouldWork" )
+//	@Test(dependsOnMethods = "saveShouldWork" )
+	@Test(enabled = false)
 	public void findBasedOnIdShouldWork() {
 		BirdModel retrievedModel = service.findById(ID);
 		assertEquals(retrievedModel.getHref(), HREF, "href wasn't what we expected");
@@ -81,7 +83,8 @@ public class BirdServiceImplTest extends AbstractTest {
 		assertEquals(retrievedModel.getPhotos().get(0), photos.get(0));
 	}
 	
-	@Test(dependsOnMethods = "saveShouldWork" )
+//	@Test(dependsOnMethods = "saveShouldWork" )
+	@Test(enabled = false)
 	public void findAllShouldWork() {
 		List<BirdModel> modelList = service.findAll();
 

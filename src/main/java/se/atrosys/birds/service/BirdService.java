@@ -19,4 +19,5 @@ public interface BirdService {
 	public void delete(BirdModel model);
 	public void saveAll(List<BirdModel> birdModels);
 	public void shutdown();
+	public BirdModel getRandomBird();
 }

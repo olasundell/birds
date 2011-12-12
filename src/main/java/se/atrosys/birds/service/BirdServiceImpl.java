@@ -72,7 +72,11 @@ public class BirdServiceImpl implements BirdService {
 		dao.shutdown();
 	}
 
-//	@PostConstruct
+	public BirdModel getRandomBird() {
+		return dao.getRandomBird();
+	}
+
+	//	@PostConstruct
 	public void postConstruct() {
 		logger.info("postConstruct called");
 		// load models.

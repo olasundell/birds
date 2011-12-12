@@ -1,9 +1,13 @@
 package se.atrosys.birds.db;
 
+import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
+import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.FamilyModel;
 
 import java.util.List;
@@ -14,11 +18,39 @@ import java.util.List;
 @Repository("familyDao")
 public class FamilyDaoImpl extends HibernateDaoSupport implements FamilyDao {
 	public FamilyModel findById(String id) {
-		return (FamilyModel)getHibernateTemplate().get(FamilyModel.class, id);
+		HibernateTemplate hibernateTemplate = getHibernateTemplate();
+		Session session = hibernateTemplate.getSessionFactory().openSession();
+
+		FamilyModel model = (FamilyModel) session.get(FamilyModel.class, id);
+
+		if (model != null) {
+			for (BirdModel birdModel: model.getBirds()) {
+				birdModel.getId();
+			}
+		}
+
+		session.close();
+
+		return model;
 	}
 
 	public List<FamilyModel> findAll() {
-		return getHibernateTemplate().find("from se.atrosys.birds.model.FamilyModel");
+		HibernateTemplate hibernateTemplate = getHibernateTemplate();
+		Session session = hibernateTemplate.getSessionFactory().openSession();
+
+		String hql = "from se.atrosys.birds.model.FamilyModel";
+		Query query = session.createQuery(hql);
+		List<FamilyModel> list = query.list();
+
+		for (FamilyModel model: list) {
+			for (BirdModel birdModel: model.getBirds()) {
+				birdModel.getId();
+			}
+		}
+
+		session.close();
+
+		return list;
 	}
 
 	public void save(FamilyModel model) {

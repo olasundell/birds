@@ -1,8 +1,14 @@
 package se.atrosys.birds.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.FamilyModel;
 import se.atrosys.birds.model.PageModel;
+
+import java.util.List;
+import java.util.Random;
 
 /**
  * Created by IntelliJ IDEA.
@@ -11,9 +17,35 @@ import se.atrosys.birds.model.PageModel;
  * Time: 8:25 PM
  * To change this template use File | Settings | File Templates.
  */
-@Service
+@Component
 public class BirdRandomiserService {
-	public PageModel randomiseBird(BirdModel birdModel) {
-		return new PageModel();
+	@Autowired BirdService birdService;
+	@Autowired FamilyService familyService;
+
+	public PageModel randomiseBird() {
+		PageModel pageModel = new PageModel();
+		Random random = new Random();
+
+		BirdModel model = birdService.getRandomBird();
+		pageModel.setBirdModel(model);
+		
+		List<BirdModel> familyBirds = model.getFamily().getBirds();
+		
+		for (int i=0; i < 5 ; i++ ) {
+			if (familyBirds.isEmpty()) {
+				break;
+			}
+
+			BirdModel remove = familyBirds.remove(random.nextInt(familyBirds.size()));
+			
+			if (remove.equals(model)) {
+				i--;
+				continue;
+			}
+			
+			pageModel.addSibling(remove);
+		}
+
+		return pageModel;
 	}
 }

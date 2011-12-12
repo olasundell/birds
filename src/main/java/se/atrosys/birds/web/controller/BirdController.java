@@ -15,6 +15,8 @@ import se.atrosys.birds.exception.NoFamilyException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.factory.BirdModelListFactory;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.PageModel;
+import se.atrosys.birds.service.BirdRandomiserService;
 import se.atrosys.birds.service.BirdService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -35,46 +37,16 @@ import java.util.Random;
 @Controller
 public class BirdController {
 	Logger logger = LoggerFactory.getLogger(this.getClass());
-	@Autowired protected BirdService service;
-	@Autowired protected BirdModelListFactory birdModelListFactory;
+	@Autowired BirdRandomiserService randomiserService;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String randomBird(HttpServletResponse response, BirdModel birdModel) {
+	public ModelAndView randomBird() {
 		logger.info("randomBird called");
-		List<BirdModel> list = service.findAll();
 
-		if (list.size() == 0) {
-			try {
-				List<BirdModel> birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase.html");
-				service.saveAll(birdModels);
-				list = service.findAll();	
-			} catch (IOException e) {
-				logger.error("An error occurred", e);
-			} catch (CouldNotFindNamesElementException e) {
-				logger.error("An error occurred", e);
-			} catch (NoSuchLanguageException e) {
-				logger.error("An error occurred", e);
-			} catch (NoFamilyException e) {
-				logger.error("An error occurred", e);
-			} catch (CouldNotFindDetailsException e) {
-				logger.error("An error occurred", e);
-			} catch (JAXBException e) {
-				logger.error("An error occurred", e);
-			}
-		}
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("random");
+		modelAndView.addObject("pageModel", randomiserService.randomiseBird());
 
-		if (list.size() == 0) {
-			response.setStatus(500);
-			return "error";
-		}
-
-		BirdModel randomModel = list.get(new Random().nextInt(list.size()));
-
-		birdModel.setHref(randomModel.getHref());
-		birdModel.setScientificName(randomModel.getScientificName());
-		birdModel.setFamily(randomModel.getFamily());
-		birdModel.setNames(randomModel.getNames());
-
-		return "random";
+		return modelAndView;
 	}
 }

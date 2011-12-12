@@ -43,4 +43,8 @@ public class FamilyModel {
 	public String getGroup() {
 		return group;  //To change body of created methods use File | Settings | File Templates.
 	}
+
+	public List<BirdModel> getBirds() {
+		return birds;
+	}
 }

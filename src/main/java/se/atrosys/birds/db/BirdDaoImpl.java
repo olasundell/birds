@@ -1,6 +1,7 @@
 package se.atrosys.birds.db;
 
 import org.hibernate.Query;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,9 +34,14 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 			for (BirdPhotoModel photoModel: model.getPhotos()) {
 				photoModel.getFarm();
 			}
+
+			for (BirdModel birdModel: model.getFamily().getBirds()) {
+				birdModel.getId();
+			}
 		}
 
 		session.close();
+
 		return model;
 
 //		return (BirdModel)getHibernateTemplate().get(BirdModel.class, id);
@@ -53,13 +59,15 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		
 //		List<BirdModel> list = session.("from se.atrosys.birds.model.BirdModel");
 
-/*
 		for (BirdModel model: list) {
 			for (BirdPhotoModel photo: model.getPhotos()) {
 				photo.getFarm();
 			}
+			
+			for (BirdModel birdModel: model.getFamily().getBirds()) {
+				birdModel.getId();
+			}
 		}
-*/
 
 		session.close();
 
@@ -82,7 +90,17 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		getHibernateTemplate().getSessionFactory().openSession().createSQLQuery("SHUTDOWN").executeUpdate();
 	}
 
-    @Autowired
+	// another prime example as to why SQL is peerless.
+	public BirdModel getRandomBird() {
+		String sql = "select id from birds limit 1 offset (select floor(count(*) * random()) from birds)";
+
+		SQLQuery sqlQuery = getSession().createSQLQuery(sql);
+		String id = (String) sqlQuery.list().get(0);
+
+		return findById(id);
+	}
+
+	@Autowired
     public void init( SessionFactory sessionFactory ) {
         setSessionFactory( sessionFactory );
     }
