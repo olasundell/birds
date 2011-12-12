@@ -10,12 +10,17 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import org.slf4j.Logger;
 import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
+import se.atrosys.birds.flickr.FlickrPhoto;
+import se.atrosys.birds.flickr.FlickrPhotoList;
 import se.atrosys.birds.flickr.FlickrService;
+import se.atrosys.birds.model.BirdPhotoModel;
 import se.atrosys.birds.service.CountryNameService;
 import se.atrosys.birds.model.BirdModel;
 
@@ -50,7 +55,9 @@ public class BirdModelFactory {
     }
 
 	private void enrichModelWithPhotos(BirdModel birdModel) throws JAXBException {
-		birdModel.addPhotos(flickrService.getPictures(birdModel));
+		FlickrPhotoList pictures = flickrService.getPictures(birdModel);
+
+		birdModel.addPhotos(pictures);
 	}
 
 	private Element createDetailedElement(BirdModel birdModel) throws CouldNotFindDetailsException {

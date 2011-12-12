@@ -4,6 +4,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
+import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.BirdPhotoModel;
 
 import java.util.List;
@@ -40,6 +41,14 @@ public class BirdPhotoDaoImpl extends HibernateDaoSupport implements BirdPhotoDa
 	public void shutdown() {
 		getHibernateTemplate().getSessionFactory().openSession().createSQLQuery("SHUTDOWN").executeUpdate();
 	}
+
+	public List<BirdPhotoModel> findAllForBird(BirdModel model) {
+		return null;  //To change body of implemented methods use File | Settings | File Templates.
+	}
+
+/*	public List<BirdPhotoModel> findAllForBird(BirdModel model) {
+		get
+	}*/
 
 	@Autowired
 	public void init( SessionFactory sessionFactory ) {

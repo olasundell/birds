@@ -3,6 +3,7 @@ package se.atrosys.birds.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import se.atrosys.birds.AbstractTest;
 import se.atrosys.birds.flickr.PhotoBuilder;

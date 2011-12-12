@@ -35,7 +35,6 @@ public class BirdModel {
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<BirdNameModel> birdNameModels;
 	@OneToMany(cascade = CascadeType.ALL)
-//	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<BirdPhotoModel> birdPhotos;
 
 	@Transient
@@ -138,10 +137,12 @@ public class BirdModel {
 	}
 
 	public void addPhotos(FlickrPhotoList pictures) {
-		birdPhotos.addAll(pictures.getList());
+		for (FlickrPhoto photo: pictures.getList()) {
+			birdPhotos.add(new BirdPhotoModel(photo));
+		}
 	}
 
-	public List getPhotos() {
+	public List<BirdPhotoModel> getPhotos() {
 		return birdPhotos;
 	}
 

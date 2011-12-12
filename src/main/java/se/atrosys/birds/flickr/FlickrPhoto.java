@@ -4,6 +4,8 @@ import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.PhotoModel;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.text.MessageFormat;
@@ -28,18 +30,12 @@ public class FlickrPhoto implements PhotoModel {
 		isfamily="0" />
 	 */
 
-	@XmlAttribute
-	String id;
-	@XmlAttribute
-	String owner;
-	@XmlAttribute
-	String secret;
-	@XmlAttribute
-	String server;
-	@XmlAttribute
-	String farm;
-	@XmlAttribute
-	String title;
+	private String id;
+	private String owner;
+	private String secret;
+	private String server;
+	private String farm;
+	private String title;
 
 	public String getUrl() {
 		return MessageFormat.format("http://farm{0}.staticflickr.com/{1}/{2}_{3}.jpg", farm, server, id, secret);
@@ -51,6 +47,7 @@ public class FlickrPhoto implements PhotoModel {
 		 */
 	}
 
+	@XmlAttribute
 	public String getId() {
 		return id;
 	}
@@ -59,6 +56,7 @@ public class FlickrPhoto implements PhotoModel {
 		this.id = id;
 	}
 
+	@XmlAttribute
 	public String getOwner() {
 		return owner;
 	}
@@ -67,6 +65,7 @@ public class FlickrPhoto implements PhotoModel {
 		this.owner = owner;
 	}
 
+	@XmlAttribute
 	public String getSecret() {
 		return secret;
 	}
@@ -75,6 +74,7 @@ public class FlickrPhoto implements PhotoModel {
 		this.secret = secret;
 	}
 
+	@XmlAttribute
 	public String getServer() {
 		return server;
 	}
@@ -83,6 +83,7 @@ public class FlickrPhoto implements PhotoModel {
 		this.server = server;
 	}
 
+	@XmlAttribute
 	public String getFarm() {
 		return farm;
 	}
@@ -91,6 +92,7 @@ public class FlickrPhoto implements PhotoModel {
 		this.farm = farm;
 	}
 
+	@XmlAttribute
 	public String getTitle() {
 		return title;
 	}

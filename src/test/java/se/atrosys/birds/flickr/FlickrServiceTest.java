@@ -38,16 +38,16 @@ public class FlickrServiceTest extends AbstractTest {
 		assertFalse(list.isEmpty(), "List is empty");
 
 		FlickrPhoto flickrPhoto = list.get(0);
-		assertNotNull(flickrPhoto.title, "First photo in list has null title");
-		assertFalse(flickrPhoto.title.isEmpty(), "First photo in list lacks title");
-		assertNotNull(flickrPhoto.farm, "First photo in list has null farm");
-		assertFalse(flickrPhoto.farm.isEmpty(), "First photo in list lacks farm");
-		assertNotNull(flickrPhoto.id, "First photo in list has null id");
-		assertFalse(flickrPhoto.id.isEmpty(), "First photo in list lacks id");
-		assertNotNull(flickrPhoto.owner, "First photo in list has null owner");
-		assertFalse(flickrPhoto.owner.isEmpty(), "First photo in list lacks owner");
-		assertNotNull(flickrPhoto.server, "First photo in list has null server");
-		assertFalse(flickrPhoto.server.isEmpty(), "First photo in list lacks server");
+		assertNotNull(flickrPhoto.getTitle(), "First photo in list has null title");
+		assertFalse(flickrPhoto.getTitle().isEmpty(), "First photo in list lacks title");
+		assertNotNull(flickrPhoto.getFarm(), "First photo in list has null farm");
+		assertFalse(flickrPhoto.getFarm().isEmpty(), "First photo in list lacks farm");
+		assertNotNull(flickrPhoto.getId(), "First photo in list has null id");
+		assertFalse(flickrPhoto.getId().isEmpty(), "First photo in list lacks id");
+		assertNotNull(flickrPhoto.getOwner(), "First photo in list has null owner");
+		assertFalse(flickrPhoto.getOwner().isEmpty(), "First photo in list lacks owner");
+		assertNotNull(flickrPhoto.getServer(), "First photo in list has null server");
+		assertFalse(flickrPhoto.getServer().isEmpty(), "First photo in list lacks server");
 		assertNotNull(flickrPhoto.getUrl(), "First photo in list has null url");
 		assertFalse(flickrPhoto.getUrl().isEmpty(), "First photo in list lacks url");
 	}

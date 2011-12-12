@@ -31,6 +31,17 @@ public class BirdPhotoModel implements PhotoModel {
 	@JoinColumn(name = "BIRD_ID")
 	private BirdModel bird;
 
+	public BirdPhotoModel() {}
+
+	public BirdPhotoModel(FlickrPhoto photo) {
+		setFarm(photo.getFarm());
+		setId(photo.getId());
+		setOwner(photo.getOwner());
+		setSecret(photo.getSecret());
+		setServer(photo.getServer());
+		setTitle(photo.getTitle());
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -81,5 +92,33 @@ public class BirdPhotoModel implements PhotoModel {
 
 	public void setBirdModel(BirdModel birdModel) {
 		this.bird = birdModel;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		BirdPhotoModel that = (BirdPhotoModel) o;
+
+		if (farm != null ? !farm.equals(that.farm) : that.farm != null) return false;
+		if (id != null ? !id.equals(that.id) : that.id != null) return false;
+		if (owner != null ? !owner.equals(that.owner) : that.owner != null) return false;
+		if (secret != null ? !secret.equals(that.secret) : that.secret != null) return false;
+		if (server != null ? !server.equals(that.server) : that.server != null) return false;
+		if (title != null ? !title.equals(that.title) : that.title != null) return false;
+
+		return true;
+	}
+
+	@Override
+	public int hashCode() {
+		int result = id != null ? id.hashCode() : 0;
+		result = 31 * result + (owner != null ? owner.hashCode() : 0);
+		result = 31 * result + (secret != null ? secret.hashCode() : 0);
+		result = 31 * result + (server != null ? server.hashCode() : 0);
+		result = 31 * result + (farm != null ? farm.hashCode() : 0);
+		result = 31 * result + (title != null ? title.hashCode() : 0);
+		return result;
 	}
 }

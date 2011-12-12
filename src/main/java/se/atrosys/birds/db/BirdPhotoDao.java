@@ -1,5 +1,6 @@
 package se.atrosys.birds.db;
 
+import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.BirdPhotoModel;
 
 import java.util.List;
@@ -18,4 +19,5 @@ public interface BirdPhotoDao {
 	public void update(BirdPhotoModel model);
 	public void delete(BirdPhotoModel model);
 	public void shutdown();
+	List<BirdPhotoModel> findAllForBird(BirdModel model);
 }

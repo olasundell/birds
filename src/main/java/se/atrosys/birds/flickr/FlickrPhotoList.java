@@ -29,7 +29,7 @@ public class FlickrPhotoList {
 		return photos.get(i);
 	}
 
-	public Collection getList() {
+	public Collection<FlickrPhoto> getList() {
 		return photos;
 	}
 }

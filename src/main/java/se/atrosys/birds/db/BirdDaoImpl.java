@@ -1,10 +1,14 @@
 package se.atrosys.birds.db;
 
+import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.BirdPhotoModel;
 
 import java.util.List;
 
@@ -18,12 +22,48 @@ import java.util.List;
 
 @Repository("birdDao")
 public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
+	@Autowired BirdPhotoDao birdPhotoDao;
 	public BirdModel findById(String id) {
-		return (BirdModel)getHibernateTemplate().get(BirdModel.class, id);
+		HibernateTemplate hibernateTemplate = getHibernateTemplate();
+		Session session = hibernateTemplate.getSessionFactory().openSession();
+
+		BirdModel model = (BirdModel) session.get(BirdModel.class, id);
+
+		if (model != null) {
+			for (BirdPhotoModel photoModel: model.getPhotos()) {
+				photoModel.getFarm();
+			}
+		}
+
+		session.close();
+		return model;
+
+//		return (BirdModel)getHibernateTemplate().get(BirdModel.class, id);
 	}
 
 	public List<BirdModel> findAll() {
-		return getHibernateTemplate().find("from se.atrosys.birds.model.BirdModel");
+		HibernateTemplate hibernateTemplate = getHibernateTemplate();
+		Session session = hibernateTemplate.getSessionFactory().openSession();
+
+		String hql = "from se.atrosys.birds.model.BirdModel";
+		Query query = session.createQuery(hql);
+		List<BirdModel> list = query.list();
+		
+//		List<BirdModel> list = hibernateTemplate.find();
+		
+//		List<BirdModel> list = session.("from se.atrosys.birds.model.BirdModel");
+
+/*
+		for (BirdModel model: list) {
+			for (BirdPhotoModel photo: model.getPhotos()) {
+				photo.getFarm();
+			}
+		}
+*/
+
+		session.close();
+
+		return list;
 	}
 
 	public void save(BirdModel model) {
