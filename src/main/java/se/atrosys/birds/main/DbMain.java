@@ -29,7 +29,7 @@ public class DbMain {
 	@Autowired BirdService birdService;
 
 	public void importIntoDb() throws CouldNotFindNamesElementException, JAXBException, IOException, NoFamilyException, NoSuchLanguageException, CouldNotFindDetailsException {
-		List<BirdModel> birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase-short.html");
+		List<BirdModel> birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase.html");
 		birdService.saveAll(birdModels);
 	}
 

@@ -3,6 +3,7 @@ package se.atrosys.birds.model;
 import se.atrosys.birds.flickr.FlickrPhoto;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by IntelliJ IDEA.
@@ -15,7 +16,6 @@ import javax.persistence.*;
 @Table(name = "BIRD_PHOTOS")
 public class BirdPhotoModel implements PhotoModel {
 	@Id
-	@Column
 	private String id;
 	@Column
 	private String owner;
@@ -27,13 +27,13 @@ public class BirdPhotoModel implements PhotoModel {
 	private String farm;
 	@Column
 	private String title;
-	@ManyToOne
-	@JoinColumn(name = "BIRD_ID")
-	private BirdModel bird;
+//	@ManyToOne
+//	private BirdModel bird;
 
-	public BirdPhotoModel() {}
+	public BirdPhotoModel() { }
 
 	public BirdPhotoModel(FlickrPhoto photo) {
+		this();
 		setFarm(photo.getFarm());
 		setId(photo.getId());
 		setOwner(photo.getOwner());
@@ -91,7 +91,7 @@ public class BirdPhotoModel implements PhotoModel {
 	}
 
 	public void setBirdModel(BirdModel birdModel) {
-		this.bird = birdModel;
+//		this.bird = birdModel;
 	}
 
 	@Override
@@ -101,8 +101,8 @@ public class BirdPhotoModel implements PhotoModel {
 
 		BirdPhotoModel that = (BirdPhotoModel) o;
 
+//		if (key != null ? !key.equals(that.key) : that.key != null) return false;
 		if (farm != null ? !farm.equals(that.farm) : that.farm != null) return false;
-		if (id != null ? !id.equals(that.id) : that.id != null) return false;
 		if (owner != null ? !owner.equals(that.owner) : that.owner != null) return false;
 		if (secret != null ? !secret.equals(that.secret) : that.secret != null) return false;
 		if (server != null ? !server.equals(that.server) : that.server != null) return false;
@@ -113,12 +113,56 @@ public class BirdPhotoModel implements PhotoModel {
 
 	@Override
 	public int hashCode() {
+//		int result = key != null ? key.hashCode() : 0;
 		int result = id != null ? id.hashCode() : 0;
 		result = 31 * result + (owner != null ? owner.hashCode() : 0);
 		result = 31 * result + (secret != null ? secret.hashCode() : 0);
 		result = 31 * result + (server != null ? server.hashCode() : 0);
 		result = 31 * result + (farm != null ? farm.hashCode() : 0);
 		result = 31 * result + (title != null ? title.hashCode() : 0);
+
 		return result;
 	}
+	
+/*	@Embeddable
+	public static class CompositeKey implements Serializable{
+		private String id;
+		private String bird_id;
+
+		public String getId() {
+			return id;
+		}
+
+		public void setId(String id) {
+			this.id = id;
+		}
+
+		public String getBird_id() {
+			return bird_id;
+		}
+
+		public void setBird_id(String bird_id) {
+			this.bird_id = bird_id;
+		}
+
+		@Override
+		public boolean equals(Object o) {
+			if (this == o) return true;
+			if (o == null || getClass() != o.getClass()) return false;
+
+			CompositeKey that = (CompositeKey) o;
+
+			if (bird_id != null ? !bird_id.equals(that.bird_id) : that.bird_id != null) return false;
+			if (id != null ? !id.equals(that.id) : that.id != null) return false;
+
+			return true;
+		}
+
+		@Override
+		public int hashCode() {
+			int result = id != null ? id.hashCode() : 0;
+			result = 31 * result + (bird_id != null ? bird_id.hashCode() : 0);
+			return result;
+		}
+	}*/
 }

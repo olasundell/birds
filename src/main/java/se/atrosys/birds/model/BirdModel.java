@@ -34,7 +34,8 @@ public class BirdModel {
 	private FamilyModel family;
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<BirdNameModel> birdNameModels;
-	@OneToMany(cascade = CascadeType.ALL)
+	@ManyToMany(cascade = CascadeType.ALL )
+	@JoinColumn(name = "BIRD_ID")
 	private List<BirdPhotoModel> birdPhotos;
 
 	@Transient
