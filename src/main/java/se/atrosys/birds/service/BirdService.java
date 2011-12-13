@@ -20,4 +20,5 @@ public interface BirdService {
 	public void saveAll(List<BirdModel> birdModels);
 	public void shutdown();
 	public BirdModel getRandomBird();
+	public BirdModel findByScientificName(String choice);
 }

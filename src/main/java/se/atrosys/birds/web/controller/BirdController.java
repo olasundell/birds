@@ -4,12 +4,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
+import org.springframework.web.servlet.view.RedirectView;
 import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoFamilyException;
@@ -43,11 +41,14 @@ public class BirdController {
 	@Autowired PageModelFactory pageModelFactory;
 	
 	@RequestMapping(value = "/", method = RequestMethod.POST)
-	public ModelAndView checkAnswer(@PathVariable String answer, PageModel pageModel) {
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("random");
-
-		return modelAndView;
+	public RedirectView checkAnswer(@RequestParam String choice, @RequestParam String id) {
+		RedirectView redirectView = new RedirectView();
+		if (birdService.findByScientificName(choice).getId().equals(id)) {
+			redirectView.getAttributesMap().put("result", "Correct!");
+		} else {
+			redirectView.getAttributesMap().put("result", "Incorrect!");
+		}
+		return redirectView;
 	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
@@ -66,21 +67,34 @@ public class BirdController {
 
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("random");
-		modelAndView.addObject("pageModel", pageModelFactory.createPageModel(model));
-		modelAndView.addObject("command", new CommandModel());
+		PageModel pageModel = pageModelFactory.createPageModel(model);
+		pageModel.setPreviousAnswer((String) request.getAttribute("result"));
+		modelAndView.addObject("pageModel", pageModel);
+		CommandModel commandModel = new CommandModel();
+		commandModel.setId(model.getId());
+		modelAndView.addObject("answer", commandModel);
 
 		return modelAndView;
 	}
 
 	public static class CommandModel {
-		private String answer;
+		private String choice;
+		private String id;
 
-		public String getAnswer() {
-			return answer;
+		public String getChoice() {
+			return choice;
 		}
 
-		public void setAnswer(String answer) {
-			this.answer = answer;
+		public void setChoice(String choice) {
+			this.choice = choice;
+		}
+
+		public String getId() {
+			return id;
+		}
+
+		public void setId(String id) {
+			this.id = id;
 		}
 	}
 }

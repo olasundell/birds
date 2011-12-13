@@ -13,6 +13,7 @@ import java.util.List;
 public class PageModel {
 	private BirdModel birdModel;
 	private List<BirdModel> siblings;
+	private String previousAnswer;
 	
 	public PageModel() {
 		siblings = new ArrayList<BirdModel>();
@@ -60,5 +61,13 @@ public class PageModel {
 		int result = birdModel != null ? birdModel.hashCode() : 0;
 		result = 31 * result + (siblings != null ? siblings.hashCode() : 0);
 		return result;
+	}
+
+	public String getPreviousAnswer() {
+		return previousAnswer;
+	}
+
+	public void setPreviousAnswer(String previousAnswer) {
+		this.previousAnswer = previousAnswer;
 	}
 }

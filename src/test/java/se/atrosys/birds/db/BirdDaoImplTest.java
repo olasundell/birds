@@ -23,4 +23,13 @@ public class BirdDaoImplTest extends AbstractTest {
 		assertNotNull(model.getId(), "returned randomised bird had null ID");
 		assertFalse(model.getId().isEmpty(), "returned randomised bird had empty ID");
 	}
+	
+	@Test
+	public void getBirdByScientificNameShouldReturnBirdModel() {
+		BirdModel model = dao.findByScientificName("Anser fabalis");
+
+		assertNotNull(model, "returned randomised bird was null");
+		assertNotNull(model.getId(), "returned randomised bird had null ID");
+		assertFalse(model.getId().isEmpty(), "returned randomised bird had empty ID");
+	}
 }

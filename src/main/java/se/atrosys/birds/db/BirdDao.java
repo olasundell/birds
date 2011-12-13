@@ -20,4 +20,6 @@ public interface BirdDao {
 	public void shutdown();
 
 	BirdModel getRandomBird();
+
+	BirdModel findByScientificName(String name);
 }

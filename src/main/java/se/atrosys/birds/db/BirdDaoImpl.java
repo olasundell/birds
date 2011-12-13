@@ -30,15 +30,7 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 
 		BirdModel model = (BirdModel) session.get(BirdModel.class, id);
 
-		if (model != null) {
-			for (BirdPhotoModel photoModel: model.getPhotos()) {
-				photoModel.getFarm();
-			}
-
-			for (BirdModel birdModel: model.getFamily().getBirds()) {
-				birdModel.getId();
-			}
-		}
+		retrieveLazyBindings(model);
 
 		session.close();
 
@@ -60,13 +52,7 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 //		List<BirdModel> list = session.("from se.atrosys.birds.model.BirdModel");
 
 		for (BirdModel model: list) {
-			for (BirdPhotoModel photo: model.getPhotos()) {
-				photo.getFarm();
-			}
-			
-			for (BirdModel birdModel: model.getFamily().getBirds()) {
-				birdModel.getId();
-			}
+			retrieveLazyBindings(model);
 		}
 
 		session.close();
@@ -98,6 +84,38 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		String id = (String) sqlQuery.list().get(0);
 
 		return findById(id);
+	}
+
+	@Override
+	public BirdModel findByScientificName(String name) {
+		HibernateTemplate hibernateTemplate = getHibernateTemplate();
+		Session session = hibernateTemplate.getSessionFactory().openSession();
+		Query query = session.createQuery("from se.atrosys.birds.model.BirdModel where scientificName = ?");
+		query.setText(0, name);
+		List<BirdModel> list = (List<BirdModel>)query.list();
+		if (list.isEmpty()) {
+			return null;
+		}
+		
+		BirdModel model = (BirdModel) list.get(0);
+
+		retrieveLazyBindings(model);
+
+		session.close();
+
+		return model;
+	}
+
+	private void retrieveLazyBindings(BirdModel model) {
+		if (model != null) {
+			for (BirdPhotoModel photoModel: model.getPhotos()) {
+				photoModel.getFarm();
+			}
+
+			for (BirdModel birdModel: model.getFamily().getBirds()) {
+				birdModel.getId();
+			}
+		}
 	}
 
 	@Autowired
