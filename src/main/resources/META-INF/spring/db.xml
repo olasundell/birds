@@ -24,4 +24,29 @@
 		<property name="maxOpenPreparedStatements" value="10" />
 	</bean>
 
+	<!-- Hibernate Session Factory  -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="birdDbDS" />
+
+		<!-- Hibernate configuration -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+
+		<!-- The packages that contain our Hibernate model classes -->
+		<property name="packagesToScan">
+			<list>
+				<value>se.atrosys.birds.model</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Hibernate transaction management -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+
  </beans>

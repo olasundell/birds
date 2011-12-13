@@ -19,13 +19,4 @@ import static org.testng.Assert.assertNotNull;
 public class BirdRandomiserServiceTest extends AbstractTest {
 	@Autowired BirdRandomiserService service;
 	
-	@Test
-	public void randomiseBirdShouldReturnValidModel() throws Exception {
-		PageModel model = service.randomiseBird();
-		assertNotNull(model.getBirdModel(), "service did not return a random bird model");
-
-		if (!model.getBirdModel().getFamily().getBirds().isEmpty()) {
-			assertNotEquals(0, model.getSiblings().size(), "Siblings list is empty");
-		}
-	}
 }

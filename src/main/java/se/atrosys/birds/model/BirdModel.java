@@ -128,6 +128,16 @@ public class BirdModel {
 	public FamilyModel getFamily() {
 		return family;
 	}
+	
+	public Map<String, String> getNameMap() {
+		if (nameStringMap.isEmpty()) {
+			for (BirdNameModel nameModel: birdNameModels) {
+				nameStringMap.put(nameModel.getLang(), nameModel.getName());
+			}
+		}
+		
+		return nameStringMap;
+	}
 
 	public List<BirdNameModel> getNames() {
 		return birdNameModels;

@@ -42,7 +42,15 @@ public class PageModel {
 		PageModel pageModel = (PageModel) o;
 
 		if (birdModel != null ? !birdModel.equals(pageModel.birdModel) : pageModel.birdModel != null) return false;
-		if (siblings != null ? !siblings.equals(pageModel.siblings) : pageModel.siblings != null) return false;
+		if (this.getSiblings().size() != pageModel.getSiblings().size()) {
+			return false;
+		}
+		
+		for (int i=0;i<getSiblings().size();i++) {
+			if (!this.getSiblings().get(i).equals(pageModel.getSiblings().get(i))) {
+				return false;
+			}
+		}
 
 		return true;
 	}

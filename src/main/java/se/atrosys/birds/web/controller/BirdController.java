@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,6 +15,7 @@ import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoFamilyException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.factory.BirdModelListFactory;
+import se.atrosys.birds.factory.PageModelFactory;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.PageModel;
 import se.atrosys.birds.service.BirdRandomiserService;
@@ -37,16 +39,48 @@ import java.util.Random;
 @Controller
 public class BirdController {
 	Logger logger = LoggerFactory.getLogger(this.getClass());
-	@Autowired BirdRandomiserService randomiserService;
+	@Autowired BirdService birdService;
+	@Autowired PageModelFactory pageModelFactory;
+	
+	@RequestMapping(value = "/", method = RequestMethod.POST)
+	public ModelAndView checkAnswer(@PathVariable String answer, PageModel pageModel) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("random");
+
+		return modelAndView;
+	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public ModelAndView randomBird() {
-		logger.info("randomBird called");
+	public ModelAndView randomBird(HttpServletRequest request) {
+		BirdModel model;
+		
+		String birdId = request.getParameter("birdid");
+
+		logger.info(String.format("randomBird called with id %s", birdId));
+
+		if (birdId != null && !birdId.isEmpty()) {
+			model = birdService.findById(birdId);
+		} else {
+			model = birdService.getRandomBird();
+		}
 
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("random");
-		modelAndView.addObject("pageModel", randomiserService.randomiseBird());
+		modelAndView.addObject("pageModel", pageModelFactory.createPageModel(model));
+		modelAndView.addObject("command", new CommandModel());
 
 		return modelAndView;
+	}
+
+	public static class CommandModel {
+		private String answer;
+
+		public String getAnswer() {
+			return answer;
+		}
+
+		public void setAnswer(String answer) {
+			this.answer = answer;
+		}
 	}
 }

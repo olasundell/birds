@@ -4,7 +4,10 @@ import org.springframework.test.context.support.AbstractTestExecutionListener;
 import org.testng.annotations.Test;
 import se.atrosys.birds.AbstractTest;
 
+import java.util.ArrayList;
+
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 /**
  * Created by IntelliJ IDEA.
@@ -22,5 +25,23 @@ public class BirdModelTest extends AbstractTest {
 		BirdModel model = new BirdModel();
 		model.setHref(HREF);
 		assertEquals(model.getId(), ID, String.format("ID %s does not match expected value %s", model.getId(), ID));
+	}
+	
+	@Test
+	public void birdNamesMapShouldBeCreated() {
+		BirdModel model = new BirdModel();
+		ArrayList<BirdNameModel> birdNameModels = new ArrayList<BirdNameModel>();
+		BirdNameModel e = new BirdNameModel();
+		
+		String english = "English";
+		e.setLang(english);
+		String parakeet = "Parakeet";
+		e.setName(parakeet);
+		
+		birdNameModels.add(e);
+		model.setNames(birdNameModels);
+		
+		assertTrue(model.getNameMap().containsKey(english));
+		assertTrue(model.getNameMap().containsValue(parakeet));
 	}
 }
