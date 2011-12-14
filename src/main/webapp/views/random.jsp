@@ -6,6 +6,7 @@
 <html>
 <head>
     <title>A random bird.</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 <body>
 
@@ -22,14 +23,14 @@ ${name.lang}: ${name.name}<br/>
 </c:forEach>--%>
 <form:form commandName="answer">
     <form:hidden path="id" />
-    <table>
-        <c:forEach items="${pageModel.siblings}" var="sibling">
-            <tr>
-                <td><form:radiobutton path="choice" value="${sibling.scientificName}"/>${sibling.nameMap["Swedish"]}</td>
-            </tr>
-        </c:forEach>
-        <tr><td><input type="submit" value="Svara"/></td></tr>
-    </table>
+	<div class="boxed">
+		<ul>
+			<c:forEach items="${pageModel.siblings}" var="sibling">
+				<li><form:radiobutton path="choice" value="${sibling.scientificName}"/>${sibling.nameMap["Swedish"]}</li>
+			</c:forEach>
+			<li><input type="submit" value="Svara" /></li>
+		</ul>
+	</div>
 </form:form>
 </body>
 </html>

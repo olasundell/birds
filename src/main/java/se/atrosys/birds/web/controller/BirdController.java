@@ -40,21 +40,30 @@ public class BirdController {
 	@Autowired BirdService birdService;
 	@Autowired PageModelFactory pageModelFactory;
 	
-	@RequestMapping(value = "/", method = RequestMethod.POST)
-	public RedirectView checkAnswer(@RequestParam String choice, @RequestParam String id) {
-		RedirectView redirectView = new RedirectView();
+	@RequestMapping(value = "/random/", method = RequestMethod.POST)
+	public ModelAndView checkAnswer(HttpServletRequest request, @RequestParam String choice, @RequestParam String id) {
+		ModelAndView modelAndView = doControl(request);
+		PageModel pageModel = (PageModel) modelAndView.getModel().get("pageModel");
+
 		if (birdService.findByScientificName(choice).getId().equals(id)) {
-			redirectView.getAttributesMap().put("result", "Correct!");
+			pageModel.setPreviousAnswer("Correct!");
 		} else {
-			redirectView.getAttributesMap().put("result", "Incorrect!");
+			pageModel.setPreviousAnswer("Incorrect!");
 		}
-		return redirectView;
+
+		return modelAndView;
 	}
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/random/", method = RequestMethod.GET)
 	public ModelAndView randomBird(HttpServletRequest request) {
+		ModelAndView modelAndView = doControl(request);
+
+		return modelAndView;
+	}
+
+	private ModelAndView doControl(HttpServletRequest request) {
 		BirdModel model;
-		
+
 		String birdId = request.getParameter("birdid");
 
 		logger.info(String.format("randomBird called with id %s", birdId));
@@ -73,7 +82,6 @@ public class BirdController {
 		CommandModel commandModel = new CommandModel();
 		commandModel.setId(model.getId());
 		modelAndView.addObject("answer", commandModel);
-
 		return modelAndView;
 	}
 
