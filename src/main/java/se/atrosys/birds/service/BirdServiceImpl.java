@@ -76,7 +76,6 @@ public class BirdServiceImpl implements BirdService {
 		return dao.getRandomBird();
 	}
 
-	@Override
 	public BirdModel findByScientificName(String name) {
 		return dao.findByScientificName(name);
 	}

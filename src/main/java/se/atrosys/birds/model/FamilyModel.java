@@ -15,10 +15,11 @@ public class FamilyModel {
 	@Id
 	@Column(name = "FAMILY_NAME")
 	private String family;
-	@Column(name = "GROUP_NAME")
-	private String group;
 	@OneToMany(mappedBy = "family")
 	private List<BirdModel> birds;
+	@ManyToOne
+	@JoinColumn(name="GROUP_NAME")
+	private GroupModel group;
 
 	public FamilyModel() {
 		birds = new ArrayList<BirdModel>();
@@ -32,19 +33,19 @@ public class FamilyModel {
 		this.family = family;
 	}
 
-	public void setGroup(String group) {
-		this.group = group;
-	}
-
 	public void addBird(BirdModel model) {
 		birds.add(model);
 	}
 
-	public String getGroup() {
-		return group;  //To change body of created methods use File | Settings | File Templates.
-	}
-
 	public List<BirdModel> getBirds() {
 		return birds;
+	}
+
+	public void setGroup(GroupModel group) {
+		this.group = group;
+	}
+
+	public GroupModel getGroup() {
+		return group;
 	}
 }

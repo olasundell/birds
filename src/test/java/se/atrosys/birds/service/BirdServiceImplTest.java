@@ -7,10 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import se.atrosys.birds.AbstractTest;
 import se.atrosys.birds.flickr.PhotoBuilder;
-import se.atrosys.birds.model.BirdModel;
-import se.atrosys.birds.model.BirdPhotoModel;
-import se.atrosys.birds.model.FamilyModel;
-import se.atrosys.birds.model.PhotoModel;
+import se.atrosys.birds.model.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,7 +55,9 @@ public class BirdServiceImplTest extends AbstractTest {
 
 		FamilyModel family = new FamilyModel();
 		family.setFamily(FAMILY_NAME);
-		family.setGroup(GROUP_NAME);
+		GroupModel group = new GroupModel();
+		group.setGroupName(GROUP_NAME);
+		family.setGroup(group);
 		familyService.save(family);
 
 		model.setFamily(family);
@@ -78,7 +77,7 @@ public class BirdServiceImplTest extends AbstractTest {
 		assertEquals(retrievedModel.getId(), ID, "id wasn't what we expected");
 		assertEquals(retrievedModel.getScientificName(), SCIENTIFIC_NAME, "scientific name wasn't what we expected");
 		assertEquals(retrievedModel.getFamily().getFamily(), FAMILY_NAME, "family name wasn't what we expected");
-		assertEquals(retrievedModel.getFamily().getGroup(), GROUP_NAME, "group name wasn't what we expected");
+		assertEquals(retrievedModel.getFamily().getGroup().getGroupName(), GROUP_NAME, "group name wasn't what we expected");
 		assertFalse(retrievedModel.getPhotos().isEmpty(), "Photo list is empty");
 		assertEquals(retrievedModel.getPhotos().get(0), photos.get(0));
 	}
@@ -94,7 +93,7 @@ public class BirdServiceImplTest extends AbstractTest {
 		assertEquals(modelList.get(0).getId(), ID, "id wasn't what we expected");
 		assertEquals(modelList.get(0).getScientificName(), SCIENTIFIC_NAME, "scientific name wasn't what we expected");
 		assertEquals(modelList.get(0).getFamily().getFamily(), FAMILY_NAME, "family name wasn't what we expected");
-		assertEquals(modelList.get(0).getFamily().getGroup(), GROUP_NAME, "group name wasn't what we expected");
+		assertEquals(modelList.get(0).getFamily().getGroup().getGroupName(), GROUP_NAME, "group name wasn't what we expected");
 	}
 	
 }

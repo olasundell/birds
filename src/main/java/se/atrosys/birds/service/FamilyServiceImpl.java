@@ -13,6 +13,7 @@ import java.util.List;
 @Service("familyService")
 public class FamilyServiceImpl implements FamilyService {
 	@Autowired FamilyDao dao;
+	@Autowired GroupService groupService;
 	
 	public FamilyModel findById(String id) {
 		return dao.findById(id);
@@ -23,6 +24,10 @@ public class FamilyServiceImpl implements FamilyService {
 	}
 
 	public void save(FamilyModel model) {
+		if (groupService.findById(model.getGroup().getGroupName()) == null) {
+			groupService.save(model.getGroup());
+		}
+
 		dao.save(model);
 	}
 

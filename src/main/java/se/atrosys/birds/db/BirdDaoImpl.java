@@ -35,8 +35,6 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		session.close();
 
 		return model;
-
-//		return (BirdModel)getHibernateTemplate().get(BirdModel.class, id);
 	}
 
 	public List<BirdModel> findAll() {
@@ -47,10 +45,6 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		Query query = session.createQuery(hql);
 		List<BirdModel> list = query.list();
 		
-//		List<BirdModel> list = hibernateTemplate.find();
-		
-//		List<BirdModel> list = session.("from se.atrosys.birds.model.BirdModel");
-
 		for (BirdModel model: list) {
 			retrieveLazyBindings(model);
 		}
@@ -88,7 +82,6 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		return findById(id);
 	}
 
-	@Override
 	public BirdModel findByScientificName(String name) {
 		HibernateTemplate hibernateTemplate = getHibernateTemplate();
 		Session session = hibernateTemplate.getSessionFactory().openSession();
