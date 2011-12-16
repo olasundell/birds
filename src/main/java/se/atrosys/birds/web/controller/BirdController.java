@@ -23,9 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -41,17 +39,12 @@ public class BirdController {
 	@Autowired PageModelFactory pageModelFactory;
 	
 	@RequestMapping(value = "/random/", method = RequestMethod.POST)
-	public ModelAndView checkAnswer(HttpServletRequest request, @RequestParam String choice, @RequestParam String id) {
-		ModelAndView modelAndView = doControl(request);
-		PageModel pageModel = (PageModel) modelAndView.getModel().get("pageModel");
-
+	public @ResponseBody Map<String, String> checkAnswer(HttpServletRequest request, @RequestParam String choice, @RequestParam String id) {
 		if (birdService.findByScientificName(choice).getId().equals(id)) {
-			pageModel.setPreviousAnswer("Correct!");
+			return Collections.singletonMap("answer", choice);
 		} else {
-			pageModel.setPreviousAnswer("Incorrect!");
+			return Collections.singletonMap("answer", birdService.findById(id).getScientificName());
 		}
-
-		return modelAndView;
 	}
 	
 	@RequestMapping(value = "/random/", method = RequestMethod.GET)
