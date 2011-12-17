@@ -66,7 +66,11 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		}
 		
 		for (RegionModel regionModel: regionModelSet) {
-			session.save(regionModel);
+			Query query = session.createQuery("from se.atrosys.birds.model.RegionModel where name = ?");
+			query.setText(0, regionModel.getName());
+			if (query.list().isEmpty()) {
+				session.save(regionModel);
+			}
 		}
 
 		for (RegionalScarcityModel regionalScarcityModel: model.getRegionalScarcity()){
