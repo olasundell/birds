@@ -26,7 +26,7 @@ ${name.lang}: ${name.name}<br/>
 		<%--<div><form:radiobutton path="choice" id="${sibling.scientificName}" value="${sibling.scientificName}"/>${sibling.nameMap["Swedish"]}</div><br/>--%>
 		<li id="${sibling.scientificNameUnderscore}"><form:radiobutton path="choice" value="${sibling.scientificNameUnderscore}"/>${sibling.nameMap["Swedish"]}</li>
 	</c:forEach>
-	<li><input type="submit" value="Svara" id="answerbutton" /></li>
+	<li><button class="button-class" type="submit" id="answerbutton">Svara</button></li>
 	</ul>
 </form:form>
 </body>
