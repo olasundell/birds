@@ -50,8 +50,7 @@ public class BirdServiceImpl implements BirdService {
 
 		dao.save(model);
 
-		birdNameService.saveAll(model.getNames());
-
+//		birdNameService.saveAll(model.getNames());
 	}
 
 	public void update(BirdModel model) {
@@ -78,35 +77,5 @@ public class BirdServiceImpl implements BirdService {
 
 	public BirdModel findByScientificName(String name) {
 		return dao.findByScientificName(name);
-	}
-
-	//	@PostConstruct
-	public void postConstruct() {
-		logger.info("postConstruct called");
-		// load models.
-		
-		List<BirdModel> birdModels = new ArrayList<BirdModel>();
-
-		try {
-			birdModels.addAll(birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase.html"));
-		} catch (IOException e) {
-			logger.error("An error occurred", e);
-		} catch (CouldNotFindNamesElementException e) {
-			logger.error("An error occurred", e);
-		} catch (NoSuchLanguageException e) {
-			logger.error("An error occurred", e);
-		} catch (NoFamilyException e) {
-			logger.error("An error occurred", e);
-		} catch (CouldNotFindDetailsException e) {
-			logger.error("An error occurred", e);
-		} catch (JAXBException e) {
-			logger.error("An error occurred", e);
-		}
-
-		for (BirdModel model: birdModels) {
-			if (findById(model.getId()) == null) {
-				save(model);
-			}
-		}
 	}
 }

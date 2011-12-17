@@ -13,6 +13,7 @@ import se.atrosys.birds.exception.NoFamilyException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.FamilyModel;
+import se.atrosys.birds.model.RegionModel;
 
 import javax.xml.bind.JAXBException;
 import java.io.*;
@@ -32,10 +33,12 @@ public class BirdModelListFactory {
 	@Autowired private BirdModelFactory birdModelFactory;
 	@Autowired private FamilyModelListFactory familyModelListFactory;
 	@Autowired private FamilyModelFactory familyModelFactory;
+	@Autowired private RegionModelFactory regionModelFactory;
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	private final ScrapedTableBuilder scrapedTableBuilder = new ScrapedTableBuilder();
 
 
-	public List<BirdModel> scrapeFromAviBase(String fileName) throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException, NoFamilyException, CouldNotFindDetailsException, JAXBException {
+	public List<BirdModel> scrapeFromAviBase(String fileName) throws IOException, NoSuchLanguageException, NoFamilyException, CouldNotFindDetailsException, JAXBException {
         ArrayList<BirdModel> birdModels = new ArrayList<BirdModel>();
 
 		File file = new File(fileName);
@@ -43,31 +46,35 @@ public class BirdModelListFactory {
 		Map<String, FamilyModel> familyModelMap = familyModelListFactory.scrapeFromAviBase(fileName);
         
         Document doc = Jsoup.parse(file, "UTF-8", "http://avibase.bsc-eoc.org/");
-        Element table = getTable(doc);
+        Element table = scrapedTableBuilder.getTable(doc);
 		FamilyModel currentFamily = null;
+		String str = doc.getElementsByTag("title").text().split(" bird checklist")[0];
+		RegionModel regionModel = regionModelFactory.createModel(str);
 
         for (Element bird: table.children()) {
 	        if (bird.getElementsByAttribute("valign").size() > 0) {
 		        String key = familyModelFactory.extractFamilyName(bird);
 		        currentFamily = familyModelMap.get(key);
 	        } else if (bird.getElementsByAttribute("colspan").size() == 0) {
-		        BirdModel model = birdModelFactory.createModel(bird);
-		        if (currentFamily == null) {
-			        logger.error("Trying to create a bird without a family.");
-		        } else {
-			        model.setFamily(currentFamily);
-			        currentFamily.addBird(model);
-			        birdModels.add(model);
+		        BirdModel model = null;
+		        try {
+			        model = birdModelFactory.createModel(bird, regionModel);
+			        
+			        if (currentFamily == null) {
+				        logger.error("Trying to create a bird without a family.");
+			        } else {
+				        model.setFamily(currentFamily);
+				        currentFamily.addBird(model);
+				        birdModels.add(model);
+			        }
+		        } catch (CouldNotFindNamesElementException e) {
+			        logger.debug("Did not add model.");
 		        }
 	        }
         }
 
         return birdModels;
     }
-
-	public Element getTable(Document doc) {
-		return doc.getElementsByClass("AVBlist").get(3).child(0);
-	}
 
 	public List<BirdModel> readFromFile(String fileName) throws IOException {
         ArrayList<BirdModel> birdModels = new ArrayList<BirdModel>();

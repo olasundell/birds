@@ -1,17 +1,15 @@
 package se.atrosys.birds.db;
 
-import org.hibernate.Query;
-import org.hibernate.SQLQuery;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import org.hibernate.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
-import se.atrosys.birds.model.BirdModel;
-import se.atrosys.birds.model.BirdPhotoModel;
+import se.atrosys.birds.model.*;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by IntelliJ IDEA.
@@ -55,7 +53,32 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 	}
 
 	public void save(BirdModel model) {
-		getHibernateTemplate().save(model);
+		HibernateTemplate hibernateTemplate = getHibernateTemplate();
+		Session session = hibernateTemplate.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		session.save(model);
+
+		Set<RegionModel> regionModelSet = new HashSet<RegionModel>();
+
+		for (RegionalScarcityModel regionalScarcityModel: model.getRegionalScarcity()){
+			regionModelSet.add(regionalScarcityModel.getRegion());
+		}
+		
+		for (RegionModel regionModel: regionModelSet) {
+			session.save(regionModel);
+		}
+
+		for (RegionalScarcityModel regionalScarcityModel: model.getRegionalScarcity()){
+			session.save(regionalScarcityModel);
+		}
+		
+		for (BirdNameModel birdNameModel: model.getNames()) {
+			session.save(birdNameModel);
+		}
+
+		transaction.commit();
+		session.close();
 	}
 
 	public void update(BirdModel model) {

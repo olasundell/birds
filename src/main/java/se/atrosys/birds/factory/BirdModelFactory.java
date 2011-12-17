@@ -21,6 +21,7 @@ import se.atrosys.birds.flickr.FlickrPhoto;
 import se.atrosys.birds.flickr.FlickrPhotoList;
 import se.atrosys.birds.flickr.FlickrService;
 import se.atrosys.birds.model.BirdPhotoModel;
+import se.atrosys.birds.model.RegionModel;
 import se.atrosys.birds.service.CountryNameService;
 import se.atrosys.birds.model.BirdModel;
 
@@ -37,20 +38,28 @@ import javax.xml.bind.JAXBException;
 public class BirdModelFactory {
 	@Autowired CountryNameService nameService;
 	@Autowired FlickrService flickrService;
-	
+	@Autowired private ScarcityFactory scarcityFactory;
+
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	public BirdModel createModel(Element listingElement) throws NoSuchLanguageException, CouldNotFindDetailsException, JAXBException {
-        BirdModel birdModel = createInitialInstance(listingElement);
+	public BirdModel createModel(Element listingElement) throws NoSuchLanguageException, CouldNotFindDetailsException, JAXBException, CouldNotFindNamesElementException {
+		return createModel(listingElement, null);
+	}
+
+	public BirdModel createModel(Element listingElement, RegionModel regionModel) throws NoSuchLanguageException, CouldNotFindDetailsException, JAXBException, CouldNotFindNamesElementException {
+        BirdModel birdModel = createInitialInstance(listingElement, regionModel);
 		Element detailedElement = createDetailedElement(birdModel);
+
+		Element namesElement = null;
 		try {
-			Element namesElement = findNamesElement(detailedElement);
-			enrichModelFromAvibase(birdModel, namesElement);
-			enrichModelWithPhotos(birdModel);
+			namesElement = findNamesElement(detailedElement);
 		} catch (CouldNotFindNamesElementException e) {
-			logger.warn(String.format("Could not find names element, species %s", birdModel.getScientificName()));
+			logger.error(String.format("Could not find names for %s", birdModel.getScientificName()));
+			throw e;
 		}
-        
+		enrichModelFromAvibase(birdModel, namesElement);
+		enrichModelWithPhotos(birdModel);
+
         return birdModel;
     }
 
@@ -70,12 +79,13 @@ public class BirdModelFactory {
 		}
 	}
 
-	protected BirdModel createInitialInstance(Element birdElement) throws NoSuchLanguageException {
+	protected BirdModel createInitialInstance(Element birdElement, RegionModel regionModel) throws NoSuchLanguageException {
         BirdModel birdModel = new BirdModel();
 
         birdModel.setScientificName(birdElement.getElementsByTag("i").text());
         birdModel.setHref(birdElement.getElementsByAttribute("href").attr("href"));
 		birdModel.putName(nameService.getLocaleForCountryDisplayName("English"), birdElement.getElementsByTag("td").get(0).text());
+		birdModel.setScarcityForRegion(regionModel, scarcityFactory.getScarcity(birdElement));
 
         return birdModel;
     }

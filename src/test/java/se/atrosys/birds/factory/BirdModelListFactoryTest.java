@@ -36,11 +36,12 @@ public class BirdModelListFactoryTest extends AbstractTest {
         List<BirdModel> list = birdModelListFactory.scrapeFromAviBase("avibase.html");
         
         assertNotNull(list, "List is null");
-		assertEquals(list.size(), 929, "List is empty");
+		assertEquals(list.size(), 924, "List did not contain the expected number of models.");
 		
 		Map<String, FamilyModel> familyModels = new HashMap<String, FamilyModel>();
 		
 		for (BirdModel model: list) {
+			assertNotNull(model.getRegionalScarcity(), "Regional scarcity list is null.");
 			familyModels.put(model.getFamily().getFamily(), model.getFamily());
 		}
 		

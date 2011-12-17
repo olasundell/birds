@@ -38,6 +38,9 @@ public class BirdModel {
 	@JoinColumn(name = "BIRD_ID")
 	private List<BirdPhotoModel> birdPhotos;
 
+	@OneToMany
+	private List<RegionalScarcityModel> regionalScarcity;
+
 	@Transient
 	private Map<Locale, String> nameLocaleMap;
 	@Transient
@@ -47,6 +50,7 @@ public class BirdModel {
         nameLocaleMap = new HashMap<Locale, String>();
 	    nameStringMap = new HashMap<String, String>();
 		birdNameModels = new ArrayList<BirdNameModel>();
+		regionalScarcity = new ArrayList<RegionalScarcityModel>();
 		birdPhotos = new ArrayList();
 	}
 
@@ -166,5 +170,25 @@ public class BirdModel {
 
 	public String getScientificNameUnderscore() {
 		return scientificName.replace(' ', '_');  //To change body of created methods use File | Settings | File Templates.
+	}
+
+	public List<RegionalScarcityModel> getRegionalScarcity() {
+		return regionalScarcity;
+	}
+
+	public void setScarcityForRegion(RegionModel regionModel, ScarcityEnum scarcity) {
+		for (RegionalScarcityModel model: regionalScarcity) {
+			if (model.getRegion().equals(regionModel)) {
+				model.setScarcity(scarcity);
+				return;
+			}
+		}
+
+		RegionalScarcityModel scarcityModel = new RegionalScarcityModel();
+
+		scarcityModel.setBird(this);
+		scarcityModel.setRegion(regionModel);
+		scarcityModel.setScarcity(scarcity);
+		regionalScarcity.add(scarcityModel);
 	}
 }

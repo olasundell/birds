@@ -9,8 +9,9 @@ import se.atrosys.birds.AbstractTest;
 import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
-import se.atrosys.birds.factory.BirdModelFactory;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.RegionModel;
+import se.atrosys.birds.model.RegionalScarcityModel;
 
 import javax.xml.bind.JAXBException;
 import java.io.File;
@@ -52,7 +53,6 @@ public class BirdModelFactoryTest extends AbstractTest {
     @BeforeMethod
     protected void setUp() throws Exception {
         detail = Jsoup.parse(new File("dendrocygnaviduata.html"), "UTF-8").body();
-	    Element table = birdModelListFactory.getTable(Jsoup.parse(new File("avibase.html"), "UTF-8"));
 	    bird = table.child(6);
     }
     
@@ -80,7 +80,10 @@ public class BirdModelFactoryTest extends AbstractTest {
 
     @Test
     public void shouldGetCorrectInstanceFromAviBaseSnippet() throws IOException, NoSuchLanguageException {
-        BirdModel model = factory.createInitialInstance(bird);
+	    RegionModel regionModel = new RegionModel();
+	    regionModel.setName("Europe");
+
+        BirdModel model = factory.createInitialInstance(bird, regionModel);
         assertNotNull(model, "model is null");
         assertEquals(model.getScientificName(), SCIENTIFIC_NAME, "scientific name does not match");
 	    assertEquals(model.getName("en"), ENGLISH_NAME, "english name does not match");
@@ -98,10 +101,18 @@ public class BirdModelFactoryTest extends AbstractTest {
 	}
     
 	@Test
-	public void shouldHavePhotos() throws JAXBException, NoSuchLanguageException, CouldNotFindDetailsException {
+	public void shouldHavePhotos() throws JAXBException, NoSuchLanguageException, CouldNotFindDetailsException, CouldNotFindNamesElementException {
 		BirdModel model = factory.createModel(bird);
 		List photos = model.getPhotos();
 		assertNotNull(photos, "Photo list is null");
 		assertFalse(photos.isEmpty(), "Photo list is empty");
+	}
+	
+	@Test
+	public void shouldHaveRegionalScarcity() throws JAXBException, NoSuchLanguageException, CouldNotFindDetailsException, CouldNotFindNamesElementException {
+		BirdModel model = factory.createModel(bird);
+		List<RegionalScarcityModel> scarcityModelList = model.getRegionalScarcity();
+		
+		assertNotNull(scarcityModelList);
 	}
 }
