@@ -163,4 +163,8 @@ public class BirdModel {
 			birdPhotoModel.setBirdModel(this);
 		}
 	}
+
+	public String getScientificNameUnderscore() {
+		return scientificName.replace(' ', '_');  //To change body of created methods use File | Settings | File Templates.
+	}
 }

@@ -36,7 +36,13 @@ public class PageModelFactory {
 		}
 
 		// add correct bird as well!
-		pageModel.getSiblings().add(random.nextInt(pageModel.getSiblings().size()), model);
+		int index = 0;
+
+		if (!pageModel.getSiblings().isEmpty()) {
+			index = random.nextInt(pageModel.getSiblings().size());
+		}
+
+		pageModel.getSiblings().add(index, model);
 
 		return pageModel;
 	}

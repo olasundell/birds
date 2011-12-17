@@ -39,14 +39,14 @@ public class BirdController {
 	@Autowired PageModelFactory pageModelFactory;
 	
 	@RequestMapping(value = "/random/", method = RequestMethod.POST)
-	public @ResponseBody Map<String, String> checkAnswer(HttpServletRequest request, @RequestParam String choice, @RequestParam String id) {
-		if (birdService.findByScientificName(choice).getId().equals(id)) {
-			return Collections.singletonMap("answer", choice);
+	public @ResponseBody String checkAnswer(@RequestParam String choice, @RequestParam String id) {
+		if (birdService.findByScientificName(choice.replace('_', ' ')).getId().equals(id)) {
+			return choice.replace(' ', '_');
 		} else {
-			return Collections.singletonMap("answer", birdService.findById(id).getScientificName());
+			return birdService.findById(id).getScientificName().replace(' ', '_');
 		}
 	}
-	
+
 	@RequestMapping(value = "/random/", method = RequestMethod.GET)
 	public ModelAndView randomBird(HttpServletRequest request) {
 		ModelAndView modelAndView = doControl(request);

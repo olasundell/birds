@@ -8,7 +8,6 @@
 	<title>A random bird.</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/jquery.form.js"></script>
 	<script type="text/javascript" src="/js/script.js"></script>
 </head>
 <body>
@@ -22,10 +21,13 @@ ${name.lang}: ${name.name}<br/>
 </c:forEach>--%>
 <form:form commandName="answer" id="answerform">
     <form:hidden path="id" />
+	<ul>
 	<c:forEach items="${pageModel.siblings}" var="sibling">
-		<form:radiobutton path="choice" value="${sibling.scientificName}"/>${sibling.nameMap["Swedish"]}<br/>
+		<%--<div><form:radiobutton path="choice" id="${sibling.scientificName}" value="${sibling.scientificName}"/>${sibling.nameMap["Swedish"]}</div><br/>--%>
+		<li id="${sibling.scientificNameUnderscore}"><form:radiobutton path="choice" value="${sibling.scientificNameUnderscore}"/>${sibling.nameMap["Swedish"]}</li>
 	</c:forEach>
-	<input type="submit" value="Svara" />
+	<li><input type="submit" value="Svara" id="answerbutton" /></li>
+	</ul>
 </form:form>
 </body>
 </html>
