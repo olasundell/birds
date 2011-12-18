@@ -7,7 +7,6 @@ import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoFamilyException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
-import se.atrosys.birds.factory.BirdModelListFactory;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.FamilyModel;
 
@@ -19,7 +18,6 @@ import java.util.Map;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
-import static org.testng.Assert.assertTrue;
 
 /**
  * Created by IntelliJ IDEA.

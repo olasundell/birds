@@ -4,28 +4,23 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import org.slf4j.Logger;
 import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
-import se.atrosys.birds.flickr.FlickrPhoto;
 import se.atrosys.birds.flickr.FlickrPhotoList;
 import se.atrosys.birds.flickr.FlickrService;
-import se.atrosys.birds.model.BirdPhotoModel;
+import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.RegionModel;
 import se.atrosys.birds.service.CountryNameService;
-import se.atrosys.birds.model.BirdModel;
 
 import javax.xml.bind.JAXBException;
+import java.io.File;
+import java.io.IOException;
+import java.util.Locale;
 
 /**
  * Created by IntelliJ IDEA.

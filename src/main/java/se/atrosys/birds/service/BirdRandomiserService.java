@@ -2,9 +2,7 @@ package se.atrosys.birds.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import se.atrosys.birds.factory.PageModelFactory;
 import se.atrosys.birds.model.BirdModel;
-import se.atrosys.birds.model.PageModel;
 
 /**
  * Created by IntelliJ IDEA.

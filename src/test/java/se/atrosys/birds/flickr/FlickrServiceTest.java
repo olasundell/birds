@@ -4,16 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 import se.atrosys.birds.AbstractTest;
 import se.atrosys.birds.exception.NoSuchLanguageException;
-import se.atrosys.birds.flickr.FlickrService;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.service.CountryNameService;
 
 import javax.xml.bind.JAXBException;
-import java.util.List;
 
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertNotNull;
-import static org.testng.Assert.assertTrue;
 
 /**
  * Created by IntelliJ IDEA.

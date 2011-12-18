@@ -1,7 +1,5 @@
 package se.atrosys.birds.model;
 
-import org.apache.commons.collections.list.AbstractLinkedList;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;

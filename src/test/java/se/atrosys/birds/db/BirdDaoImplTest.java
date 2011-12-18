@@ -7,7 +7,6 @@ import se.atrosys.birds.model.BirdModel;
 
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertNotNull;
-import static org.testng.Assert.assertTrue;
 
 /**
  * TODO write comment

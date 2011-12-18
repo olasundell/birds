@@ -1,6 +1,5 @@
 package se.atrosys.birds.factory;
 
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.FamilyModel;
 

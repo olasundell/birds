@@ -1,6 +1,5 @@
 package se.atrosys.birds.model;
 
-import org.springframework.test.context.support.AbstractTestExecutionListener;
 import org.testng.annotations.Test;
 import se.atrosys.birds.AbstractTest;
 

@@ -1,8 +1,5 @@
 package se.atrosys.birds.model;
 
-import sun.security.krb5.PrincipalName;
-
-import javax.annotation.Generated;
 import javax.persistence.*;
 
 /**

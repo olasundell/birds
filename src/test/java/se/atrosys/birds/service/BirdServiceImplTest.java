@@ -1,13 +1,13 @@
 package se.atrosys.birds.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import se.atrosys.birds.AbstractTest;
 import se.atrosys.birds.flickr.PhotoBuilder;
-import se.atrosys.birds.model.*;
+import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.BirdPhotoModel;
+import se.atrosys.birds.model.FamilyModel;
+import se.atrosys.birds.model.GroupModel;
 
 import java.util.ArrayList;
 import java.util.List;

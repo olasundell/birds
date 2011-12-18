@@ -1,6 +1,5 @@
 package se.atrosys.birds.service;
 
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import se.atrosys.birds.db.GroupDao;

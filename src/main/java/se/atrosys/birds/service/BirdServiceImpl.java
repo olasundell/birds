@@ -5,18 +5,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import se.atrosys.birds.db.BirdDao;
-import se.atrosys.birds.exception.CouldNotFindDetailsException;
-import se.atrosys.birds.exception.CouldNotFindNamesElementException;
-import se.atrosys.birds.exception.NoFamilyException;
-import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.factory.BirdModelListFactory;
 import se.atrosys.birds.model.BirdModel;
-import se.atrosys.birds.model.BirdNameModel;
 
-import javax.annotation.PostConstruct;
-import javax.xml.bind.JAXBException;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

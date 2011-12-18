@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import se.atrosys.birds.factory.ScrapedTableBuilder;
 
 import java.io.File;

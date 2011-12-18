@@ -2,8 +2,6 @@ package se.atrosys.birds.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.util.ReflectionTestUtils;
-import org.springframework.ui.ExtendedModelMap;
-import org.springframework.ui.Model;
 import org.springframework.web.servlet.ModelAndView;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -13,18 +11,13 @@ import se.atrosys.birds.AbstractTest;
 import se.atrosys.birds.factory.BirdModelBuilder;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.PageModel;
-import se.atrosys.birds.service.BirdRandomiserService;
 import se.atrosys.birds.service.BirdServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.testng.Assert.assertNotNull;
-import static org.testng.Assert.assertTrue;
 
 /**
  * Created by IntelliJ IDEA.

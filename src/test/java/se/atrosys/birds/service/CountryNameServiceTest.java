@@ -4,11 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 import se.atrosys.birds.AbstractTest;
 import se.atrosys.birds.exception.NoSuchLanguageException;
-import se.atrosys.birds.service.CountryNameService;
 
 import java.util.Locale;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertNotNull;
 
 /**
  * Created by IntelliJ IDEA.

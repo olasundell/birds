@@ -1,14 +1,11 @@
 package se.atrosys.birds.model;
 
-import org.hibernate.annotations.CollectionOfElements;
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import se.atrosys.birds.flickr.FlickrPhoto;
 import se.atrosys.birds.flickr.FlickrPhotoList;
 
-import java.util.*;
 import javax.persistence.*;
-import javax.persistence.metamodel.EntityType;
+import java.util.*;
 
 /**
  * Created by IntelliJ IDEA.

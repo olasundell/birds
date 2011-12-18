@@ -4,26 +4,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.AbstractController;
-import org.springframework.web.servlet.view.RedirectView;
-import se.atrosys.birds.exception.CouldNotFindDetailsException;
-import se.atrosys.birds.exception.CouldNotFindNamesElementException;
-import se.atrosys.birds.exception.NoFamilyException;
-import se.atrosys.birds.exception.NoSuchLanguageException;
-import se.atrosys.birds.factory.BirdModelListFactory;
 import se.atrosys.birds.factory.PageModelFactory;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.PageModel;
-import se.atrosys.birds.service.BirdRandomiserService;
 import se.atrosys.birds.service.BirdService;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.xml.bind.JAXBException;
-import java.io.IOException;
-import java.util.*;
 
 /**
  * Created by IntelliJ IDEA.

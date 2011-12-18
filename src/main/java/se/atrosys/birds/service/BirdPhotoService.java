@@ -1,6 +1,5 @@
 package se.atrosys.birds.service;
 
-import org.springframework.stereotype.Service;
 import se.atrosys.birds.model.BirdPhotoModel;
 
 import java.util.List;

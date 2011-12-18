@@ -1,6 +1,5 @@
 package se.atrosys.birds.factory;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.BeforeMethod;
@@ -8,8 +7,7 @@ import org.testng.annotations.Test;
 import se.atrosys.birds.AbstractTest;
 import se.atrosys.birds.model.ScarcityEnum;
 
-import java.io.File;
-
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 
 /**
@@ -33,5 +31,6 @@ public class ScarcityFactoryTest extends AbstractTest {
 	public void shouldGetCorrectScarcityFromElement() {
 		ScarcityEnum result = scarcityFactory.getScarcity(bird);
 		assertNotNull(result);
+		assertEquals(result, ScarcityEnum.RARE_ACCIDENTAL);
 	}
 }

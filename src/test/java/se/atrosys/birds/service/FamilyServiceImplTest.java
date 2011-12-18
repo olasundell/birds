@@ -9,7 +9,6 @@ import se.atrosys.birds.model.FamilyModel;
 import java.util.List;
 
 import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertNotEquals;
 import static org.testng.Assert.assertNotNull;
 
 /**

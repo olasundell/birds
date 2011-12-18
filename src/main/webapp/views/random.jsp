@@ -11,8 +11,21 @@
 	<script type="text/javascript" src="/js/script.js"></script>
 </head>
 <body>
-
-<img src="${pageModel.birdModel.photos[0].url}"/><br/>
+<c:choose>
+	<c:when test="${pageModel.soundMedia}">
+		<audio controls="controls">
+			<source src="${pageModel.sound.URL}" type="${pageModel.sound.type}" />
+			Your browser does not support the audio element.
+		</audio>
+	</c:when>
+	<c:when test="${pageModel.pictureMedia}">
+		<img src="${pageModel.birdModel.photos[0].url}"/><br/>
+	</c:when>
+	<c:otherwise>
+		An error occurred, neither picture nor sound for the bird ${pageModel.birdModel.scientificName}.<br/>
+		Please contact the author and report this error.
+	</c:otherwise>
+</c:choose>
 <%--Group: ${pageModel.birdModel.family.group}<br/>
 Family: ${pageModel.birdModel.family.family}<br/>
 Name: ${pageModel.birdModel.scientificName}<br/>

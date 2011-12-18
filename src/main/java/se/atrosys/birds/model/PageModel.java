@@ -70,4 +70,17 @@ public class PageModel {
 	public void setPreviousAnswer(String previousAnswer) {
 		this.previousAnswer = previousAnswer;
 	}
+
+	// TODO implement these properly.
+	public boolean isSoundMedia() {
+		return false;
+	}
+	
+	public boolean isPictureMedia() {
+		return true;
+	}
+	
+	public SoundModel getSound() {
+		return null;
+	}
 }
