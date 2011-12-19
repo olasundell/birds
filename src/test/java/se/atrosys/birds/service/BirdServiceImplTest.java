@@ -2,7 +2,7 @@ package se.atrosys.birds.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
-import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.flickr.PhotoBuilder;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.BirdPhotoModel;
@@ -21,7 +21,7 @@ import static org.testng.Assert.*;
  * Time: 9:11 PM
  * To change this template use File | Settings | File Templates.
  */
-public class BirdServiceImplTest extends AbstractTest {
+public class BirdServiceImplTest extends BaseTest {
 	@Autowired BirdService service;
 	@Autowired FamilyService familyService;
 	

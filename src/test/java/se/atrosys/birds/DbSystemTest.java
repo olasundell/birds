@@ -24,7 +24,7 @@ import static org.testng.Assert.assertNotNull;
  * Time: 8:41 PM
  * To change this template use File | Settings | File Templates.
  */
-public class DbSystemTest extends AbstractTest {
+public class DbSystemTest extends BaseTest {
 	@Autowired BirdModelListFactory birdModelListFactory;
 	@Autowired BirdService birdService;
 

@@ -4,7 +4,7 @@ import org.jsoup.nodes.Element;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.model.ScarcityEnum;
 
 import static org.testng.Assert.assertEquals;
@@ -17,7 +17,7 @@ import static org.testng.Assert.assertNotNull;
  * Time: 6:50 PM
  * To change this template use File | Settings | File Templates.
  */
-public class ScarcityFactoryTest extends AbstractTest {
+public class ScarcityFactoryTest extends BaseTest {
 	@Autowired ScarcityFactory scarcityFactory;
 	@Autowired BirdModelListFactory birdModelListFactory;
 	Element bird;

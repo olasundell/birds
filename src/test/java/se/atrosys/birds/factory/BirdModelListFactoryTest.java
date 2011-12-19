@@ -2,7 +2,7 @@ package se.atrosys.birds.factory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
-import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoFamilyException;
@@ -26,7 +26,7 @@ import static org.testng.Assert.assertNotNull;
  * Time: 4:26 PM
  * To change this template use File | Settings | File Templates.
  */
-public class BirdModelListFactoryTest extends AbstractTest {
+public class BirdModelListFactoryTest extends BaseTest {
 	@Autowired private BirdModelListFactory birdModelListFactory;
 
 	@Test

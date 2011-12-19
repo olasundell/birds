@@ -1,7 +1,7 @@
 package se.atrosys.birds.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.BaseTest;
 
 /**
  * Created by IntelliJ IDEA.
@@ -10,7 +10,7 @@ import se.atrosys.birds.AbstractTest;
  * Time: 8:28 PM
  * To change this template use File | Settings | File Templates.
  */
-public class BirdRandomiserServiceTest extends AbstractTest {
+public class BirdRandomiserServiceTest extends BaseTest {
 	@Autowired BirdRandomiserService service;
 	
 }

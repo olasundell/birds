@@ -2,7 +2,7 @@ package se.atrosys.birds.flickr;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
-import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.service.CountryNameService;
@@ -19,7 +19,7 @@ import static org.testng.Assert.assertNotNull;
  * Time: 4:00 PM
  * To change this template use File | Settings | File Templates.
  */
-public class FlickrServiceTest extends AbstractTest {
+public class FlickrServiceTest extends BaseTest {
 	@Autowired CountryNameService nameService;
 	@Autowired FlickrService service;
 

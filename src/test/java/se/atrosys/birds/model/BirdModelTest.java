@@ -1,7 +1,7 @@
 package se.atrosys.birds.model;
 
 import org.testng.annotations.Test;
-import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.BaseTest;
 
 import java.util.ArrayList;
 
@@ -15,7 +15,7 @@ import static org.testng.Assert.assertTrue;
  * Time: 8:19 PM
  * To change this template use File | Settings | File Templates.
  */
-public class BirdModelTest extends AbstractTest {
+public class BirdModelTest extends BaseTest {
 	private final static String HREF = "species.jsp?avibaseid=A534AFEA126DBD62";
 	private final static String ID = "A534AFEA126DBD62";
 	

@@ -5,7 +5,7 @@ import org.jsoup.nodes.Element;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.model.FamilyModel;
 
 import static org.testng.Assert.assertEquals;
@@ -14,7 +14,7 @@ import static org.testng.Assert.assertNotNull;
 /**
  * TODO write comment
  */
-public class FamilyModelFactoryTest extends AbstractTest {
+public class FamilyModelFactoryTest extends BaseTest {
 	private static final String ORDER = "ANSERIFORMES";
 	private static final String FAMILY = "Anatidae";
 	@Autowired FamilyModelFactory familyModelFactory;

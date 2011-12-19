@@ -5,13 +5,14 @@ import org.jsoup.nodes.Element;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.RegionModel;
 import se.atrosys.birds.model.RegionalScarcityModel;
+import se.atrosys.birds.model.SoundModel;
 
 import javax.xml.bind.JAXBException;
 import java.io.File;
@@ -27,7 +28,7 @@ import static org.testng.Assert.*;
  * Time: 6:26 PM
  * To change this template use File | Settings | File Templates.
  */
-public class BirdModelFactoryTest extends AbstractTest {
+public class BirdModelFactoryTest extends BaseTest {
     public static final String ENGLISH_NAME = "White-faced Whistling-Duck";
     public static final String GERMAN_NAME= "Witwenpfeifgans";
     public static final String HREF = "species.jsp?avibaseid=A534AFEA126DBD62";
@@ -113,5 +114,13 @@ public class BirdModelFactoryTest extends AbstractTest {
 		List<RegionalScarcityModel> scarcityModelList = model.getRegionalScarcity();
 		
 		assertNotNull(scarcityModelList);
+	}
+	
+	@Test
+	public void shouldHaveSoundModels() throws CouldNotFindNamesElementException, JAXBException, NoSuchLanguageException, CouldNotFindDetailsException {
+		BirdModel model = factory.createModel(bird);
+		List<SoundModel> soundModels = model.getSounds();
+		assertNotNull(soundModels, "Sounds list is null!");
+		assertFalse(soundModels.isEmpty(),"No sounds attached to bird model");
 	}
 }

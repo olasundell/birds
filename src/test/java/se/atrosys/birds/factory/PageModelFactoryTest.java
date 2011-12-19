@@ -2,7 +2,7 @@ package se.atrosys.birds.factory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
-import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.PageModel;
 
@@ -13,7 +13,7 @@ import se.atrosys.birds.model.PageModel;
  * Time: 8:12 PM
  * To change this template use File | Settings | File Templates.
  */
-public class PageModelFactoryTest extends AbstractTest {
+public class PageModelFactoryTest extends BaseTest {
 	@Autowired PageModelFactory pageModelFactory;
 	private final BirdModelBuilder birdModelBuilder = new BirdModelBuilder();
 

@@ -2,7 +2,7 @@ package se.atrosys.birds.factory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
-import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.model.FamilyModel;
 
 import java.io.IOException;
@@ -18,7 +18,7 @@ import static org.testng.Assert.assertNotNull;
  * Time: 5:28 PM
  * To change this template use File | Settings | File Templates.
  */
-public class FamilyModelListFactoryTest extends AbstractTest {
+public class FamilyModelListFactoryTest extends BaseTest {
 	@Autowired FamilyModelListFactory factory;
 	
 	@Test

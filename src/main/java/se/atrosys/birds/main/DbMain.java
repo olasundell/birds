@@ -11,6 +11,7 @@ import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.factory.BirdModelListFactory;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.service.BirdService;
+import se.atrosys.birds.service.SoundService;
 
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
@@ -27,10 +28,16 @@ import java.util.List;
 public class DbMain {
 	@Autowired BirdModelListFactory birdModelListFactory;
 	@Autowired BirdService birdService;
+	@Autowired private SoundService soundService;
 
 	public void importIntoDb() throws CouldNotFindNamesElementException, JAXBException, IOException, NoFamilyException, NoSuchLanguageException, CouldNotFindDetailsException {
 		List<BirdModel> birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase.html");
 		birdService.saveAll(birdModels);
+	}
+
+	public void enrichBirdsWithSounds() {
+		List<BirdModel> list = birdService.findAll();
+		soundService.enrichAll(list);
 	}
 
 	public static void main(String[] args) throws CouldNotFindNamesElementException, JAXBException, IOException, NoSuchLanguageException, NoFamilyException, CouldNotFindDetailsException {

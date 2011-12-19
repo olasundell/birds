@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.factory.BirdModelBuilder;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.PageModel;
@@ -26,7 +26,7 @@ import static org.testng.Assert.assertNotNull;
  * Time: 8:06 PM
  * To change this template use File | Settings | File Templates.
  */
-public class BirdControllerTest extends AbstractTest {
+public class BirdControllerTest extends BaseTest {
 	public static final String HREF = "bar avibaseid=321";
 	public static final String SCIENTIFIC_NAME = "Scifinameisch";
 	@Autowired BirdController controller;

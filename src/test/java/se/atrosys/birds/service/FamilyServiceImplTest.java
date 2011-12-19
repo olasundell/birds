@@ -2,7 +2,7 @@ package se.atrosys.birds.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
-import se.atrosys.birds.AbstractTest;
+import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.FamilyModel;
 
@@ -14,7 +14,7 @@ import static org.testng.Assert.assertNotNull;
 /**
  * TODO write comment
  */
-public class FamilyServiceImplTest extends AbstractTest {
+public class FamilyServiceImplTest extends BaseTest {
 	@Autowired FamilyService familyService;
 	
 	@Test

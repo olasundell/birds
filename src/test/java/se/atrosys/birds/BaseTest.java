@@ -20,11 +20,11 @@ import java.io.IOException;
  * To change this template use File | Settings | File Templates.
  */
 @ContextConfiguration(locations = "classpath:META-INF/spring/context.xml")
-public class AbstractTest extends AbstractTestNGSpringContextTests {
+public class BaseTest extends AbstractTestNGSpringContextTests {
 	protected Element table;
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	public AbstractTest() {
+	public BaseTest() {
 		ScrapedTableBuilder tableBuilder = new ScrapedTableBuilder();
 		try {
 			table = tableBuilder.getTable(Jsoup.parse(new File("avibase.html"), "UTF-8"));

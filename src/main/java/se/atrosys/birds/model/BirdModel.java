@@ -37,6 +37,9 @@ public class BirdModel {
 
 	@OneToMany
 	private List<RegionalScarcityModel> regionalScarcity;
+	
+	@OneToMany
+	private List<SoundModel> sounds;
 
 	@Transient
 	private Map<Locale, String> nameLocaleMap;
@@ -187,5 +190,9 @@ public class BirdModel {
 		scarcityModel.setRegion(regionModel);
 		scarcityModel.setScarcity(scarcity);
 		regionalScarcity.add(scarcityModel);
+	}
+
+	public List<SoundModel> getSounds() {
+		return sounds;
 	}
 }
