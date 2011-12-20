@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
+import se.atrosys.birds.exception.CouldNotFindSoundsException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.RegionModel;
@@ -91,7 +92,7 @@ public class BirdModelFactoryTest extends BaseTest {
     }
 
 	@Test
-	public void shouldGetCorrectInstanceFromCreateModel() throws CouldNotFindNamesElementException, NoSuchLanguageException, CouldNotFindDetailsException, JAXBException {
+	public void shouldGetCorrectInstanceFromCreateModel() throws CouldNotFindNamesElementException, NoSuchLanguageException, CouldNotFindDetailsException, JAXBException, CouldNotFindSoundsException {
 		BirdModel model = factory.createModel(bird);
 		assertNotNull(model, "model is null");
 		assertEquals(model.getScientificName(), SCIENTIFIC_NAME, "scientific name does not match");
@@ -101,7 +102,7 @@ public class BirdModelFactoryTest extends BaseTest {
 	}
     
 	@Test
-	public void shouldHavePhotos() throws JAXBException, NoSuchLanguageException, CouldNotFindDetailsException, CouldNotFindNamesElementException {
+	public void shouldHavePhotos() throws JAXBException, NoSuchLanguageException, CouldNotFindDetailsException, CouldNotFindNamesElementException, CouldNotFindSoundsException {
 		BirdModel model = factory.createModel(bird);
 		List photos = model.getPhotos();
 		assertNotNull(photos, "Photo list is null");
@@ -109,7 +110,7 @@ public class BirdModelFactoryTest extends BaseTest {
 	}
 	
 	@Test
-	public void shouldHaveRegionalScarcity() throws JAXBException, NoSuchLanguageException, CouldNotFindDetailsException, CouldNotFindNamesElementException {
+	public void shouldHaveRegionalScarcity() throws JAXBException, NoSuchLanguageException, CouldNotFindDetailsException, CouldNotFindNamesElementException, CouldNotFindSoundsException {
 		BirdModel model = factory.createModel(bird);
 		List<RegionalScarcityModel> scarcityModelList = model.getRegionalScarcity();
 		
@@ -117,7 +118,7 @@ public class BirdModelFactoryTest extends BaseTest {
 	}
 	
 	@Test
-	public void shouldHaveSoundModels() throws CouldNotFindNamesElementException, JAXBException, NoSuchLanguageException, CouldNotFindDetailsException {
+	public void shouldHaveSoundModels() throws CouldNotFindNamesElementException, JAXBException, NoSuchLanguageException, CouldNotFindDetailsException, CouldNotFindSoundsException {
 		BirdModel model = factory.createModel(bird);
 		List<SoundModel> soundModels = model.getSounds();
 		assertNotNull(soundModels, "Sounds list is null!");

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
+import se.atrosys.birds.exception.CouldNotFindSoundsException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.flickr.FlickrPhotoList;
 import se.atrosys.birds.flickr.FlickrService;
@@ -34,10 +35,11 @@ public class BirdModelFactory {
 	@Autowired CountryNameService nameService;
 	@Autowired FlickrService flickrService;
 	@Autowired private ScarcityFactory scarcityFactory;
+	@Autowired SoundModelListFactory soundModelListFactory;
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	public BirdModel createModel(Element listingElement) throws NoSuchLanguageException, CouldNotFindDetailsException, JAXBException, CouldNotFindNamesElementException {
+	public BirdModel createModel(Element listingElement) throws NoSuchLanguageException, CouldNotFindDetailsException, JAXBException, CouldNotFindNamesElementException, CouldNotFindSoundsException {
 		return createModel(listingElement, null);
 	}
 
@@ -54,9 +56,18 @@ public class BirdModelFactory {
 		}
 		enrichModelFromAvibase(birdModel, namesElement);
 		enrichModelWithPhotos(birdModel);
+		enrichmodelWithSound(birdModel);
 
         return birdModel;
     }
+
+	private void enrichmodelWithSound(BirdModel birdModel) {
+		try {
+			birdModel.addSounds(soundModelListFactory.createList(birdModel));
+		} catch (CouldNotFindSoundsException e) {
+			logger.info(String.format("Could not add sounds to model for %s due to the following exception", birdModel.getScientificName()), e);
+		}
+	}
 
 	private void enrichModelWithPhotos(BirdModel birdModel) throws JAXBException {
 		FlickrPhotoList pictures = flickrService.getPictures(birdModel);

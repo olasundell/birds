@@ -195,4 +195,9 @@ public class BirdModel {
 	public List<SoundModel> getSounds() {
 		return sounds;
 	}
+
+	public void addSounds(List<SoundModel> list) {
+		sounds.addAll(list);
+		
+	}	
 }
