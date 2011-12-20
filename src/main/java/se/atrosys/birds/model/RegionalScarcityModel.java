@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Table(name = "REGIONAL_SCARCITY")
 public class RegionalScarcityModel {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	@OneToOne

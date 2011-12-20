@@ -56,7 +56,7 @@ public class SoundModelListFactory {
 
 		for (Element mp3: mp3List) {
 			SoundModel soundModel = new SoundModel();
-			soundModel.setUrl(mp3.attr("href"));
+			soundModel.setURL(mp3.attr("href"));
 
 			soundModels.add(soundModel);
 			// TODO write factory

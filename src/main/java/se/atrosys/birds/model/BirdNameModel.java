@@ -10,19 +10,22 @@ import javax.persistence.*;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "BIRD_NAMES")
+@Table(name = "BIRD_NAMES", uniqueConstraints = @UniqueConstraint(columnNames = {"BIRD_ID", "BIRD_NAME", "LANGUAGE"}))
 public class BirdNameModel {
 	@Id
 	@Column(name = "ID")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@ManyToOne
+/*	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "BIRD_ID")
-	private BirdModel bird;
+	private BirdModel bird;*/
+	@Column(name = "BIRD_ID")
+	private String birdId;
 	@Column(name = "BIRD_NAME")
 	private String name;
-	@Column(name = "LANG")
-	private String lang;
+	@ManyToOne
+	@JoinColumn(name = "LANGUAGE")
+	private LanguageModel languageModel;
 
 	public String getName() {
 		return name;
@@ -32,15 +35,31 @@ public class BirdNameModel {
 		this.name = name;
 	}
 
-	public String getLang() {
-		return lang;
+	public LanguageModel getLang() {
+		return languageModel;
 	}
-
+	
 	public void setLang(String lang) {
-		this.lang = lang;
+		if (this.languageModel == null) {
+			LanguageModel model = new LanguageModel();
+			model.setLanguage(lang);
+			setLang(model);
+		}
 	}
 
-	public void setBird(BirdModel bird) {
+	public void setLang(LanguageModel lang) {
+		this.languageModel = lang;
+	}
+
+/*	public void setBird(BirdModel bird) {
 		this.bird = bird;
+	}*/
+
+	public String getBirdId() {
+		return birdId;
+	}
+
+	public void setBirdId(String birdId) {
+		this.birdId = birdId;
 	}
 }

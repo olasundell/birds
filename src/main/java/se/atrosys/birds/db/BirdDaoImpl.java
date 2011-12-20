@@ -1,6 +1,7 @@
 package se.atrosys.birds.db;
 
 import org.hibernate.*;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
@@ -56,7 +57,7 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		HibernateTemplate hibernateTemplate = getHibernateTemplate();
 		Session session = hibernateTemplate.getSessionFactory().openSession();
 		Transaction transaction = session.beginTransaction();
-		
+
 		session.save(model);
 
 		Set<RegionModel> regionModelSet = new HashSet<RegionModel>();
@@ -77,7 +78,13 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 			session.save(regionalScarcityModel);
 		}
 		
+		Query languageQuery = session.createQuery("from se.atrosys.birds.model.LanguageModel where language = ?");
+		
 		for (BirdNameModel birdNameModel: model.getNames()) {
+			languageQuery.setText(0, birdNameModel.getLang().getLanguage());
+			if (languageQuery.list().isEmpty()) {
+				session.save(birdNameModel.getLang());
+			}
 			session.save(birdNameModel);
 		}
 
@@ -86,7 +93,50 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 	}
 
 	public void update(BirdModel model) {
-		getHibernateTemplate().update(model);
+		HibernateTemplate hibernateTemplate = getHibernateTemplate();
+		Session session = hibernateTemplate.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+
+		session.update(model);
+
+		Set<RegionModel> regionModelSet = new HashSet<RegionModel>();
+
+		for (RegionalScarcityModel regionalScarcityModel: model.getRegionalScarcity()){
+			regionModelSet.add(regionalScarcityModel.getRegion());
+		}
+
+		for (RegionModel regionModel: regionModelSet) {
+			Query query = session.createQuery("from se.atrosys.birds.model.RegionModel where name = ?");
+			query.setText(0, regionModel.getName());
+			if (query.list().isEmpty()) {
+				session.save(regionModel);
+			}
+		}
+
+		for (RegionalScarcityModel regionalScarcityModel: model.getRegionalScarcity()){
+			session.save(regionalScarcityModel);
+		}
+		
+		Query birdNameQuery = session.createQuery("from se.atrosys.birds.model.BirdNameModel where bird_id = ? and bird_name = ? and language = ?");
+
+		for (BirdNameModel birdNameModel: model.getNames()) {
+			if (birdNameModel.getBirdId() == null || birdNameModel.getBirdId().equals(model.getId())) {
+				birdNameModel.setBirdId(model.getId());
+			}
+			
+			birdNameQuery.setString(0, model.getId());
+			birdNameQuery.setString(1, birdNameModel.getName());
+			birdNameQuery.setString(2, birdNameModel.getLang().getLanguage());
+
+			if (birdNameQuery.list().isEmpty()) {
+				session.save(birdNameModel);
+			}
+
+			logger.info(String.format("Bird name %s already exists with language %s for bird %s", birdNameModel.getName(), birdNameModel.getLang().getLanguage(), model.getScientificName()));
+		}
+
+		transaction.commit();
+		session.close();
 	}
 
 	public void delete(BirdModel model) {
@@ -136,6 +186,10 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 
 			for (BirdModel birdModel: model.getFamily().getBirds()) {
 				birdModel.getId();
+			}
+			
+			for (SoundModel soundModel: model.getSounds()) {
+				soundModel.getURL();
 			}
 		}
 	}

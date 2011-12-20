@@ -54,7 +54,11 @@ public class BirdServiceImpl implements BirdService {
 
 	public void saveAll(List<BirdModel> birdModels) {
 		for (BirdModel model: birdModels) {
-			save(model);
+			if (findById(model.getId()) != null) {
+				update(model);
+			} else {
+				save(model);
+			}
 		}
 	}
 

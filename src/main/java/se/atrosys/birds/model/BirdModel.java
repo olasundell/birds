@@ -29,7 +29,10 @@ public class BirdModel {
 	@ManyToOne
 	@JoinColumn(name = "FAMILY_NAME")
 	private FamilyModel family;
-	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+//	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "bird")
+//	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@OneToMany
+	@JoinColumn(name ="BIRD_ID", referencedColumnName = "ID")
 	private List<BirdNameModel> birdNameModels;
 	@ManyToMany(cascade = CascadeType.ALL )
 	@JoinColumn(name = "BIRD_ID")
@@ -38,7 +41,7 @@ public class BirdModel {
 	@OneToMany
 	private List<RegionalScarcityModel> regionalScarcity;
 	
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<SoundModel> sounds;
 
 	@Transient
@@ -52,6 +55,7 @@ public class BirdModel {
 		birdNameModels = new ArrayList<BirdNameModel>();
 		regionalScarcity = new ArrayList<RegionalScarcityModel>();
 		birdPhotos = new ArrayList();
+		sounds = new ArrayList<SoundModel>();
 	}
 
     public String getScientificName() {
@@ -73,7 +77,7 @@ public class BirdModel {
 	    BirdNameModel birdNameModel = new BirdNameModel();
 	    birdNameModel.setLang(lang.getDisplayLanguage());
 	    birdNameModel.setName(name);
-	    birdNameModel.setBird(this);
+//	    birdNameModel.setBird(this);
 
 	    birdNameModels.add(birdNameModel);
     }
@@ -136,7 +140,7 @@ public class BirdModel {
 	public Map<String, String> getNameMap() {
 		if (nameStringMap.isEmpty()) {
 			for (BirdNameModel nameModel: birdNameModels) {
-				nameStringMap.put(nameModel.getLang(), nameModel.getName());
+				nameStringMap.put(nameModel.getLang().getLanguage(), nameModel.getName());
 			}
 		}
 		

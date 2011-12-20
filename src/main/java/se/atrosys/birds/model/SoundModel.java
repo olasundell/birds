@@ -26,7 +26,11 @@ public class SoundModel {
 		this.id = id;
 	}
 
-	public void setUrl(String url) {
+	public void setURL(String url) {
 		this.url = url;
+	}
+
+	public String getURL() {
+		return url;
 	}
 }
