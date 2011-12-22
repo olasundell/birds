@@ -3,14 +3,17 @@ package se.atrosys.birds.factory;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import se.atrosys.birds.exception.CouldNotFindSoundsException;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.SoundModel;
+import se.atrosys.birds.util.FileFetcher;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -22,19 +25,26 @@ import java.util.List;
  */
 @Component
 public class SoundModelListFactory {
+	@Autowired FileFetcher fileFetcher;
+	
 	public List<SoundModel> createList(BirdModel birdModel) throws CouldNotFindSoundsException {
 		List<SoundModel> soundModels = new ArrayList<SoundModel>();
-		String format = String.format("/home/ola/code/birds/sounds/%s", birdModel.getScientificName().replace(' ', '-'));
+		String fileUrl = String.format("/home/ola/code/birds/sounds/%s", birdModel.getScientificName().replace(' ', '-'));
 
-		File file = new File(format);
+		File file = new File(fileUrl);
 		Element element = null;
+
+		if (!file.exists()) {
+			String httpUrl = String.format("http://www.xeno-canto.org/species/%s", birdModel.getScientificName().replace(" ", "-"));
+			file = fileFetcher.fetchFile(new HashMap<String, String>(), file.toURI().toString(), httpUrl);
+		}
 
 		try {
 			element = Jsoup.parse(file, "UTF-8").body();
 		} catch (IOException e) {
-			throw new CouldNotFindSoundsException(format);
+			throw new CouldNotFindSoundsException(fileUrl);
 		}
-		
+
 		Elements select = element.select("table.results");
 		
 		if (select.isEmpty()) {
@@ -62,5 +72,13 @@ public class SoundModelListFactory {
 			// TODO write factory
 //			soundModelFactory.createModel(mp3.attr("href"));
 		}
+	}
+
+	protected FileFetcher getFileFetcher() {
+		return fileFetcher;
+	}
+
+	protected void setFileFetcher(FileFetcher fileFetcher) {
+		this.fileFetcher = fileFetcher;
 	}
 }
