@@ -1,5 +1,7 @@
 package se.atrosys.birds.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +16,9 @@ public class PageModel {
 	private BirdModel birdModel;
 	private List<BirdModel> siblings;
 	private String previousAnswer;
-	
+
+	private MediaModel currentMedia;
+
 	public PageModel() {
 		siblings = new ArrayList<BirdModel>();
 	}
@@ -25,6 +29,7 @@ public class PageModel {
 
 	public void setBirdModel(BirdModel birdModel) {
 		this.birdModel = birdModel;
+		currentMedia = randomMediaUtil.getRandomMedia(birdModel);
 	}
 
 	public void addSibling(BirdModel sibling) {
@@ -73,14 +78,14 @@ public class PageModel {
 
 	// TODO implement these properly.
 	public boolean isSoundMedia() {
-		return false;
+		return !birdModel.getSounds().isEmpty();
 	}
 	
 	public boolean isPictureMedia() {
-		return true;
+		return birdModel.getSounds().isEmpty();
 	}
 	
 	public SoundModel getSound() {
-		return null;
+		return birdModel.getSounds().get(0);
 	}
 }

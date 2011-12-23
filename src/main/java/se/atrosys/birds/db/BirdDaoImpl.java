@@ -180,17 +180,28 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 
 	private void retrieveLazyBindings(BirdModel model) {
 		if (model != null) {
-			for (BirdPhotoModel photoModel: model.getPhotos()) {
-				photoModel.getFarm();
-			}
-
+			retrieveBirdModelLazyBindings(model);
 			for (BirdModel birdModel: model.getFamily().getBirds()) {
-				birdModel.getId();
+				retrieveBirdModelLazyBindings(birdModel);
 			}
-			
-			for (SoundModel soundModel: model.getSounds()) {
-				soundModel.getURL();
-			}
+		}
+	}
+
+	private void retrieveBirdModelLazyBindings(BirdModel model) {
+		for (BirdPhotoModel photoModel: model.getPhotos()) {
+			photoModel.getFarm();
+		}
+
+		for (BirdNameModel birdNameModel: model.getNames()) {
+			birdNameModel.getLang();
+		}
+
+		for (SoundModel soundModel: model.getSounds()) {
+			soundModel.getURL();
+		}
+
+		for (RegionalScarcityModel regionalScarcityModel:  model.getRegionalScarcity()) {
+			regionalScarcityModel.getRegion();
 		}
 	}
 

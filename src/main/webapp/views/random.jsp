@@ -11,10 +11,17 @@
 	<script type="text/javascript" src="/js/script.js"></script>
 </head>
 <body>
+<div class="fg-buttonset fg-buttonset-single">
+	<button class="fg-button ui-state-default ui-priority-primary ui-corner-left">Visual</button>
+	<button class="fg-button ui-state-default ui-priority-primary">Code</button>
+	<button class="fg-button ui-state-default ui-priority-primary">Split</button>
+	<button class="fg-button ui-state-default ui-priority-primary ui-corner-right">Preview</button>
+</div>
 <c:choose>
 	<c:when test="${pageModel.soundMedia}">
-		<audio controls="controls">
-			<source src="${pageModel.sound.URL}" type="${pageModel.sound.type}" />
+		<audio controls autoplay autobuffer>
+			<%--<source src="${pageModel.sound.URL}" type="${pageModel.sound.type}" />--%>
+			<source src="${pageModel.sound.URL}" />
 			Your browser does not support the audio element.
 		</audio>
 	</c:when>

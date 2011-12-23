@@ -44,3 +44,18 @@ ul {
 	zoom: 1;
 }
 
+.fg-button {
+   outline: 0;
+   margin:0 4px 0 0;
+   padding: .4em 1em;
+   text-decoration:none !important;
+   cursor:pointer;
+   position: relative;
+   text-align: center;
+   zoom: 1;
+}
+
+.fg-toolbar { padding: .5em; margin: 0; width:50%;
+	.fg-buttonset { margin-right:1.5em; padding-left: 1px; }
+	.fg-button { font-size: 1em;  }
+}

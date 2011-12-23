@@ -33,4 +33,8 @@ public class SoundModel {
 	public String getURL() {
 		return url;
 	}
+	
+	public String getType() {
+		return url.substring(url.length() - 3);
+	}
 }

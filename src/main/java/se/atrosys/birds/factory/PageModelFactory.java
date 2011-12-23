@@ -1,5 +1,6 @@
 package se.atrosys.birds.factory;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.PageModel;
