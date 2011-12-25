@@ -11,22 +11,22 @@
 	<script type="text/javascript" src="/js/script.js"></script>
 </head>
 <body>
-<div class="fg-buttonset fg-buttonset-single">
-	<button class="fg-button ui-state-default ui-priority-primary ui-corner-left">Visual</button>
-	<button class="fg-button ui-state-default ui-priority-primary">Code</button>
-	<button class="fg-button ui-state-default ui-priority-primary">Split</button>
-	<button class="fg-button ui-state-default ui-priority-primary ui-corner-right">Preview</button>
-</div>
+<%--TODO add button toolbar--%>
+<%--<div class="fg-buttonset fg-buttonset-single">
+	<button class="fg-button ui-state-default ui-priority-primary ui-corner-left">English</button>
+	<button class="fg-button ui-state-default ui-priority-primary">Svenska</button>
+	<button class="fg-button ui-state-default ui-priority-primary">Latin</button>
+</div>--%>
 <c:choose>
 	<c:when test="${pageModel.soundMedia}">
 		<audio controls autoplay autobuffer>
 			<%--<source src="${pageModel.sound.URL}" type="${pageModel.sound.type}" />--%>
-			<source src="${pageModel.sound.URL}" />
+			<source src="${pageModel.currentSound.URL}" />
 			Your browser does not support the audio element.
 		</audio>
 	</c:when>
 	<c:when test="${pageModel.pictureMedia}">
-		<img src="${pageModel.birdModel.photos[0].url}"/><br/>
+		<img src="${pageModel.currentPhoto.url}"/><br/>
 	</c:when>
 	<c:otherwise>
 		An error occurred, neither picture nor sound for the bird ${pageModel.birdModel.scientificName}.<br/>

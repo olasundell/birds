@@ -3,8 +3,10 @@ package se.atrosys.birds.factory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.MediaModel;
 import se.atrosys.birds.model.PageModel;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -18,6 +20,7 @@ public class PageModelFactory {
 
 		PageModel pageModel = new PageModel();
 		pageModel.setBirdModel(model);
+		pageModel.setCurrentMedia(getRandomMedia(model));
 
 		List<BirdModel> familyBirds = model.getFamily().getBirds();
 
@@ -47,4 +50,12 @@ public class PageModelFactory {
 
 		return pageModel;
 	}
+
+	protected MediaModel getRandomMedia(BirdModel model) {
+		List<MediaModel> mediaModels = new ArrayList<MediaModel>();
+		
+		mediaModels.addAll(model.getPhotos());
+		mediaModels.addAll(model.getSounds());
+		return mediaModels.get(new Random().nextInt(mediaModels.size()));
+	}	
 }

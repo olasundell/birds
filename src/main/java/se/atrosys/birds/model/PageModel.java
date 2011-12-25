@@ -17,6 +17,14 @@ public class PageModel {
 	private List<BirdModel> siblings;
 	private String previousAnswer;
 
+	public MediaModel getCurrentMedia() {
+		return currentMedia;
+	}
+
+	public void setCurrentMedia(MediaModel currentMedia) {
+		this.currentMedia = currentMedia;
+	}
+
 	private MediaModel currentMedia;
 
 	public PageModel() {
@@ -29,7 +37,6 @@ public class PageModel {
 
 	public void setBirdModel(BirdModel birdModel) {
 		this.birdModel = birdModel;
-		currentMedia = randomMediaUtil.getRandomMedia(birdModel);
 	}
 
 	public void addSibling(BirdModel sibling) {
@@ -68,24 +75,23 @@ public class PageModel {
 		return result;
 	}
 
-	public String getPreviousAnswer() {
-		return previousAnswer;
-	}
-
 	public void setPreviousAnswer(String previousAnswer) {
 		this.previousAnswer = previousAnswer;
 	}
 
-	// TODO implement these properly.
 	public boolean isSoundMedia() {
-		return !birdModel.getSounds().isEmpty();
+		return currentMedia.isSound();
 	}
 	
 	public boolean isPictureMedia() {
-		return birdModel.getSounds().isEmpty();
+		return currentMedia.isPhoto();
 	}
-	
-	public SoundModel getSound() {
-		return birdModel.getSounds().get(0);
+
+	public PhotoModel getCurrentPhoto() {
+		return (PhotoModel)currentMedia;  //To change body of created methods use File | Settings | File Templates.
+	}
+
+	public SoundModel getCurrentSound() {
+		return (SoundModel)currentMedia;  //To change body of created methods use File | Settings | File Templates.
 	}
 }

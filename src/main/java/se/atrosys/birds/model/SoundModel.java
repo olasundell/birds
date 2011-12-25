@@ -11,7 +11,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "SOUNDS")
-public class SoundModel {
+public class SoundModel implements MediaModel {
 	@Id
 	@GeneratedValue
 	private int id;
@@ -36,5 +36,15 @@ public class SoundModel {
 	
 	public String getType() {
 		return url.substring(url.length() - 3);
+	}
+
+	@Override
+	public boolean isSound() {
+		return true;  //To change body of implemented methods use File | Settings | File Templates.
+	}
+
+	@Override
+	public boolean isPhoto() {
+		return false;  //To change body of implemented methods use File | Settings | File Templates.
 	}
 }

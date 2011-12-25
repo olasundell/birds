@@ -1,10 +1,15 @@
 package se.atrosys.birds.factory;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.MediaModel;
 import se.atrosys.birds.model.PageModel;
+
+import static org.testng.Assert.assertNotNull;
 
 /**
  * Created by IntelliJ IDEA.
@@ -16,11 +21,24 @@ import se.atrosys.birds.model.PageModel;
 public class PageModelFactoryTest extends BaseTest {
 	@Autowired PageModelFactory pageModelFactory;
 	private final BirdModelBuilder birdModelBuilder = new BirdModelBuilder();
+	private BirdModel birdModel;
+	
+	@BeforeMethod
+	public void beforeMethod() {
+		BirdModel birdModel = birdModelBuilder.build();
+	}
 
 	@Test
 	public void createPageModelShouldReturnValidModel() throws Exception {
-		BirdModel birdModel = birdModelBuilder.build();
-
 		PageModel model = pageModelFactory.createPageModel(birdModel);
+		// TODO add asserts
+	}
+	
+	@Test
+	public void shouldGetRandomMediaModel() {
+		MediaModel mediaModel = pageModelFactory.getRandomMedia(birdModel);
+		
+		// TODO add asserts
+		assertNotNull(mediaModel, "Expected a MediaModel instance");
 	}
 }

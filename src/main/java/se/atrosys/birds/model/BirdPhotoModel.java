@@ -16,7 +16,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "BIRD_PHOTOS")
-public class BirdPhotoModel implements PhotoModel {
+public class BirdPhotoModel implements MediaModel, PhotoModel {
 	@Id
 	private String id;
 	@Column
@@ -177,4 +177,14 @@ public class BirdPhotoModel implements PhotoModel {
 			return result;
 		}
 	}*/
+
+	@Override
+	public boolean isSound() {
+		return false;  //To change body of implemented methods use File | Settings | File Templates.
+	}
+
+	@Override
+	public boolean isPhoto() {
+		return true;  //To change body of implemented methods use File | Settings | File Templates.
+	}
 }
