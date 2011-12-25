@@ -10,10 +10,7 @@ import se.atrosys.birds.exception.CouldNotFindDetailsException;
 import se.atrosys.birds.exception.CouldNotFindNamesElementException;
 import se.atrosys.birds.exception.CouldNotFindSoundsException;
 import se.atrosys.birds.exception.NoSuchLanguageException;
-import se.atrosys.birds.model.BirdModel;
-import se.atrosys.birds.model.RegionModel;
-import se.atrosys.birds.model.RegionalScarcityModel;
-import se.atrosys.birds.model.SoundModel;
+import se.atrosys.birds.model.*;
 
 import javax.xml.bind.JAXBException;
 import java.io.File;
@@ -47,7 +44,6 @@ public class BirdModelFactoryTest extends BaseTest {
             .append("<td>Rare/Accidental </td>")
             .append("</tr>").toString();
     @Autowired private BirdModelFactory factory;
-	@Autowired private BirdModelListFactory birdModelListFactory;
     private Element detail;
     private Element bird;
 
@@ -124,4 +120,5 @@ public class BirdModelFactoryTest extends BaseTest {
 		assertNotNull(soundModels, "Sounds list is null!");
 		assertFalse(soundModels.isEmpty(),"No sounds attached to bird model");
 	}
+	
 }

@@ -10,4 +10,5 @@ package se.atrosys.birds.model;
 public interface MediaModel {
 	boolean isSound();
 	boolean isPhoto();
+	boolean isEligible();
 }

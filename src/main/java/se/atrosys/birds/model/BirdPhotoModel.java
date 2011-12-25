@@ -29,6 +29,8 @@ public class BirdPhotoModel implements MediaModel, PhotoModel {
 	private String farm;
 	@Column
 	private String title;
+	@Column
+	private boolean eligible;
 //	@ManyToOne
 //	private BirdModel bird;
 
@@ -186,5 +188,10 @@ public class BirdPhotoModel implements MediaModel, PhotoModel {
 	@Override
 	public boolean isPhoto() {
 		return true;  //To change body of implemented methods use File | Settings | File Templates.
+	}
+
+	@Override
+	public boolean isEligible() {
+		return eligible;
 	}
 }

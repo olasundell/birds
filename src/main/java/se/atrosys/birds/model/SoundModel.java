@@ -17,6 +17,8 @@ public class SoundModel implements MediaModel {
 	private int id;
 	@Column
 	private String url;
+	@Column
+	private boolean eligible;
 
 	public int getId() {
 		return id;
@@ -46,5 +48,10 @@ public class SoundModel implements MediaModel {
 	@Override
 	public boolean isPhoto() {
 		return false;  //To change body of implemented methods use File | Settings | File Templates.
+	}
+	
+	@Override
+	public boolean isEligible() {
+		return eligible;
 	}
 }

@@ -4,10 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.flickr.PhotoBuilder;
-import se.atrosys.birds.model.BirdModel;
-import se.atrosys.birds.model.BirdPhotoModel;
-import se.atrosys.birds.model.FamilyModel;
-import se.atrosys.birds.model.GroupModel;
+import se.atrosys.birds.model.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -95,5 +92,17 @@ public class BirdServiceImplTest extends BaseTest {
 		assertEquals(modelList.get(0).getFamily().getFamily(), FAMILY_NAME, "family name wasn't what we expected");
 		assertEquals(modelList.get(0).getFamily().getGroup().getGroupName(), GROUP_NAME, "group name wasn't what we expected");
 	}
-	
+
+	@Test
+	public void shouldOnlyHaveEligibleMediaModels() {
+		BirdModel model = service.findById(ID);
+
+		for (MediaModel soundModel: model.getSounds()) {
+			assertTrue(soundModel.isEligible());
+		}
+
+		for (MediaModel photoModel: model.getPhotos()) {
+			assertTrue(photoModel.isEligible());
+		}
+	}
 }
