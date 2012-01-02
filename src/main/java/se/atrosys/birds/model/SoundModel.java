@@ -17,12 +17,12 @@ public class SoundModel implements MediaModel {
 	private int id;
 	@Column
 	private String url;
-	@Column
+	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT TRUE")
 	private boolean eligible;
 
-	public int getId() {
+/*	public int getId() {
 		return id;
-	}
+	}*/
 
 	public void setId(int id) {
 		this.id = id;
@@ -36,22 +36,22 @@ public class SoundModel implements MediaModel {
 		return url;
 	}
 	
-	public String getType() {
+	public String getFileEnding() {
 		return url.substring(url.length() - 3);
 	}
 
 	@Override
-	public boolean isSound() {
-		return true;  //To change body of implemented methods use File | Settings | File Templates.
+	public MediaType getType() {
+		return MediaType.SOUND;
 	}
 
 	@Override
-	public boolean isPhoto() {
-		return false;  //To change body of implemented methods use File | Settings | File Templates.
-	}
-	
-	@Override
 	public boolean isEligible() {
 		return eligible;
+	}
+
+	@Override
+	public String getId() {
+		return String.valueOf(id);  //To change body of implemented methods use File | Settings | File Templates.
 	}
 }

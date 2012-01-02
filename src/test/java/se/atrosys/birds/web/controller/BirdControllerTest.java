@@ -75,7 +75,6 @@ public class BirdControllerTest extends BaseTest {
 		final PageModel pageModel = new PageModel();
 		pageModel.setBirdModel(birdModel);
 
-
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("random");
 		modelAndView.addObject("pageModel", pageModel);
@@ -97,6 +96,17 @@ public class BirdControllerTest extends BaseTest {
 		String answer = controller.checkAnswer(birdModel.getId(), birdModel.getScientificName());
 		
 		assertNotNull(answer, "answer map is null");
+	}
+	
+	@Test
+	public void eligibleCommandModelShouldBeSet() {
+		HttpServletRequest request = mock(HttpServletRequest.class);
+		when(request.getParameter("birdid")).thenReturn("");
+		ModelAndView actual = controller.randomBird(request);
+		
+		assertNotNull(actual);
+		Object eligible = actual.getModel().get("eligible");
+		assertNotNull(eligible);
 	}
 
 	// TODO writeme

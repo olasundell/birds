@@ -150,13 +150,18 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 	// another prime example as to why SQL is peerless.
 	public BirdModel getRandomBird() {
 		String sql = "select id from birds limit 1 offset (select floor(count(*) * random()) from birds)";
+		BirdModel model = null;
 
 		Session session = getSession();
 		SQLQuery sqlQuery = session.createSQLQuery(sql);
-		String id = (String) sqlQuery.list().get(0);
+		List list = sqlQuery.list();
+		if (!list.isEmpty()) {
+			model = findById((String) list.get(0));
+		}
+		
 		session.close();
 
-		return findById(id);
+		return model;
 	}
 
 	public BirdModel findByScientificName(String name) {

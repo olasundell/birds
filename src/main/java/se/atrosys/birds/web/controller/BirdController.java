@@ -66,6 +66,11 @@ public class BirdController {
 		CommandModel commandModel = new CommandModel();
 		commandModel.setId(model.getId());
 		modelAndView.addObject("answer", commandModel);
+		
+		CommandModel ineligibleCommand = new CommandModel();
+		commandModel.setId(pageModel.getCurrentMedia().getId());
+		modelAndView.addObject("answer", commandModel);
+		
 		return modelAndView;
 	}
 

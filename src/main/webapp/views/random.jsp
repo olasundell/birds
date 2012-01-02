@@ -33,6 +33,10 @@
 		Please contact the author and report this error.
 	</c:otherwise>
 </c:choose>
+<form:form commandName="ineligible">
+	<form:hidden path="mediaId"/>
+	<button class="button-class" type="submit">Inte OK</button>
+</form:form>
 <%--Group: ${pageModel.birdModel.family.group}<br/>
 Family: ${pageModel.birdModel.family.family}<br/>
 Name: ${pageModel.birdModel.scientificName}<br/>

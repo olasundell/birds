@@ -80,11 +80,11 @@ public class PageModel {
 	}
 
 	public boolean isSoundMedia() {
-		return currentMedia.isSound();
+		return currentMedia.getType() == MediaModel.MediaType.SOUND;
 	}
 	
 	public boolean isPictureMedia() {
-		return currentMedia.isPhoto();
+		return currentMedia.getType() == MediaModel.MediaType.PHOTO;
 	}
 
 	public PhotoModel getCurrentPhoto() {

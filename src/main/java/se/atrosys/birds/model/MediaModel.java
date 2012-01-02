@@ -8,7 +8,12 @@ package se.atrosys.birds.model;
  * To change this template use File | Settings | File Templates.
  */
 public interface MediaModel {
-	boolean isSound();
-	boolean isPhoto();
+	MediaType getType();
 	boolean isEligible();
+	String getId();
+	
+	public static enum MediaType {
+		SOUND,
+		PHOTO
+	}
 }
