@@ -63,13 +63,14 @@ public class BirdController {
 		PageModel pageModel = pageModelFactory.createPageModel(model);
 		pageModel.setPreviousAnswer((String) request.getAttribute("result"));
 		modelAndView.addObject("pageModel", pageModel);
+
 		CommandModel commandModel = new CommandModel();
 		commandModel.setId(model.getId());
 		modelAndView.addObject("answer", commandModel);
 		
 		CommandModel ineligibleCommand = new CommandModel();
-		commandModel.setId(pageModel.getCurrentMedia().getId());
-		modelAndView.addObject("answer", commandModel);
+		ineligibleCommand.setId(pageModel.getCurrentMedia().getId());
+		modelAndView.addObject("eligible", ineligibleCommand);
 		
 		return modelAndView;
 	}

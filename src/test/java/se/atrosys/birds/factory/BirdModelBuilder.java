@@ -1,7 +1,10 @@
 package se.atrosys.birds.factory;
 
+import se.atrosys.birds.flickr.FlickrPhotoList;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.BirdPhotoModel;
 import se.atrosys.birds.model.FamilyModel;
+import se.atrosys.birds.model.SoundModel;
 
 public class BirdModelBuilder {
 
@@ -24,6 +27,10 @@ public class BirdModelBuilder {
 		family.addBird(birdModel);
 		family.addBird(new BirdModel());
 		family.addBird(new BirdModel());
+
+		birdModel.getPhotos().add(new BirdPhotoModel());
+		birdModel.getSounds().add(new SoundModel());
+		
 		return birdModel;
 	}
 

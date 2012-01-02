@@ -1,9 +1,13 @@
 package se.atrosys.birds.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
+import se.atrosys.birds.db.BirdDao;
+import se.atrosys.birds.db.BirdDaoImpl;
+import se.atrosys.birds.factory.BirdModelBuilder;
 import se.atrosys.birds.flickr.PhotoBuilder;
 import se.atrosys.birds.model.*;
 
@@ -20,35 +24,67 @@ import static org.testng.Assert.*;
  * To change this template use File | Settings | File Templates.
  */
 public class BirdServiceImplTest extends BaseTest {
-	@Autowired BirdService service;
+	@Autowired BirdServiceImpl service;
 	@Autowired FamilyService familyService;
 	
 	public static final String ID = "123ABC";
 	public static final String HREF = String.format("foo avibaseid=%s", ID);
 	public static final String SCIENTIFIC_NAME = "bar";
-	private final BirdModel model = new BirdModel();
+	private final BirdModel model = new BirdModelBuilder().build();
 	private static final String FAMILY_NAME = "Faaaamily";
 	private static final String GROUP_NAME = "Groupers";
 	private static final List<BirdPhotoModel> photos = new ArrayList<BirdPhotoModel>();
 	private final PhotoBuilder<BirdPhotoModel> photoBuilder = new PhotoBuilder<BirdPhotoModel>();
+	private BirdDao oldDao;
 
 	@BeforeClass
 	public void beforeClass() {
+		
 		// switch dao
+		oldDao = service.getDao();
+		
+		service.setDao(new BirdDao() {
+			public BirdModel findById(String id) {
+				return model;  //To change body of implemented methods use File | Settings | File Templates.
+			}
 
+			public List<BirdModel> findAll() {
+				List<BirdModel> list = new ArrayList<BirdModel>();
+				list.add(model);
+				return list;  //To change body of implemented methods use File | Settings | File Templates.
+			}
+
+			public void save(BirdModel model) {
+				//To change body of implemented methods use File | Settings | File Templates.
+			}
+
+			public void update(BirdModel model) {
+				//To change body of implemented methods use File | Settings | File Templates.
+			}
+
+			public void delete(BirdModel model) {
+				//To change body of implemented methods use File | Settings | File Templates.
+			}
+
+			public void shutdown() {
+				//To change body of implemented methods use File | Settings | File Templates.
+			}
+
+			public BirdModel getRandomBird() {
+				return model;
+			}
+
+			public BirdModel findByScientificName(String name) {
+				return model;  //To change body of implemented methods use File | Settings | File Templates.
+			}
+		});
 	}
 
-/*	@AfterClass
+	@AfterClass
 	public void afterClass() {
-		for (BirdModel m: service.findAll()) {
-			service.delete(m);
-		}
-		
-		for (FamilyModel m: familyService.findAll()) {
-			familyService.delete(m);
-		}
-	}*/
-
+		service.setDao(oldDao);
+	}
+	
 	// TODO disabled as it changes data. Rewrite using mocking.
 	@Test(enabled = false)
 	public void saveShouldWork() throws InstantiationException, IllegalAccessException {
@@ -100,16 +136,4 @@ public class BirdServiceImplTest extends BaseTest {
 		assertEquals(modelList.get(0).getFamily().getGroup().getGroupName(), GROUP_NAME, "group name wasn't what we expected");
 	}
 
-	@Test
-	public void shouldOnlyHaveEligibleMediaModels() {
-		BirdModel model = service.findById(ID);
-
-		for (MediaModel soundModel: model.getSounds()) {
-			assertTrue(soundModel.isEligible());
-		}
-
-		for (MediaModel photoModel: model.getPhotos()) {
-			assertTrue(photoModel.isEligible());
-		}
-	}
 }

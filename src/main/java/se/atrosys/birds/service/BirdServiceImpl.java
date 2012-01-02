@@ -73,4 +73,12 @@ public class BirdServiceImpl implements BirdService {
 	public BirdModel findByScientificName(String name) {
 		return dao.findByScientificName(name);
 	}
+
+	protected void setDao(BirdDao dao) {
+		this.dao = dao;
+	}
+
+	public BirdDao getDao() {
+		return dao;
+	}
 }

@@ -25,7 +25,7 @@ public class PageModelFactoryTest extends BaseTest {
 	
 	@BeforeMethod
 	public void beforeMethod() {
-		BirdModel birdModel = birdModelBuilder.build();
+		birdModel = birdModelBuilder.build();
 	}
 
 	@Test

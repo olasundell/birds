@@ -4,9 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.MediaModel;
+
+import java.util.List;
 
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.assertTrue;
 
 /**
  * TODO write comment
@@ -30,5 +34,22 @@ public class BirdDaoImplTest extends BaseTest {
 		assertNotNull(model, "returned randomised bird was null");
 		assertNotNull(model.getId(), "returned randomised bird had null ID");
 		assertFalse(model.getId().isEmpty(), "returned randomised bird had empty ID");
+	}
+
+
+	// TODO fix this stuff.
+	@Test(enabled = false)
+	public void shouldOnlyHaveEligibleMediaModels() {
+		List<BirdModel> list = dao.findAll();
+
+		for (BirdModel model: list) {
+			for (MediaModel soundModel: model.getSounds()) {
+				assertTrue(soundModel.isEligible());
+			}
+
+			for (MediaModel photoModel: model.getPhotos()) {
+				assertTrue(photoModel.isEligible());
+			}
+		}
 	}
 }
