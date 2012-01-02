@@ -29,10 +29,8 @@ public class BirdPhotoModel implements MediaModel, PhotoModel {
 	private String farm;
 	@Column
 	private String title;
-	@Column
+	@Column(nullable = false, columnDefinition = "BOOLEAN NOT NULL DEFAULT TRUE")
 	private boolean eligible;
-//	@ManyToOne
-//	private BirdModel bird;
 
 	public BirdPhotoModel() { }
 
@@ -180,17 +178,14 @@ public class BirdPhotoModel implements MediaModel, PhotoModel {
 		}
 	}*/
 
-	@Override
 	public boolean isSound() {
 		return false;  //To change body of implemented methods use File | Settings | File Templates.
 	}
 
-	@Override
 	public boolean isPhoto() {
 		return true;  //To change body of implemented methods use File | Settings | File Templates.
 	}
 
-	@Override
 	public boolean isEligible() {
 		return eligible;
 	}

@@ -1,11 +1,11 @@
-.hover(
+/*.hover(
 	function(){
 		$(this).addClass("ui-state-hover");
 	},
 	function(){
 		$(this).removeClass("ui-state-hover");
 	}
-)
+)*/
 var nextBirdHandler = function() {
     window.location = "/random/";
 

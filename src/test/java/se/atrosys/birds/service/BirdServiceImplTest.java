@@ -1,6 +1,7 @@
 package se.atrosys.birds.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.flickr.PhotoBuilder;
@@ -30,6 +31,11 @@ public class BirdServiceImplTest extends BaseTest {
 	private static final String GROUP_NAME = "Groupers";
 	private static final List<BirdPhotoModel> photos = new ArrayList<BirdPhotoModel>();
 	private final PhotoBuilder<BirdPhotoModel> photoBuilder = new PhotoBuilder<BirdPhotoModel>();
+
+	@BeforeClass
+	public void beforeClass() {
+		
+	}
 
 /*	@AfterClass
 	public void afterClass() {
