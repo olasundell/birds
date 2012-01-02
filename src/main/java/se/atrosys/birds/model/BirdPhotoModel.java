@@ -29,10 +29,8 @@ public class BirdPhotoModel implements MediaModel, PhotoModel {
 	private String farm;
 	@Column
 	private String title;
-	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT TRUE")
+	@Column(nullable = false, columnDefinition = "BOOLEAN NOT NULL DEFAULT TRUE")
 	private boolean eligible;
-//	@ManyToOne
-//	private BirdModel bird;
 
 	public BirdPhotoModel() { }
 
@@ -180,12 +178,10 @@ public class BirdPhotoModel implements MediaModel, PhotoModel {
 		}
 	}*/
 
-	@Override
 	public MediaType getType() {
 		return MediaType.PHOTO;
 	}
 
-	@Override
 	public boolean isEligible() {
 		return eligible;
 	}
