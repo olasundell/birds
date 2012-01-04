@@ -185,4 +185,8 @@ public class BirdPhotoModel implements MediaModel, PhotoModel {
 	public boolean isEligible() {
 		return eligible;
 	}
+
+	public void setEligible(boolean eligible) {
+		this.eligible = eligible;
+	}
 }

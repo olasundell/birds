@@ -28,8 +28,8 @@ public class DbSystemTest extends BaseTest {
 	@Autowired BirdModelListFactory birdModelListFactory;
 	@Autowired BirdService birdService;
 
-	// TODO disabled due to the fact that it changes data. Rewrite using hsql or Derby.
-	@Test(enabled = false)
+	// this test is a prerequisite for all other tests. Run first.
+	@Test(priority = -1, enabled = false)
 	public void dbShouldWork() throws CouldNotFindNamesElementException, IOException, NoFamilyException, NoSuchLanguageException, CouldNotFindDetailsException, JAXBException {
 		List<BirdModel> birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase-short.html");
 		birdService.save(birdModels.get(0));

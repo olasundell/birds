@@ -65,7 +65,7 @@ public class BirdModelFactory {
 		try {
 			birdModel.addSounds(soundModelListFactory.createList(birdModel));
 		} catch (CouldNotFindSoundsException e) {
-			logger.info(String.format("Could not add sounds to model for %s due to the following exception", birdModel.getScientificName()), e);
+			logger.info(String.format("Could not add sounds to model for %s due to the following error: %s", birdModel.getScientificName(), e.getMessage()));
 		}
 	}
 

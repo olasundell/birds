@@ -10,6 +10,7 @@ package se.atrosys.birds.model;
 public interface MediaModel {
 	MediaType getType();
 	boolean isEligible();
+	void setEligible(boolean eligible);
 	String getId();
 	
 	public static enum MediaType {

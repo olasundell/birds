@@ -40,17 +40,18 @@ public class SoundModel implements MediaModel {
 		return url.substring(url.length() - 3);
 	}
 
-	@Override
 	public MediaType getType() {
 		return MediaType.SOUND;
 	}
 
-	@Override
 	public boolean isEligible() {
 		return eligible;
 	}
 
-	@Override
+	public void setEligible(boolean eligible) {
+		this.eligible = eligible;
+	}
+
 	public String getId() {
 		return String.valueOf(id);  //To change body of implemented methods use File | Settings | File Templates.
 	}

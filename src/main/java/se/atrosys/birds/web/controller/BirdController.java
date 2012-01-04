@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import se.atrosys.birds.factory.PageModelFactory;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.MediaModel;
 import se.atrosys.birds.model.PageModel;
 import se.atrosys.birds.service.BirdService;
 
@@ -44,6 +45,11 @@ public class BirdController {
 
 		return modelAndView;
 	}
+	
+	@RequestMapping(value = "/ineliglble/", method = RequestMethod.POST)
+	public void ineligible(String mediaId) {
+
+	}
 
 	private ModelAndView doControl(HttpServletRequest request) {
 		BirdModel model;
@@ -68,11 +74,27 @@ public class BirdController {
 		commandModel.setId(model.getId());
 		modelAndView.addObject("answer", commandModel);
 		
-		CommandModel ineligibleCommand = new CommandModel();
-		ineligibleCommand.setId(pageModel.getCurrentMedia().getId());
-		modelAndView.addObject("eligible", ineligibleCommand);
+		IneligibleModel ineligibleCommand = new IneligibleModel();
+		ineligibleCommand.setMediaModel(pageModel.getCurrentMedia());
+		modelAndView.addObject("ineligible", ineligibleCommand);
 		
 		return modelAndView;
+	}
+	
+	public static class IneligibleModel {
+		private MediaModel mediaModel;
+
+		public void setMediaModel(MediaModel mediaModel) {
+			this.mediaModel = mediaModel;
+		}
+		
+		public String getId() {
+			return mediaModel.getId();
+		}
+		
+		public String getType() {
+			return mediaModel.getType().name();
+		}
 	}
 
 	public static class CommandModel {

@@ -14,6 +14,7 @@ import static org.testng.Assert.assertNotNull;
 /**
  * TODO write comment
  */
+@Test(groups = "system")
 public class FamilyServiceImplTest extends BaseTest {
 	@Autowired FamilyService familyService;
 	

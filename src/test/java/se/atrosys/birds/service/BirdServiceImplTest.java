@@ -23,6 +23,7 @@ import static org.testng.Assert.*;
  * Time: 9:11 PM
  * To change this template use File | Settings | File Templates.
  */
+@Test(groups = "system")
 public class BirdServiceImplTest extends BaseTest {
 	@Autowired BirdServiceImpl service;
 	@Autowired FamilyService familyService;
@@ -39,7 +40,7 @@ public class BirdServiceImplTest extends BaseTest {
 
 	@BeforeClass
 	public void beforeClass() {
-		
+/*
 		// switch dao
 		oldDao = service.getDao();
 		
@@ -77,16 +78,15 @@ public class BirdServiceImplTest extends BaseTest {
 			public BirdModel findByScientificName(String name) {
 				return model;  //To change body of implemented methods use File | Settings | File Templates.
 			}
-		});
+		});*/
 	}
 
-	@AfterClass
+/*	@AfterClass
 	public void afterClass() {
 		service.setDao(oldDao);
-	}
+	}*/
 	
-	// TODO disabled as it changes data. Rewrite using mocking.
-	@Test(enabled = false)
+	@Test(groups = "system")
 	public void saveShouldWork() throws InstantiationException, IllegalAccessException {
 		model.setHref(HREF);
 		model.setScientificName(SCIENTIFIC_NAME);
@@ -109,8 +109,7 @@ public class BirdServiceImplTest extends BaseTest {
 		service.save(model);
 	}
 
-//	@Test(dependsOnMethods = "saveShouldWork" )
-	@Test(enabled = false)
+	@Test(dependsOnMethods = "saveShouldWork", groups = "system")
 	public void findBasedOnIdShouldWork() {
 		BirdModel retrievedModel = service.findById(ID);
 		assertEquals(retrievedModel.getHref(), HREF, "href wasn't what we expected");
@@ -122,18 +121,25 @@ public class BirdServiceImplTest extends BaseTest {
 		assertEquals(retrievedModel.getPhotos().get(0), photos.get(0));
 	}
 	
-//	@Test(dependsOnMethods = "saveShouldWork" )
-	@Test(enabled = false)
+	@Test(dependsOnMethods = "saveShouldWork", groups = "system")
 	public void findAllShouldWork() {
 		List<BirdModel> modelList = service.findAll();
+		boolean found = false;
 
 		assertNotNull(modelList, "Model list is null");
 		assertTrue(modelList.size() > 0, "Model list size is zero");
-		assertEquals(modelList.get(0).getHref(), HREF, "href wasn't what we expected");
-		assertEquals(modelList.get(0).getId(), ID, "id wasn't what we expected");
-		assertEquals(modelList.get(0).getScientificName(), SCIENTIFIC_NAME, "scientific name wasn't what we expected");
-		assertEquals(modelList.get(0).getFamily().getFamily(), FAMILY_NAME, "family name wasn't what we expected");
-		assertEquals(modelList.get(0).getFamily().getGroup().getGroupName(), GROUP_NAME, "group name wasn't what we expected");
+		for (BirdModel birdModel: modelList) {
+			if (birdModel.getHref().equals(HREF)) {
+				assertEquals(birdModel.getHref(), HREF, "href wasn't what we expected");
+				assertEquals(birdModel.getId(), ID, "id wasn't what we expected");
+				assertEquals(birdModel.getScientificName(), SCIENTIFIC_NAME, "scientific name wasn't what we expected");
+				assertEquals(birdModel.getFamily().getFamily(), FAMILY_NAME, "family name wasn't what we expected");
+				assertEquals(birdModel.getFamily().getGroup().getGroupName(), GROUP_NAME, "group name wasn't what we expected");
+				found = true;
+			}
+		}
+		
+		assertTrue(found, "Could not find expected model");
 	}
 
 }

@@ -105,7 +105,7 @@ public class BirdControllerTest extends BaseTest {
 		ModelAndView actual = controller.randomBird(request);
 		
 		assertNotNull(actual);
-		Object eligible = actual.getModel().get("eligible");
+		Object eligible = actual.getModel().get("ineligible");
 		assertNotNull(eligible);
 	}
 
