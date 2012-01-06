@@ -4,13 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.model.BirdModel;
+import se.atrosys.birds.model.BirdNameModel;
 import se.atrosys.birds.model.MediaModel;
 
 import java.util.List;
 
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertNotNull;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 /**
  * TODO write comment
@@ -39,6 +38,25 @@ public class BirdDaoImplTest extends BaseTest {
 		assertFalse(model.getId().isEmpty(), "returned bird had empty ID");
 	}
 
+	@Test
+	public void updateShouldWork() {
+		BirdModel model = dao.findByScientificName(SCIENTIFIC_NAME);
+
+		BirdNameModel birdNameModel = new BirdNameModel();
+		birdNameModel.setBirdId(model.getId());
+		birdNameModel.setLang("English");
+		birdNameModel.setName("Whoopersnapper");
+		
+		int oldNameSize = model.getNames().size();
+		model.getNames().add(birdNameModel);
+		
+		dao.update(model);
+		
+		BirdModel updated = dao.findById(model.getId());
+		
+		assertNotNull(updated);
+		assertEquals(updated.getNames().size(), oldNameSize + 1, "Name list wasn't updated.");
+	}
 
 	// TODO fix this stuff.
 	@Test(enabled = false)

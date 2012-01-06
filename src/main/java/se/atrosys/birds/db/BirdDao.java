@@ -1,5 +1,6 @@
 package se.atrosys.birds.db;
 
+import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.model.BirdModel;
 
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
 public interface BirdDao {
 	public BirdModel findById(String id);
 	public List<BirdModel> findAll();
-	public void save(BirdModel model);
+	public void save(BirdModel model) throws NoSuchLanguageException;
 	public void update(BirdModel model);
 	public void delete(BirdModel model);
 	public void shutdown();

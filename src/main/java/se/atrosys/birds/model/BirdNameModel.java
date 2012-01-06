@@ -42,7 +42,7 @@ public class BirdNameModel {
 	public void setLang(String lang) {
 		if (this.languageModel == null) {
 			LanguageModel model = new LanguageModel();
-			model.setLanguage(lang);
+			model.setLanguage(lang.toLowerCase());
 			setLang(model);
 		}
 	}

@@ -3,18 +3,6 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<!-- Data Source -->
-<!--	<bean id="birdDbDS" class="org.apache.commons.dbcp.BasicDataSource">
-		<property regionname="driverClassName" value="org.hsqldb.jdbcDriver" />
-		<property regionname="url" value="jdbc:hsqldb:file:/home/ola/code/birds/src/main/sql/birddb;shutdown=true" />
-		<property regionname="username" value="SA" />
-		<property regionname="password" value="" />
-		<property regionname="initialSize" value="1" />
-		<property regionname="maxActive" value="5" />
-		<property regionname="poolPreparedStatements" value="true" />
-		<property regionname="maxOpenPreparedStatements" value="10" />
-	</bean>-->
-
 	<bean id="birdDbDS" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="org.postgresql.Driver" />
 		<property name="url" value="jdbc:postgresql://localhost/birds"/>

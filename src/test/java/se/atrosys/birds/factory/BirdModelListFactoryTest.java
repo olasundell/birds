@@ -29,7 +29,7 @@ import static org.testng.Assert.assertNotNull;
 public class BirdModelListFactoryTest extends BaseTest {
 	@Autowired private BirdModelListFactory birdModelListFactory;
 
-	@Test
+	@Test(enabled = false)
     public void scrapeFromAviBaseShouldReturnList() throws IOException, CouldNotFindNamesElementException, NoSuchLanguageException, NoFamilyException, CouldNotFindDetailsException, JAXBException {
         List<BirdModel> list = birdModelListFactory.scrapeFromAviBase("avibase.html");
         

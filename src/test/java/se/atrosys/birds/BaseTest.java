@@ -38,12 +38,12 @@ import static org.testng.Assert.assertNotNull;
 public class BaseTest extends AbstractTestNGSpringContextTests {
 	protected Element table;
 	Logger logger = LoggerFactory.getLogger(this.getClass());
-	@Autowired BirdModelListFactory birdModelListFactory;
-	@Autowired BirdService birdService;
+	@Autowired(required = true) BirdModelListFactory birdModelListFactory;
+	@Autowired(required = true) BirdService birdService;
 
 	// this test is a prerequisite for all other tests requiring a database.
 	@BeforeGroups(groups = "system")
-	public void dbShouldWork() throws CouldNotFindNamesElementException, IOException, NoFamilyException, NoSuchLanguageException, CouldNotFindDetailsException, JAXBException {
+	public void initDb() throws CouldNotFindNamesElementException, IOException, NoFamilyException, NoSuchLanguageException, CouldNotFindDetailsException, JAXBException {
 		List<BirdModel> birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase-short.html");
 		birdService.saveAll(birdModels);
 		List<BirdModel> list = birdService.findAll();

@@ -7,7 +7,9 @@ import se.atrosys.birds.exception.NoSuchLanguageException;
 
 import java.util.Locale;
 
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.assertTrue;
 
 /**
  * Created by IntelliJ IDEA.
@@ -16,8 +18,9 @@ import static org.testng.Assert.assertNotNull;
  * Time: 9:56 AM
  * To change this template use File | Settings | File Templates.
  */
-public class CountryNameServiceTest extends BaseTest {
-	@Autowired private CountryNameService service;
+//@Test(groups = "system")
+public class LanguageServiceTest extends BaseTest {
+	@Autowired private LanguageService service;
 
 	@Test
 	public void getLocaleForCountryDisplayNameShouldWork() throws NoSuchLanguageException {
@@ -43,6 +46,7 @@ public class CountryNameServiceTest extends BaseTest {
 
 	@Test(expectedExceptions = NoSuchLanguageException.class)
 	public void getLocaleForErronousLangStringShouldThrowException() throws NoSuchLanguageException {
-		Locale locale = service.getLocaleForCountryDisplayName("Svalaboboy");
+		service.getLocaleForCountryDisplayName("Svalaboboy");
+		assertTrue(false, "Exception wasn't thrown.");
 	}
 }

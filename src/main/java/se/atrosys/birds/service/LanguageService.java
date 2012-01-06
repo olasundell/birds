@@ -2,6 +2,7 @@ package se.atrosys.birds.service;
 
 import org.springframework.stereotype.Component;
 import se.atrosys.birds.exception.NoSuchLanguageException;
+import se.atrosys.birds.model.LanguageModel;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -15,11 +16,11 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 @Component
-public class CountryNameService {
+public class LanguageService {
 
 	private final Map<String,Locale> languageNameMap;
 
-	public CountryNameService() {
+	public LanguageService() {
 		languageNameMap = new HashMap<String, Locale>();
 		for (Locale l: Locale.getAvailableLocales()) {
 			languageNameMap.put(l.getDisplayLanguage().toLowerCase(), l);
@@ -32,4 +33,8 @@ public class CountryNameService {
 	    }
 		return languageNameMap.get(displayName.toLowerCase());
     }
+	
+	public boolean isLanguage(LanguageModel lang) {
+		return languageNameMap.containsKey(lang.getLanguage());
+	}
 }

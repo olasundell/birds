@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.model.BirdModel;
-import se.atrosys.birds.service.CountryNameService;
+import se.atrosys.birds.service.LanguageService;
 
 import javax.xml.bind.JAXBException;
 
@@ -20,7 +20,8 @@ import static org.testng.Assert.assertNotNull;
  * To change this template use File | Settings | File Templates.
  */
 public class FlickrServiceTest extends BaseTest {
-	@Autowired CountryNameService nameService;
+	@Autowired
+	LanguageService nameService;
 	@Autowired FlickrService service;
 
 	@Test

@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.db.BirdDao;
 import se.atrosys.birds.db.BirdDaoImpl;
+import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.factory.BirdModelBuilder;
 import se.atrosys.birds.flickr.PhotoBuilder;
 import se.atrosys.birds.model.*;
@@ -38,8 +39,8 @@ public class BirdServiceImplTest extends BaseTest {
 	private final PhotoBuilder<BirdPhotoModel> photoBuilder = new PhotoBuilder<BirdPhotoModel>();
 	private BirdDao oldDao;
 
-	@BeforeClass
-	public void beforeClass() {
+//	@BeforeClass
+//	public void beforeClass() {
 /*
 		// switch dao
 		oldDao = service.getDao();
@@ -79,15 +80,15 @@ public class BirdServiceImplTest extends BaseTest {
 				return model;  //To change body of implemented methods use File | Settings | File Templates.
 			}
 		});*/
-	}
+//	}
 
 /*	@AfterClass
 	public void afterClass() {
 		service.setDao(oldDao);
 	}*/
 	
-	@Test(groups = "system")
-	public void saveShouldWork() throws InstantiationException, IllegalAccessException {
+	@Test
+	public void saveShouldWork() throws InstantiationException, IllegalAccessException, NoSuchLanguageException {
 		model.setHref(HREF);
 		model.setScientificName(SCIENTIFIC_NAME);
 		photos.add(photoBuilder.build(BirdPhotoModel.class));
@@ -109,7 +110,7 @@ public class BirdServiceImplTest extends BaseTest {
 		service.save(model);
 	}
 
-	@Test(dependsOnMethods = "saveShouldWork", groups = "system")
+	@Test(dependsOnMethods = "saveShouldWork")
 	public void findBasedOnIdShouldWork() {
 		BirdModel retrievedModel = service.findById(ID);
 		assertEquals(retrievedModel.getHref(), HREF, "href wasn't what we expected");
@@ -121,7 +122,7 @@ public class BirdServiceImplTest extends BaseTest {
 		assertEquals(retrievedModel.getPhotos().get(0), photos.get(0));
 	}
 	
-	@Test(dependsOnMethods = "saveShouldWork", groups = "system")
+	@Test(dependsOnMethods = "saveShouldWork")
 	public void findAllShouldWork() {
 		List<BirdModel> modelList = service.findAll();
 		boolean found = false;

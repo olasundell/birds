@@ -16,7 +16,7 @@ import se.atrosys.birds.flickr.FlickrPhotoList;
 import se.atrosys.birds.flickr.FlickrService;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.RegionModel;
-import se.atrosys.birds.service.CountryNameService;
+import se.atrosys.birds.service.LanguageService;
 
 import javax.xml.bind.JAXBException;
 import java.io.File;
@@ -32,7 +32,8 @@ import java.util.Locale;
  */
 @Component
 public class BirdModelFactory {
-	@Autowired CountryNameService nameService;
+	@Autowired
+	LanguageService nameService;
 	@Autowired FlickrService flickrService;
 	@Autowired private ScarcityFactory scarcityFactory;
 	@Autowired SoundModelListFactory soundModelListFactory;

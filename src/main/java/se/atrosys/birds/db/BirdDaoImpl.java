@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
+import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.model.*;
+import se.atrosys.birds.service.LanguageService;
 
 import java.util.HashSet;
 import java.util.List;
@@ -23,6 +25,8 @@ import java.util.Set;
 @Repository("birdDao")
 public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 	@Autowired BirdPhotoDao birdPhotoDao;
+	@Autowired LanguageService languageService;
+	
 	public BirdModel findById(String id) {
 		HibernateTemplate hibernateTemplate = getHibernateTemplate();
 		Session session = hibernateTemplate.getSessionFactory().openSession();
@@ -53,7 +57,7 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		return list;
 	}
 
-	public void save(BirdModel model) {
+	public void save(BirdModel model) throws NoSuchLanguageException {
 		HibernateTemplate hibernateTemplate = getHibernateTemplate();
 		Session session = hibernateTemplate.getSessionFactory().openSession();
 		Transaction transaction = session.beginTransaction();
@@ -81,9 +85,19 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		Query languageQuery = session.createQuery("from se.atrosys.birds.model.LanguageModel where language = ?");
 		
 		for (BirdNameModel birdNameModel: model.getNames()) {
+			if (!languageService.isLanguage(birdNameModel.getLang())) {
+				throw new NoSuchLanguageException(String.format("Could not find language %s", birdNameModel.getLang().getLanguage()));
+			}
+
 			languageQuery.setText(0, birdNameModel.getLang().getLanguage());
 			if (languageQuery.list().isEmpty()) {
-				session.save(birdNameModel.getLang());
+				Session langSession = getHibernateTemplate().getSessionFactory().openSession();
+				Transaction langTransaction = langSession.beginTransaction();
+
+				langSession.save(birdNameModel.getLang());
+
+				langTransaction.commit();
+				langSession.close();
 			}
 			session.save(birdNameModel);
 		}

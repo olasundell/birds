@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import se.atrosys.birds.db.BirdDao;
+import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.factory.BirdModelListFactory;
 import se.atrosys.birds.model.BirdModel;
 
@@ -34,7 +35,7 @@ public class BirdServiceImpl implements BirdService {
 		return dao.findAll();
 	}
 
-	public void save(BirdModel model) {
+	public void save(BirdModel model) throws NoSuchLanguageException {
 		if (familyService.findById(model.getFamily().getFamily()) == null) {
 			familyService.save(model.getFamily());
 		}
@@ -52,7 +53,7 @@ public class BirdServiceImpl implements BirdService {
 		dao.delete(model);
 	}
 
-	public void saveAll(List<BirdModel> birdModels) {
+	public void saveAll(List<BirdModel> birdModels) throws NoSuchLanguageException {
 		for (BirdModel model: birdModels) {
 			if (findById(model.getId()) != null) {
 				update(model);

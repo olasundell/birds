@@ -31,7 +31,7 @@ public class BirdModel {
 	private FamilyModel family;
 //	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "bird")
 //	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name ="BIRD_ID", referencedColumnName = "ID")
 	private List<BirdNameModel> birdNameModels;
 	@ManyToMany(cascade = CascadeType.ALL )
@@ -77,7 +77,7 @@ public class BirdModel {
 	    BirdNameModel birdNameModel = new BirdNameModel();
 	    birdNameModel.setLang(lang.getDisplayLanguage());
 	    birdNameModel.setName(name);
-//	    birdNameModel.setBird(this);
+	    birdNameModel.setBirdId(this.getId());
 
 	    birdNameModels.add(birdNameModel);
     }

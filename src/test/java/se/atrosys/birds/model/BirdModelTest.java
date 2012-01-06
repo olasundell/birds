@@ -40,7 +40,7 @@ public class BirdModelTest extends BaseTest {
 		birdNameModels.add(e);
 		model.setNames(birdNameModels);
 		
-		assertTrue(model.getNameMap().containsKey(english));
+		assertTrue(model.getNameMap().containsKey(english.toLowerCase()));
 		assertTrue(model.getNameMap().containsValue(parakeet));
 	}
 }
