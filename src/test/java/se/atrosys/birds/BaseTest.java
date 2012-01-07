@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeGroups;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import se.atrosys.birds.exception.CouldNotFindDetailsException;
@@ -41,18 +42,26 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
 	@Autowired(required = true) BirdModelListFactory birdModelListFactory;
 	@Autowired(required = true) BirdService birdService;
 
-	// this test is a prerequisite for all other tests requiring a database.
-	@BeforeGroups(groups = "system")
-	public void initDb() throws CouldNotFindNamesElementException, IOException, NoFamilyException, NoSuchLanguageException, CouldNotFindDetailsException, JAXBException {
-		List<BirdModel> birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase-short.html");
-		birdService.saveAll(birdModels);
-		List<BirdModel> list = birdService.findAll();
+/*	@Override
+	@BeforeSuite
+	protected void springTestContextPrepareTestInstance() throws Exception {
+		super.springTestContextPrepareTestInstance();
+	}*/
 
-		assertNotNull(list);
-		assertFalse(list.isEmpty());
-		assertNotNull(list.get(0).getFamily());
-		assertNotNull(list.get(0).getNames(), "Names list is null");
-		assertFalse(list.get(0).getNames().isEmpty(), "Names list is empty");
+	// this test is a prerequisite for all other tests requiring a database.
+	@BeforeMethod(groups = "system")
+	public void initDb() throws CouldNotFindNamesElementException, IOException, NoFamilyException, NoSuchLanguageException, CouldNotFindDetailsException, JAXBException {
+		if (birdService.findAll().size() == 0) {
+			List<BirdModel> birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase-short.html");
+			birdService.saveAll(birdModels);
+			List<BirdModel> list = birdService.findAll();
+
+			assertNotNull(list);
+			assertFalse(list.isEmpty());
+			assertNotNull(list.get(0).getFamily());
+			assertNotNull(list.get(0).getNames(), "Names list is null");
+			assertFalse(list.get(0).getNames().isEmpty(), "Names list is empty");
+		}
 	}
 
 	public BaseTest() {

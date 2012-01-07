@@ -14,6 +14,7 @@ import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.MediaModel;
 import se.atrosys.birds.model.PageModel;
 import se.atrosys.birds.service.BirdService;
+import se.atrosys.birds.service.MediaService;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -29,7 +30,8 @@ public class BirdController {
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired BirdService birdService;
 	@Autowired PageModelFactory pageModelFactory;
-	
+	@Autowired private MediaService mediaService;
+
 	@RequestMapping(value = "/random/", method = RequestMethod.POST)
 	public @ResponseBody String checkAnswer(@RequestParam String choice, @RequestParam String id) {
 		if (birdService.findByScientificName(choice.replace('_', ' ')).getId().equals(id)) {
@@ -47,8 +49,9 @@ public class BirdController {
 	}
 	
 	@RequestMapping(value = "/ineliglble/", method = RequestMethod.POST)
-	public void ineligible(String mediaId) {
-
+	public ModelAndView ineligible(HttpServletRequest request, String mediaId, String mediaType) {
+		mediaService.setIneligible(mediaId, mediaType);
+		return doControl(request);
 	}
 
 	private ModelAndView doControl(HttpServletRequest request) {
@@ -63,8 +66,15 @@ public class BirdController {
 		} else {
 			model = birdService.getRandomBird();
 		}
-
+		
 		ModelAndView modelAndView = new ModelAndView();
+		
+		if (model == null) {
+			modelAndView.setViewName("error");
+			
+			return modelAndView;
+		}
+
 		modelAndView.setViewName("random");
 		PageModel pageModel = pageModelFactory.createPageModel(model);
 		pageModel.setPreviousAnswer((String) request.getAttribute("result"));

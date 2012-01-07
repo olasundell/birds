@@ -7,7 +7,6 @@ import se.atrosys.birds.model.FamilyModel;
 import se.atrosys.birds.model.SoundModel;
 
 public class BirdModelBuilder {
-
 	private final BirdModel birdModel;
 	private String scientificName;
 	private String href;
@@ -28,8 +27,13 @@ public class BirdModelBuilder {
 		family.addBird(new BirdModel());
 		family.addBird(new BirdModel());
 
-		birdModel.getPhotos().add(new BirdPhotoModel());
-		birdModel.getSounds().add(new SoundModel());
+		BirdPhotoModel photoModel = new BirdPhotoModel();
+		photoModel.setEligible(true);
+		birdModel.getPhotos().add(photoModel);
+
+		SoundModel soundModel = new SoundModel();
+		soundModel.setEligible(true);
+		birdModel.getSounds().add(soundModel);
 		
 		return birdModel;
 	}
