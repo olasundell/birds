@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import se.atrosys.birds.exception.CouldNotFindMediaException;
 import se.atrosys.birds.factory.PageModelFactory;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.MediaModel;
@@ -50,7 +51,11 @@ public class BirdController {
 	
 	@RequestMapping(value = "/ineliglble/", method = RequestMethod.POST)
 	public ModelAndView ineligible(HttpServletRequest request, String mediaId, String mediaType) {
-		mediaService.setIneligible(mediaId, mediaType);
+		try {
+			mediaService.setIneligible(mediaId, mediaType);
+		} catch (CouldNotFindMediaException e) {
+			logger.error("Could not find media", e);
+		}
 		return doControl(request);
 	}
 

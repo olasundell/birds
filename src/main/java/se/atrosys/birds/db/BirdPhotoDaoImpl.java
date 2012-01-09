@@ -6,6 +6,7 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.BirdPhotoModel;
+import se.atrosys.birds.model.MediaModel;
 
 import java.util.List;
 

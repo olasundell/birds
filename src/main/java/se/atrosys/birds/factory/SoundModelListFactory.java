@@ -26,7 +26,8 @@ import java.util.List;
 @Component
 public class SoundModelListFactory {
 	@Autowired FileFetcher fileFetcher;
-	
+	@Autowired SoundModelFactory soundModelFactory;
+
 	public List<SoundModel> createList(BirdModel birdModel) throws CouldNotFindSoundsException {
 		List<SoundModel> soundModels = new ArrayList<SoundModel>();
 		String fileUrl = String.format("/home/ola/code/birds/sounds/%s", birdModel.getScientificName().replace(' ', '-'));
@@ -65,12 +66,7 @@ public class SoundModelListFactory {
 		Elements mp3List = table.getElementsByAttributeValueContaining("href", match);
 
 		for (Element mp3: mp3List) {
-			SoundModel soundModel = new SoundModel();
-			soundModel.setURL(mp3.attr("href"));
-
-			soundModels.add(soundModel);
-			// TODO write factory
-//			soundModelFactory.createModel(mp3.attr("href"));
+			soundModels.add(soundModelFactory.createModel(mp3.attr("href")));
 		}
 	}
 

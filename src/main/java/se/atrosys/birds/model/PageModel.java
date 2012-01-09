@@ -1,7 +1,5 @@
 package se.atrosys.birds.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -80,11 +78,11 @@ public class PageModel {
 	}
 
 	public boolean isSoundMedia() {
-		return currentMedia.getType() == MediaModel.MediaType.SOUND;
+		return currentMedia.getType() == MediaType.SOUND;
 	}
 	
 	public boolean isPictureMedia() {
-		return currentMedia.getType() == MediaModel.MediaType.PHOTO;
+		return currentMedia.getType() == MediaType.PHOTO;
 	}
 
 	public PhotoModel getCurrentPhoto() {

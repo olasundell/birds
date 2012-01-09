@@ -12,9 +12,5 @@ public interface MediaModel {
 	boolean isEligible();
 	void setEligible(boolean eligible);
 	String getId();
-	
-	public static enum MediaType {
-		SOUND,
-		PHOTO
-	}
+
 }

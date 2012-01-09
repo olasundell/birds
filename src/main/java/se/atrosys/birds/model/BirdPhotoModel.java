@@ -42,6 +42,7 @@ public class BirdPhotoModel implements MediaModel, PhotoModel {
 		setSecret(photo.getSecret());
 		setServer(photo.getServer());
 		setTitle(photo.getTitle());
+		setEligible(true);
 	}
 
 	public String getId() {
