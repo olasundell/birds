@@ -47,8 +47,9 @@
 		Please contact the author and report this error.
 	</c:otherwise>
 </c:choose>
-<form:form commandName="ineligible">
-	<form:hidden path="id"/>
+<form:form commandName="ineligible" action="/ineligible/">
+	<form:hidden path="mediaId"/>
+	<form:hidden path="mediaType"/>
 	<button class="button-class" type="submit">Inte OK</button>
 </form:form>
 <%--Group: ${pageModel.birdModel.family.group}<br/>
@@ -57,12 +58,12 @@ Name: ${pageModel.birdModel.scientificName}<br/>
 <c:forEach items="${pageModel.birdModel.names}" var="name">
 ${name.lang}: ${name.name}<br/>
 </c:forEach>--%>
-<form:form commandName="answer" id="answerform">
+<form:form commandName="answer" id="answerform" action="/random/">
     <form:hidden path="id" />
 	<ul>
 	<c:forEach items="${pageModel.siblings}" var="sibling">
 		<%--<div><form:radiobutton path="choice" id="${sibling.scientificName}" value="${sibling.scientificName}"/>${sibling.nameMap["Swedish"]}</div><br/>--%>
-		<li id="${sibling.scientificNameUnderscore}"><form:radiobutton path="choice" value="${sibling.scientificNameUnderscore}"/>${sibling.nameMap["Swedish"]}</li>
+		<li id="${sibling.scientificNameUnderscore}"><form:radiobutton path="choice" value="${sibling.scientificNameUnderscore}"/>${sibling.nameMap["swedish"]}</li>
 	</c:forEach>
 	<li><button class="button-class" type="submit" id="answerbutton">Svara</button></li>
 	</ul>

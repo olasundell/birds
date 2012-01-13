@@ -49,7 +49,7 @@ public class BirdController {
 		return modelAndView;
 	}
 	
-	@RequestMapping(value = "/ineliglble/", method = RequestMethod.POST)
+	@RequestMapping(value = "/ineligible/", method = RequestMethod.POST)
 	public ModelAndView ineligible(HttpServletRequest request, String mediaId, String mediaType) {
 		try {
 			mediaService.setIneligible(mediaId, mediaType);
@@ -103,11 +103,11 @@ public class BirdController {
 			this.mediaModel = mediaModel;
 		}
 		
-		public String getId() {
+		public String getMediaId() {
 			return mediaModel.getId();
 		}
 		
-		public String getType() {
+		public String getMediaType() {
 			return mediaModel.getType().name();
 		}
 	}

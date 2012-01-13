@@ -31,7 +31,7 @@ public class PageModelFactory {
 
 			BirdModel remove = familyBirds.remove(random.nextInt(familyBirds.size()));
 
-			if (remove.equals(model)) {
+			if (remove.equals(model) || !remove.getNameMap().containsKey("swedish")) {
 				i--;
 				continue;
 			}
