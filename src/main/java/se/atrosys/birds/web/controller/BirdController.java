@@ -12,10 +12,11 @@ import org.springframework.web.servlet.ModelAndView;
 import se.atrosys.birds.exception.CouldNotFindMediaException;
 import se.atrosys.birds.factory.PageModelFactory;
 import se.atrosys.birds.model.BirdModel;
-import se.atrosys.birds.model.MediaModel;
 import se.atrosys.birds.model.PageModel;
 import se.atrosys.birds.service.BirdService;
 import se.atrosys.birds.service.MediaService;
+import se.atrosys.birds.web.model.CommandModel;
+import se.atrosys.birds.web.model.IneligibleCommandModel;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -89,47 +90,11 @@ public class BirdController {
 		commandModel.setId(model.getId());
 		modelAndView.addObject("answer", commandModel);
 		
-		IneligibleModel ineligibleCommand = new IneligibleModel();
-		ineligibleCommand.setMediaModel(pageModel.getCurrentMedia());
-		modelAndView.addObject("ineligible", ineligibleCommand);
+		IneligibleCommandModel ineligibleCommandCommand = new IneligibleCommandModel();
+		ineligibleCommandCommand.setMediaModel(pageModel.getCurrentMedia());
+		modelAndView.addObject("ineligible", ineligibleCommandCommand);
 		
 		return modelAndView;
 	}
-	
-	public static class IneligibleModel {
-		private MediaModel mediaModel;
 
-		public void setMediaModel(MediaModel mediaModel) {
-			this.mediaModel = mediaModel;
-		}
-		
-		public String getMediaId() {
-			return mediaModel.getId();
-		}
-		
-		public String getMediaType() {
-			return mediaModel.getType().name();
-		}
-	}
-
-	public static class CommandModel {
-		private String choice;
-		private String id;
-
-		public String getChoice() {
-			return choice;
-		}
-
-		public void setChoice(String choice) {
-			this.choice = choice;
-		}
-
-		public String getId() {
-			return id;
-		}
-
-		public void setId(String id) {
-			this.id = id;
-		}
-	}
 }

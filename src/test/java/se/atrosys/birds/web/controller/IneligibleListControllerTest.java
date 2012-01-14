@@ -5,6 +5,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 
 /**
@@ -18,5 +19,7 @@ public class IneligibleListControllerTest extends BaseTest {
 		ModelAndView modelAndView = controller.list();
 
 		assertNotNull(modelAndView, "Expected an instance.");
+        assertEquals(modelAndView.getViewName(), "listineligible", "Wrong view name");
+        assertNotNull(modelAndView.getModel().get("ieModel"), "Model instance is null");
 	}
 }

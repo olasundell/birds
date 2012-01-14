@@ -15,6 +15,7 @@ import se.atrosys.birds.service.BirdService;
 import se.atrosys.birds.service.BirdServiceImpl;
 import se.atrosys.birds.service.MediaService;
 import se.atrosys.birds.service.MediaServiceImpl;
+import se.atrosys.birds.web.model.CommandModel;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -90,7 +91,7 @@ public class BirdControllerTest extends BaseTest {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("random");
 		modelAndView.addObject("pageModel", pageModel);
-		modelAndView.addObject("command", new BirdController.CommandModel());
+		modelAndView.addObject("command", new CommandModel());
 		
 		return modelAndView;
 	}
