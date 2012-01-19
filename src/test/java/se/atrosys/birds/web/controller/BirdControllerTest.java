@@ -184,7 +184,12 @@ public class BirdControllerTest extends BaseTest {
 			return null;
 		}
 
-		@Override
+        @Override
+        public void clearAll() {
+            //To change body of implemented methods use File | Settings | File Templates.
+        }
+
+        @Override
 		public BirdModel findById(String id) {
 			if (birdModel.getId().equals(id)) {
 				return birdModel;

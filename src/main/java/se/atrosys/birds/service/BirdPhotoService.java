@@ -2,6 +2,7 @@ package se.atrosys.birds.service;
 
 import se.atrosys.birds.model.BirdPhotoModel;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -19,4 +20,6 @@ public interface BirdPhotoService {
 	public void delete(BirdPhotoModel model);
 	public void saveAll(List<BirdPhotoModel> birdModels);
 	public void shutdown();
+
+    Collection<? extends BirdPhotoModel> findAllIneligible();
 }

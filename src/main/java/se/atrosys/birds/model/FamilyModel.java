@@ -1,5 +1,7 @@
 package se.atrosys.birds.model;
 
+import org.hibernate.annotations.ForeignKey;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +16,7 @@ public class FamilyModel {
 	@Column(name = "FAMILY_NAME")
 	private String family;
 	@OneToMany(mappedBy = "family")
+    @ForeignKey(name = "FK_FAMILY_BIRDS")
 	private List<BirdModel> birds;
 	@ManyToOne
 	@JoinColumn(name="GROUP_NAME")

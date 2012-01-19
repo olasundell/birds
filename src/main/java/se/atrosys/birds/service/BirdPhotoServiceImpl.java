@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import se.atrosys.birds.db.BirdPhotoDao;
 import se.atrosys.birds.model.BirdPhotoModel;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -54,4 +55,9 @@ public class BirdPhotoServiceImpl implements BirdPhotoService {
 	public void shutdown() {
 		dao.shutdown();
 	}
+
+    @Override
+    public Collection<? extends BirdPhotoModel> findAllIneligible() {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
 }

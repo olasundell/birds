@@ -22,4 +22,6 @@ public interface BirdService {
 	public void shutdown();
 	public BirdModel getRandomBird();
 	public BirdModel findByScientificName(String choice);
+
+    void clearAll();
 }

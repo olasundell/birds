@@ -17,7 +17,8 @@
 
 	<bean id="birdDbDS" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver" />
-		<property name="url" value="jdbc:derby:birds;create=true"/>
+		<property name="url" value="jdbc:derby:memory:birds;create=true;traceFile=/tmp/derbytrace.out"/>
+		<!--;traceDirectory=/home/ola/code/birds/"/>-->
 		<property name="poolPreparedStatements" value="true" />
 		<property name="maxOpenPreparedStatements" value="10" />
 	</bean>
@@ -31,6 +32,9 @@
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.DerbyDialect</prop>
 				<prop key="hibernate.hbm2ddl.auto">create</prop>
+                <prop key="hibernate.hbm2ddl.export">true</prop>
+                <prop key="hibernate.hbm2ddl.outputfilename">birds.ddl</prop>
+                <!--<prop key="hibernate.show_sql">true</prop>-->
 			</props>
 		</property>
 
@@ -46,5 +50,7 @@
 	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
+
+    <!--<bean id="localContainerFB" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"/>-->
 
 </beans>

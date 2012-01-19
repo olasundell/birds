@@ -1,5 +1,6 @@
 package se.atrosys.birds.model;
 
+import org.hibernate.annotations.ForeignKey;
 import org.slf4j.LoggerFactory;
 import se.atrosys.birds.flickr.FlickrPhoto;
 import se.atrosys.birds.flickr.FlickrPhotoList;
@@ -33,15 +34,20 @@ public class BirdModel {
 //	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name ="BIRD_ID", referencedColumnName = "ID")
+    @ForeignKey(name = "FK_NAMES")
 	private List<BirdNameModel> birdNameModels;
-	@ManyToMany(cascade = CascadeType.ALL )
+	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "BIRD_ID")
+    @ForeignKey(name = "FK_PHOTOS")
+    @JoinTable(name = "BIRDS_PHOTOS_JT")
 	private List<BirdPhotoModel> birdPhotos;
 
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
+    @ForeignKey(name = "FK_SCARCITY")
 	private List<RegionalScarcityModel> regionalScarcity;
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ForeignKey(name = "FK_SOUNDS")
 	private List<SoundModel> sounds;
 
 	@Transient

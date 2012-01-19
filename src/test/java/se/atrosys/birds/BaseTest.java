@@ -1,10 +1,15 @@
 package se.atrosys.birds;
 
+import org.hibernate.cfg.Configuration;
+import org.hibernate.ejb.Ejb3Configuration;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeGroups;
@@ -27,6 +32,7 @@ import java.util.List;
 
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.assertTrue;
 
 /**
  * Created by IntelliJ IDEA.
@@ -41,6 +47,10 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired(required = true) BirdModelListFactory birdModelListFactory;
 	@Autowired(required = true) BirdService birdService;
+//    @Autowired LocalContainerEntityManagerFactoryBean fb;
+    @Autowired AnnotationSessionFactoryBean sessionFactoryBean;
+
+    private static List<BirdModel> birdModels;
 
 /*	@Override
 	@BeforeSuite
@@ -51,17 +61,28 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
 	// this test is a prerequisite for all other tests requiring a database.
 	@BeforeMethod(groups = "system")
 	public void initDb() throws CouldNotFindNamesElementException, IOException, NoFamilyException, NoSuchLanguageException, CouldNotFindDetailsException, JAXBException {
-		if (birdService.findAll().size() == 0) {
-			List<BirdModel> birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase-short.html");
-			birdService.saveAll(birdModels);
-			List<BirdModel> list = birdService.findAll();
+        if (birdModels == null || birdModels.isEmpty()) {
+            birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase-short.html");
+        }
 
-			assertNotNull(list);
-			assertFalse(list.isEmpty());
-			assertNotNull(list.get(0).getFamily());
-			assertNotNull(list.get(0).getNames(), "Names list is null");
-			assertFalse(list.get(0).getNames().isEmpty(), "Names list is empty");
-		}
+        if (!birdService.findAll().isEmpty()) {
+//            new SchemaExport(new Configuration());
+//            birdService.clearAll();
+            Ejb3Configuration cfg = new Ejb3Configuration();
+            Ejb3Configuration configured = cfg.configure();
+            SchemaExport schemaExport = new SchemaExport(configured.getHibernateConfiguration());
+            schemaExport.create(true, false);
+        }
+        assertTrue(birdService.findAll().isEmpty(), "Could not clear birds.");
+
+        birdService.saveAll(birdModels);
+        List<BirdModel> list = birdService.findAll();
+
+        assertNotNull(list);
+        assertFalse(list.isEmpty());
+        assertNotNull(list.get(0).getFamily());
+        assertNotNull(list.get(0).getNames(), "Names list is null");
+        assertFalse(list.get(0).getNames().isEmpty(), "Names list is empty");
 	}
 
 	public BaseTest() {

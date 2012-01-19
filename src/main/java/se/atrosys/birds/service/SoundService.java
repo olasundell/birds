@@ -6,6 +6,7 @@ import se.atrosys.birds.db.SoundDao;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.SoundModel;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -25,4 +26,8 @@ public class SoundService {
 	public SoundModel findById(String id) {
 		return dao.findById(id);
 	}
+
+    public Collection<? extends SoundModel> findAllIneligible() {
+        return dao.findAllIneligible();
+    }
 }

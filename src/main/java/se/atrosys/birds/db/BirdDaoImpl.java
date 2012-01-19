@@ -91,13 +91,13 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 
 			languageQuery.setText(0, birdNameModel.getLang().getLanguage());
 			if (languageQuery.list().isEmpty()) {
-				Session langSession = getHibernateTemplate().getSessionFactory().openSession();
-				Transaction langTransaction = langSession.beginTransaction();
+//				Session langSession = getHibernateTemplate().getSessionFactory().openSession();
+//				Transaction langTransaction = langSession.beginTransaction();
 
-				langSession.save(birdNameModel.getLang());
+				session.save(birdNameModel.getLang());
 
-				langTransaction.commit();
-				langSession.close();
+//				langTransaction.commit();
+//				langSession.close();
 			}
 			session.save(birdNameModel);
 		}
@@ -197,7 +197,28 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		return model;
 	}
 
-	private void retrieveLazyBindings(BirdModel model) {
+    @Override
+    public void clearAll() {
+        getHibernateTemplate().getSessionFactory().close();
+/*
+        Session session = getHibernateTemplate().getSessionFactory().openSession();
+
+        Transaction transaction = session.getTransaction();
+        transaction.begin();
+
+        session.createSQLQuery("delete from BIRDS_PHOTOS_JT").executeUpdate();
+        session.createSQLQuery("delete from BIRDS_REGIONAL_SCARCITY").executeUpdate();
+        session.createSQLQuery("delete from REGIONAL_SCARCITY").executeUpdate();
+        session.createSQLQuery("delete from BIRDS_SOUNDS").executeUpdate();
+        session.createSQLQuery("delete from BIRD_NAMES").executeUpdate();
+        session.createSQLQuery("delete from BIRDS").executeUpdate();
+        session.createSQLQuery("delete from LANGUAGES").executeUpdate();
+
+        transaction.commit();
+        session.close();*/
+    }
+
+    private void retrieveLazyBindings(BirdModel model) {
 		if (model != null) {
 			retrieveBirdModelLazyBindings(model);
 			for (BirdModel birdModel: model.getFamily().getBirds()) {

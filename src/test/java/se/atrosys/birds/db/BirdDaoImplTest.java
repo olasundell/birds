@@ -73,4 +73,11 @@ public class BirdDaoImplTest extends BaseTest {
 			}
 		}
 	}
+    
+    @Test
+    public void clearAllShouldClearAll() {
+        assertFalse(dao.findAll().isEmpty());
+        dao.clearAll();
+        assertTrue(dao.findAll().isEmpty());
+    }
 }

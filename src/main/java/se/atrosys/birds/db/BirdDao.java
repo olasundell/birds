@@ -23,4 +23,6 @@ public interface BirdDao {
 	BirdModel getRandomBird();
 
 	BirdModel findByScientificName(String name);
+
+    void clearAll();
 }
