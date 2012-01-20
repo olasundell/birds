@@ -4,9 +4,8 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+import org.springframework.orm.hibernate3.HibernateAccessor;
 import org.springframework.stereotype.Repository;
-import se.atrosys.birds.model.MediaModel;
 import se.atrosys.birds.model.SoundModel;
 
 import java.util.Collection;
@@ -16,7 +15,7 @@ import java.util.List;
  * TODO write comment
  */
 @Repository("soundDao")
-public class SoundDaoImpl extends HibernateDaoSupport implements SoundDao {
+public class SoundDaoImpl extends BirdDaoHibernateSupport implements SoundDao {
 	@Override
 	public void update(SoundModel model) {
 		getHibernateTemplate().update(model);
@@ -41,6 +40,7 @@ public class SoundDaoImpl extends HibernateDaoSupport implements SoundDao {
 
     @Autowired
 	public void init( SessionFactory sessionFactory ) {
-		setSessionFactory( sessionFactory );
+		super.init(sessionFactory);
+		getHibernateTemplate().setFlushMode(HibernateAccessor.FLUSH_ALWAYS);
 	}
 }

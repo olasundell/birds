@@ -1,6 +1,7 @@
 package se.atrosys.birds.db;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.model.BirdModel;
@@ -14,7 +15,7 @@ import static org.testng.Assert.*;
 /**
  * TODO write comment
  */
-@Test(groups = "system")
+
 public class BirdDaoImplTest extends BaseTest {
 	private static final String SCIENTIFIC_NAME = "Anser fabalis";
 	@Autowired BirdDao dao;
@@ -74,7 +75,7 @@ public class BirdDaoImplTest extends BaseTest {
 		}
 	}
     
-    @Test
+    @Test(enabled = false)
     public void clearAllShouldClearAll() {
         assertFalse(dao.findAll().isEmpty());
         dao.clearAll();

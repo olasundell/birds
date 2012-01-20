@@ -11,7 +11,7 @@ import se.atrosys.birds.BaseTest;
  * To change this template use File | Settings | File Templates.
  */
 public class SoundDaoImplTest extends BaseTest {
-    @Test
+//    @Test
 //    Collection<? extends SoundModel> findAllIneligible();
     public void findAllIneligibleShouldReturnValidList() {
         

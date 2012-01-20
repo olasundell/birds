@@ -17,7 +17,7 @@ import static org.testng.Assert.*;
 public class IneligibleListControllerTest extends BaseTest {
 	@Autowired IneligibleListController controller;
 
-	@Test
+//	@Test
 	public void controllerShouldSetView() {
 		ModelAndView modelAndView = controller.list();
 
@@ -25,7 +25,7 @@ public class IneligibleListControllerTest extends BaseTest {
         assertEquals(modelAndView.getViewName(), "listineligible", "Wrong view name");
     }
     
-    @Test
+//    @Test
     public void controllerShouldSetModel() {
         ModelAndView modelAndView = controller.list();
 
@@ -33,7 +33,7 @@ public class IneligibleListControllerTest extends BaseTest {
         assertNotNull(modelAndView.getModel().get("ieModel"), "Model instance is null");
 	}
     
-    @Test
+//    @Test
     public void modelShouldContainPhotos() {
         ModelAndView modelAndView = controller.list();
 

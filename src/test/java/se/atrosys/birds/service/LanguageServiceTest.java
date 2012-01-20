@@ -18,7 +18,7 @@ import static org.testng.Assert.assertTrue;
  * Time: 9:56 AM
  * To change this template use File | Settings | File Templates.
  */
-//@Test(groups = "system")
+@Test(groups = "system")
 public class LanguageServiceTest extends BaseTest {
 	@Autowired private LanguageService service;
 

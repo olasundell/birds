@@ -2,7 +2,6 @@ package se.atrosys.birds.db;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 import se.atrosys.birds.model.BirdNameModel;
 
@@ -16,7 +15,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Repository("birdNameDao")
-public class BirdNameDaoImpl extends HibernateDaoSupport implements BirdNameDao {
+public class BirdNameDaoImpl extends BirdDaoHibernateSupport implements BirdNameDao {
 	public BirdNameModel findById(String id) {
 		return getHibernateTemplate().get(BirdNameModel.class, id);
 	}
@@ -43,6 +42,6 @@ public class BirdNameDaoImpl extends HibernateDaoSupport implements BirdNameDao 
 
 	@Autowired
 	public void init( SessionFactory sessionFactory ) {
-		setSessionFactory( sessionFactory );
+		super.init(sessionFactory);
 	}
 }
