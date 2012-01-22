@@ -17,12 +17,8 @@ public class SoundModel implements MediaModel {
 	private int id;
 	@Column
 	private String url;
-	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT TRUE")
-	private boolean eligible;
-
-/*	public int getId() {
-		return id;
-	}*/
+	@Column(nullable = false)
+	private boolean eligible = true;
 
 	public void setId(int id) {
 		this.id = id;

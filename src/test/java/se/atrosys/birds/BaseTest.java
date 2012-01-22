@@ -65,17 +65,17 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
             birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase-short.html");
         }
 
-        if (!birdService.findAll().isEmpty()) {
+        if (birdService.findAll().isEmpty()) {
 //            new SchemaExport(new Configuration());
 //            birdService.clearAll();
-            Ejb3Configuration cfg = new Ejb3Configuration();
+/*            Ejb3Configuration cfg = new Ejb3Configuration();
             Ejb3Configuration configured = cfg.configure();
             SchemaExport schemaExport = new SchemaExport(configured.getHibernateConfiguration());
-            schemaExport.create(true, false);
+            schemaExport.create(true, false);*/
+            birdService.saveAll(birdModels);
         }
-        assertTrue(birdService.findAll().isEmpty(), "Could not clear birds.");
+//        assertTrue(birdService.findAll().isEmpty(), "Could not clear birds.");
 
-        birdService.saveAll(birdModels);
         List<BirdModel> list = birdService.findAll();
 
         assertNotNull(list);

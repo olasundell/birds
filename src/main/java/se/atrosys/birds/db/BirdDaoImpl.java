@@ -62,6 +62,24 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		Session session = hibernateTemplate.getSessionFactory().openSession();
 		Transaction transaction = session.beginTransaction();
 
+        for (BirdNameModel birdNameModel: model.getNames()) {
+            if (!languageService.isLanguage(birdNameModel.getLang())) {
+                throw new NoSuchLanguageException(String.format("Could not find language %s", birdNameModel.getLang().getLanguage()));
+            }
+
+            Query languageQuery = session.createQuery("from se.atrosys.birds.model.LanguageModel where language = ?");
+            languageQuery.setText(0, birdNameModel.getLang().getLanguage());
+            if (languageQuery.list().isEmpty()) {
+                Session langSession = getHibernateTemplate().getSessionFactory().openSession();
+                Transaction langTransaction = langSession.beginTransaction();
+
+                session.save(birdNameModel.getLang());
+
+                langTransaction.commit();
+                langSession.close();
+            }
+        }
+
 		session.save(model);
 
 		Set<RegionModel> regionModelSet = new HashSet<RegionModel>();
@@ -82,23 +100,9 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 			session.save(regionalScarcityModel);
 		}
 		
-		Query languageQuery = session.createQuery("from se.atrosys.birds.model.LanguageModel where language = ?");
-		
-		for (BirdNameModel birdNameModel: model.getNames()) {
-			if (!languageService.isLanguage(birdNameModel.getLang())) {
-				throw new NoSuchLanguageException(String.format("Could not find language %s", birdNameModel.getLang().getLanguage()));
-			}
 
-			languageQuery.setText(0, birdNameModel.getLang().getLanguage());
-			if (languageQuery.list().isEmpty()) {
-//				Session langSession = getHibernateTemplate().getSessionFactory().openSession();
-//				Transaction langTransaction = langSession.beginTransaction();
 
-				session.save(birdNameModel.getLang());
-
-//				langTransaction.commit();
-//				langSession.close();
-			}
+        for (BirdNameModel birdNameModel: model.getNames()) {
 			session.save(birdNameModel);
 		}
 
@@ -238,6 +242,7 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 
 		for (SoundModel soundModel: model.getSounds()) {
 			soundModel.getURL();
+            soundModel.isEligible();
 		}
 
 		for (RegionalScarcityModel regionalScarcityModel:  model.getRegionalScarcity()) {
