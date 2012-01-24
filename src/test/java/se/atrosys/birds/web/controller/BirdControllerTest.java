@@ -1,6 +1,7 @@
 package se.atrosys.birds.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.web.servlet.ModelAndView;
 import org.testng.Assert;
@@ -9,20 +10,16 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.exception.NoSuchLanguageException;
-import se.atrosys.birds.factory.BirdModelBuilder;
+import se.atrosys.birds.factory.BirdModelCollectionBuilder;
 import se.atrosys.birds.model.*;
 import se.atrosys.birds.service.BirdService;
 import se.atrosys.birds.service.BirdServiceImpl;
 import se.atrosys.birds.service.MediaService;
-import se.atrosys.birds.service.MediaServiceImpl;
 import se.atrosys.birds.web.model.CommandModel;
 
 import javax.servlet.http.HttpServletRequest;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -36,32 +33,27 @@ import static org.testng.Assert.*;
  * To change this template use File | Settings | File Templates.
  */
 public class BirdControllerTest extends BaseTest {
-	public static final String HREF = "bar avibaseid=321";
-	public static final String SCIENTIFIC_NAME = "Scifinameisch";
 	@Autowired BirdController controller;
 	private BirdModel birdModel;
 	private BirdModel otherBirdModel;
 	private BirdServiceImpl oldBirdService;
 	private static final String FAULTY_ID = "FAAAAULTY";
-	private MediaServiceImpl oldMediaService;
+	private MediaService oldMediaService;
+    @Autowired BirdModelCollectionBuilder birdModelCollectionBuilder;
+    @Qualifier("stubMediaService")
+    @Autowired MediaService stubMediaService;
 
 	@BeforeMethod
 	protected void setUp() throws Exception {
-		birdModel = new BirdModelBuilder().setHref(HREF).setScientificName(SCIENTIFIC_NAME).build();
-		otherBirdModel = new BirdModelBuilder().setHref("ladlas avibaseid=1231231").setScientificName("foobar").build();
-		
 		oldBirdService = (BirdServiceImpl) ReflectionTestUtils.getField(controller, "birdService");
-		oldMediaService = (MediaServiceImpl) ReflectionTestUtils.getField(controller, "mediaService");
-		
-		List<MediaModel> mediaModels = new ArrayList<MediaModel>();
-		mediaModels.addAll(birdModel.getPhotos());
-		mediaModels.addAll(birdModel.getSounds());
-		mediaModels.addAll(otherBirdModel.getPhotos());
-		mediaModels.addAll(otherBirdModel.getSounds());
+		oldMediaService = (MediaService) ReflectionTestUtils.getField(controller, "mediaService");
 
+        List<BirdModel> build = birdModelCollectionBuilder.getLastCollection();
+        birdModel = build.get(0);
+        otherBirdModel = build.get(1);
+        
 		ReflectionTestUtils.setField(controller, "birdService", new TestBirdServiceImpl());
-		ReflectionTestUtils.setField(controller, "mediaService", new TestMediaServiceImpl(mediaModels));
-		
+		ReflectionTestUtils.setField(controller, "mediaService", stubMediaService);
 	}
 
 	@AfterMethod
@@ -154,7 +146,7 @@ public class BirdControllerTest extends BaseTest {
 
 		controller.ineligible(request, photoModel.getId(), photoModel.getType().toString());
 
-		assertFalse(photoModel.isEligible());
+		assertFalse(photoModel.isEligible(), "Photo model should have been ineligible, but isn't");
 	}
 	
 	@Test
@@ -236,31 +228,4 @@ public class BirdControllerTest extends BaseTest {
 		}
 	}
 
-	private class TestMediaServiceImpl implements MediaService {
-		Map<String, MediaModel> modelMap;
-		int mediaId = 0;
-		
-		public TestMediaServiceImpl(List<MediaModel> mediaModels) {
-			modelMap = new HashMap<String, MediaModel>();
-			for (MediaModel model: mediaModels) {
-				if (model.getId() == null || model.getId().isEmpty() || modelMap.containsKey(model.getId())) {
-					switch (model.getType()) {
-					case PHOTO :
-						((BirdPhotoModel)model).setId(String.valueOf(mediaId++));
-						break;
-					case SOUND :
-						((SoundModel)model).setId(mediaId++);
-						break;
-					}
-				}
-				
-				modelMap.put(model.getId(), model);
-			}
-		}
-
-		@Override
-		public void setIneligible(String mediaId, String mediaType) {
-			modelMap.get(mediaId).setEligible(false);
-		}
-	}
 }

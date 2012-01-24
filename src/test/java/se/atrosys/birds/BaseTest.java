@@ -41,7 +41,7 @@ import static org.testng.Assert.assertTrue;
  * Time: 10:34 AM
  * To change this template use File | Settings | File Templates.
  */
-@ContextConfiguration(locations = "classpath:META-INF/spring/context.xml")
+@ContextConfiguration(locations = { "classpath:META-INF/spring/context.xml", "classpath:META-INF/spring/services.xml" } )
 public class BaseTest extends AbstractTestNGSpringContextTests {
 	protected Element table;
 	Logger logger = LoggerFactory.getLogger(this.getClass());

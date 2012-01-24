@@ -7,10 +7,8 @@ import se.atrosys.birds.exception.CouldNotFindSoundsException;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.SoundModel;
 import se.atrosys.birds.util.FileFetcher;
-import se.atrosys.birds.util.FileFetcherImpl;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 

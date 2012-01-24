@@ -1,12 +1,9 @@
 package se.atrosys.birds.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.db.BirdDao;
-import se.atrosys.birds.db.BirdDaoImpl;
 import se.atrosys.birds.exception.NoSuchLanguageException;
 import se.atrosys.birds.factory.BirdModelBuilder;
 import se.atrosys.birds.flickr.PhotoBuilder;
