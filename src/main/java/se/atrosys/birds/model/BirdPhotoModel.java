@@ -29,8 +29,9 @@ public class BirdPhotoModel implements MediaModel, PhotoModel {
 	private String farm;
 	@Column
 	private String title;
-	@Column(nullable = false, columnDefinition = "BOOLEAN NOT NULL DEFAULT TRUE")
-	private boolean eligible;
+//	@Column(nullable = false, columnDefinition = "BOOLEAN NOT NULL DEFAULT TRUE")
+	@Column(nullable = false)
+	private boolean eligible = true;
 
 	public BirdPhotoModel() { }
 

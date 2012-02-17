@@ -1,11 +1,13 @@
 package se.atrosys.birds.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.exception.CouldNotFindMediaException;
+import se.atrosys.birds.factory.BirdModelCollectionBuilder;
 import se.atrosys.birds.model.*;
 
 import java.util.List;
@@ -20,6 +22,7 @@ public class MediaServiceImplTest extends BaseTest {
 	@Autowired MediaService mediaService;
 	@Autowired BirdPhotoService birdPhotoService;
 	@Autowired SoundService soundService;
+    @Autowired BirdModelCollectionBuilder birdModelCollectionBuilder;
 	
 	BirdPhotoModel photoMedia;
 	SoundModel soundMedia;

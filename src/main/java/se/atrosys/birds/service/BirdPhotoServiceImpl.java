@@ -58,6 +58,6 @@ public class BirdPhotoServiceImpl implements BirdPhotoService {
 
     @Override
     public Collection<? extends BirdPhotoModel> findAllIneligible() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return dao.findAllIneligible();  //To change body of implemented methods use File | Settings | File Templates.
     }
 }

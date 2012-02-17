@@ -255,6 +255,7 @@ public class BirdDaoImpl extends BirdDaoHibernateSupport implements BirdDao {
 
 		for (SoundModel soundModel: model.getSounds()) {
 			soundModel.getURL();
+            soundModel.isEligible();
 		}
 
 		for (RegionalScarcityModel regionalScarcityModel:  model.getRegionalScarcity()) {

@@ -66,11 +66,11 @@ public class BirdDaoImplTest extends BaseTest {
 
 		for (BirdModel model: list) {
 			for (MediaModel soundModel: model.getSounds()) {
-				assertTrue(soundModel.isEligible());
+				assertTrue(soundModel.isEligible(), String.format("Sound model %s isn't eligible", soundModel.getId()));
 			}
 
 			for (MediaModel photoModel: model.getPhotos()) {
-				assertTrue(photoModel.isEligible());
+				assertTrue(photoModel.isEligible(), String.format("Photo model %s isn't eligible", photoModel.getId()));
 			}
 		}
 	}
