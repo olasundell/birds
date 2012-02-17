@@ -39,7 +39,6 @@ public class BirdModel {
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "BIRD_ID")
     @ForeignKey(name = "FK_PHOTOS")
-    @JoinTable(name = "BIRDS_PHOTOS_JT")
 	private List<BirdPhotoModel> birdPhotos;
 
 	@OneToMany(cascade = CascadeType.ALL)

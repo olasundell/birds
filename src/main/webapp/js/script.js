@@ -16,17 +16,16 @@
       success: function(data, textStatus, jqXHR) {
         $('#' + data).addClass('correct');
         $('#answerbutton').text('Nästa');
-        return $('#answerbutton').click(nextBirdHandler);
+        return $('#answerbutton').click(function() {
+          return nextBirdHandler;
+        });
       }
     });
     return false;
   };
 
   $(function() {
-    var _this = this;
-    return $("#answerbutton").bind(click(function() {
-      return submitAnswerHandler;
-    }));
+    return $("#answerbutton").click(submitAnswerHandler);
   });
 
 }).call(this);

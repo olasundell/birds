@@ -17,5 +17,5 @@ submitAnswerHandler = ->
 	false
 
 $ ->
-	$("#answerbutton").bind click => submitAnswerHandler
+	$("#answerbutton").click(submitAnswerHandler)
 
