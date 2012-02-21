@@ -5,7 +5,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.HibernateTemplate;
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.FamilyModel;
@@ -17,7 +16,7 @@ import java.util.List;
  * TODO write comment
  */
 @Repository("groupDao")
-public class GroupDaoImpl extends HibernateDaoSupport implements GroupDao {
+public class GroupDaoImpl extends BirdDaoHibernateSupport implements GroupDao {
 	public GroupModel findById(String id) {
 		HibernateTemplate hibernateTemplate = getHibernateTemplate();
 		Session session = hibernateTemplate.getSessionFactory().openSession();
@@ -69,12 +68,8 @@ public class GroupDaoImpl extends HibernateDaoSupport implements GroupDao {
 		getHibernateTemplate().delete(model);
 	}
 
-	public void shutdown() {
-		getHibernateTemplate().getSessionFactory().openSession().createSQLQuery("SHUTDOWN").executeUpdate();
-	}
-
 	@Autowired
 	public void init( SessionFactory sessionFactory ) {
-		setSessionFactory(sessionFactory);
+		super.init(sessionFactory);
 	}
 }

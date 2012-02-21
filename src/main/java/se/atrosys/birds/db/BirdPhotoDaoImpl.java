@@ -4,11 +4,9 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 import se.atrosys.birds.model.BirdModel;
 import se.atrosys.birds.model.BirdPhotoModel;
-import se.atrosys.birds.model.MediaModel;
 
 import java.util.Collection;
 import java.util.List;
@@ -21,7 +19,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Repository("birdPhotoDao")
-public class BirdPhotoDaoImpl extends HibernateDaoSupport implements BirdPhotoDao {
+public class BirdPhotoDaoImpl extends BirdDaoHibernateSupport implements BirdPhotoDao {
 	public BirdPhotoModel findById(String id) {
 		return getHibernateTemplate().get(BirdPhotoModel.class, id);
 	}
@@ -70,6 +68,6 @@ public class BirdPhotoDaoImpl extends HibernateDaoSupport implements BirdPhotoDa
 
 	@Autowired
 	public void init( SessionFactory sessionFactory ) {
-		setSessionFactory( sessionFactory );
+		super.init(sessionFactory);
 	}
 }

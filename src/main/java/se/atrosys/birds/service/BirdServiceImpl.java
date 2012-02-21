@@ -76,7 +76,11 @@ public class BirdServiceImpl implements BirdService {
 	}
 
     public void clearAll() {
-        dao.clearAll();
+		dao.deleteAll();
+/*		for (BirdModel model: findAll()) {
+			dao.delete(model);
+		}*/
+//        dao.clearAll();
     }
 
     protected void setDao(BirdDao dao) {

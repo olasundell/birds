@@ -3,6 +3,7 @@ package se.atrosys.birds.db;
 import org.hibernate.*;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate3.HibernateAccessor;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
@@ -23,7 +24,7 @@ import java.util.Set;
  */
 
 @Repository("birdDao")
-public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
+public class BirdDaoImpl extends BirdDaoHibernateSupport implements BirdDao {
 	@Autowired BirdPhotoDao birdPhotoDao;
 	@Autowired LanguageService languageService;
 	
@@ -60,25 +61,28 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 	public void save(BirdModel model) throws NoSuchLanguageException {
 		HibernateTemplate hibernateTemplate = getHibernateTemplate();
 		Session session = hibernateTemplate.getSessionFactory().openSession();
+		session.flush();
 		Transaction transaction = session.beginTransaction();
 
-        for (BirdNameModel birdNameModel: model.getNames()) {
-            if (!languageService.isLanguage(birdNameModel.getLang())) {
-                throw new NoSuchLanguageException(String.format("Could not find language %s", birdNameModel.getLang().getLanguage()));
-            }
+		for (BirdNameModel birdNameModel: model.getNames()) {
+			LanguageModel lang = birdNameModel.getLang();
+			if (!languageService.isLanguage(lang)) {
+				throw new NoSuchLanguageException(String.format("Could not find language %s", lang.getLanguage()));
+			}
 
-            Query languageQuery = session.createQuery("from se.atrosys.birds.model.LanguageModel where language = ?");
-            languageQuery.setText(0, birdNameModel.getLang().getLanguage());
-            if (languageQuery.list().isEmpty()) {
-                Session langSession = getHibernateTemplate().getSessionFactory().openSession();
-                Transaction langTransaction = langSession.beginTransaction();
+			Query languageQuery = session.createQuery("from se.atrosys.birds.model.LanguageModel where language = ?");
+			languageQuery.setText(0, lang.getLanguage());
+			if (languageQuery.list().isEmpty()) {
+//				Session langSession = getHibernateTemplate().getSessionFactory().openSession();
+//				Transaction langTransaction = langSession.beginTransaction();
 
-                session.save(birdNameModel.getLang());
+				session.save(lang);
 
-                langTransaction.commit();
-                langSession.close();
-            }
-        }
+//				langTransaction.commit();
+//				langSession.close();
+			}
+		}
+
 
 		session.save(model);
 
@@ -101,8 +105,7 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		}
 		
 
-
-        for (BirdNameModel birdNameModel: model.getNames()) {
+		for (BirdNameModel birdNameModel: model.getNames()) {
 			session.save(birdNameModel);
 		}
 
@@ -159,6 +162,16 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 
 	public void delete(BirdModel model) {
 		getHibernateTemplate().delete(model);
+		model.setId(null);
+	}
+	
+	public void deleteAll() {
+		List<BirdModel> birdModels = findAll();
+		getHibernateTemplate().deleteAll(birdModels);
+		
+		for (BirdModel model: birdModels) {
+			model.setId(null);
+		}
 	}
 
 	public void shutdown() {
@@ -250,8 +263,4 @@ public class BirdDaoImpl extends HibernateDaoSupport implements BirdDao {
 		}
 	}
 
-	@Autowired
-    public void init( SessionFactory sessionFactory ) {
-        setSessionFactory( sessionFactory );
-    }
 }

@@ -46,4 +46,28 @@ public class RegionalScarcityModel {
 	public void setBird(BirdModel bird) {
 		this.birdModel = bird;
 	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		RegionalScarcityModel that = (RegionalScarcityModel) o;
+
+		if (id != that.id) return false;
+		if (birdModel != null ? !birdModel.equals(that.birdModel) : that.birdModel != null) return false;
+		if (regionModel != null ? !regionModel.equals(that.regionModel) : that.regionModel != null) return false;
+		if (scarcity != that.scarcity) return false;
+
+		return true;
+	}
+
+	@Override
+	public int hashCode() {
+		int result = id;
+		result = 31 * result + (birdModel != null ? birdModel.hashCode() : 0);
+		result = 31 * result + (regionModel != null ? regionModel.hashCode() : 0);
+		result = 31 * result + (scarcity != null ? scarcity.hashCode() : 0);
+		return result;
+	}
 }

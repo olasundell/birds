@@ -209,5 +209,9 @@ public class BirdModel {
 	public void addSounds(List<SoundModel> list) {
 		sounds.addAll(list);
 		
-	}	
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 }
