@@ -12,7 +12,7 @@
 </head>
 <body>
 <%--TODO add button toolbar--%>
-<span id="toolbar" class="ui-widget-header ui-corner-all">
+<%--<span id="toolbar" class="ui-widget-header ui-corner-all">
 	<span id="media" class="ui-buttonset">
 		<input type="radio" id="all" name="repeat" checked="checked" class="ui-helper-hidden-accessible">
 			<label for="all" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left" aria-pressed="false" role="button" aria-disabled="false">
@@ -27,7 +27,7 @@
 				<span class="ui-button-text">Endast bilder</span>
 			</label>
 	</span>
-</span>
+</span>--%>
 
 <br/>
 
