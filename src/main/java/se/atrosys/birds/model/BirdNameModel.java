@@ -62,4 +62,12 @@ public class BirdNameModel {
 	public void setBirdId(String birdId) {
 		this.birdId = birdId;
 	}
+
+    @Override
+    public String toString() {
+        return "BirdNameModel{" +
+                "name='" + name + '\'' +
+                ", languageModel=" + languageModel +
+                '}';
+    }
 }
