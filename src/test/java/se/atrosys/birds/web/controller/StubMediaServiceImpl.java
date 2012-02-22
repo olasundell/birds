@@ -1,7 +1,5 @@
 package se.atrosys.birds.web.controller;
 
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import se.atrosys.birds.exception.CouldNotFindMediaException;
 import se.atrosys.birds.model.BirdPhotoModel;
 import se.atrosys.birds.model.MediaModel;
@@ -51,11 +49,16 @@ class StubMediaServiceImpl implements MediaService {
     }
 
     @Override
-    public MediaModel setIneligible(String mediaId, MediaType mediaType) throws CouldNotFindMediaException {
+    public MediaModel setEligibility(String mediaId, MediaType mediaType, boolean eligible) throws CouldNotFindMediaException {
         return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
-    @Override
+	@Override
+	public MediaModel setEligible(String mediaId, String mediaType) throws CouldNotFindMediaException {
+		return null;  //To change body of implemented methods use File | Settings | File Templates.
+	}
+
+	@Override
     public void update(MediaModel model) {
     }
 }

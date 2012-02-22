@@ -7,12 +7,12 @@ submitAnswerHandler = ->
 	dataString = 'choice='+currentName + '&id='+$("#id").val()
 
 	$.ajax '/random/',
-			type: 'POST'
-			data: dataString
-			success: (data, textStatus, jqXHR) ->
-				$('#'+data).addClass('correct')
-				$('#answerbutton').text('Nästa')
-				$('#answerbutton').click(nextBirdHandler)
+		type: 'POST'
+		data: dataString
+		success: (data, textStatus, jqXHR) ->
+			$("#"+data).addClass("correct")
+			$("#answerbutton").text('Nästa')
+			$("#answerbutton").click(nextBirdHandler)
 
 	false
 

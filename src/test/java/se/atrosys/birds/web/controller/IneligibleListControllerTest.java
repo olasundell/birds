@@ -31,7 +31,7 @@ public class IneligibleListControllerTest extends BaseTest {
     @Autowired MediaService mediaService;
 
 /*    @BeforeClass
-    public void setIneligible() throws CouldNotFindMediaException {
+    public void setEligibility() throws CouldNotFindMediaException {
     }
     
     @AfterClass

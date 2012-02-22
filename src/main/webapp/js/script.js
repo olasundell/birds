@@ -14,11 +14,9 @@
       type: 'POST',
       data: dataString,
       success: function(data, textStatus, jqXHR) {
-        $('#' + data).addClass('correct');
-        $('#answerbutton').text('Nästa');
-        return $('#answerbutton').click(function() {
-          return nextBirdHandler;
-        });
+        $("#" + data).addClass("correct");
+        $("#answerbutton").text('Nästa');
+        return $("#answerbutton").click(nextBirdHandler);
       }
     });
     return false;

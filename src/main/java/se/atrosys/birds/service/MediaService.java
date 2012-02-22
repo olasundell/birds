@@ -10,6 +10,7 @@ import se.atrosys.birds.model.MediaType;
  */
 public interface MediaService {
 	MediaModel setIneligible(String mediaId, String mediaType) throws CouldNotFindMediaException;
-    MediaModel setIneligible(String mediaId, MediaType mediaType) throws CouldNotFindMediaException;
-    void update(MediaModel model);
+    MediaModel setEligibility(String mediaId, MediaType mediaType, boolean eligible) throws CouldNotFindMediaException;
+	MediaModel setEligible(String mediaId, String mediaType) throws CouldNotFindMediaException;
+	void update(MediaModel model);
 }

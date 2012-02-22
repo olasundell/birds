@@ -21,18 +21,18 @@ public class MediaServiceImpl implements MediaService {
 
     @Override
 	public MediaModel setIneligible(String mediaId, String mediaType) throws CouldNotFindMediaException {
-        return setIneligible(mediaId, MediaType.valueOf(mediaType));
+        return setEligibility(mediaId, MediaType.valueOf(mediaType), false);
     }
     
     @Override
-    public MediaModel setIneligible(String mediaId, MediaType mediaType) throws CouldNotFindMediaException {
+    public MediaModel setEligibility(String mediaId, MediaType mediaType, boolean eligible) throws CouldNotFindMediaException {
 		switch (mediaType) {
 		case PHOTO:
 			BirdPhotoModel birdPhotoModel = birdPhotoDao.findById(mediaId);
 			if (birdPhotoModel == null) {
 				throw new CouldNotFindMediaException(mediaId, MediaType.PHOTO);
 			}
-			birdPhotoModel.setEligible(false);
+			birdPhotoModel.setEligible(eligible);
 			birdPhotoDao.update(birdPhotoModel);
             return birdPhotoModel;
 		case SOUND:
@@ -48,7 +48,12 @@ public class MediaServiceImpl implements MediaService {
 		}
 	}
 
-    @Override
+	@Override
+	public MediaModel setEligible(String mediaId, String mediaType) throws CouldNotFindMediaException {
+		return setEligibility(mediaId, MediaType.valueOf(mediaType), true);
+	}
+
+	@Override
     public void update(MediaModel model) {
         switch (model.getType()) {
         case SOUND : 
