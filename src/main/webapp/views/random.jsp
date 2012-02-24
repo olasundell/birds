@@ -9,6 +9,14 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/script.js"></script>
+
+	<script type="text/javascript" src="../audio-player/audio-player.js"></script>
+	<script type="text/javascript">
+		AudioPlayer.setup("http://localhost:8080/audio-player/player.swf", {
+			width: 290
+		});
+	</script>
+
 </head>
 <body>
 <%--TODO add button toolbar--%>
@@ -33,11 +41,15 @@
 
 <c:choose>
 	<c:when test="${pageModel.soundMedia}">
-		<audio controls autoplay autobuffer>
-			<%--<source src="${pageModel.sound.URL}" type="${pageModel.sound.type}" />--%>
-			<source src="${pageModel.currentSound.URL}" />
-			Your browser does not support the audio element.
+		<audio id="audioplayer" controls="controls" src="${pageModel.currentSound.URL}" type="${pageModel.currentSound.type}">
+			<%--Your browser does not support the audio element.--%>
 		</audio>
+		<script type="text/javascript">
+			var audioTag = document.createElement('audio');
+			if (!(!!(audioTag.canPlayType) && ("no" != audioTag.canPlayType("audio/mpeg")) && ("" != audioTag.canPlayType("audio/mpeg")))) {
+				AudioPlayer.embed("audioplayer", {soundFile: "${pageModel.currentSound.URL}"});
+			}
+		</script>
 	</c:when>
 	<c:when test="${pageModel.pictureMedia}">
 		<img src="${pageModel.currentPhoto.url}"/><br/>
@@ -50,7 +62,7 @@
 <form:form commandName="ineligible" action="/ineligible/">
 	<form:hidden path="mediaId"/>
 	<form:hidden path="mediaType"/>
-	<button class="button-class" type="submit">Inte OK</button>
+	<button id="ineligiblebutton" class="button-class" type="submit">Inte OK</button>
 </form:form>
 <%--Group: ${pageModel.birdModel.family.group}<br/>
 Family: ${pageModel.birdModel.family.family}<br/>
