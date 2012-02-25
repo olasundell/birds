@@ -152,4 +152,8 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<scm>
+		<connection>scm:git:git@github.com:olasundell/birds.git</connection>
+	</scm>
 </project>
