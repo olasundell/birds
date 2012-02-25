@@ -2,7 +2,7 @@
   var ineligibleHandler, nextBirdHandler, submitAnswerHandler;
 
   nextBirdHandler = function() {
-    window.location = "/random/";
+    window.location = "";
     return false;
   };
 
@@ -11,11 +11,11 @@
     mediaId = $('input[name=mediaId]').val();
     mediaType = $('input[name=mediaType]').val();
     dataString = 'mediaId=' + mediaId + "&mediaType=" + mediaType;
-    $.ajax('/ineligible/', {
+    $.ajax("../ineligible/", {
       type: 'POST',
       data: dataString,
       success: function(data, textStatus, jqXHR) {
-        return window.location = "/random/";
+        return window.location = "";
       }
     });
     return false;
@@ -25,7 +25,7 @@
     var currentName, dataString;
     currentName = $('input[name=choice]:checked').val();
     dataString = 'choice=' + currentName + '&id=' + $("#id").val();
-    $.ajax('/random/', {
+    $.ajax($('document.location').href, {
       type: 'POST',
       data: dataString,
       success: function(data, textStatus, jqXHR) {

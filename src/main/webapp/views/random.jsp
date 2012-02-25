@@ -5,14 +5,16 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
+	<%--<base href="/" target="_blank"/>--%>
 	<title>A random bird.</title>
-	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/script.js"></script>
+	<script type="text/javascript" src="../js/script.js"></script>
 
 	<script type="text/javascript" src="../audio-player/audio-player.js"></script>
 	<script type="text/javascript">
-		AudioPlayer.setup("http://localhost:8080/audio-player/player.swf", {
+//		AudioPlayer.setup("http://localhost:8080/audio-player/player.swf", {
+		AudioPlayer.setup("../audio-player/player.swf", {
 			width: 290
 		});
 	</script>

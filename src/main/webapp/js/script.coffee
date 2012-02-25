@@ -1,23 +1,23 @@
 nextBirdHandler = ->
-	window.location = "/random/"
+	window.location = ""
 	false
 
 ineligibleHandler = ->
 	mediaId = $('input[name=mediaId]').val()
 	mediaType = $('input[name=mediaType]').val()
 	dataString = 'mediaId='+mediaId+"&mediaType="+mediaType
-	$.ajax '/ineligible/',
+	$.ajax "../ineligible/",
 		type: 'POST'
 		data: dataString
 		success: (data, textStatus, jqXHR) ->
-			window.location = "/random/"
+			window.location = ""
 	false
 
 submitAnswerHandler = ->
 	currentName = $('input[name=choice]:checked').val()
 	dataString = 'choice='+currentName + '&id='+$("#id").val()
 
-	$.ajax '/random/',
+	$.ajax $('document.location').href,
 		type: 'POST'
 		data: dataString
 		success: (data, textStatus, jqXHR) ->
@@ -29,6 +29,5 @@ submitAnswerHandler = ->
 
 $ ->
 	$("#answerbutton").click(submitAnswerHandler)
-#	$("#ineligliblebutton").click(ineligibleHandler)
 	$("#ineligiblebutton").click(ineligibleHandler)
 
