@@ -1,3 +1,4 @@
+<%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
 <%--<jsp:useBean id="birdModel" scope="request" type="se.atrosys.birds.model.BirdModel"/>--%>
 <jsp:useBean id="pageModel" scope="request" type="se.atrosys.birds.model.PageModel" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -42,15 +43,7 @@
 
 <c:choose>
 	<c:when test="${pageModel.soundMedia}">
-		<audio id="audioplayer" controls="controls" src="${pageModel.currentSound.URL}" type="${pageModel.currentSound.type}">
-			<%--Your browser does not support the audio element.--%>
-		</audio>
-		<script type="text/javascript">
-			var audioTag = document.createElement('audio');
-			if (!(!!(audioTag.canPlayType) && ("no" != audioTag.canPlayType("audio/mpeg")) && ("" != audioTag.canPlayType("audio/mpeg")))) {
-				AudioPlayer.embed("audioplayer", {soundFile: "${pageModel.currentSound.URL}"});
-			}
-		</script>
+		<tags:audioplayer currentSound="${pageModel.currentSound}"/>
 	</c:when>
 	<c:when test="${pageModel.pictureMedia}">
 		<img src="${pageModel.currentPhoto.url}"/><br/>
