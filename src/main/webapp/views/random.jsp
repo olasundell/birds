@@ -1,5 +1,4 @@
 <%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
-<%--<jsp:useBean id="birdModel" scope="request" type="se.atrosys.birds.model.BirdModel"/>--%>
 <jsp:useBean id="pageModel" scope="request" type="se.atrosys.birds.model.PageModel" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
