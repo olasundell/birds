@@ -5,7 +5,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-	<%--<base href="/" target="_blank"/>--%>
 	<title>A simple game of identifying birds.</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -52,17 +51,13 @@
 		Please contact the author and report this error.
 	</c:otherwise>
 </c:choose>
+
 <form:form commandName="ineligible" action="/ineligible/">
 	<form:hidden path="mediaId"/>
 	<form:hidden path="mediaType"/>
 	<button id="ineligiblebutton" class="button-class" type="submit">Inte OK</button>
 </form:form>
-<%--Group: ${pageModel.birdModel.family.group}<br/>
-Family: ${pageModel.birdModel.family.family}<br/>
-Name: ${pageModel.birdModel.scientificName}<br/>
-<c:forEach items="${pageModel.birdModel.names}" var="name">
-${name.lang}: ${name.name}<br/>
-</c:forEach>--%>
+
 <form:form commandName="answer" id="answerform" action="/random/">
     <form:hidden path="id" />
 	<ul>
