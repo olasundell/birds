@@ -1,8 +1,23 @@
 (function() {
-  var nextBirdHandler, submitAnswerHandler;
+  var ineligibleHandler, nextBirdHandler, submitAnswerHandler;
 
   nextBirdHandler = function() {
-    window.location = "/random/";
+    window.location = "";
+    return false;
+  };
+
+  ineligibleHandler = function() {
+    var dataString, mediaId, mediaType;
+    mediaId = $('input[name=mediaId]').val();
+    mediaType = $('input[name=mediaType]').val();
+    dataString = 'mediaId=' + mediaId + "&mediaType=" + mediaType;
+    $.ajax("../ineligible/", {
+      type: 'POST',
+      data: dataString,
+      success: function(data, textStatus, jqXHR) {
+        return window.location = "";
+      }
+    });
     return false;
   };
 
@@ -10,7 +25,7 @@
     var currentName, dataString;
     currentName = $('input[name=choice]:checked').val();
     dataString = 'choice=' + currentName + '&id=' + $("#id").val();
-    $.ajax('/random/', {
+    $.ajax($('document.location').href, {
       type: 'POST',
       data: dataString,
       success: function(data, textStatus, jqXHR) {
@@ -23,7 +38,8 @@
   };
 
   $(function() {
-    return $("#answerbutton").click(submitAnswerHandler);
+    $("#answerbutton").click(submitAnswerHandler);
+    return $("#ineligiblebutton").click(ineligibleHandler);
   });
 
 }).call(this);

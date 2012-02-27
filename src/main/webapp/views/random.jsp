@@ -1,14 +1,22 @@
-<%--<jsp:useBean id="birdModel" scope="request" type="se.atrosys.birds.model.BirdModel"/>--%>
+<%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
 <jsp:useBean id="pageModel" scope="request" type="se.atrosys.birds.model.PageModel" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-	<title>A random bird.</title>
-	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	<title>A simple game of identifying birds.</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/script.js"></script>
+	<script type="text/javascript" src="../js/script.js"></script>
+
+	<script type="text/javascript" src="../audio-player/audio-player.js"></script>
+	<script type="text/javascript">
+		AudioPlayer.setup("../audio-player/player.swf", {
+			width: 290
+		});
+	</script>
+
 </head>
 <body>
 <%--TODO add button toolbar--%>
@@ -33,11 +41,7 @@
 
 <c:choose>
 	<c:when test="${pageModel.soundMedia}">
-		<audio controls autoplay autobuffer>
-			<%--<source src="${pageModel.sound.URL}" type="${pageModel.sound.type}" />--%>
-			<source src="${pageModel.currentSound.URL}" />
-			Your browser does not support the audio element.
-		</audio>
+		<tags:audioplayer currentSound="${pageModel.currentSound}"/>
 	</c:when>
 	<c:when test="${pageModel.pictureMedia}">
 		<img src="${pageModel.currentPhoto.url}"/><br/>
@@ -47,17 +51,13 @@
 		Please contact the author and report this error.
 	</c:otherwise>
 </c:choose>
+
 <form:form commandName="ineligible" action="/ineligible/">
 	<form:hidden path="mediaId"/>
 	<form:hidden path="mediaType"/>
-	<button class="button-class" type="submit">Inte OK</button>
+	<button id="ineligiblebutton" class="button-class" type="submit">Inte OK</button>
 </form:form>
-<%--Group: ${pageModel.birdModel.family.group}<br/>
-Family: ${pageModel.birdModel.family.family}<br/>
-Name: ${pageModel.birdModel.scientificName}<br/>
-<c:forEach items="${pageModel.birdModel.names}" var="name">
-${name.lang}: ${name.name}<br/>
-</c:forEach>--%>
+
 <form:form commandName="answer" id="answerform" action="/random/">
     <form:hidden path="id" />
 	<ul>
