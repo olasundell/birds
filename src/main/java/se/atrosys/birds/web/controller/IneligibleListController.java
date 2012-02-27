@@ -60,4 +60,12 @@ public class IneligibleListController {
 
 		return modelAndView;
 	}
+
+	protected void setSoundService(SoundService soundService) {
+		this.soundService = soundService;
+	}
+
+	protected void setBirdPhotoService(BirdPhotoService birdPhotoService) {
+		this.birdPhotoService = birdPhotoService;
+	}
 }
