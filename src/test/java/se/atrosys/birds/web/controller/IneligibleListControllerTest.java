@@ -3,15 +3,14 @@ package se.atrosys.birds.web.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.servlet.ModelAndView;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import se.atrosys.birds.BaseTest;
 import se.atrosys.birds.factory.BirdModelCollectionBuilder;
-import se.atrosys.birds.model.BirdModel;
-import se.atrosys.birds.model.BirdPhotoModel;
-import se.atrosys.birds.model.SoundModel;
+import se.atrosys.birds.model.*;
 import se.atrosys.birds.service.BirdPhotoService;
 import se.atrosys.birds.service.MediaService;
 import se.atrosys.birds.service.SoundService;
@@ -29,6 +28,7 @@ import static org.testng.Assert.*;
  */
 public class IneligibleListControllerTest extends BaseTest {
 	@Autowired IneligibleListController controller;
+	@Autowired BirdModelCollectionBuilder birdModelCollectionBuilder;
 
     @Qualifier("stubMediaService")
     @Autowired MediaService mediaService;
@@ -89,13 +89,18 @@ public class IneligibleListControllerTest extends BaseTest {
         assertFalse(list.isEmpty(), "Bird photo model list is empty");
     }
 
-	public void setBirdPhotoService(BirdPhotoService birdPhotoService) {
-		this.birdPhotoService = birdPhotoService;
-	}
-
-	public void setSoundService(SoundService soundService) {
-		this.soundService = soundService;
-	}
+/*	@Test
+	// TODO rewrite this test, it is a false positive.
+	public void shouldSetMediaModelAsEligible() {
+		for (BirdModel birdModel: birdModelCollectionBuilder.getLastCollection()) {
+			for (MediaModel model: birdModel.getPhotos()) {
+				if (!model.isEligible()) {
+					MediaModel returnedModel = controller.setEligible(model.getId(), model.getType().name());
+				}
+			}
+		}
+		Assert.assertTrue(true);
+	}*/
 
 	private static class StubBirdPhotoService implements BirdPhotoService {
 		@Override

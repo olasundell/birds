@@ -61,4 +61,8 @@ class StubMediaServiceImpl implements MediaService {
 	@Override
     public void update(MediaModel model) {
     }
+
+	public Map<String, MediaModel> getModelMap() {
+		return modelMap;
+	}
 }
