@@ -25,6 +25,7 @@ import java.util.List;
  */
 @Component
 public class SoundModelListFactory {
+	public static final String RESULTS_TABLE_IS_NOT_IN_MARKUP = "Can't find the results table in the markup, it isn't there!";
 	@Autowired FileFetcher fileFetcher;
 	@Autowired SoundModelFactory soundModelFactory;
 
@@ -49,7 +50,7 @@ public class SoundModelListFactory {
 		Elements select = element.select("table.results");
 		
 		if (select.isEmpty()) {
-			throw new CouldNotFindSoundsException("Can't find the results table in the markup, it isn't there!");
+			throw new CouldNotFindSoundsException(RESULTS_TABLE_IS_NOT_IN_MARKUP);
 		} else if (select.size() > 1) {
 			throw new CouldNotFindSoundsException("Can't find the results table in the markup, too many tables found!");
 		}
