@@ -157,7 +157,7 @@
 			<id>jenkins</id>
 			<activation>
 				<property>
-					<name>env.BUILD_NUMBER</name>
+					<name>cobertura</name>
 				</property>
 			</activation>
 			<build>
