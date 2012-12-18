@@ -45,7 +45,7 @@ public class BirdController {
 
 	@RequestMapping(value = "/random/", method = RequestMethod.GET)
 	public ModelAndView randomBird(HttpServletRequest request) {
-		ModelAndView modelAndView = doControl(request);
+		ModelAndView modelAndView = generateModelAndView(request);
 
 		return modelAndView;
 	}
@@ -57,21 +57,11 @@ public class BirdController {
 		} catch (CouldNotFindMediaException e) {
 			logger.error("Could not find media", e);
 		}
-		return doControl(request);
+		return generateModelAndView(request);
 	}
 
-	private ModelAndView doControl(HttpServletRequest request) {
-		BirdModel model;
-
-		String birdId = request.getParameter("birdid");
-
-		logger.info(String.format("randomBird called with id %s", birdId));
-
-		if (birdId != null && !birdId.isEmpty()) {
-			model = birdService.findById(birdId);
-		} else {
-			model = birdService.getRandomBird();
-		}
+	private ModelAndView generateModelAndView(HttpServletRequest request) {
+        BirdModel model = generateRandomBird(request);
 		
 		ModelAndView modelAndView = new ModelAndView();
 		
@@ -96,5 +86,20 @@ public class BirdController {
 		
 		return modelAndView;
 	}
+
+    private BirdModel generateRandomBird(HttpServletRequest request) {
+        BirdModel model;
+
+        String birdId = request.getParameter("birdid");
+
+        logger.info(String.format("randomBird called with id %s", birdId));
+
+        if (birdId != null && !birdId.isEmpty()) {
+            model = birdService.findById(birdId);
+        } else {
+            model = birdService.getRandomBird();
+        }
+        return model;
+    }
 
 }
