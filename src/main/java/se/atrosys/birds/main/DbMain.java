@@ -45,7 +45,7 @@ public class DbMain {
 
 	public static void main(String[] args) throws CouldNotFindNamesElementException, JAXBException, IOException, NoSuchLanguageException, NoFamilyException, CouldNotFindDetailsException {
 //		final ApplicationContext ac =  new ClassPathXmlApplicationContext(new String[] {"classpath:/META-INF/spring/context.xml"});
-		final ClassPathXmlApplicationContext ac =  new ClassPathXmlApplicationContext(new String[] {"classpath:/META-INF/spring/context.xml"});
+		final ClassPathXmlApplicationContext ac =  new ClassPathXmlApplicationContext(new String[] {"classpath:/spring/context.xml"});
 		Configuration configuration = new Configuration();
 
 /*		configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");

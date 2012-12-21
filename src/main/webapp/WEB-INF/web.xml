@@ -8,7 +8,7 @@
 		and Filters -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:/META-INF/spring/context.xml</param-value>
+		<param-value>classpath:/spring/context.xml</param-value>
 	</context-param>
 
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
@@ -22,7 +22,7 @@
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>
-				classpath:/META-INF/spring/context.xml
+				classpath:/spring/context.xml
 			</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>

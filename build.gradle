@@ -32,6 +32,9 @@ dependencies {
     testCompile 'org.apache.derby:derby:+'
 }
 
+httpPort = 8092
+stopPort = 8091
+
 test {
     useTestNG()
 }
