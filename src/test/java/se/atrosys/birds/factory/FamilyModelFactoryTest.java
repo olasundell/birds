@@ -12,7 +12,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 
 /**
- * TODO write comment
+ * Test class for the family model factory.
  */
 public class FamilyModelFactoryTest extends BaseTest {
 	private static final String ORDER = "ANSERIFORMES";

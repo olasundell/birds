@@ -7,7 +7,7 @@ import se.atrosys.birds.model.FamilyModel;
 import se.atrosys.birds.model.GroupModel;
 
 /**
- * TODO write comment
+ * Creates a family model on demand, also contains
  */
 @Component
 public class FamilyModelFactory {
@@ -22,11 +22,11 @@ public class FamilyModelFactory {
 		return model;
 	}
 
-	public GroupModel extractGroupModel(Element bird) {
+	private GroupModel extractGroupModel(Element bird) {
 		return groupModelFactory.createModel(extractNameArray(bird)[0]);
 	}
 
-	public String extractFamilyName(Element bird) {
+	String extractFamilyName(Element bird) {
 		return extractNameArray(bird)[1];
 	}
 

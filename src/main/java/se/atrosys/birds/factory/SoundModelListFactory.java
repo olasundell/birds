@@ -31,7 +31,7 @@ public class SoundModelListFactory {
 
 	public List<SoundModel> createList(BirdModel birdModel) throws CouldNotFindSoundsException {
 		List<SoundModel> soundModels = new ArrayList<SoundModel>();
-		String fileUrl = String.format("/home/ola/code/birds/sounds/%s", birdModel.getScientificName().replace(' ', '-'));
+		String fileUrl = String.format("sounds/%s", birdModel.getScientificName().replace(' ', '-'));
 
 		File file = new File(fileUrl);
 		Element element = null;

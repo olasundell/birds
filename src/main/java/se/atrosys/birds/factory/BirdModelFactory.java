@@ -81,7 +81,7 @@ public class BirdModelFactory {
 	}
 
 	private Element createDetailedElement(BirdModel birdModel) throws CouldNotFindDetailsException {
-		String format = String.format("/home/ola/code/birds/species/%s", birdModel.getHref());
+		String format = String.format("species/%s", birdModel.getHref());
 		File file = new File(format);
 		try {
 			return Jsoup.parse(file, "UTF-8").body();
@@ -129,8 +129,10 @@ public class BirdModelFactory {
     protected Element findNamesElement(Element element) throws CouldNotFindNamesElementException {
         for (Element e: element.getElementsByTag("b")) {
 	        // TODO this should be a bit more precise, check for more languages than German
-            Elements elements = e.getElementsContainingText("German:");
-            if (elements.size() > 0) {
+            Elements names = e.getElementsContainingText("German:");
+
+            // we found
+            if (names.size() > 0) {
                 return e.parent();
             }
         }

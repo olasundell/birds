@@ -6,7 +6,7 @@ import org.springframework.orm.hibernate3.HibernateAccessor;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 /**
- * TODO write comment
+ * Ordinary Hibernate DAO class.
  */
 public abstract class BirdDaoHibernateSupport extends HibernateDaoSupport {
 	public void shutdown() {

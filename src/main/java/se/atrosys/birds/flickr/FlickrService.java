@@ -32,7 +32,7 @@ public class FlickrService {
 	private final String APIKEY = "2ae735c1073a6524c6af82dd4a0da37c";
 	private final String SECRET = "43bbaa4345802f59";
 	private final String FLICKR_URL = String.format("http://api.flickr.com/services/rest/?api_key=%s&method={flickrmethod}&tags={tags}", APIKEY);
-	private final String FILE_URL = String.format("file:///home/ola/code/birds/flickr/{flickrmethod}-tags={tags}");
+	private final String FILE_URL = String.format("file://%s/flickr/{flickrmethod}-tags={tags}", new File(".").getAbsoluteFile().getParent());
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired private FileFetcher fileFetcher;
 

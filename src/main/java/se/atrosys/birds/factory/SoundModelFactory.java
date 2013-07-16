@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 import se.atrosys.birds.model.SoundModel;
 
 /**
- * TODO write comment
+ * Factory for a model of a bird sound
  */
 @Component
 public class SoundModelFactory {

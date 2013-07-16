@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 import se.atrosys.birds.model.GroupModel;
 
 /**
- * TODO write comment
+ * Factory for a model of a taxonomic group
  */
 @Component
 public class GroupModelFactory {

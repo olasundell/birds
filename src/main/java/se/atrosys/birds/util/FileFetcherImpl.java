@@ -23,7 +23,7 @@ public class FileFetcherImpl implements FileFetcher {
 
 	public FileFetcherImpl() {
 		httpClient = new DefaultHttpClient();
-		httpClient.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, new HttpHost("proxy.svt.se", 8080, "http"));
+//		httpClient.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, new HttpHost("proxy.svt.se", 8080, "http"));
 	}
 
 	public File fetchFile(Map<String, String> getParams, String fileUrl, String httpUrl) {

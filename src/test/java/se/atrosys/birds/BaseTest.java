@@ -78,7 +78,7 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
 	@BeforeMethod(groups = "system")
 	public void initDb() throws Exception, IOException, NoFamilyException, NoSuchLanguageException, CouldNotFindDetailsException, JAXBException, SQLException {
         if (birdModels == null || birdModels.isEmpty()) {
-            birdModels = birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase-short.html");
+            birdModels = birdModelListFactory.scrapeFromAviBase("avibase-short.html");
         }
 
         if (!birdService.findAll().isEmpty()) {
@@ -89,7 +89,7 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
         assertTrue(birdService.findAll().isEmpty(), "Could not clear birds.");
 
 //        birdService.saveAll(birdModels);
-		birdService.saveAll(birdModelListFactory.scrapeFromAviBase("/home/ola/code/birds/avibase-short.html"));
+		birdService.saveAll(birdModelListFactory.scrapeFromAviBase("avibase-short.html"));
         List<BirdModel> list = birdService.findAll();
 
         assertNotNull(list);
